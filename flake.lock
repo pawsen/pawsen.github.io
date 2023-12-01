@@ -1,0 +1,129 @@
+{
+  "nodes": {
+    "ananke": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1700669123,
+        "narHash": "sha256-ZNOUPFSh4S1fMvOIHQNFKb7TShKKznlcFnBoUe2F6kI=",
+        "owner": "theNewDynamic",
+        "repo": "gohugo-theme-ananke",
+        "rev": "91df000ca82769a7578df81fa142d1a18e446bc0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "theNewDynamic",
+        "repo": "gohugo-theme-ananke",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "hugo-coder": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1701263629,
+        "narHash": "sha256-bOmzK02BN38NSYU6j3pszwz9kLYyZx/nBpv21tsoiS0=",
+        "owner": "luizdepra",
+        "repo": "hugo-coder",
+        "rev": "d8155219709d59557d17f44a552617ea5a7c990a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "luizdepra",
+        "repo": "hugo-coder",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1701068326,
+        "narHash": "sha256-vmMceA+q6hG1yrjb+MP8T0YFDQIrW3bl45e7z24IEts=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "8cfef6986adfb599ba379ae53c9f5631ecd2fd9c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "ananke": "ananke",
+        "flake-utils": "flake-utils",
+        "hugo-coder": "hugo-coder",
+        "nixpkgs": "nixpkgs",
+        "stack": "stack",
+        "terminal": "terminal"
+      }
+    },
+    "stack": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1698530367,
+        "narHash": "sha256-TYlqe2sN83JCiabq0UPWJay3QRk0Dir1hH2WWDoaPb0=",
+        "owner": "CaiJimmy",
+        "repo": "hugo-theme-stack",
+        "rev": "21da06e448fe466ef0a03d1c717847f0eb0049fe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "CaiJimmy",
+        "repo": "hugo-theme-stack",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "terminal": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1686412942,
+        "narHash": "sha256-iJXHsG1jVDUjxEWsWkBqznGgxqAsUq1pu4Mj8gE3DA8=",
+        "owner": "panr",
+        "repo": "hugo-theme-terminal",
+        "rev": "7e13d24d10c59c1cf1d1f011f7c4c93266d8aa7d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "panr",
+        "repo": "hugo-theme-terminal",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
