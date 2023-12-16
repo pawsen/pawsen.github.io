@@ -1,0 +1,69 @@
+:PROPERTIES:
+:ID:       e1fd3eac-80d9-4314-871e-2a7c7532f390
+:END:
+#+title: bash
+* error handling
+If using =trap func ERR= we need to =set -eE= and not just =set -e=. With the latter, =trap= will not catch errors in functions, because the =ERR trap= is not inherited from parent scope. See this [[https://stackoverflow.com/a/35800451][SO]]. Thus
+: set -E # export trap to functions
+
+Example
+#+begin_src sh
+set -eE
+
+print_error() {
+    read line file <<<$(caller)
+    echo "An error occurred in line $line of file $file:" >&2
+    sed "${line}q;d" "$file" >&2
+}
+trap print_error ERR
+
+function func(){
+  echo "hello" | grep soo
+}
+func
+#+end_src
+See this [[https://stackoverflow.com/a/26261518][SO]] for special =trap= names: =ERR=, =DEBUG=, =EXIT=, =RETURN= or =help trap=.
+
+* getting help
+Get help to =builtin= bash functions
+
+ex for =caller=
+#+begin_src sh
+type caller
+help caller
+#+end_src
+* man pages
+The =man man= list the sections and numbers of a manual
+#+begin_quote
+MANUAL SECTIONS
+    The standard sections of the manual include:
+
+    1      User Commands
+    2      System Calls
+    3      C Library Functions
+    4      Devices and Special Files
+    5      File Formats and Conventions
+    6      Games et. al.
+    7      Miscellanea
+    8      System Administration tools and Daemons
+
+    Distributions customize the manual section to their specifics,
+    which often include additional sections.
+#+end_quote
+
+List available sections with =man -k= (similar to apropos command)
+#+begin_src sh
+man -k "^signal"
+bsd_signal (3)       - signal handling with BSD semantics
+signal (2)           - ANSI C signal handling
+signal (7)           - overview of signals
+signal-safety (7)    - async-signal-safe functions
+signalfd (2)         - create a file descriptor for accepting signals
+signalfd4 (2)        - create a file descriptor for accepting signals
+sysv_signal (3)      - signal handling with System V semantics
+#+end_src
+
+thus to get an overview of signals,
+#+begin_src sh
+man 7 signal
+#+end_src

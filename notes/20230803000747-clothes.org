@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       f2337199-058c-4af5-a3b1-fd88ed84fd79
+:END:
+#+title: clothes
+* shorts
+- Prana Mojo, str M.
+  style: M3MOJO110, color: coal
+* undertrøjer / tank top
+- Super.natural, M Base Tank 140, str L
+- SHEEP RUN 100% Merino Wool tank top
+  Kan være et billigere alternativ til super.natural

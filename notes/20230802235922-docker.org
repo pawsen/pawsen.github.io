@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       8583ebe5-6a99-4031-9491-a562a28d7e18
+:END:
+#+title: docker
+
+* clear logs
+oneline with grep
+#+begin_src sh
+docker ps | grep -E "os2mo_mo\s+"| awk {'print $1'} | xargs docker inspect --format='{{.LogPath}}' | sudo  xargs truncate -s 0
+#+end_src
+
+Or follow this https://stackoverflow.com/a/42510314 to change the docker config to enable log-rotation

@@ -1,0 +1,74 @@
+:PROPERTIES:
+:ID:       a1b57a39-78a7-4fc0-91a3-546a2a349a52
+:END:
+#+title: batteries
+
+* Connectors
+[[https://en.wikipedia.org/wiki/DC_connector][Wikipedia dc connectors]]
+
+For batteries
+- [[https://en.wikipedia.org/wiki/JST_connector][jst]]
+  - SM, locking
+
+* Nickel strips
+:PROPERTIES:
+:ID:       1de1b8e1-6474-4c69-b92e-63cbeea311a9
+:END:
+
+** dimensions
+According to the table below
+
+[[*Nickel strips]]
+
+#+NAME: fig:amp
+#+CAPTION: https://endless-sphere.com/sphere/threads/nickel-strip-ratings.98849/post-1447486
+[[attachment:Ampacity (Powestream extrapolation).jpg]]
+
+
+** Test if it is pure nickel
+
+*** The salt water test - corrosion
+Nickel does not corrode easily, unlike steel which loves to rust. Take a piece
+of nickel strip and scratch it up aggressively with strong sandpaper or a metal
+file. Then mix up a cup of salt water (the exact amount doesn’t really matter).
+Drop your scratched nickel strips in the water and wait a few days. If you don’t
+see any rust forming, you’ve got pure nickel! If you see brown or orange rust,
+you’ve got nickel plated steel strips.
+
+*** The sanding/grinding wheel test - sparks from grinding
+I developed this test on accident while experimenting with the first test. I
+used a Dremel sanding wheel to scuff up the surface of a pure nickel strip and a
+nickel plated steel strip before doing the salt water test. The pure nickel
+strip was fairly uneventful, but when I used a sanding or grinding wheel on the
+nickel plated steel strip, I got brilliant sparks shooting from the strip as
+soon as the wheel ate through the thin nickel layer and contacted the steel.
+Makes sense - steel creates spark showers. Apparently though, nickel does not,
+and that makes this another great test. It’s also superior to the salt water
+test because you get the result instantly. But if you’re still in doubt, go
+ahead and toss the piece in salt water after you’re done grinding on it, and
+that will verify the results of the grinding wheel test.
+
+* PowerWall
+** Fuses
+
+For powerwalls made of recycled cells of varying/unknown quality, fusing each cell is recommended. According to the following video it is not necessary to fuse both sides of the battery. One side is enough.
+[[https://youtu.be/iL6Td8R5C1g][Dead shorting an 18650 Battery to test cell level fuses]]
+
+5 Amps is sufficient
+
+Three types of cell fuse
+- [[https://batteryhookup.com/products/nickel-fuse-2p-wide-continuous-roll-by-the-foot-18650-cell-level-fusing][Nickel fuse, continuous roll]]
+- Fuse wire, like 30AWG tinned copper. [[https://www.amazon.com/gp/product/B01LZBOSQJ][30AWG on amazon]] and [[https://youtu.be/QWZKIr5BcU0][fuse wire test]]. The [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][fusing current is seen in this table]]
+  Can be either spot welded or soldered between battery and bus bar. [[https://secondlifestorage.com/index.php?threads/experiment-soldering-18650-capacity-fade.8217/][Welding should not decrease battery performance]] if done properly
+- Glass fuses. Some recommend these over fuse wire, as they don't heat/glow. I prefer the fuse wire for ease of installation and it's neater.
+
+*** images
+#+CAPTION: Spot welded fuse wire to bus bar
+[[file:~/git/org/.attach/files/20220713_190008.jpg]]
+[[file:~/git/org/.attach/files/20220713_190150.jpg]]
+
+#+CAPTION: Fusing current for AWG wires. From https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
+[[file:~/git/org/.attach/files/AWG-wire-sizes.jpg]]
+
+#+CAPTION: nickel fuse strip
+[[file:~/git/org/.attach/files/strip.jpg]]

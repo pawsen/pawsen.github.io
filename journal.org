@@ -1,0 +1,7 @@
+
+* 2023
+** 2023-04 April
+*** 2023-04-14 Friday
+**** [2023-04-14 Fri 23:54] some status
+
+[[orgit:~/git/proxmark3/][~/git/proxmark3/ (magit-status)]]

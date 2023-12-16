@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       e4f866ef-9e7c-40e0-9ee4-6e9da5f0d7d5
+:END:
+#+title: movies
+
+* science
+
+** GIZMO!
+Gizmo! is a 1977 documentary film produced and directed by Howard Smith about improbable inventions, and uses old newsreel footage about these inventions
+https://en.wikipedia.org/wiki/Gizmo! https://youtu.be/ONwe96StEpA

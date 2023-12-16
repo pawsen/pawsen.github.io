@@ -1,0 +1,208 @@
+:PROPERTIES:
+:ID:       3750306f-bf6a-4da2-8735-e4a46e58cdf7
+:END:
+#+title: nixos
+* flakes
+get template, see available here https://github.com/NixOS/templates/
+: nix flake new FOLDER --template templates#python
+
+nix build using defaultPackage, nix develop using devShell, or nix run using defaultApp
+
+aliasing =+= to =nix-shell -p=, then we can do (and garbage collect will take care of it later)
+: cat images.json | + jq | + convert
+
+Comma runs software without installing it. Basically it just wraps together nix shell -c and nix-index. You stick a , in front of a command to run it from whatever location it happens to occupy in nixpkgs without really thinking about it.
+https://github.com/nix-community/comma
+
+
+Install
+: nix-env -iA nixos.tdesktop
+
+remove all
+: nix-env -e
+
+* using flakes to build
+
+nix shell is meant to spawn a shell with an application in scope - that's why it modifies only the PATH envvar (think: if you want to ad hoc launch some app, but don't want to actually install it).
+
+nix develop is meant to spawn a shell with an application's development dependencies in scope (think: if you want to hack on an application locally, compile it etc.).
+
+That's why for bringing libraries to scope, you should create a flake that uses mkShell and then run nix develop; nix shell doesn't work with libraries by design.
+
+=nix run= is for running applications defined in flakes. But flakes allow you to run arbitrary applications, not just binaries from a given derivation.
+
+I think =nix-shell -p pkg --run "some command"= is closer to =nix shell nixpkgs#pkg --comand "some command"=.
+
+See the comparison table at the end of this blog post
+https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/
+https://blog.ysndr.de/posts/internals/2021-01-01-flake-ification/
+** example 1
+https://gitlab.com/gridbugs/ia
+
+nix run gitlab:gridbugs/ia
+nix flake show gitlab:gridbugs/ia
+
+Q: How do I tell nix to re-download an app located in a git repo?
+A: It will re-download it by itself rather soon, but if you want to force it try (admittedly counter-intuitively) =nix flake lock gitlab:gridbugs/ia= , or do =nix run --refresh gitlab:gridbugs/ia=
+
+* containers
+** nspawn
+https://discourse.nixos.org/t/system-with-nixos-how-to-add-another-extra-distribution/5767/8
+https://www.reddit.com/r/NixOS/comments/t5v83i/comment/hz7gl96/?utm_source=share&utm_medium=web2x&context=3
+
+: nix-shell -p xorg.xhost
+#+begin_src sh
+cat escape.sh
+
+#!/usr/bin/env bash
+xhost +local:
+
+systemd-nspawn -b \
+  -D /home/paw/container/debian1\
+  -M debian \
+  --bind=/home/paw \
+  --bind-ro=/tmp/.X11-unix \
+  --bind=/dev/snd \
+  --bind=/dev/dri \
+  --bind=/dev/shm \
+  --bind=/run/user/1000/pulse:/run/user/host/pulse
+#+end_src
+
+#+title: Readme
+
+
+Use [[https://www.reddit.com/r/NixOS/comments/n6g3j4/buildpythonpackage_dependency_problems_how_to/][overlay]] to pin a python package to a specific version
+
+Customizing packages in Nix
+https://bobvanderlinden.me/customizing-packages-in-nix/
+
+
+Building packages and applications
+https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/python.section.md#building-packages-and-applications-building-packages-and-applications
+
+* building
+https://elatov.github.io/2022/01/building-a-nix-package/
+
+: nix-build -K -E 'with import <nixpkgs> {}; (python39.pkgs.callPackage ./default.nix) {}'
+
+
+See runtime dependencies (closure) by giving a path in /nix/store/...
+nix-store -qR  `which man`
+OR
+nix-store -q --tree  `which man`
+OR only build build dependencies listed once (--reference: immediate dependencies)
+nix-store -q --references `which man`
+
+See build time dependencies
+nix-store -qR $(nix-store -qd `which man`)
+
+See content of drv-file (how to build the derivation). Can use path of either .drv file or output of derivation
+nix show-derivation /nix/store/l9mbk8pcw242r3s8118qaz16mxah2zd2-python3.9-pydstool-0.91.0_dev | bat
+
+* profiles
+See this https://www.reddit.com/r/NixOS/comments/bi3gz3/what_is_the_difference_between_nix_profiles_and
+
+Installing into a profile (creates a new generation)
+
+: nix profile install nixpkgs#bsdgames
+: nix-env -iA nixos.bsdgames
+
+See current profile( See packages install into profile)
+: nix profile list
+OR
+: nix-env -q
+
+
+See generations
+: nix-env --list-generations
+
+** garbage collecting
+
+Lets install and uninstall a package
+: nix-env -iA nixos.bsdgames
+: nix-env -e bsdgames
+
+Now garbage collect will not delete derivations in =/nix/store/= that are still referenced by generations (that is the case with ~bsdgames~. The previous generation points to ~bsdgames~)
+: nix-garbage-collect
+
+See which generations points to path in =/nix/store=
+: nix-store --query --roots /nix/store/zn61n12a346yxydww9l0iv5v78ly75mp-bsd-games-2.17
+: /nix/var/nix/profiles/per-user/paw/profile-11-link -> /nix/store/njfqw117gnmm5b1mwdl3gii63w2p99jq-user-environment
+: /nix/var/nix/profiles/per-user/paw/profile-8-link -> /nix/store/4ldc2ck0h8aizm24m8r359y7pr4wkfsg-user-environment
+
+ie. delete profile-8 and profile-11 and rerun gc will remove =bsdgames= and unused dependencies from =/nix/store=
+
+
+Building with nix-build or flakes creates an indirect root by symlinking =./result= to
+: ls -l /nix/var/nix/gcroots/auto/
+
+How do we remove the derivation then? There are two possibilities:
+- Remove the indirect GC root from /nix/var/nix/gcroots/auto.
+- Remove the result symlink.
+
+In the first case, the derivation will be deleted from the nix store, and result becomes a dangling symlink. In the second case, the derivation is removed as well as the indirect root in /nix/var/nix/gcroots/auto.
+
+Use this to find stray gcroots hidden in unexpected places (from building envs from shell.nix files, for example).
+: sudo -i nix-store --gc --print-roots | egrep -v '^(/nix/var|/run/current-system|/run/booted-system|/proc|{memory|{censored)'
+
+* python and ....
+Basically do this,
+https://www.reddit.com/r/NixOS/comments/y5ahg2/comment/isl6fdo/
+
+
+Here's a bit longer explanation with links to examples
+https://discourse.nixos.org/t/why-is-it-so-hard-to-use-a-python-package/19200/11?u=pawsen
+
+
+
+** mach-nix
+https://github.com/DavHau/mach-nix
+
+*** examples
+https://gist.github.com/sagittaros/32dc6ffcbc423dc0fed7eef24698d5ca
+
+#+begin_src nix
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+        python = "python39";
+        pythonPackages = pkgs.${python + "Packages"};
+
+        req = mach-nix.lib."${system}".buildPythonPackage rec {
+            inherit python;
+            pname = "requests";
+            version = "v2.28.1";
+            src = builtins.fetchGit {
+              url = "https://github.com/psf/requests";
+              # not nessecary to specify when cloning default branch
+              # ref = "main";
+              # commit id
+              rev ="7104ad4b135daab0ed19d8e41bd469874702342b";
+              shallow = true;
+            };
+            requirements = ''
+                charset_normalizer>=2,<4,
+                idna>=2.5,<4,
+                urllib3>=1.21.1,<1.27,
+                certifi>=2017.4.17,
+            '';
+            # use requirementsextra in case auto-detected requirements are incomplete
+            requirementsExtra = "pytest";
+          };
+#+end_src
+* misc useful commands
+Get =<nixpkgs>= commit-id for specific version of a program.
+https://lazamar.co.uk/nix-versions/
+
+Quick primer on [[https://elatov.github.io/2022/01/building-a-nix-package/#contributing-to-nixpkgs][contributing to nixpkgs]]
+
+#+begin_src sh
+
+nix search nixpkgs#python3Packages poetry
+nix-build -E 'with import <nixpkgs> {}; callPackage ./default.nix {}'
+#+end_src
+
+Find which packages provides a library, etc: Install =nix-index= and
+: nix-locate -1 -w libgssapi_krb5.so.2  | grep -v \(
+* examples
+[[https://git.kirinsst.xyz/kir/nixos-configs][server-config]]
+[[https://gitea.tlater.net/tlaternet/tlaternet-server][another good server config]]

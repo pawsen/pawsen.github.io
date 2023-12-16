@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       1471d241-0cb5-46ac-bbdd-6827e727a8e6
+:END:
+#+title: json
+
+* jsonPath
+[[https://goessner.net/articles/JsonPath/][JSONPath]] expressions always refer to a JSON structure in the same way as XPath
+expression are used in combination with an XML document.
+
+example
+#+begin_src json
+{ "store": {
+    "book": [
+      { "category": "reference",
+        "author": "Nigel Rees",
+        "title": "Sayings of the Century",
+        "price": 8.95
+      },
+      { "category": "fiction",
+        "author": "Evelyn Waugh",
+        "title": "Sword of Honour",
+        "price": 12.99
+      },
+      { "category": "fiction",
+        "author": "Herman Melville",
+        "title": "Moby Dick",
+        "isbn": "0-553-21311-3",
+        "price": 8.99
+      },
+      { "category": "fiction",
+        "author": "J. R. R. Tolkien",
+        "title": "The Lord of the Rings",
+        "isbn": "0-395-19395-8",
+        "price": 22.99
+      }
+    ],
+    "bicycle": {
+      "color": "red",
+      "price": 19.95
+    }
+  }
+}
+#+end_src
+
+#+begin_src python
+import json
+from jsonpath import jsonpath
+
+jp = json.loads(store)
+jsonpath(jp, "$..author")
+#+end_src
+: ['Nigel Rees', 'Evelyn Waugh', 'Herman Melville', 'J. R. R. Tolkien']

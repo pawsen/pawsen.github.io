@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       81c7c1b3-33ab-40c9-b195-f86bb234c3df
+:END:
+#+title: climbing
+
+* accidents
+** carabiner broke by cross-loading from Grigri
+[[http://publications.americanalpineclub.org/articles/13200305300/Fall-on-Rock-Inadequate-Protection-Inadequate-Clothing-and-Equipment-Weather][incident]] and [[http://www.rockclimbing.com/cgi-bin/forum/gforum.cgi?do=post_view_flat;post=168185;page=1;sb=post_latest_reply;so=ASC;mh=25;][discussion]]
+lesson: use carabiner which prevents the grigri from rotating in the bin.
+** Using ascenders as belay devise
+[[http://www.supertopo.com/climbers-forum/330793/Mistakes-synergy-death-Accident-report-Joe-Ivy][Ascender broke rope]] and [[http://www.caves.org/section/vertical/nh/45/ivyaccrpt.html][detailed report at caves.org]]
+* Tech tips
+** anchors
+[[https://www.climbing.com/skills/tech-tip-sport-streamlining-anchors/][Bowline with two loops]]
+** Rappelling
+1. Attach a short prussic cord to your leg loop with a locking carabiner.
+2. Tie a French prussic knot around the rope where you normally hold your
+   braking hand.
+* gear
+p-led is called quick-links, [[https://www.google.com/search?q=delta+link+climbing][here]] shown as triangular shape (delta link)
+
+** breaking strength of climbing rope (approx 13kN)
+[[https://youtu.be/ZWaDh6-roMI?feature=shared&t=303][This]] test shows that a dynamic climbing rope breaks around 12kN in a drop test and 13-14kN in a slow pull test. Ie. the rope breaks around the same, whether it's a drop- or slow pull test.
+** force on gear/climber when falling on dynamic rope (less than 6kN)
+
+From [[https://www.hownot2.com/post/climbing-science#c990e4_9baafdd0e10848cfbc376951dfcde834~mv2.png][hownot2]]
+| anchor | climber | belayer |
+|--------+---------+---------|
+|      4 |     2.5 |       1 |
+
+But having a ground anchor increases the forces. See this [[https://www.hownot2.com/post/big-climbers#viewer-djhjt][chart]]

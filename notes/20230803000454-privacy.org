@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       e986949a-9a06-4e2c-b6ee-8ef38628bbf1
+:END:
+#+title: privacy
+* email
+https://generator.email/inbox3/
+https://cock.li/

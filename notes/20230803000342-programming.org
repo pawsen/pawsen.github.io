@@ -1,0 +1,455 @@
+:PROPERTIES:
+:ID:       d0a61574-577e-4ee9-a0d4-20336f1275cd
+:END:
+#+title: programming
+* good examples
+https://nullprogram.com/toys/
+* ctf
+Writeups and much nore
+https://github.com/Gallopsled/
+
+** blogs
+- https://blog.malwaremustdie.org/
+- https://www.malware-traffic-analysis.net/
+
+** nc3
+[[https://vmcall.blog/][writeup 2019]]
+https://github.com/RigspolitietNC3/nc3ctf2018
+* makefile
+** bear
+Two ways to fill the =compile_commands.json= using bear on macos
+
+The issue is that the location of =make= is protected. Thus when we use a make
+in a nonprotected area, bear works
+
+Either
+=brew install make= will install make at =/usr/local/opt/gmake=. Use it as
+=bear gmake= (gnu make, eg. just prepended with g)
+
+or =cp `which make` .=
+=brew ./make=
+
+Using bear might result in the error /lto-wrapper: fatal error: environment
+variable COLLECT_GCC must be set/. Remove lto from C/CXX flags
+#+BEGIN_SRC conf
+# -flto causes build error when using bear, eg. bear make
+# lto-wrapper: fatal error: environment variable COLLECT_GCC must be set
+# Avoid this by removing flto from the default flags.
+# NOTE: this must be after the include Arduino.mk line.
+CXXFLAGS = -fpermissive -fno-exceptions -fno-threadsafe-statics -fno-devirtualize -fdiagnostics-color
+CFLAGS   = -fno-fat-lto-objects -fdiagnostics-color=$(DIAGNOSTICS_COLOR_WHEN)
+
+### CFLAGS_STD
+CFLAGS_STD        = -std=gnu11
+
+### CXXFLAGS_STD
+# CXXFLAGS_STD      = -std=gnu++11
+CXXFLAGS_STD      = -std=gnu++17
+
+### CPPFLAGS
+CXXFLAGS         += -pedantic -Wall -Wextra
+LDFLAGS          += -fdiagnostics-color
+#+END_SRC
+
+But setting
+#+BEGIN_SRC conf
+CFLAGS_STD = -std=gnu11 -flto -fno-fat-lto-objects
+CXXFLAGS_STD = -std=gnu++17  -fno-threadsafe-statics -flto -fno-devirtualize
+#+END_SRC
+=bear gmake= seems to works even with =-flto=. Strange.
+
+Running
+=COLLECT_GCC=/usr/local/bin/avr-gcc bear gmake= results in /lto-wrapper: fatal
+error: environment variable COLLECT_GCC_OPTIONS must be set/.
+** =-isystem= vs =-I= for including headers
+use headers that you control with =-I= and the ones you don't (system, 3rd party
+libs) with =-isystem=. The practical difference comes when warnings are enabled,
+in that warnings which come from =-isystem= headers will be suppressed.
+https://gcc.gnu.org/onlinedocs/gcc/Directory-Options.html#Directory-Options
+* c++
+** arduino libs
+*** bool as bit library
+https://github.com/Chris--A/BitBool
+** bit bool arrays
+They are packed into the fewest number of bytes. The structure in this example
+is packed into a single byte of SRAM.
+#+BEGIN_SRC cpp
+static struct
+{
+  bool running:1;
+  bool digdug:1;
+}
+flags;
+
+void setup()
+{
+  flags.running = false;
+  flags.digdug = true;
+}
+
+void loop()
+{
+  flags.running = ! flags.running;
+  flags.digdug = ! flags.digdug;
+}
+#+END_SRC
+** books
+https://www.amazon.ca/Book-Programming-4th-Edition/dp/0201183994
+** examples
+*** pass arrays to functions
+http://arduino.land/FAQ/content/6/32/en/passing-arrays-to-functions.html
+** resources
+https://www.learncpp.com/cpp-tutorial/
+https://mbevin.wordpress.com/
+[[https://en.cppreference.com/w/][cppreference]]
+[[http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.html][CppCoreGuidelines]]
+** notes
+*** tutorials
+https://www.cprogramming.com/tutorial/
+*** reference vs pointer
+Pointer: doesn't change the 'pointed value'(x or y)
+#+BEGIN_SRC cpp
+int x = 2;
+int y = 3;
+int* p = &x;
+int* q = &y;    // now p!=q and *p!=*q
+p = q;          // p becomes &y; now p==q, so (obviously)*p == *q
+#+END_SRC
+
+Reference: change the 'referenced value'(x or y)
+#+BEGIN_SRC cpp
+int x = 2;
+int y = 3;
+int& r = x;     // r refers to x
+int& r2 = y;    // now r2 refers to y
+r = r2;         // read through r2, write through r: x becomes 3
+#+END_SRC
+
+Reference cannot be uninitialized
+#+BEGIN_SRC cpp
+int x = 7;
+int& r {x};    // bind r to x (r refers to x)
+r = 7;         // assign to whatever r refers to
+
+int& r2;       // error: uninitialized reference
+r2 = 99;       // assign to whatever r2 refers to »
+#+END_SRC
+
+We use . (dot) to access struct members through a name (and through a reference)
+and −> to access struct members through a pointer.
+#+begin_src cpp
+void f(Vector v, Vector& rv, Vector* pv)
+{
+     int i1 = v.sz;       // access through name
+     int i2 = rv.sz;      // access through reference
+     int i3 = pv−>sz;     // access through pointer
+}
+#+end_src
+*** vector implementation
+
+**** using struct
+Organize elements into struct. =v='s =elem= doesn't point at anything. Use =new=
+to produce a pointer. Note =Vector& v= indicates that we pass v by non-const
+reference; that way, vector_init() can modify the vector passed to it.
+#+BEGIN_SRC cpp
+struct Vector {
+     int sz;       // number of elements
+     double* elem; // pointer to elements
+};
+
+void vector_init(Vector& v, int s)
+{
+     v.elem = new double[s]; // allocate an array of s doubles
+     v.sz = s;
+}
+
+void f(Vector v, Vector& rv, Vector* pv)
+{
+     int i1 = v.sz;       // access through name
+     int i2 = rv.sz;      // access through reference
+     int i3 = pv−>sz;     // access through pointer
+}
+
+// use the vector type
+int s = 6;
+Vector v;
+vector_init(v,s);
+#+END_SRC
+
+**** using class
+#+BEGIN_SRC cpp
+class Vector {
+public:
+     Vector(int s) :elem{new double[s]}, sz{s} { }   // construct a Vector
+     double& operator[](int i) { return elem[i]; }   // element access: subscripting
+     int size() { return sz; }
+private:
+     double* elem; // pointer to the elements
+     int sz;       // the number of elements
+};
+
+Vector v(6);    // a Vector with 6 elements
+#+END_SRC
+A member “function” with the same name as its class is called a constructor.
+
+Vector(int) defines how objects of type Vector are constructed. In particular,
+it states that it needs an integer to do that. That integer is used as the
+number of elements. The constructor initializes the Vector members using a
+member initializer list:
+=:elem{new double[s]}, sz{s}=
+That is, we first initialize elem with a pointer to s elements of type double
+obtained from the free store. Then, we initialize sz to s.
+
+Access to elements is provided by a subscript function, called =operator[]=. It
+returns a reference to the appropriate element (a double& allowing both reading
+and writing)
+*** enum
+Use the new ~enum class~
+#+BEGIN_SRC cpp
+enum Color { red, green, blue };                    // plain enum
+enum Card { red_card, green_card, yellow_card };    // another plain enum
+enum class Animal { dog, deer, cat, bird, human };  // enum class
+enum class Mammal { kangaroo, deer, human };        // another enum class
+
+void fun() {
+
+    // examples of bad use of plain enums:
+    Color color = Color::red;
+    Card card = Card::green_card;
+
+    int num = color;    // no problem
+
+    if (color == Card::red_card) // no problem (bad)
+        cout << "bad" << endl;
+
+    if (card == Color::green)   // no problem (bad)
+        cout << "bad" << endl;
+
+    // examples of good use of enum classes (safe)
+    Animal a = Animal::deer;
+    Mammal m = Mammal::deer;
+
+    int num2 = a;   // error
+    if (m == a)         // error (good)
+        cout << "bad" << endl;
+
+    if (a == Mammal::deer) // error (good)
+        cout << "bad" << endl;
+
+}
+#+END_SRC
+Conclusion:
+enum classes should be preferred because they cause fewer surprises that could
+potentially lead to bugs
+
+Another example of scope.
+#+BEGIN_SRC cpp
+enum class Color1 { red, green, blue };    //this will compile
+enum class Color2 { red, green, blue };
+
+enum Color1 { red, green, blue };    //this will not compile
+enum Color2 { red, green, blue };
+int x = red;    //Compile time error(which red are you refering to??)
+#+END_SRC
+*** union vs variant
+#+BEGIN_SRC cpp
+enum Type { ptr, num }; // a Type can hold values ptr and num (§2.5)
+
+struct Entry {
+     string name;  // string is a standard-library type
+     Type t;
+     Node* p; // use p if t==ptr
+     int i;   // use i if t==num
+};
+
+void f(Entry* pe)
+{
+     if (pe−>t == num)
+           cout << pe−>i;
+     // ...
+}
+#+END_SRC
+The members p and i are never used at the same time, so space is wasted. It can
+be easily recovered by specifying that both should be members of a ~union~, like
+this:
+
+#+BEGIN_SRC cpp
+union Value {
+     Node* p;
+     int i;
+};
+
+struct Entry {
+     string name;
+     Type t;
+     Value v;  // use v.p if t==ptr; use v.i if t==num
+};
+
+void f(Entry* pe)
+{
+     if (pe−>t == num)
+           cout << pe−>v.i;
+     // ...
+}
+#+END_SRC
+
+Maintaining the correspondence between a type field (here, t) and the type held
+in a union is error-prone.
+#+BEGIN_SRC cpp
+struct Entry {
+     string name;
+     variant<Node*,int> v;
+};
+
+void f(Entry* pe)
+{
+     if (holds_alternative<int>(pe−>v))  // does *pe hold an int? (see §13.5.1)
+           cout << get<int>(pe−>v);      // get the int
+     // ...
+}
+#+END_SRC
+
+*** range based for-loops.
+So, in generic code, the following guidelines can be provided:
+#+BEGIN_SRC cpp
+// For observing the elements, use:
+for (const auto& elem : container)
+
+//For modifying the elements in place, use:
+for (auto&& elem : container)
+#+END_SRC
+https://stackoverflow.com/a/15927037
+*** operators
+- binary operators
+  (those with an operand to its left and one operand to its right)
+*** constructors
+Remember: default copy/move constructors do shallow copy/move operations, which
+in general is fine, but not for classes with pointers to objects that handle its
+storage
+
+- default
+  =class_name()=
+- parameterized
+  =class_name(parameters)=
+**** copy
+An implicit copy constructor is automatically defined.
+
+#+begin_src cpp
+MyClass::MyClass (const MyClass&);
+#+end_src
+
+This does a ~shallow~ copy. For classes with pointers that handles storage, this
+is probably not what we want. For these, performing a shallow copy means that
+the pointer value is copied, but not the content itself; This means that both
+objects (the copy and the original) would be sharing a single eg. string object
+(they would both be pointing to the same object), and at some point (on
+destruction) both objects would try to delete the same block of memory, probably
+causing the program to crash on runtime. This can be solved by defining the
+following custom copy constructor that performs a ~deep copy~:
+
+#+begin_src cpp
+// copy constructor: deep copy
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Example5 {
+    string* ptr;
+  public:
+    Example5 (const string& str) : ptr(new string(str)) {}
+    ~Example5 () {delete ptr;}
+    // copy constructor:
+    Example5 (const Example5& x) : ptr(new string(x.content())) {}
+    // access content:
+    const string& content() const {return *ptr;}
+};
+
+int main () {
+  Example5 foo ("Example");
+  Example5 bar = foo;
+
+  cout << "bar's content: " << bar.content() << '\n';
+  return 0;
+}
+#+end_src
+
+
+The deep copy performed by this copy constructor allocates storage for a new
+string, which is initialized to contain a copy of the original object. In this
+way, both objects (copy and original) have distinct copies of the content stored
+in different locations.
+
+Note this is different from the ~copy assignment~ constructor.
+
+#+BEGIN_SRC cpp
+MyClass foo;
+MyClass bar (foo);       // object initialization: copy constructor called
+MyClass baz = foo;       // object initialization: copy constructor called
+foo = bar;               // object already initialized: copy assignment called
+#+END_SRC
+
+The copy assignment operator is an overload of operator= which takes a value or
+reference of the class itself as parameter. The return value is generally a
+reference to *this (although this is not required). For example, for a class
+MyClass, the copy assignment may have the following signature:
+
+#+begin_src cpp
+MyClass& operator= (const MyClass&);
+#+end_src
+
+Again, for classes with pointers, see how to [[http://www.cplusplus.com/doc/tutorial/classes2/#copy_assignment][handle deep copy]].
+**** Designated initializers
+Each designator must name a direct non-static data member of T, and all
+designators used in the expression must appear in the same order as the data
+members of T.
+
+#+begin_src cpp
+struct A { int x; int y; int z; };
+A a{.y = 2, .x = 1}; // error; designator order does not match declaration order
+A b{.x = 1, .z = 2}; // ok, b.y initialized to 0
+#+end_src
+Each direct non-static data member named by the designated initializer is
+initialized from the corresponding brace-or-equals initializer that follows the
+designator. Narrowing conversions are prohibited.
+
+Designated initializer can be used to initialize a union into the state other
+than the first. Only one initializer may be provided for a union.
+#+begin_src cpp
+union u { int a; const char* b; };
+u f = { .b = "asdf" };         // OK, active member of the union is b
+u g = { .a = 1, .b = "asdf" }; // Error, only one initializer may be provided
+#+end_src
+For a non-union aggregate, element for which a designated initializer is not
+provided are initialized the same as described above for when the number of
+initializer clauses is less than the number of members (default member
+initializers where provided, empty list-initialization otherwise):
+
+#+begin_src cpp
+struct A {
+  string a;
+  int b = 42;
+  int c = -1;
+};
+A{.c=21}  // Initializes a with {}, which calls the default constructor
+          // then initializes b with = 42
+          // then initializes c with = 21
+#+end_src
+*** memory leaks
+https://stackoverflow.com/a/44989219
+https://stackoverflow.com/a/8417851
+** snippets
+*** Python like enumerate in c++17
+http://reedbeta.com/blog/python-like-enumerate-in-cpp17/
+* lisp
+** wizard book
+The [[https://mitpress.mit.edu/sites/default/files/sicp/index.html][wizard book]]
+
+A [[https://github.com/salvipeter/sicp][CL translation]] of the examples in the Wizard Book, with solutions to (most of)
+the exercises
+* arduino
+** examples
+[[https://github.com/ondras/arduino][Arduino c++ examples]]
+** (maybe) enable lsp for arduino-mode
+https://discordapp.com/channels/406534637242810369/505437595652849684/638078449185062922
+** projects
+https://github.com/stefanv/office-status-lcd

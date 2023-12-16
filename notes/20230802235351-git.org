@@ -1,0 +1,149 @@
+:PROPERTIES:
+:ID:       afed119c-272e-410a-b5f3-c52a2d40d905
+:END:
+#+title: git
+
+* stash
+=git stash pop= throws away the (topmost, by default) stash after applying it, whereas =git stash apply= leaves it in the stash list for possible later reuse (or you can then =git stash drop= it).
+
+
+List the stashed modifications/show files modified/content of last stash
+: git stash list
+: git stash show
+: git stash show -p
+: git show stash@{0}
+: git stash show -p stash@{1}
+
+List contents of all local stashes:
+: git stash list | awk -F: '{ print "\n\n\n\n"; print $0; print "\n\n"; system("git stash show -p " $1); }'
+
+List only file names
+: git stash show -p stash@{0} --name-only
+
+[[https://stackoverflow.com/a/1105666][View/checkout single file from stash]]
+: git diff stash@{0}^1 stash@{0} -- <filename>
+: git checkout stash@{0} -- <filename>
+* ignore changes to tracked file
+As per [[https://stackoverflow.com/a/40272289][SO]] and this [[https://stackoverflow.com/a/42363882][SO]] for listing ignored files
+#+begin_src sh
+git update-index --skip-worktree <path-name>
+git ls-files -v . | grep ^S
+#+end_src
+
+* submodules
+** intro
+Show info on submodules
+#+BEGIN_SRC sh
+git config --global status.submoduleSummary true
+git config --global diff.submodule log
+
+# verify if submodules need to be pushed(and do it)
+git config --global alias.spush 'push --recurse-submodules=on-demand'
+#+END_SRC
+
+Include origin in log(after =git fetch=)
+#+BEGIN_SRC sh
+git --no-pager log --oneline origin/master
+#+END_SRC
+
+Always remember to update submodules after =git fetch=. Git *auto-fetches*, but
+does not *auto-update*.
+#+BEGIN_SRC sh
+git submodules update
+#+END_SRC
+
+The prefered command is
+#+BEGIN_SRC sh
+git submodule update — init — recursive
+#+END_SRC
+in order to auto-init any new submodule, and to recursively update these if need
+be.
+
+If we change the =.gitmodules= file
+#+BEGIN_SRC sh
+git submodule sync
+#+END_SRC
+
+** best practice recap
+- Configuration settings
+  #+BEGIN_SRC conf
+  diff.submodule = log  # (so you get clearer container diffs when referenced submodule commits changed).
+  fetch.recurseSubmodules = on-demand # (so you are confident new referenced commits for known submodules get fetched with container updates).
+  status.submoduleSummary = true # (so git status gets useful again when a referenced submodule commit changed).
+  #+END_SRC
+- Adding or cloning
+  + Initial add: git submodule add <url> <path>
+  + Initial container clone: git clone — recursive <url> [<path>]
+- Grabbing updates inside a submodule
+  + cd path/to/module
+  + git fetch
+  + git checkout -q <commit-sha1>
+  + cd -
+  + git commit -am “Updated submodule X to: blah blah”
+- Grabbing container updates
+  + git pull
+  + git submodule sync — recursive
+  + git submodule update — init — recursive
+- Updating a submodule inside container code
+  + git submodule update — remote — rebase — path/to/module
+  + cd path/to/module
+  + Local work, testing, eventually staging
+  + git commit -am “Update to central submodule: blah blah”
+  + git push
+  + cd -
+  + git commit -am “Updated submodule X to: blah blah”
+- Permanently removing a submodule (1.7.8+)
+  + git submodule deinit path/to/module
+  + git rm path/to/module
+  + git commit -am “Removed submodule X”
+** Useful scripts
+[[https://stackoverflow.com/questions/11258737/restore-git-submodules-from-gitmodules][These scripts]] reads the =.gitmodules= file and initialize the submodules
+*** Clone boilerplate and reinitialize submodules
+bash script to automate steps 2 & 3 of the following process:
+
+1. Clone a 'boilerplate' repo to begin a new project
+2. Remove the .git folder and re-initialize as a new repo
+3. Re-initialize the submodules, prompting for input before deleting folders
+#+BEGIN_SRC sh
+#!/bin/bash
+
+set -e
+rm -rf .git
+git init
+
+git config -f .gitmodules --get-regexp '^submodule\..*\.path$' > tempfile
+
+while read -u 3 path_key path
+do
+    url_key=$(echo $path_key | sed 's/\.path/.url/')
+    url=$(git config -f .gitmodules --get "$url_key")
+
+    read -p "Are you sure you want to delete $path and re-initialize as a new submodule? " yn
+    case $yn in
+        [Yy]* ) rm -rf $path; git submodule add $url $path; echo "$path has been initialized";;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+
+done 3<tempfile
+
+rm tempfile
+#+END_SRC
+*** add submodule respecting branch and repo name.
+
+#+BEGIN_SRC sh
+#!/bin/sh
+
+set -e
+
+git config -f .gitmodules --get-regexp '^submodule\..*\.path$' |
+    while read path_key path
+    do
+        name=$(echo $path_key | sed 's/\submodule\.\(.*\)\.path/\1/')
+        url_key=$(echo $path_key | sed 's/\.path/.url/')
+        branch_key=$(echo $path_key | sed 's/\.path/.branch/')
+        url=$(git config -f .gitmodules --get "$url_key")
+        branch=$(git config -f .gitmodules --get "$branch_key" || echo "master")
+        git submodule add -b $branch --name $name $url $path || continue
+    done
+#+END_SRC

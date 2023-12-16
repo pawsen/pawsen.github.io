@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       1ae8e5ce-004d-4320-b95b-fe0923fb868c
+:END:
+#+title: useful programs
+* Command line video/audio splitter
+https://github.com/c0decracker/video-splitter
+* screenshots/gifs
+https://flameshot.org/
+https://github.com/phw/peek
+* cli
+** nmcli
+cli for networkmanager
+#+begin_src sh
+nmcli device wifi list
+#+end_src
+* Asciinema
+
+The following commands are used to build a recording:
+
+#+begin_src sh
+
+# Install asciinema:
+apt-get install asciinema
+# Setup a window:
+printf '\e[8;26;100t' # set window size to 100x26
+tmux new-session -s preso
+PS1='\n\$ ' # minimal prompt
+# After windows are setup, detach from tmux (Ctrl-B D)
+# Create a recording:
+asciinema rec name.cast -i 3 -c "tmux attach -t preso"
+# Stop the recording by detaching (Ctrl-B D)
+# Tip: Edit the recording to remove the last few milliseconds of the detach
+# Replay the recording:
+asciinema play name.cast
+#+end_src

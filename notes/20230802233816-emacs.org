@@ -1,0 +1,502 @@
+:PROPERTIES:
+:ID:       bb9bf6d5-ec75-4370-a08f-f1a798c584a0
+:END:
+#+title: emacs
+
+* movement
+
+K  / SPC c k : +lookup documentation
+gd / SPC c d : +lookup/definition
+gD / SPC c D : +lookup/references
+SPC c j   Jump to symbol in current workspace
+SPC c J	Jump to symbol in any workspace
+C-o -> jump back
+C-i -> jump forward
+gi -> evil-insert-resume (jump back to last position in insert mode)
+'' -> evil-goto-mark-line
+`` -> evil-goto-mark
+SPC ` -> evil-switch-windows-last-buffer
+S-r -> evil-multiedit-match-all
+ - Highlight word (viw)
+ - S-r
+ - Change words OR C-n/C-p for next/prev word
+| Keybind | Description |
+|---------+-------------|
+| C-`     | toogle popup(useful for switching to terminal) |
+
+z = ispell-word
+https://github.com/emacs-evil/evil-collection#rationale
+
+
+yss <key> -> sourround line. Fx. sourround by print() with =yssf print=
+https://github.com/tpope/vim-surround/blob/master/doc/surround.txt
+
+Ivy
+=SPC SPC= and the =C-o= while opening files brings up a menu.
+C-c C-o	Open a buffer with your search results
+C-c C-e	Open a writable buffer of your search results
+C-SPC	Preview the current candidate
+C-RET	Open the selected candidate in other-window
+
+Changes to the resulting wgrep buffer (opened by C-c C-e) can be committed with
+C-c C-c and aborted with C-c C-k (alternatively ZZ and ZQ, for evil users).
+https://web.archive.org/web/20220331115535/https://hungyi.net/posts/doom-emacs-search-replace-project/
+
+M-s o	occur. Ex find all functions in file =^[^\S\r\n]+def= or better =^[[:blank:]]+def= / =^\s-+def=.
+https://www.emacswiki.org/emacs/RegularExpression
+https://regexr.com/
+https://regex101.com/
+
+
+Use SPC s p to search within a project.
+
+When a search is active:
+Shortcut 	Description
+C-c C-o 	Open a buffer with your search results
+C-c C-e 	Open a writable buffer of your search results
+C-SPC 	Preview the current candidate
+M-RET 	Open the selected candidate in other-window
+
+When a search results buffer is open:
+Shortcut 	Description
+C-c C-c or ZZ 	Commit changes
+C-c C-k or ZQ 	Abort
+
+
+See this on evil-multiedit
+https://narra.co.za/doom-tips-and-howtos/
+
+and this on using =:s= for substituting
+https://www.reddit.com/r/emacs/comments/68oukt/evilmode_problems_searching_and_substituting/
+
+some comments on how to use windows/frames
+https://hungyi.net/posts/tear-off-window-emacs/
+
+Generel usage, good for brushup
+https://noelwelsh.com/posts/doom-emacs/
+
+* moving to text
+
+| Keybind  | Description                                                 |
+|----------+-------------------------------------------------------------|
+| =s/S=    | Snipe move to matching text, cycle matches with =, / ;=     |
+| =gs SPC= | Avy move to matching text                                   |
+| =ys z/Z= | yank sourround with snipe                                   |
+| =ys x/X= | yank sourround with snipe; exclude letters from word-object |
+
+These movements can also be used for creating text objects, ie marking with =vs
+CHARS= or =vg SPC CHARS=. For yank, =ys= is bound to ~evil sourround~, thus the
+alternative keybinding of =z/Z= or =x/X=
+
+** evil surround
+=yse f= insert surround function
+=yse t= insert surround tag
+=cs'"= change ' with "
+=ds'= delete '
+
+=yse b= insert ()
+=yse B= insert {}
+
+phonetics:
+=y= yank or insert
+=d= delete
+=c= change
+
+The letters =w=, =W=, and =s= correspond to a |word|, a |WORD|, and
+a |sentence|, respectively. These are special in that they have nothing to
+delete, and used with |ds| they are a no-op. With |cs|, one could consider them
+a slight shortcut for =ysi= (cswb == =ysiwb=, more or less).
+
+A =p= represents a |paragraph|. This similarly to w, W, and s above; however,
+newlines are sometimes added and/or removed.
+
+The target(what comes after eg. *ys*) takes a wim motion or text object. The
+difference is that motion, e.g., =cw=, operates from the current cursor
+position. A command using a text-object, e.g., =ciw= operates on the whole
+object regardless of the cursor position.
+
+There are two text objects(=a= and =i=), for the three building blocks of
+plaintext: words, sentences and paragraphs.
+=aw= around word
+=iw= inner word
+
+=f= forward to char
+=F= backward
+=t= till before char
+=T= backwards untill
+
+Use =,= and =;= to jump to the previous and next occurrence of the character
+found with t, T, f, or F.
+
+evil-indent-plus
+- =ii= A block of text with the same or higher indentation.
+- =ik= A block of text with the same or higher indentation, including the first
+  line above with less indentation.
+- =ij= A block of text with the same or higher indentation, including the first
+  line above and below with less indentation.
+
+See [[https://github.com/emacs-evil/evil-surround/blob/master/evil-surround.el#L52-L67][code]] and detailed [[https://github.com/tpope/vim-surround/blob/master/doc/surround.txt][examples]]. Also the [[http://vimdoc.sourceforge.net/htmldoc/motion.html#text-objects][motion]]- and general [[http://vimdoc.sourceforge.net/htmldoc/help.html][vim-help]] and [[https://vim.rtorr.com/][cheat sheet]].
+
+* narrowing / multiple cursors
+
+Narrow also works on text objetcs
+| Keybind          | Description                                                           |
+|------------------+-----------------------------------------------------------------------|
+| =zn=             | narrow                                                                |
+| =zw=             | widen                                                                 |
+| =C-x nd=         | narrow defunc                                                         |
+|------------------+-----------------------------------------------------------------------|
+| ~evil-multiedit~ |                                                                       |
+| =R=              | Select a word, press =R= to select the rest. Useful with narrow first |
+| =M d/D=          | Select next/prev candidate of current selection                       |
+| =C-n/p=          | Next/previous region                                                  |
+| ~evil-mc~        |                                                                       |
+| =gz=             | ~mc-hydra~                                                            |
+
+* org
+
+| keybind           | Description                                                       |
+|-------------------+-------------------------------------------------------------------|
+| =[[*=  C-SPC      | Insert internal link to heading (ie. complete after typing =[[*=) |
+| =[[*]]=  C-SPC    | Insert link to roam (ie complete after typing =[[*]]=)            |
+| SPC n l / C-c C-l | Copy link id / Insert link id                                     |
+|                   |                                                                   |
+
+** babel
+=C-c C-v d=, insert org src-blocks. If it is invoked within a code block will split it into two separate code blocks, and if it is invoked outside a code block will surround the current selection with a new code block
+=C-c C-,=, insert environment defined in =org-structure-template-alist=
+https://stackoverflow.com/a/54330547
+
+These are the languages org can evaluate.
+[[https://orgmode.org/worg/org-contrib/babel/languages/index.html][babel laungages]] shows 'out-of-the-box' enabled languages.
+
+See currently enabled languages with =C-h v= =org-babel-load-language=
+
+** highlight code blocks
+org-mode just appends =-mode= to the language name given and tries to find a major mode function.
+Emacs lisp function names are case sensitive.
+
+We can get a list of all such functions by typing =C-h a= =-mode$=, i.e. search
+for all functions that end with -mode, but the resulting list contains many
+modes that are not major modes for programming languages.
+
+For more complicated mappings, org uses the alias mapping, (key, value), in =org-src-lang-modes=. See them with =C-h v=.
+
+** email example
+#+begin_src org
+#+attr_html: :width 100px
+#+attr_latex: :width 100px
+[[~/images/example.jpg]]
+
+#+CAPTION: Weight space
+#+ATTR_HTML: :alt neural network :title Neural network representation :align right
+#+ATTR_HTML: :width 50% :height 50%
+https://i.stack.imgur.com/nzHSl.jpg
+
+
+Maybe there's a *caption*?
+#+caption: small gold moon
+#+attr_html: width 100px
+[[file:dark_city_small_gold_moon.jpg]]
+
+Here we're /talking/
+#+attr_html: width 100px
+[[file:auditorio-de-tenerife2.jpg]]
+
+#+BEGIN_QUOTE
+To be or not to be in Emacs?
+#+END_QUOTE
+
+
+ Regards,
+ #+begin_signature
+ -- *Paw* \\
+ #+end_signature
+#+end_src
+
+* code completion
+company:
+
+By default, completion is triggered after a short idle period or with the
+=C-SPC= key. While the popup is visible, the following keys are available:
+
+| Keybind | Description                              |
+|---------+------------------------------------------|
+| =C-n=   | Go to next candidate                     |
+| =C-p=   | Go to previous candidate                 |
+| =C-j=   | (evil) Go to next candidate              |
+| =C-k=   | (evil) Go to previous candidate          |
+| =C-h=   | Display documentation (if available)     |
+| =C-u=   | Move to previous page of candidates      |
+| =C-d=   | Move to next page of candidates          |
+| =C-s=   | Filter candidates                        |
+| =C-S-s= | Search candidates with helm/ivy          |
+| =C-SPC= | Complete common                          |
+| =TAB=   | Complete common or select next candidate |
+| =S-TAB= | Select previous candidate                |
+
+** Vim-esque omni-completion prefix (C-x)
+In the spirit of Vim's omni-completion, the following ~insert mode~ keybinds are
+available to evil users to access specific company backends.
+| Keybind   | Description                       |
+|-----------+-----------------------------------|
+| =C-x C-]= | Complete etags                    |
+| =C-x C-f= | Complete file path                |
+| =C-x C-k= | Complete from dictionary/keyword  |
+| =C-x C-l= | Complete full line                |
+| =C-x C-o= | Invoke complete-at-point function |
+| =C-x C-n= | Complete next symbol at point     |
+| =C-x C-p= | Complete previous symbol at point |
+| =C-x C-s= | Complete snippet                  |
+| =C-x s=   | Complete spelling suggestions     |
+
+Fx, typing =/etc/f=, then pressing =C-x C-f= will complete the path
+
+* searching
+ivy:
+
+These keybindings are available while a search is active:
+
+| Keybind   | Description                                                        |
+|-----------+--------------------------------------------------------------------|
+| =C-RET=   | Open the selected candidate in other-window                        |
+| =C-SPC=   | Preview the current candidate                                      |
+| =C-c C-o= | Open a buffer with your search results                             |
+| =C-c C-e= | Open a writable buffer of your search results                      |
+|-----------+--------------------------------------------------------------------|
+| =C-j/k=   | In buffer(=C-c C-o=): open next/prev result without changing focus |
+| =C-o=     | open result without changing focus                                 |
+| =g o=     | ~ivy-occur-dispatch~                                               |
+
+* rectangle edit
+https://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html
+
+https://emacs.stackexchange.com/a/19
+In evil-mode you can use =evil-visual-block= (default binding of =C-v=) to select a rectangle visually.
+* marking
+M-@ : mark word. Only mark from cursor position and forward
+viw : evil mark word
+
+* dired
+https://github.com/emacs-evil/evil-collection/blob/master/modes/dired/evil-collection-dired.el
+| keybind             | Description                                    |
+|---------------------+------------------------------------------------|
+| % m                 | regex mark                                     |
+| t                   | toogle mark                                    |
+| I                   | insert content of subdir                       |
+| g$                  | hide subdir                                    |
+| S-ret               | open file in other window                      |
+| SPC-u I             | Change ls flags; fx add -R to list all subdirs |
+| dired-narrow-regexp | narrow dired to expression                     |
+
+** multiedit
+=R= to select all occurences in visual mode
+=M-d= and =M-D= match symbol and next/prev
+=C-M-d= to restore selection
+=RET= to toogle selection
+
+#+NAME: bindings
+#+BEGIN_SRC lisp
+;; evil-multiedit
+:v  "R"     #'evil-multiedit-match-all
+:n  "M-d"   #'evil-multiedit-match-symbol-and-next
+:n  "M-D"   #'evil-multiedit-match-symbol-and-prev
+:v  "M-d"   #'evil-multiedit-match-and-next
+:v  "M-D"   #'evil-multiedit-match-and-prev
+:nv "C-M-d" #'evil-multiedit-restore
+(:after evil-multiedit
+  (:map evil-multiedit-state-map
+    "M-d" #'evil-multiedit-match-and-next
+    "M-D" #'evil-multiedit-match-and-prev
+    "RET" #'evil-multiedit-toggle-or-restrict-region)
+  (:map (evil-multiedit-state-map evil-multiedit-insert-state-map)
+    "C-n" #'evil-multiedit-next
+    "C-p" #'evil-multiedit-prev))
+
+;; evil-mc
+(:prefix "gz"
+  :nv "m" #'evil-mc-make-all-cursors
+  :nv "u" #'evil-mc-undo-all-cursors
+  :nv "z" #'+evil/mc-toggle-cursors
+  :nv "c" #'+evil/mc-make-cursor-here
+  :nv "n" #'evil-mc-make-and-goto-next-cursor
+  :nv "p" #'evil-mc-make-and-goto-prev-cursor
+  :nv "N" #'evil-mc-make-and-goto-last-cursor
+  :nv "P" #'evil-mc-make-and-goto-first-cursor)
+(:after evil-mc
+  :map evil-mc-key-map
+  :nv "C-n" #'evil-mc-make-and-goto-next-cursor
+  :nv "C-N" #'evil-mc-make-and-goto-last-cursor
+  :nv "C-p" #'evil-mc-make-and-goto-prev-cursor
+  :nv "C-P" #'evil-mc-make-and-goto-first-cursor)
+#+END_SRC
+** company
+https://github.com/hlissner/doom-emacs/tree/develop/modules/completion/company
+the following insert mode keybinds are available to evil users to access
+specific company backends:
+
+Keybind	Description
+C-x C-]	Complete etags
+C-x C-f	Complete file path
+C-x C-k	Complete from dictionary/keyword
+C-x C-l	Complete full line
+C-x C-o	Invoke complete-at-point function
+C-x C-n	Complete next symbol at point
+C-x C-p	Complete previous symbol at point
+C-x C-s	Complete snippet
+C-x s	Complete spelling suggestions
+** tips
+=gv= visual restore. Reselect the text
+=gc= comment
+=ea= insert at the end of the word
+While ivy search is active, open wgrep buffer =C-c C-e=. Changes are committed
+with =C-c C-c= and aborted with =C-c C-k= (=ZZ= or =ZQ= for evil)
+=SPC '= resume last ivy session
+=M-o= opens hydra when search is active
+=C-w= n: evil-window-map
+="ayy= This will store the line in register a.
+="ap= This will put the contents of register a at the cursor.
+** insert mode
+- =C-w= evil-delete-backward-word
+- C-k evil-insert-digraph( =C-k aa= inserts å)
+- C-r evil-paste-from-register.
+  ="= and =+= is default register(system clipboard), ie =C-r "= is like =p=.
+  See the register with =: reg= or =M-SPC i r= or paste using =councel-yank-pop= (=SPC y p=)
+  ="+yy= and ="+p= copies to and from the default register.
+  =*= is "mouse selection and middle click" register. They are named quoteplus
+  and quotestar.
+- C-y evil-copy-from-above. Copy char above
+- C-t evil-shift-right-line. Indent
+- C-d evil-shift-left-line. Remove indent
+
+* projectile
+Make projectile discover your projects
+
+=M-x projectile-discover-projects-in-directory= and then give the path to the
+dir containing the projects. Fx =~/code=
+
+Now projects can easily be opened with =SPC p p=
+
+=M-x projectile-invalidate-cache= bound to  =SPC p i=
+* magit
+
+| key       | desc                           |
+|-----------+--------------------------------|
+| backspace | magit-diff-show-or-scroll-down |
+| RET       | magit-show-commit              |
+|           |                                |
+
+
+** See diffs for two commits side-by-side
+=M-x magit-toggle-buffer-lock=
+
+See the diffs associated with the two commits in two separate magit-revision
+buffers. You can accomplish this by loading up the first diff in the usual way
+(e.g. by hitting =RET= or =BACKSPACE= on it in a log view), running =M-x
+magit-toggle-buffer-lock= so that the buffer becomes pinned to that particular
+view, and then loading up the second diff in the usual way.
+
+Using =RET= the old buffer might be switched, but due to the =buffer-lock= it is
+still available in the buffer list.
+
+** Compare two commits
+Maybe:
+https://emacs.stackexchange.com/a/27967
+
+* lsp
+
+=lsp-describe-session= will show you the project layout and then =lsp-workspace-folder-add/remove= to create the proper project layout.
+Projects are saved in =~/.emacs.d/.local/etc/lsp-session=
+
+* comments on debugging facilities
+#+begin_src lisp
+;;;; * Debugging, Tracing, and Profiling
+
+;; M-: (info "(elisp) Debugging") RET
+
+;; Standard debugger:
+;; M-x debug-on-entry FUNCTION
+;; M-x cancel-debug-on-entry &optional FUNCTION
+;; debug &rest DEBUGGER-ARGS
+;; M-x toggle-debug-on-error
+;; M-x toggle-debug-on-quit
+;; setq debug-on-signal
+;; setq debug-on-next-call
+;; setq debug-on-event
+;; setq debug-on-message REGEXP
+
+;; Edebug -- a source-level debugger for Emacs Lisp
+;; M-x edebug-defun (C-u C-M-x) Cancel with eval-defun (C-M-x)
+;; M-x edebug-all-defs -- Toggle edebugging of all definitions
+;; M-x edebug-all-forms -- Toggle edebugging of all forms
+;; M-x edebug-eval-top-level-form
+
+;; Tracing:
+;; M-x trace-function FUNCTION &optional BUFFER
+;; M-x untrace-function FUNCTION
+;; M-x untrace-all
+
+;; Timing and benchmarking:
+;; (benchmark-run &optional REPETITIONS &rest FORMS)
+
+;; Emacs Lisp Profiler (ELP)
+;; M-x elp-instrument-package
+;; M-x elp-instrument-list
+;; M-x elp-instrument-function
+;; M-x elp-reset-*
+;; M-x elp-results
+;; M-x elp-restore-all
+;;
+;; "There's a built-in profiler called ELP. You can try something like
+;; M-x elp-instrument-package, enter "vc", and then try finding a file
+;; Afterwards, M-x elp-results will show you a profile report.
+;; (Note that if the time is instead being spent in non-vc-related
+;; functions, this technique will not show it, but you can instrument
+;; further packages if you like.)" http://stackoverflow.com/a/6732810/324105
+
+;; CPU & Memory Profiler ('Native Profiler')
+;; M-x profiler-start
+;; M-x profiler-report
+;; M-x profiler-reset
+;; M-x profiler-stop
+;; M-x profiler-*
+
+;; Dope ("DOtemacs ProfilEr. A per-sexp-evaltime profiler.")
+;; https://raw.github.com/emacsmirror/dope/master/dope.el
+;; M-x dope-quick-start will show a little introduction tutorial.
+
+;; Spinning:
+;; Set debug-on-quit to t
+;; When the problem happens, hit C-g for a backtrace.
+
+#+end_src
+* insert unicode characters
+=quoted-insert= is bound to =C-q= in normal mode and =C-v= in insert mode.
+
+#+begin_quote
+The variable =read-quoted-char-radix= specifies the radix for this feature; set
+it to 10 or 16 to use decimal or hex instead of octal.
+
+Unicode chars are often described by their hex-code, thus set
+(setq read-quoted-char-radix 16)
+#+end_quote
+
+eg, =C-v 21d2 RET= in insert mode will put the ⇒ arrow.
+Reverse lookup is done by =SPC i u= or =C-x 8 ret=
+
+
+(the =C-x 8= could have been chosen to remind us that the default input radix is
+8 (octal))
+
+=C-x 8= also has many shortcuts for inserting common characters. In this case,
+=C-x 8 o= inserts "°". The =C-x 8= keymap is a good place to define own
+shortcuts, to insert the characters you use most often.
+
+*** Change input-method
+: M-x set-input-method TeX
+
+Then type something like =\alpha= — it will be replaced with the corresponding
+Unicode character. You can switch the input method off by typing =C-\=.
+
+You can find all the supported TeX commands with
+: M-x describe-input-method
