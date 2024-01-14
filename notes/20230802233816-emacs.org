@@ -213,6 +213,8 @@ To be or not to be in Emacs?
  -- *Paw* \\
  #+end_signature
 #+end_src
+** GTD workflow
+https://daryl.wakatara.com/emacs-gtd-flow-evolved/
 
 * code completion
 company:

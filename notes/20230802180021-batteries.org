@@ -18,10 +18,11 @@ For batteries
 ** dimensions
 According to the table below
 
-[[*Nickel strips]]
 
 #+NAME: fig:amp
 #+CAPTION: https://endless-sphere.com/sphere/threads/nickel-strip-ratings.98849/post-1447486
+
+
 [[attachment:Ampacity (Powestream extrapolation).jpg]]
 
 

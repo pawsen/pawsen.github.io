@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       95205077-78e3-4051-af30-2d357bf3e2f2
+:END:
+#+title: welding
+
+* Tig
+https://www.weldingtipsandtricks.com/tig-welding-interview.html
+
+Strømregel ca 40 amp. pr. mm plade (indtil ca 3.2mm ).
+A little more than one amp for aluminum
+A little less than one amp for stainless
+
+Argon manometerflov 8 til 12 liter.
+Wolframtråden ca. 1mm fra emnet, svejsestilling næsten lodret (+- 15 grader)
+
+Når jeg sliber elektroder plejer jeg at sætte dem i en boremaskine, for at dreje dem regelmæssigt, men ikke for hurtigt rundt på båndsliberen. Hvis man sliber væk fra spidsen hjælper man til at transportere varmen væk fra den, så den ikke gløder op.
+2,5 x diameter på wolfram sliber du den op, ca!
+Så hvis du kører med 1,6mm wolfram sliber du ca. 4mm op.
