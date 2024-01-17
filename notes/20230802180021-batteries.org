@@ -49,6 +49,78 @@ test because you get the result instantly. But if you’re still in doubt, go
 ahead and toss the piece in salt water after you’re done grinding on it, and
 that will verify the results of the grinding wheel test.
 
+* Testing :ATTACH:
+
+#+CAPTION: flow chart for testing used batteries
+#+CAPTION: https://secondlifestorage.com/index.php?threads/18650-harvesting-flow-charts.9714
+[[attachment:_20240117_134522index.php.jpeg]]
+
+** Internal resistance
+DC and AC IR, [[https://secondlifestorage.com/index.php?threads/dc-ir-vs-ac-1kh-ir-measurements.9471/post-64654][thread]]. Theoretical info on how to measure IR can be found in this paper, [[https://sci-hub.se/10.3390/s100605604][Comparison of methods for determining IR]]
+
+Use the AC IR as screening tool before the C/D/C (charge/discharge/charge) cycle. Too high internal resistance and the cell should be discarded.
+
+The advantage of AC IR is that the cell can be tested at a lower voltage and still give accurate results. The same cannot be said for DC IR, where the cell needs to be charged.
+
+*** AC IR :ATTACH:
+
+AC IR is most useful as a coarse first-level screening tool, to weed out unhealthy or damaged cells. It cannot be used for more refined analyses because it does not incorporate the non-ohmic components of IR
+
+However, this [[https://docs.google.com/spreadsheets/d/1n6DU0VC7Yjksz2ah90VUcpw6SW6kFqQt/edit#gid=1042577799][IR cheat sheet]] give maximum and optimal AC IR values for different cells. And this [[https://secondlifestorage.com/index.php?threads/dc-ir-vs-ac-1kh-ir-measurements.9471/post-66400][post]] shows that AC & DC IR correlates(shown below as well)
+#+CAPTION: AC & DC IR measurements
+[[attachment:_20240117_15553520341-0abdeb4398e2d17212a3aa109e6b96a9.jpg]]
+
+#+CAPTION: SOH vs AC & DC IR
+[[attachment:_20240117_1551034755-1d484a0665d4c8b6866f08dc47a918e6.jpg]]
+
+The current observation is that AC IR so far has been a very good indicator of a cells SOH with DC IR confirming it.
+AC IR can indicate a cells SOH even at low V i.e. a cells cutoff V of ≈2.8V to 2.5V and even below that, where DC IR needs the cell to be at least ≈3.2V to get a reasonably respectable reading.
+
+*** dc IR
+DC IR match real life usage of cells best, but it's time consuming, requires 30<SoC<80% and expensive equipment to measure. [[https://secondlifestorage.com/index.php?threads/opus-bt-c3100-wire-mod-results.9374/post-64352][This post]] shows how DC IR changes for low and high SoC
+30<SoC<80% correspond approximately to OCV of 3.8-3.9V. See the link in the OCV section.
+
+- *Low frequency*, ie 1Hz, AC-IR is a valid alternative for DC-IR measurement
+- AC-IR reduces measurement time dramatically
+- Possible to measure resistance of 1mΩ or less accurately
+- 4-terminal pair test leads required to measure low resistance with AC-IR
+- the cheap standard 1kHz ac IR measuring device does not correlate with DC IR. (ie. emphasise the low frequency of 1Hz)
+*** importance of IR matching
+It is known that poor (DC) IR matching can lead to significant reduction in life, e.g. below
+#+begin_src quote
+Gogoana et al. [13] cycle-aged two cylindrical lithium iron phosphate (LFP) cells connected in parallel. They found that a 20% difference in internal resistance resulted in a 40% reduction in the useful life of the pair of cells compared to if the cells had approximately equal internal resistances. The authors attribute this to the uneven current distribution between the cells. Their results highlight that each cell will go through periods where it experiences high currents that will in turn age the cells more quickly.
+
+Gong et al. [1] drew similar conclusions from their experimental work with 32 Ah cells. When two cells with a 20% impedance difference were connected in parallel, the peak current experienced was 40% higher than if the cells were identical. The authors also performed simulation studies, using the Mathwork's Simscape extension to Simulink to connect two equivalent circuit models (ECMs) in parallel. This is one of the few examples of parallel cell modelling within the literature from Modelling and experimental evaluation of parallel connected lithium ion cells for an electric vehicle battery system
+#+end_src
+https://sci-hub.se/http://dx.doi.org/10.1016/j.jpowsour.2016.01.001
+
+** SoC or State of Charge :ATTACH:
+
+*** Open Circuit Voltage :ATTACH:
+Lead-acid batteries have a relatively discharge linear curve, which allows a good estimation of the state of charge.
+Lithium-ion batteries have a much flatter discharge curve, which means that over a wide operating range, the voltage at the battery terminals changes very slightly.
+
+#+CAPTION: Open Circuit voltage, liion VS Lead Acid
+[[attachment:_20240117_141842OCV-vs-SOC-EN.png]]
+
+
+Experimental OCV vs SoC is found [[https://lygte-info.dk/info/BatteryChargePercent%20UK.html][here]](see *tables*  section after the images) and summarized here
+#+CAPTION: Estimated remaining capacity, OCV
+[[attachment:_20240117_142835BatteryChargePercent.png]]
+
+
+*** Coulomb Counting
+
+To track the state of charge when using the battery, the most intuitive method is to follow the current by integrating it during cell use. This integration directly gives the quantity of electrical charges injected or withdrawn from the battery, thus making it possible to precisely quantify the SoC of the battery.
+
+Small measurement errors may occur, related to the sampling frequency. To correct these marginal errors, the coulomb counter is recalibrated at each load cycle.
+** SoH or State of Health
+
+SoH = Q_{max} Q_{rated}
+** Repacking
+See [[https://docs.google.com/spreadsheets/d/1e2962wuNumstvv6UMLi-F7xVHQFWlMr1/edit#gid=1526562313][Repackr with IR and 80x14.xlsm]] for creating matching battery packages.
+Found from https://drive.google.com/drive/folders/1UOQUXa4Kwa99KoeuNDe7EV3iSECb8iIs
+
 * PowerWall
 ** Fuses
 
