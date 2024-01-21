@@ -1,0 +1,91 @@
+:PROPERTIES:
+:ID:       8a517a77-f336-4f67-991c-2906aad3795c
+:END:
+#+title: 3d printing
+
+* Increasing model strength
+The strength of a model is mostly defined by the number of perimeters (not infill). If you want to have a stronger print, increase the number of perimeters. That said, infill does help with compression resistance.
+
+* Infill stiffness :ATTACH:
+
+[[https://www.printables.com/model/120194-infill-stiffness-demo-test-collection-from-tpu][Infill stiffness demo]], pictures below
+
+#+CAPTION: Infill patters
+[[attachment:_20240120_212856271950264_10222111009867444_8256496233515063002_n.webp]]
+
+#+CAPTION: Filament usage and print time
+[[attachment:_20240120_212924271961371_10222111009787442_7182615361503010877_n.webp]]
+
+- The two stiffest ones are cubic and gyroid, but cubic is stiffer and much faster! Printing the same size of infill takes 50% longer with gyroid
+- if you look for filament efficient option, go for adaptive cubic. It’s still quite strong, but very quick and efficient!
+
+From [[https://help.prusa3d.com/article/infill-patterns_177130][prusa documentation]]
+- The Gyroid is our favorite and one of the best infills. It’s one of the few 3D structures that provide great support in every direction.
+
+* Things
+** Tools
+Milwaukee M18 Battery Holder
+https://www.printables.com/model/135373-milwaukee-m18-battery-holder
+
+Angle grinder Drill bit sharpener
+https://www.printables.com/model/643333-dangerous-for-use-drill-bit-sharpener
+
+** Prusa
+*** nozzle stuff
+[[https://www.printables.com/model/624027-mk4-nextruder-nozzle-change-heater-block-clamp][nozzle change fixture]] and for bling, this [[https://forum.prusa3d.com/forum/english-forum-awesome-prints-hall-of-fame/very-nice-prusa-nextruder-nozzle-box-for-mk4/][nozzle storing box]].
+
+*** Enclosure
+[[https://blog.prusa3d.com/cheap-simple-3d-printer-enclosure_7785/][DIY IKEA based enclosure]]
+
+** Guns
+
+*** brief history
+The first 3d-printed gun that got media attention was the [[https://en.wikipedia.org/wiki/Liberator_(gun)][Liberator]]. With careful sprint settings it has a lifespan of  8–10 shots.
+
+The history of 3d printed guns: [[https://odysee.com/@THOR.THE.GOD:b/history-of-3d-printed-guns-%28re-upload%29:b][part 1]], [[https://youtu.be/XAPM3sX5G_s?feature=shared][part2]] and a [[https://en.wikipedia.org/wiki/List_of_3D_printed_weapons_and_parts][list of 3D printed guns]].
+
+A well know gun is the [[https://en.wikipedia.org/wiki/FGC-9][FGC-9 Mk2]] (FGC: Fuck Gun Control). The creator JStark1809 died of heart related issues shortly after an arrest/search in Germany. He was 28, approx.
+*** Electrochemical etching / ECM :ATTACH:
+[[https://youtu.be/TSM6fBdmuso][High level overview]] by [[https://www.youtube.com/@IvanPrintsGuns][IvanPrintsGuns]]
+
+This zip file, [[attachment:794331711_ECM v2.1 Barrelmaking Package.zip][794331711_ECM v2.1 Barrelmaking Package.zip]] or [[https://odysee.com/@TheGatalog-Guides_Tutorials:b/DIY-ECM-Barrelmaking:d][online copy]], details the process (ie. stl files, readme, etc) and is a companion to the video.
+* Filaments
+** Shrinkage :ATTACH:
+Print this file [[attachment:shrinkage+exposure_calibration.stl][shrinkage+exposure_calibration.stl]]
+
+On one side measure the distances of the inner sides with a caliper, on the other side measure the distance between the outer sides. Try to measure the distances without the influence of the first few layers to avoid bias due to elephant foot.
+
+You can use the calculator here to calculate the results: https://yaqwsx.github.io/printer-calculator/#/shrinkage
+
+The calculator is intended for resin printers but shrinkage is still shrinkage and the "exposure bleeding" indicates overextrusion, even if negative values appear to mean overextrusion rather than underextrusion.
+** TPU
+Shore hardness test measures the hardness of elastic materials such as rubber, polymers and elastomers.
+A higher Shore value indicates a harder material
+
+- Soft TPU (Shore 85A-88A): Extremely flexible and elastic. Can be stretched up to 700-1000% of its original length. Typically used for printing components that require high flexibility, such as phone cases and watchbands.
+- Medium TPU (Shore 90A): Possesses good flexibility and durability. Can be stretched approximately 500% of its original length. Used for drone components, orthotic inserts, sports equipment, etc. This is the most common type of TPU used in 3D printing.
+- Hard TPU (Shore 95A): Still flexible but more rigid. Maximum stretch of around 200-300% of original length. Suitable for applications that require a degree of flexibility as well as support, e.g. electronic enclosures, insoles, toys, handles, etc.
+
+[[https://ninjatek.com/shop/compare-filaments/?compare%5B%5D=ninjaflex&compare%5B%5D=edge&compare%5B%5D=chinchilla&compare%5B%5D=eel&compare%5B%5D=cheetah&compare%5B%5D=armadillo][NinjaTek TPU comparison]]
+
+95A is the general, cheap TPU.
+
+Use retraction for very flexible filaments, to prevent pressure buildup in the extruder.
+
+*** Where to buy
+[[https://www.amazon.com/YOYI-Filament-Dimensional-Filaments-Elasticity/dp/B0CG61JNTP][Yoyi 95A on Amazon]]
+
+*** print settings
+https://www.reddit.com/r/prusa3d/comments/17og5hj/comment/k7yt05p
+
+Or use generic TPU profile, fx =flex/AmazonBasic=
+
+** PETG
+https://www.amazon.com/Polymaker-PolyLite-Printer-Filament-Packaging/dp/B09ZY56ZCH
+
+*** Drying
+PETG absorbs more moisture than PLA or ABS filament. I
+
+- Food hydrator, https://amzn.to/3FtLqK4 This one will work any circular one with an adjustable temp should do fine. You will have to cut out the grate between the levels to get the spool to fit.
+- CNC Kitchen made a great video on making a dry box from scratch. https://youtu.be/WEFtUKGAd7k I would also recommend drying your filament for 24 hours.
+- get a dryer, https://www.amazon.com/dp/B08C9RZPMN this is the one I use.
