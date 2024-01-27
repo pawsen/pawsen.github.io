@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       1f55415f-c0da-4857-a63e-36ec02429201
+:END:
+#+title: woodworking
+
+
+Best youtube channel for woodworking, [[https://www.youtube.com/@WorkshopCompanion][Workshop Companion]]
+
+* Tools
+** Domino joints :ATTACH:
+
+[[attachment:_20240121_212722maxresdefault.jpg]]
+Use a [[https://www.amazon.com/gp/product/B000K9PL14][Premium Doweling Jig]] as demonstrated by [[https://youtu.be/jgAHkyVjpzQ?feature=shared][Workshop Companion]]

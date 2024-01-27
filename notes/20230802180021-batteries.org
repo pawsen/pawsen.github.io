@@ -145,3 +145,47 @@ Three types of cell fuse
 
 #+CAPTION: nickel fuse strip
 [[file:~/git/org/.attach/files/strip.jpg]]
+
+* LiFePO4 in car
+
+All prices in EUR
+| Name                | Description                                               |  price | url                                                                                                          |
+|---------------------+-----------------------------------------------------------+--------+--------------------------------------------------------------------------------------------------------------|
+| Battery             | 12V, 100A, LiFePO4 with Temp Protection,                  |    289 | https://www.litime.de/products/litime-12v-100ah-tm-lifepo4-batterie-tieftemperaturschutz-fur-trollingmotoren |
+| Inverter            | Pure sine, 1000W. Try to search for a used                |    138 | https://www.ebay.de/itm/203074673536                                                                         |
+| 230V charger        | 14.6V, 20A, XT60 and eu plug                              |   53.7 | https://www.aliexpress.com/item/32831716444.html                                                             |
+| dc-dc charger       | 14.6V, 10A                                                |   50,4 | https://www.aliexpress.com/item/1005006128785637.html                                                        |
+| 60A Circuit breaker | 12V, between alternator/starter battery and dc-dc charger |    3.8 | https://www.aliexpress.com/item/1005006161099930.html                                                        |
+| 200A mega fuse      | 12V, between battery and inverter,                        |   1.16 | https://www.aliexpress.com/item/1005006113042292.html                                                        |
+| XT60 connector      | 5 pcs, pairs                                              |   0.46 | https://www.aliexpress.com/item/1005005643878854.html                                                        |
+| battery voltmeter   | Alt. use Coulomb counter. See link below                  |   4.66 | https://www.aliexpress.com/item/1005005210816625.html                                                        |
+| 2AWG cables         | 2x, connecting battery to inverter, 30 cm, 115A @ 75℃     |  2*2.4 | https://www.aliexpress.com/item/1005005741206301.html                                                        |
+| 10AWG cable         | connecting charger plug to battery, 2m, 35A @ 75℃         |   14.8 | https://www.aliexpress.com/item/1005001732356744.html                                                        |
+| 14AWG cable         | connecting charger plug to battery, 2m, 20A @ 75℃         |    5.9 | https://www.aliexpress.com/item/1005001732356744.html                                                        |
+| usb PD charger      | SW3518s module, only buck, 2 channel 100W                 |     10 | https://www.aliexpress.com/item/1005004331359699.html                                                        |
+| boost converter     | 50W, for boosting input to SW3518s from 12V to 21V        |      2 | https://www.aliexpress.com/item/1005003044909360.html                                                        |
+|---------------------+-----------------------------------------------------------+--------+--------------------------------------------------------------------------------------------------------------|
+| total               |                                                           | 582.28 |                                                                                                              |
+#+TBLFM: @>$3=vsum(@2..@-1)
+
+1. The battery is recommended by https://www.mobile-solarpower.com/lithium-batteries.html
+   That's Will Prowse,https://www.youtube.com/@WillProwse. According to Reddit he's legit.
+2. The mega fuse between battery and inverter:
+        Let's pretend we have a 1500W inverter
+        1500W / 12V = 125A
+        125A X 1.25(safety factor) = 156.25A
+        choose 200A
+3. usb PD charger: there's a *difference* between SW3518s and SW3518
+4. The ampacity for the cables are from https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
+
+Alternatives
+| Name                 | Description                       | price | url                                                      |
+|----------------------+-----------------------------------+-------+----------------------------------------------------------|
+| coulomb counter      | Instead of voltmeter              |    14 | https://www.aliexpress.com/item/1005005297360206.html    |
+| dc-dc charger        | 3A, CC CV                         |   2.4 | https://www.aliexpress.com/item/1005004022655532.html    |
+| dc-dc charger        | deluxe, 8A                        |    65 | https://powerwerx.com/dcdc-charger-lifepo4-8a-adjustable |
+| dc-dc charger        | 30A, choose without bluetooth&nfc |   112 | https://www.aliexpress.com/item/1005002247278366.html    |
+| dc-dc charger        | 8A, looks ok for the price        |    45 | https://www.aliexpress.com/item/1005005705151923.html    |
+| car fuse, mini blade | 5A or 7.5A, 10 pcs                |   4.3 | https://www.aliexpress.com/item/1005006215756284.html    |
+| male car plug        |                                   |   0.8 | https://www.aliexpress.com/item/1005006368260359.html    |
+| female car plug      |                                   |   0.5 | https://www.aliexpress.com/item/1005005077776924.html    |
