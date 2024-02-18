@@ -7,8 +7,49 @@
 [[https://en.wikipedia.org/wiki/DC_connector][Wikipedia dc connectors]]
 
 For batteries
-- [[https://en.wikipedia.org/wiki/JST_connector][jst]]
-  - SM, locking
+** JST
+A  large number of different types. See [[https://www.mattmillman.com/info/crimpconnectors/common-jst-connector-types/
+][this usefule info]]. [[https://en.wikipedia.org/wiki/JST_connector][wikipedia]] has additional info.
+3d printed [[https://www.printables.com/model/475497-angled-jst-tweezers][tweezers]] for easy removal.
+
+Popular types are (with different pin-to-pin pitch)
+- SM, wire to wire and locking
+- XH, (larger version of the PH) which can be found on aliexpress with 2.54mm pitch(Note that the /official/ connectors has 2.5mm pitch) that fits with dupont headers.
+
+ 
+** XT :ATTACH:
+XT60 and XT90 are often used for bicycle batteries, as Anderson connectors are considered too bulky(and the ampacity is lower than for e.g. LiFePO4 batteries)
+
+3d printed surface/flush [[https://www.thingiverse.com/thing:3340052/files][mount]] for XT60.
+
+If more heavy duty XT-like connectors are needed, the [[https://www.google.com/search?q=QS8+connector][QS8 connector]] carries 110A, up to 6AWG wire and are anti-spark
+
+#+CAPTION: XT90 vs QS8
+[[attachment:_20240218_033152proxy.php.jpeg; charset=utf-8]]
+
+
+** Anderson :ATTACH:
+Relevant here is the Powerpole(single pole) and SB(two or three poles) series. The connectors are genderless/hermaphroditic. See [[https://www.ctals.com.au/collections/what-size-anderson-plug][info]] and [[https://en.wikipedia.org/wiki/Anderson_Powerpole][wikipedia]] for area of uses.
+
+
+NOTE: There's different keying for each colors of the SB series, so they cannot be interchanged(except black and grey). The colors also correspond to different suggested voltages.
+The plugs comes with different pin fits, i.e. the SB50(50A) have plugs for 6, 8 and 10-12 awg cables.
+
+#+CAPTION: Different keying for each colour in the SB50 series
+[[attachment:_20240218_023440220px-Anderson_SB50_Colour_Keying.jpg]]
+
+Buy them from [[https://www.aliexpress.com/item/1005005237025318.html][aliexpress]], remember to select AWG size.
+
+The SB connectors can be flush mounted. Here's a 3d model from [[https://www.thingiverse.com/thing:5835998/files][thingiverse]]
+
+#+CAPTION: Powerpole and SB multipole
+[[attachment:_20240218_024447Single-Pole-vs-Multi-Pole-B.jpg.jpeg]]
+
+PPs can be stacked into any configuration or keying you want, by locking the housings into each other, in rows or columns, and rotated from 0 to 90 to 180 to 270 degrees from each other.
+
+PPs don't directly have a way to screw the housings to things, but there are hardware pieces avalable to lock them together, and to mount them to surfaces. If you have at least three housings in a row, you can put screws thru the retaining pin holes to mount it to a surface.
+
+ You can create a four pin connector by screwing two SBs together back to back. You can "key" this connector in four ways depending on the rotation of each of the two.
 
 * Nickel strips
 :PROPERTIES:
@@ -148,6 +189,11 @@ Three types of cell fuse
 
 * LiFePO4 in car
 
+** charger
+https://www.sportsmobileforum.com/forums/f20/installing-a-kisae-dmt-1250-dc-to-dc-charger-24264.html
+
+** battery
+
 All prices in EUR
 | Name                | Description                                               |  price | url                                                                                                          |
 |---------------------+-----------------------------------------------------------+--------+--------------------------------------------------------------------------------------------------------------|
@@ -177,6 +223,9 @@ All prices in EUR
         choose 200A
 3. usb PD charger: there's a *difference* between SW3518s and SW3518
 4. The ampacity for the cables are from https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
+5. Alternative DC chargers
+   https://www.amazon.com/Renogy-Battery-Batteries-Multi-stage-Charging/dp/B07Q5VYPCF
+
 
 Alternatives
 | Name                 | Description                       | price | url                                                      |
@@ -189,3 +238,73 @@ Alternatives
 | car fuse, mini blade | 5A or 7.5A, 10 pcs                |   4.3 | https://www.aliexpress.com/item/1005006215756284.html    |
 | male car plug        |                                   |   0.8 | https://www.aliexpress.com/item/1005006368260359.html    |
 | female car plug      |                                   |   0.5 | https://www.aliexpress.com/item/1005005077776924.html    |
+** diy :ATTACH:
+
+[[https://diysolarforum.com/threads/horseflys-cabin-solar-lifepo4-upgrade.27472/][Build with heating pads]]. See schematic below and the last page in the post for update: Only one temp. sensor is necsecary
+#+CAPTION: Battery with heating pads
+[[attachment:_20240217_235825cesdce_orig.jpg]]
+
+* tech
+** Wire batteries in parallel :ATTACH:
+Pull from +ve on one battery and -ve of the other battery to ensure even load/wear/resistance
+[[attachment:_20240206_203635How-to-Wire-Batteries-in-Series-and-Parallel-Image-11.jpg]]
+* fuses
+| Category | Type     |                  Ratings(A) |
+|----------+----------+-----------------------------|
+| Blade    | Mini     |                        2-30 |
+| Blade    | Standard |                        1-40 |
+| Blade    | Maxi     |                      20-120 |
+|----------+----------+-----------------------------|
+| Link     | Strip    |                      30-100 |
+| Link     | Midi     |  30-150(32V) OR 30-100(58V) |
+| Link     | Mega     | 40-500(32V) OR 125-300(58V) |
+|----------+----------+-----------------------------|
+| ANL      |          |                        -500 |
+
+Remember to sellect the correct voltage as well
+
+Blade fuses are now the most commonly used category of fuses with almost every
+new vehicle featuring one or more of the different types. They push-fit into
+fuse holders or boxes and are held in place by friction.
+
+MIDI fuse 32 Vdc / 58 Vdc
+
+MEGA fuse 32 Vdc / 58 Vdc
+
+ANL fuse 80 Vdc
+
+The ANL fuse is a bolt-down fuse and can be an alternative for the MEGA fuse and
+is a fast acting fuse. ANL fuses are good for any bigger loads such as
+Inverters, charge controllers, power distribution panels, or as the main battery
+/ system fuse.
+
+* Wires :ATTACH:
+Use [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][Table of AWG wires]] to get initial recommendation.
+And depending on length, use the [[http://assets.bluesea.com/files/resources/newsletter/images/DC_wire_selection_chartlg.jpg][awg selection chart]]
+
+#+CAPTION: AWG selection chart
+[[attachment:_20240218_005227DC_wire_selection_chartlg.jpg]]
+
+** Crimpers
+Three recommended crimpers that can crimp most things
+- [[https://www.amazon.com/Insulated-Non-Insulated-Klein-Tools-1005/dp/B0006M6Y5M][Klein Tools 1005]], for 10-22 AWG or the cheaper [[https://www.amazon.com/dp/B00004SBDI][Channellock 909 9.5-Inch Wire Crimping Tool]] (I bought the latter)
+  Note: There's die for insulated and non-insulated connectors. The die possitions are (possible) reversed on the Klein- vs Channellock tool. That's the only difference between them.
+- [[https://www.amazon.com/gp/product/B017S9EINA][Hexagon crimping tool]], for 2-10 AWG, (iCrimp Cable Lug Crimping Tool, this version have AWG sizing. It can be found with [[https://www.12voltplanet.co.uk/copper-tube-terminal-hexagon-crimping-tool-6-50mm2.html][mm2 sizing]] as well)
+  For crimping Andersen Connectors pins, set the die to one size smaller than the actual pin, i.e. for 6awg(16mm2 with mm2 sizing), set the die to 4awg(10mm2), as recommended in [[https://youtu.be/cTRYkjGKx0M?feature=shared&t=117][this video]].
+- [[https://www.amazon.com/IWISS-Ratcheting-Anderson-Connectors-CONNECTORS/dp/B01MSQPTDS][Anderson connector tool]], for 15, 30 and 45 A connectors(10, 12, 14, 16, 18, 20 awg wires).
+  Apparently these Anderson connectors requires a specific tool for crimping. This tool should be good and less expensive than the original.
+
+
+Other good crimpers
+For large sizes
+- [[https://www.amazon.com/TEMCo-Lug-Crimper-Tool-TH0020/dp/B00HJYY5GA][Dieless cable lug crimper]]. Heavy duty, makes very good [[https://youtu.be/uuTRLQOa5zk?feature=shared][crimps]] even when lug and wire doesn't match exactly.
+- [[https://www.aliexpress.com/item/4001255674082.html][IWISS IWS 38 crimper]] (choose the 38 version).
+
+For ferrules
+(Ferrules are the thin tubular end connectors used on cables that are going to mounted in screw terminals. Also called bootlace terminals)
+- [[https://www.amazon.com/IWISS-Self-adjusting-Hexagonal-AWG23-10-End-sleeves/dp/B00H950AK4][iCrimp HSC8 6-6A]], hexagonal crimping tool
+  The 6-6 stands for 6 ridges, 6 sides. The hex one.
+  The 6-4 stands for 6 ridges, 4 sides. The square one.
+  Go for the hexagonal one.
+
+  The leading 6 is probably related to the max. size of the cable, i.e. the higher number, the larger diameter cable.

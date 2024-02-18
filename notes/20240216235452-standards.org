@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       26d5cd34-862d-4fba-9236-3571c80c21f8
+:END:
+#+title: standards
+
+
+* ISO and ASTM
+- Chinese https://www.doc88.com/
+  It's not possible to download the standards without paying, only view them
+  Download the standards using [[https://github.com/apankowski/doc88-downloader][doc88-downloader]]
+- Russian http://snti.ru/ might have some standards as well.
+  No experience with this site

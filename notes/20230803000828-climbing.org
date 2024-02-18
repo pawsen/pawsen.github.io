@@ -59,6 +59,15 @@ https://www.climbing.com/skills/how-to-self-rescue-climbing/
 ** Splicing rope
 
 https://youtu.be/ZXPAWXhn0Co?feature=shared
+** Prucell prusik :ATTACH:
+
+[[attachment:_20240201_204820purcell+prusik+double+and+single+strand+TEXT.jpg.jpeg]]
+
+Tied in the usual way, it consists of a prusik hitch sort of tied back onto itself to make an double strand adjustable loop. This has a few applications in self rescue, rope ascending, rigging mechanical advantage systems, adjusting rescue litters, and impressing your knot-nerd pals. One useful feature is that it can be extended under load, which makes it handy for knot passing and other rescue-type stuff. Plus, it’s inexpensive.
+
+[[https://www.alpinesavvy.com/blog/single-strand-purcell-prusik][alpinesavvy]] links to a [[https://youtu.be/rGqorj3q0_U][video]] showing how to tie a prucell prusik as a single strand.([[http://www.bluugnome.com/shareables/purcell-prusik/purcell-prusik-tether.aspx][Here's]] a deep dive into prucell prusik, but it's not really worth the time to read.).
+
+The prucell is nice to know, but not super important
 
 * LRS
 
