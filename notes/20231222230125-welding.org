@@ -16,3 +16,19 @@ Wolframtråden ca. 1mm fra emnet, svejsestilling næsten lodret (+- 15 grader)
 Når jeg sliber elektroder plejer jeg at sætte dem i en boremaskine, for at dreje dem regelmæssigt, men ikke for hurtigt rundt på båndsliberen. Hvis man sliber væk fra spidsen hjælper man til at transportere varmen væk fra den, så den ikke gløder op.
 2,5 x diameter på wolfram sliber du den op, ca!
 Så hvis du kører med 1,6mm wolfram sliber du ca. 4mm op.
+
+
+** Alu
+*** Frequency settings
+In general, higher frequency gives a narrower arc and higher penetration.
+- 120Hz is a good starting point
+- 50-60 Hz for thick or cast aluminium
+
+*** AC balance aka. cleaning action.
+The direction of current is arbitrarily defined as the direction in which positive charges flow. In metals (and electric circuits) the charge carriers are electrons, and they travels from negative to positive terminals, i.e. opposite directions as the defined direction of positive charge.
+
+Percentage of negative terminal on burner/electrode
+- High positive, more flow of electrons from material to electrode, gives increased cleaning effect(breaking the alu oxide layer), but also heats the electrode. For high positive, like 50%, we get a (too) big rounded tip.
+- 65 - 80% seems to be the most used interval.
+
+The American terms are DCEN(electode negative, the usual for steel welding) and DCEP(electrode positive)

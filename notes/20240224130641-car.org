@@ -1,0 +1,100 @@
+:PROPERTIES:
+:ID:       151c5bb7-60e6-492d-bec2-a82880121c8e
+:END:
+#+title: car
+
+* Manuals
+https://workshop-manuals.com/ or for cars before 2014, find alldata (version 10.53) on a torrent site. After 2014, alldata is a online subscription site. It might also be possible to find a torrent of a [[https://haynes.com/][Haynes Manual]] for the car. Or buy a second hand copy on ebay.
+
+** alldata 10.53
+
+https://thepiratebay10.info/torrent/9637407/AllData_10.53_(Q3_2013)_-_Install_Disc__US_Domestics__Extras
+
+alright, here's what i did to get alldata installed and working properly:
+
+first, you need a program that will mount an ISO image. daemon tools will work (alcohol installs crappy software now, dont do it).
+
+once you have that installed and the files downloaded, mount the image AFW_10530813.iso. this will start the auto run and install the actual program. let the installer run, ignore any errors you get.
+
+now, you want to copy the ace.exe crack into the alldata install directory. delete (or back up) the original, then copy the crack. DO NOT RUN ALLDATA UNTIL DIRECTED!
+
+now, install the flexconnect software included in this torrent, in AD1052_Disable.the.Rearm.of.Activation.for.Ace.exe/FLEXnet Connect Software Manager/setup.exe (this is the program you want to run next).
+
+once this is done, you need to extract the files you want into each of their own directories. i created c:cars on my computer. copy all the data discs to there, then use a program like winrar to extract them each to their own folder (warning: this may take a LONG while. it took me 14ish hours to decompress everything on a 7200rpm 2tb drive).
+
+once his is done, you want to run the program called alldatadvdcopy (or something similar, i dont recall atm and will update once i get the proper name). once the program loads, you want to search for network discs, hit ok on the screens that come up. once you get a file tree listing, select the directory you saved the decompressed files too.
+
+a new screen should come up with a list of everything you saved in there. hit ok.
+
+Then hit finish once prompted.
+
+now you can run alldata. you should be able to view all TSBs, all diagnose and repair menus, all maintenance menus and all diagrams should be there.
+
+This is a followup to Jerkius's post. The copy program is call "ALLDATA Disk Copy" and is installed by alldata. It can be found in the start men directory for alldata.
+
+When you run it click next then hit the "Use Network Data Disks" button at the top. Then ok and browse to where you extracted you disks. You do not need to extract or install all disks just choose the ones you want. Each disk has a coverge.txt that tells you what's on it.
+
+* Berlingo
+** rear axle
+If you have a front wheel drive vehicle,you certainly have a torsion bar equipped rear end.
+it's more economical to produce,and do not require wells on the body to locate struts,so you gain a bit of room in the rear seat area.
+However the suspension do not work as vertically as with a strut system.
+
+[[https://en.wikipedia.org/wiki/Twist-beam_rear_suspension][Twist beam rear suspension on wikipedia]]
+
+| bolt             | torque (Nm) |
+|------------------+-------------|
+| rear (TX50), 2x  |          55 |
+| front (TX50), 4x |          40 |
+| wheel hub (40mm) |         250 |
+|                  |             |
+
+Other tools needed
+- Umbrako 14
+
+*** Fit grease nipples on the rear axle, to remove creaking/squeaking sounds
+This [[https://www.berlingoforum.com/thread-10879.html?highlight=grease+nipple][post]] describes how to fit grease nipples on the rear axle. The grease should remove the quickingk sound
+
+[[https://www.berlingoforum.com/thread-10879-post-137359.html#pid137359][detailed explanation]]
+#+begin_quote
+Just fitted a pair of nipples to my trailing arms.
+
+Using an Aldi chinesium tap & die set.
+
+Drilled 5mm holes with a new bit, the arms are hard as a dogs head, eventually it will give, then you will go through about 5mm of white plastic then clunk against the hard bearing pin.
+Then thread with a M6x1 tap.
+
+For long nipples I used these,
+https://www.ebay.co.uk/itm/233642984589
+They are only part threaded, so I fully threaded them using a m6x1 die & a bit of WD40.
+
+best practice would be to finish with a plug (3rd) tap, which would thread the sleeve properly.
+The 2nd tap that was in the Aldi set has a nose that might prevent the plastic sleeve being threaded properly.
+
+Wind your fully threaded nipple until it comes to a dead stop against the hard pin.
+Unwind two turns, that should be a 2mm gap to match the sleeve.
+Measure the gap between the nipple head and the arm, remove nipple & refit with washers that match the gap.
+
+I pumped each side with forty strokes (total guess) of NGL1 grease, it's a bit thinner than the usual NGL2 grease.
+
+Who knows where the grease went, assuming it is being delivered to the gap between the pin & plastic sleeve, it hasn't shown from the seal, so any excess might have gone through the outer bearing, turned around and gone into the hollow of the pin.
+
+Hopefully any swarf will keep to the outside of the sleeve and or fall into the void of the trailing arm.
+#+end_quote
+
+** parts
+
+| description                   | number |
+|-------------------------------+--------|
+| rear axle bushing mount bolts | 515325 |
+|                               |        |
+
+** Videos
+[[https://youtu.be/WGU9X5l2n_Y?si=OQNZxhpbhO6DxJZg][Rear axle removal]]
+[[https://youtu.be/7oAUgYwAYg4?si=0rMpmHMLMRYZ3ZX3][Rear axle installation]]
+
+[[https://youtu.be/jIQVIJ8zPfE?si=Ed-etgJihIWfUyKn][Dismantling rear axle, russian style]]
+[[https://youtu.be/Su4rwLu10Fg][Rear axle renovation]]
+
+
+Not specific for a Berlingo, but this video shows how to [[https://youtu.be/5FkmdCbOdp8][replace bushings on a torsion bars rear end.]]

@@ -1,4 +1,4 @@
-:PROPERTIES:
+:nPROPERTIES:
 :ID:       ece9df65-2bad-4d25-abf2-c54b5b489ca3
 :END:
 #+title: linux

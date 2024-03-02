@@ -57,6 +57,8 @@ PPs don't directly have a way to screw the housings to things, but there are har
 :END:
 
 ** dimensions
+8mm x 1.5mm
+
 According to the table below
 
 
