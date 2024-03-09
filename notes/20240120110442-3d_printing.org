@@ -69,6 +69,15 @@ A higher Shore value indicates a harder material
 [[https://ninjatek.com/shop/compare-filaments/?compare%5B%5D=ninjaflex&compare%5B%5D=edge&compare%5B%5D=chinchilla&compare%5B%5D=eel&compare%5B%5D=cheetah&compare%5B%5D=armadillo][NinjaTek TPU comparison]]
 
 95A is the general, cheap TPU.
+Keep the filament dry or heat it in the oven.
+
+Print on [[https://youtu.be/Z05HtwNZtJQ][clear office tape]](Kapton tape) or use a glue stick if printing on a smooth or PEI surface. It might also me necessary to modify the Nextruder Idle Lever by printing a new [[https://www.printables.com/model/596608-nextruder-modified-idler-lever][version]]. As per [[https://blog.prusa3d.com/how-to-print-with-flexible-filament_29672/][this blog]], it might also be necessary to
+#+begin_quote
+Loosen your idler as much as possible before you start loading the filament/printing. There is a high risk that the filament will tangle around the bondtech if there’s too much pressure on the string.
+
+ You have to print very slowly, typical safe speed is 20mm/s. Generally, a maximum recommended speed for flexible filaments is 30-40mm/s, because you would risk clogging the nozzle if you set the speed too high. In PrusaSlicer we recommend using the „Flexfill 98A or Filatech FilaFlex40“ profile. It has an optimal speed set through the maximum volumetric speed (It is set to 1.5mm3/s, that’s approximately 17mm/s when using 0.2mm layer).
+#+end_quote
+
 
 Use retraction for very flexible filaments, to prevent pressure buildup in the extruder.
 
@@ -89,3 +98,22 @@ PETG absorbs more moisture than PLA or ABS filament. I
 - Food hydrator, https://amzn.to/3FtLqK4 This one will work any circular one with an adjustable temp should do fine. You will have to cut out the grate between the levels to get the spool to fit.
 - CNC Kitchen made a great video on making a dry box from scratch. https://youtu.be/WEFtUKGAd7k I would also recommend drying your filament for 24 hours.
 - get a dryer, https://www.amazon.com/dp/B08C9RZPMN this is the one I use.
+** drying
+Very comprehensive description at [[https://3dprinting.stackexchange.com/a/1408][se]], including drying temp.
+
+Video: [[https://youtu.be/FasWH3_gdlY?si=wSeBHoMGniR1mTvB][How to tune in new filament]]
+[[https://www.printables.com/model/39810-improved-all-in-one-temperature-and-bridging-tower][temp tower]]
+* Printing sheets / PEI
+** Silk like
+https://oseq.cz/products/oseq-safe-sheet-sale-254x241-for-prusa-mk4-mk3-3s-3s
+
+https://www.prusa3d.com/en/category/steel-sheets/
+- https://www.prusa3d.com/product/satin-powder-coated-steel-sheet/
+- OR the factory second (at a discounted price)
+  https://www.prusa3d.com/en/category/steel-sheets/
+* Prusa MK4
+** printer
+| Testing protocal |             13.11.2023 |
+| Serial Number    |          SN23019031900 |
+| Board number     | 10589-3742441531700348 |
+| MAC address      |      10:9c:70:28:10:53 |

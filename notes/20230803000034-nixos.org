@@ -203,6 +203,35 @@ nix-build -E 'with import <nixpkgs> {}; callPackage ./default.nix {}'
 
 Find which packages provides a library, etc: Install =nix-index= and
 : nix-locate -1 -w libgssapi_krb5.so.2  | grep -v \(
+
+Get meta data for package (incl. version)
+: nix eval nixpkgs#prusa-slicer.meta
+
 * examples
 [[https://git.kirinsst.xyz/kir/nixos-configs][server-config]]
 [[https://gitea.tlater.net/tlaternet/tlaternet-server][another good server config]]
+* Fix package
+
+gsettings
+https://nixos.org/manual/nixpkgs/stable/#ssec-gnome-icons
+https://discourse.nixos.org/t/org-gtk-settings-filechooser-is-not-installed-when-running-i3/24373/5
+
+
+
+nix-locate org.gtk.Settings.FileChooser.gschema.xml
+
+https://search.nixos.org/packages?channel=23.11&from=0&size=50&sort=relevance&type=packages&query=gtk3
+https://github.com/NixOS/nixpkgs/blob/nixos-23.11/pkgs/development/libraries/gtk/3.x.nix#L245
+
+
+GLib-GIO-ERROR **: No GSettings schemas are installed on the system
+(openscad:26805): GLib-GIO-ERROR **: 13:10:37.913: Settings schema 'org.gtk.Settings.FileChooser' is not installed
+
+veracrypt: add wrapGAppsHook
+https://github.com/NixOS/nixpkgs/pull/221768/files
+
+
+advanced example
+https://github.com/NixOS/nixpkgs/pull/190960/files
+** shallow clone of nixpkgs
+https://discourse.nixos.org/t/nix-monorepo-size-and-contribution/5565

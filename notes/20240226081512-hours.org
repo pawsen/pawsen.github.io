@@ -39,3 +39,20 @@
 |--------------------------------------------------------+-----+-------+-------+----------|
 |                                                        |     |       |       | 35:30:00 |
 #+TBLFM: @2$5..@-1$5=$4-$3;T::@>$5=vsum(@2$5..@-1$5);T
+
+udlæg, kvitteringer
+| beskrivelse         |   beløb |
+|---------------------+---------|
+| krydsfiner, bil     |  419.95 |
+| vinkelbeslag, bil   |      99 |
+| ledninger t. lager  |  517.70 |
+| afbryder, bil       |   46.95 |
+| Cola, betaling led  |   41.70 |
+| Olie t. generator   |   64.95 |
+| Neglelak            |     161 |
+| Stikfordeler, lager |     128 |
+|---------------------+---------|
+|                     | 1479.25 |
+#+TBLFM: T::@>$2=vsum(@2$2..@-1$2)
+
+udlæg; online

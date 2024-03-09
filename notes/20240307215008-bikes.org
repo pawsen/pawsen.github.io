@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       b87e63b0-7d21-4cb5-8418-ac5f93551ed7
+:END:
+#+title: bikes
+
+* Bafang middrives
+** Bottom Brackets Standards and how it fits :ATTACH:
+
+https://www.empoweredcycles.com/blogs/news/101474694-bottom-bracket-standards-and-bafang-mid-drive-motors
+
+To see if the BB motor and the frame will need bottom bracket spacers(could be stacked M6 washers), measure the distance from the center of the BB and to the frame chain stay(the rod going backwards towards the rear axle).
+The distance should be at least 7cm (2 2/3"). Move the ruler out to determine the needed spacing. See the picture below.
+
+
+#+CAPTION: Measuring the distance between BB and frame chain stay
+[[attachment:_20240307_215132IMG_2643_a3db526f-2196-4b43-958e-7651e76dea03_large.JPG.jpeg]]
+
+** Front Chainring size
+https://electricbike-blog.com/2017/05/26/take-a-wild-guess-selecting-the-best-front-chainring-size-for-a-mid-drive-ebike-on-the-first-try/
+** reprogrammking the controller
+
+https://electricbike-blog.com/2015/06/26/a-hackers-guide-to-programming-the-bbs02/
+https://electricbike-blog.com/2015/03/17/programming-the-bbs02-without-frying-your-controller-and-losing-your-sanity/
+
+** displays
+https://electricbike-blog.com/bbs02-displays/
+
+I recommend the 500c but if you can’t get the 500c the DPC-14 is a good 2nd bet
+
+The DPC 14 is also called 850c

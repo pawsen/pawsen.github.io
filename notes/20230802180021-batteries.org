@@ -244,42 +244,118 @@ Alternatives
 
 [[https://diysolarforum.com/threads/horseflys-cabin-solar-lifepo4-upgrade.27472/][Build with heating pads]]. See schematic below and the last page in the post for update: Only one temp. sensor is necsecary
 #+CAPTION: Battery with heating pads
-[[attachment:_20240217_235825cesdce_orig.jpg]]
+[[attachment:LFP_Cell_Layout3_230Ah_Box_Side_View2.png]]
+
+#+CAPTION: Battery box, top view. Note how the cells are connected
+[[attachment:LFP_Cell_Layout3_230Ah_Box_TopView_w_covers.png]]
+
+** bus bar :ATTACH:
+Homemade busbar of braided copper
+
+#+CAPTION: bus bar
+[[attachment:nickel_pated.jpg][nickel_pated.jpg]]
+
+take the (annealed) copper pipe, start flattening it in a (hydraulic) vise until it's 'flat' but not closed so you can slide the braid in (the full length of the pipe segment, in this case 25mm). Then compress the pipe segment with the braid. After compression you get a cold weld - internally, it will look like this:
+#+CAPTION:  cold welded 'annealed copper pipe' together with the braided strands.
+[[attachment:weld.jpg]]
+
+The copper braid is 25 mm2 equivalent, but it's 25 mm wide x 2 mm thick. It's rated at 150A. Link: https://www.copperbraid.co.uk/product/flat-super-flexible-25-mm2/
+
+Nickel plating was done with nickel acetate, made with vinegar and a pure nickel bar used for electroplating
+
+#+CAPTION: Assembled battery with flexible bus bars.
+[[attachment:20210422_130857.jpg]]
+
+Consider using [[https://mgchemicals.com/products/grease-for-electronics/electrically-conductive-grease/conductive-paste/][Conductive Assembly Paste 847]] between the bus bar and terminals. Might equalize any potential issues from not having perfectly flat bus bars or difference in resistance contact from cell to cell.
 
 * tech
 ** Wire batteries in parallel :ATTACH:
 Pull from +ve on one battery and -ve of the other battery to ensure even load/wear/resistance
 [[attachment:_20240206_203635How-to-Wire-Batteries-in-Series-and-Parallel-Image-11.jpg]]
-* fuses
-| Category | Type     |                  Ratings(A) |
-|----------+----------+-----------------------------|
-| Blade    | Mini     |                        2-30 |
-| Blade    | Standard |                        1-40 |
-| Blade    | Maxi     |                      20-120 |
-|----------+----------+-----------------------------|
-| Link     | Strip    |                      30-100 |
-| Link     | Midi     |  30-150(32V) OR 30-100(58V) |
-| Link     | Mega     | 40-500(32V) OR 125-300(58V) |
-|----------+----------+-----------------------------|
-| ANL      |          |                        -500 |
+* fuses :ATTACH:
+A single 180Ah cell shot-circuit using a wrench submerged in water. The cell delivered 2500A, about 13C. This is done using a older cell(video is from 2011), a newer cell might deliver closer to 20C.
 
-Remember to sellect the correct voltage as well
+For big packs, like a 2p 280A, could potentially deliver 12kA at 20C. Only T-class fuses have this high Ampere Interrupt Capacity(AIC) and is especially recommended for 48V systems. Here's a [[https://diysolarforum.com/threads/mrbf-or-class-t.47659/post-606422][table of AIC]] for relevant fuses and be sure to check this post about [[https://diysolarforum.com/threads/class-t-vs-anl-fuse.13913/post-640573][Bussman BS88 and NH style fuses]] that is a cheaper alternative to T-class. [[https://diysolarforum.com/threads/class-t-vs-anl-fuse.13913/post-657800][link to buying 180LET]](BS88 style).
+
+The main thing a Class T (and BS88) fuse offers over Mega for the same AIC is that they are faster. This means that in addition to protecting the wiring (typical use of the fuse) they can also protect the silicon (like a BMS).
+
+180LET on [[https://www.digikey.dk/en/products/detail/eaton-bussmann-electrical-division/180LET/1876565][digikey]], [[https://www.eaton.com/content/dam/eaton/products/electrical-circuit-protection/fuses/bussmann-series-catalogs/bus-ele-cat-1007-flc-2018.pdf][datasheet/catelog(p.89)]] or [[https://www.eaton.com/us/en-us/skuPage.180LET.html][manufacture]].
+
+#+CAPTION: LET BS88, page 89 of the datasheet
+[[attachment:let_bs88.png][let_bs88.png]]
+
+
+| Category                   | Type     |                  Ratings(A) |
+|----------------------------+----------+-----------------------------|
+| Blade                      | Mini     |                        2-30 |
+| Blade                      | Standard |                        1-40 |
+| Blade                      | Maxi     |                      20-120 |
+|----------------------------+----------+-----------------------------|
+| Link                       | Strip    |                      30-100 |
+| Link                       | Midi     |  30-150(32V) OR 30-100(58V) |
+| Link                       | Mega     | 40-500(32V) OR 125-300(58V) |
+|----------------------------+----------+-----------------------------|
+| ANL                        |          |                        -500 |
+|----------------------------+----------+-----------------------------|
+| Cooper Bussmann MRBF fuses |          |                             |
+|----------------------------+----------+-----------------------------|
+| T-rated                    |          |                             |
+
+Remember to select the correct voltage as well
 
 Blade fuses are now the most commonly used category of fuses with almost every
 new vehicle featuring one or more of the different types. They push-fit into
 fuse holders or boxes and are held in place by friction.
-
-MIDI fuse 32 Vdc / 58 Vdc
-
-MEGA fuse 32 Vdc / 58 Vdc
-
-ANL fuse 80 Vdc
 
 The ANL fuse is a bolt-down fuse and can be an alternative for the MEGA fuse and
 is a fast acting fuse. ANL fuses are good for any bigger loads such as
 Inverters, charge controllers, power distribution panels, or as the main battery
 / system fuse.
 
+Calculate fuse size for a high frequency inverter (ex. 3500W)
+3500 ac watts / .85 conversion factor / 20 volts low cutoff = 205.882352941 service amps.
+205.882352941 service amps / .8 fuse headroom = 257.352941176 fault amps.
+
+#+CAPTION: https://diysolarforum.com/threads/class-t-vs-anl-fuse.13913/page-3#post-326485
+[[attachment:_20240309_172628Choose_the_Fuse_Amperage.jpg]]
+** estimating short circut current
+
+https://diysolarforum.com/threads/class-t-vs-anl-fuse.13913/post-390863
+#+begin_quote
+A battery's short circuit current is typically estimated by dividing its open circuit voltage by its internal resistance. While the true DC internal resistance can be determined using a series of discharge tests, it is often simpler to directly measure the battery's impedance or conductance using an AC test signal.
+#+end_quote
+
+Example:
+3.2V cell with IR of 0.25mOhm and busbar with a resistance of 0.15mOhm (including terminal to busbar resistance) can produce no more than 3.2V / 0.40mOhm = 8kA. It doesn't matter how much you put in series - the current can not go over 8kA with these numbers.
+Putting another battery in parallel double the current.
+
+Preece's Law can be used to generate an estimate for the approximate dc fusing current for a given wire size and material. It has been found that the dc fusing current for a straight wire element depends upon it's diameter as given by Preece's Law.
+
+I = a*d^{3/2}.
+
+I is the fusing current, d is the diameter of the wire, a is a constant depending on the material of the wire.
+
+* Inverters
+** High frequency
+High frequency inverters are generally more complex on the electronics side but do away with the giant, heavy copper transformer that a low frequency inverter uses.
+
+
+** Low Frequency
+Uses a giant, heavy copper transformer.
+
+Can handle high surge currents from e.g. motors and compressors, but they tend to have slightly less efficiency and higher no-load idle power consumption.
+
+LF inverters are best for running a house off of.
+*** MUST EP3000 6kW, 18kW peak inverter
+Has the added advantage of also being able to work as a battery charger when coupled to the generator.
+It is heavy weight (45kg) and uses around 50W in indle power. Ask for spare parts for the inverter and order a replacement power and control board.
+[[https://offer.alibaba.com/cps/a26g1gth?bm=cps&src=saf&url=https%3A%2F%2Fwww.alibaba.com%2Fproduct-detail%2FMUST-EP3000plus-1KW-2KW-3KW-4KW_1600447397373.html][alibaba link]].
+
+Make sure to get the newer *plus* version and not the older *pro*.
+https://www.mustsolar.com/must-products-updated-ep3000-plus/
+
+See [[https://diysolarforum.com/threads/this-could-be-interesting.7835/post-190627][this post]] for inside pictures of the inverter. Note the big and heavy coil.
+See [[https://github.com/PurpleAlien/must-power_grafana][his github]] for grafana plugins/modbus protocol to read from the MUST devices. He uploaded a description of the [[https://diysolarforum.com/resources/must-ep3000-modbus-rtu-protocol.308/][modbus protocol]] and [[https://diysolarforum.com/resources/must-ep3000-plus-inverter-charger-1-6-kw-version.98/][manual]].
 * Wires :ATTACH:
 Use [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][Table of AWG wires]] to get initial recommendation.
 And depending on length, use the [[http://assets.bluesea.com/files/resources/newsletter/images/DC_wire_selection_chartlg.jpg][awg selection chart]]

@@ -50,7 +50,10 @@ However the suspension do not work as vertically as with a strut system.
 |                  |             |
 
 Other tools needed
-- Umbrako 14
+- Unbrako 14
+
+Download pdf from here: Still waiting to become member.
+https://www.berlingoforum.com/thread-3311-post-24296.html#pid24296
 
 *** Fit grease nipples on the rear axle, to remove creaking/squeaking sounds
 This [[https://www.berlingoforum.com/thread-10879.html?highlight=grease+nipple][post]] describes how to fit grease nipples on the rear axle. The grease should remove the quickingk sound
@@ -87,7 +90,8 @@ Hopefully any swarf will keep to the outside of the sleeve and or fall into the 
 | description                   | number |
 |-------------------------------+--------|
 | rear axle bushing mount bolts | 515325 |
-|                               |        |
+| Inner bearing race            |        |
+
 
 ** Videos
 [[https://youtu.be/WGU9X5l2n_Y?si=OQNZxhpbhO6DxJZg][Rear axle removal]]
