@@ -20,7 +20,31 @@ Install
 
 remove all
 : nix-env -e
+** FHS
+#+begin_src nix
+# flake.nix
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  };
 
+  outputs = { self, nixpkgs }:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      fhs = pkgs.buildFHSUserEnv {
+        name = "fhs-shell";
+        targetPkgs = pkgs: [pkgs.gcc pkgs.libtool pkgs.nodejs-18_x] ;
+      };
+    in
+      {
+        devShells.${system}.default = fhs.env;
+      };
+}
+#+end_src
+Now I can access this environment through nix develop. The only thing to be aware is that the derivation that buildFHSUserEnv makes is exposed through the .env attribute and that is what needs to be exported as a dev shell.
+
+You can read more about buildFHSUserEnv [[https://ryantm.github.io/nixpkgs/builders/special/fhs-environments/][here]] and a note about [[https://discourse.nixos.org/t/flakes-way-of-creating-a-fhs-environment/20821/5][how to use program.]]
 * using flakes to build
 
 nix shell is meant to spawn a shell with an application in scope - that's why it modifies only the PATH envvar (think: if you want to ad hoc launch some app, but don't want to actually install it).
@@ -115,6 +139,14 @@ OR
 
 See generations
 : nix-env --list-generations
+
+Compare versions from local flake with github:nixpkgs
+#+begin_src sh
+nix eval nixpkgs#prusa-slicer.meta | nixfmt | grep name
+nix eval github:nixos/nixpkgs#prusa-slicer.meta | nixfmt | grep name
+
+nix profile install --priority 4 github:nixos/nixpkgs#prusa-slicer
+#+end_src
 
 ** garbage collecting
 

@@ -117,3 +117,8 @@ https://www.prusa3d.com/en/category/steel-sheets/
 | Serial Number    |          SN23019031900 |
 | Board number     | 10589-3742441531700348 |
 | MAC address      |      10:9c:70:28:10:53 |
+** input shaping
+#+begin_quote
+In control theory, input shaping is an open-loop control technique for reducing vibrations in computer-controlled machines. The method works by creating a command signal that cancels its own vibration. That is, a vibration excited by previous parts of the command signal is cancelled by vibration excited by latter parts of the command. Input shaping is implemented by convolving a sequence of impulses, known as an input shaper, with any arbitrary command. The shaped command that results from the convolution is then used to drive the system. If the impulses in the shaper are chosen correctly, then the shaped command will excite less residual vibration than the unshaped command. The amplitudes and time locations of the impulses are obtained from the system's natural frequencies and damping ratios. Shaping can be made very robust to errors in the system parameters.
+#+end_quote
+[[https://youtu.be/gzBhTrHv0-c][demonstration]] and [[https://youtu.be/5fOhi-LL9dU][another]].

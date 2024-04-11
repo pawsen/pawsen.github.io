@@ -386,3 +386,19 @@ For ferrules
   Go for the hexagonal one.
 
   The leading 6 is probably related to the max. size of the cable, i.e. the higher number, the larger diameter cable.
+
+*  power tools batteries
+See this [[https://docs.google.com/spreadsheets/d/e/2PACX-1vRghl-44o7Nw_GGOGKN8PdnxJtbzF7UR7nYDt3zEPrRL_azznKE1w4QvBJRLxdQnecwIgQ6tuuzQ4bT/pub#][Spredsheet]] with battery and cell information for most brands, like Milwaukee, DeWALT, etc.
+
+NOTE!
+Only Makita 18V and Ryobi 18V have low voltage protection built into the battery.
+
+Get a [[https://www.aliexpress.com/item/1005001327267228.html][BMS]] or a [[https://www.amazon.com/Digital-Battery-Low-Voltage-Protection/dp/B07929Y5SZ][low voltage protector disconnect]](XH-M609 on [[https://www.aliexpress.com/item/1005005374391032.html][aliexpress]]. Btw description says it is good for 20A, but then the traces will get really hot. Add wires or use it with a relay or stay below 10A). There are triangle shaped BMS for M12.  Search for "M12 bms milwaukee" on aliexpress.
+
+Add 3.3K resistors over cell connections on the BMS, to trick it into thinking cells are connected, like shown in this [[https://youtu.be/T8lREgBeVL8?si=s5w2zCnubRzsJ_Nn&t=66][video]].
+
+** Milwaukee
+- Milwaukee M12 batteries have no BMS inside. The only component is a thermistor for overheat/low temp protection. All battery intelligence is in the tools and chargers.
+- M18 have a BMS. However, some intelligence such as low voltage disconnect is in the tool. Makita and Ryobi keep the low voltage disconnect inside the batteries, making them great for DIY projects. Connecting loads directly to a Milwaukee M18 or M12 terminals without low voltage cutoff circuitry will overdischarge and ruin the battery.
+
+Cutoff voltage for M12 is around 9.74V(The tool will no longer turn). Set it to 10V to be on the safe side. Most 18650 cells can run down to 2.7V without destroying them, but going so low (ie. 3*2.7V=8.1V) could destroy some cells if they are slightly out of balance.

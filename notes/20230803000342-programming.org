@@ -453,3 +453,6 @@ the exercises
 https://discordapp.com/channels/406534637242810369/505437595652849684/638078449185062922
 ** projects
 https://github.com/stefanv/office-status-lcd
+* Serial
+File transfer over serial
+https://superuser.com/a/1706144 using the python3 script [[https://github.com/mattmart3/serio/blob/python3/serio.py][serio.py]]
