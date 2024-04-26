@@ -102,3 +102,62 @@ Hopefully any swarf will keep to the outside of the sleeve and or fall into the 
 
 
 Not specific for a Berlingo, but this video shows how to [[https://youtu.be/5FkmdCbOdp8][replace bushings on a torsion bars rear end.]]
+* Van
+
+
+
+Comparison, Sprinter, Promaster(Fiat Ducato), Ford Transit
+http://rvwiki.mousetrap.net/doku.php?id=rv:eurovan
+http://rvwiki.mousetrap.net/doku.php?id=rv:cargo_van:comparo#living_area_comparison
+
+** What to know when importing
+- Vælg en bil fra syd for Hannover, indlandsbilerne i Tyskland er som regel uden rust.
+- Vælg en bil med lavt kilometer tal , tyskerne regner alt over 100000 km som højt 😉 , fra 150000 km og over 200000 km falder priserne drastisk.
+
+Følgende sider kan bruge til at søge efter biler:
+mobile.de
+autoscout.de
+ebay-kleinanzeigen.de
+qouka.de
+sperrmuell.de
+
+Når du køber privat i Tyskland skal du sikre dig to dokumenter
+- Fahrzeugsbrief ( Svarer til den danske registreringsattest, denne bruges som sikkerhed hvis eksempelvis sælger har lån i bilen, er det tilfældet har han den ikke
+- Fahrzeigsschein, et mindre grønt foldedokument, med samme oplysninger som på Fahrzeugsbrief, dette eller et kopi at dette skal altid opbevares i bilen.
+så kort fortalt, den som har Fahrzeugsbrief og Fahrzeugsschein i hånden er den reelle ejer af bilen, har du begge er bilen din ( ligegyldigt hvilket navn der står på dem ), det letteste for dig er selv at hente bilen.
+Du kan med begge dokumenter få/købe korttidsnummerplader koster i gebyr 13 Euro plus omkring 25 euro for pladerne og de kan benyttes i 7 dage, de kræver en forsikring som kan laves online..25-30 Euro for3-5 dage , togbillet, ned og hente bil, herefter kører du til grænsen og med de tyske korttidsplader køre 7 dage i DK, toldsyn,betale afgift herhjemme og på med DK plader ( tager 1/2 time ved automentor i Padborg , Synhal som nabo )
+Jeg kan dog anbefale dig før du køber bilen at få lavet en bindende afgiftsvurdering, så ved du 100% hvad det koster at skifte til DK plader ( automentor koster 500 kr , svar indenfor få timer , bindede 30 dage )
+
+#+CAPTION: Fahrzeugsbrief
+[[attachment:426831180_10228071699010623_7679763049741976987_n.jpg]]
+
+#+CAPTION: Fahrzeugsschein
+[[attachment:426870907_10228071700290655_8568478493588432539_n.jpg]]
+
+googleoversættelse [[https://www-adac-de.translate.goog/rund-ums-fahrzeug/auto-kaufen-verkaufen/kfz-zulassung/fahrzeugschein/?_x_tr_sl=de&_x_tr_tl=da&_x_tr_hl=da&_x_tr_pto=wapp][Fahrzeugschein]]
+googleoversætelse [[https://www-adac-de.translate.goog/rund-ums-fahrzeug/auto-kaufen-verkaufen/kfz-zulassung/fahrzeugbrief/?_x_tr_sl=de&_x_tr_tl=da&_x_tr_hl=da&_x_tr_pto=wapp][Fahrzeugsbrief]]
+
+
+Der findes private firmaer som tilbyder bindende forhåndsvurderinger, personligt brugte jeg Automentor, her koster en bindende vurdering 500 Kr og du har svar indenfor 48 timer.
+https://www.automentor.dk/vaerd-at-vide/
+
+Afgift: Find ca 10 tilsvarende biler i DK hos en FORHANDLER med ca samme årgang og kilometer. Tag prisen og multiplicér den med 0,6. Find gennemsnit for alle 10 priser. Det er ca prisen for afgift i DK.
+** Fiat Ducato
+https://da.wikipedia.org/wiki/Fiat_Ducato
+
+
+
+** Sprinter
+
+http://rvwiki.mousetrap.net/doku.php?id=rv:eurovan
+
+Modelnumre
+XYY
+
+f.eks.
+316: 3tons 160hK
+211: 2tons, 110hK
+
+
+*** Engine number 651
+Rene siger at du SKAL købe en sprinter med motor nummer 651. Den holder en million km. 646 motor nummer holder kun 300 k så springer de i luften.
