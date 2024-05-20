@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       f1f504bd-b62e-40fc-8771-dbccd7ff3246
+:END:
+#+title: crypto
+
+https://www.reddit.com/r/CryptoCurrency/comments/m20cyd/a_complete_list_of_all_the_basic_useful/
+
+* MIT OpenCourse
+** Blockchain and Maney
+https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/
+https://www.youtube.com/watch?v=EH6vE97qIP4
+* Blommberg interview with SBF
+https://archive.ph/pg7qT
+
+#+begin_quote
+> Matt: (27:13)
+
+> I think of myself as like a fairly cynical person. And that was so much more cynical than how I would've described farming. You're just like, well, I'm in the Ponzi business and it's pretty good.
+#+end_quote
+
+SBF laid the Ponzi scheme straight out: scammers make boxes that pay fake coins when you store your money in them, they put so much money into the boxes that the fake coins seem valuable, then they rug pull everyone and move on to the next one
+
+- Ponzi scheme: Taking later entrants' investments to pay earlier investors on the false pretense that the venture's activity generated the returns.
+- pump-and-dump: Duping others into thinking an asset has value so that it can be resold above its legit worth.
+
+The original description given clearly fits pump-and-dump better[1], since it's based on making an asset seem valuable:
