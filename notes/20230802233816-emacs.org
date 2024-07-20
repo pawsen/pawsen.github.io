@@ -215,6 +215,49 @@ To be or not to be in Emacs?
 #+end_src
 ** GTD workflow
 https://daryl.wakatara.com/emacs-gtd-flow-evolved/
+** tables
+*** multi-line formula definitions
+
+https://emacs.stackexchange.com/questions/39289/multi-line-org-mode-formula-definitions
+Org-Babel allows creating functions (written in, but not limited to, emacs-lisp), which can then be referenced in table formulas:
+
+#+NAME: add
+#+begin_src emacs-lisp
+(+ a b)
+  ; feel free to use as many lines or comments here!
+  ; press C-c ' here to edit in emacs-lisp-mode
+#+END_SRC
+
+|----+----+-----|
+|  a |  b | a+b |
+|----+----+-----|
+|  1 |  2 |   3 |
+| 10 | 10 |  20 |
+|  5 | -7 |  -2 |
+|----+----+-----|
+#+TBLFM: $3='(org-sbe "add" (a $1) (b $2))
+*** css headers :ATTACH:
+
+https://stackoverflow.com/questions/39342374/org-mode-s-table-export-to-html-how-to-set-column-width
+
+#+HTML_HEAD: <style type="text/css">
+#+HTML_HEAD: .styledtable col:nth-of-type(1) { width:  2%; background: orange; }
+#+HTML_HEAD: .styledtable col:nth-of-type(2) { width: 80%; background: dodgerblue; }
+#+HTML_HEAD: .styledtable col:nth-of-type(3) { width: 18%; background: hotpink; }
+#+HTML_HEAD: </style>
+
+#+ATTR_HTML: :class styledtable
+#+attr_html: :border 1 :rules all :frame border :width 100%
+|----+-------------------------------------+-----------------|
+| ID | BUG                                 | Result          |
+|----+-------------------------------------+-----------------|
+|  1 | jdkkskdjskdsdjsdljskdjfskfjksdjfksf | ok              |
+|  2 | 823jjsljfdkjsdskkkkkuuffggg         | not bug         |
+|  3 | aaaaahhaaaaa                        | can't reproduct |
+|----+-------------------------------------+-----------------|
+
+#+CAPTION: orb table with predefined cell colors and width when exported to html.
+[[attachment:_20240719_222630OMxur.png]]
 
 * code completion
 company:

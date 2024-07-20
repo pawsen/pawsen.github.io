@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       98f6ee0f-fd11-4000-b427-33ce6db9ad4d
+:END:
+#+title: network
+
+[[https://github.com/kramse/security-courses/blob/master/presentations/pentest/simulated-ddos-workshop/simulating-ddos-workshop-exercises.pdf][Kramses github]] have a pdf with examples on how to use ~nmap~ and ~hping3~.
+
+* host/port scanning
+
+#+begin_src sh
+nix shell nixpkgs#nmap
+
+sudo nmap -p 22,53,80,443 -T4 "10.0.45.0/24"
+#+end_src
+* Generating packages
+
+#+begin_src sh
+nix shell nixpkgs#hping
+sudo hping3 -q -c 10000000 -i u60 -S -p 80 10.0.45.15
+#+end_src
+
+* Monitoring packets
+
+The bandwith and packages can be monitored using ~ifpps~ and ~bmon~.
+#+begin_src sh
+nix shell nixpkgs#netsniff-ng nixpkgs#bmon nixpkgs#tcptrack
+
+ifpps -d DEV
+bmon -p DEV
+#+end_src
+
+** tcptrack :ATTACH:
+
+A favorite. Tells how much bandwidth is being used and also what protocol (service/port) and destination the transmission is taking place to. Very helpful when you want to know exactly what is using up your bandwidth
+
+#+CAPTION: tcptrack
+[[attachment:_20240719_160248vNY9G.png]]
+** bmon :ATTACH:
+
+Shows how many bytes/bits and packets are received and sent. Invoke in ~ascii~ output mode with ~bmon -o ascii~.
+
+#+CAPTION: bmon
+[[attachment:_20240719_160550bmon-Detailed-Bandwidth-Statistics.gif]]

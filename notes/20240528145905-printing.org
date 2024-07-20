@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       46fce3cd-ff90-44e1-9ef3-06a5068314ee
+:END:
+#+title: printing
+
+* HP p-touch
+https://github.com/HenrikBengtsson/brother-ptouch-label-printer-on-linux

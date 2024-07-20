@@ -55,7 +55,7 @@ That's why for bringing libraries to scope, you should create a flake that uses 
 
 =nix run= is for running applications defined in flakes. But flakes allow you to run arbitrary applications, not just binaries from a given derivation.
 
-I think =nix-shell -p pkg --run "some command"= is closer to =nix shell nixpkgs#pkg --comand "some command"=.
+I think =nix-shell -p pkg --run "some command"= is closer to =nix shell nixpkgs#pkg --command "some command"=.
 
 See the comparison table at the end of this blog post
 https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/
@@ -69,6 +69,20 @@ nix flake show gitlab:gridbugs/ia
 Q: How do I tell nix to re-download an app located in a git repo?
 A: It will re-download it by itself rather soon, but if you want to force it try (admittedly counter-intuitively) =nix flake lock gitlab:gridbugs/ia= , or do =nix run --refresh gitlab:gridbugs/ia=
 
+** Entering the byuild env of a flake
+https://nixos-and-flakes.thiscute.world/development/intro#enter-the-build-environment-of-any-nix-package
+
+#+begin_src sh
+nix develop nixpkgs#ptouch-print
+unpackPhase
+---edit code
+#+end_src
+
+#+begin_quote
+he default execution order of all build phases of a Nix package is:
+
+$prePhases unpackPhase patchPhase $preConfigurePhases configurePhase $preBuildPhases buildPhase checkPhase $preInstallPhases installPhase fixupPhase installCheckPhase $preDistPhases distPhase $postPhases
+#+end_quote
 * containers
 ** nspawn
 https://discourse.nixos.org/t/system-with-nixos-how-to-add-another-extra-distribution/5767/8
