@@ -1,0 +1,83 @@
+:PROPERTIES:
+:ID:       9a61aa06-a5cb-414d-9e32-b837c2d9227b
+:END:
+#+title: sdr radio
+
+* Brief into to audio formats
+
+~Self-describing~ formats (e.g. WAV, FLAC, MP3) have a header that completely describes the signal and encoding attributes of the audio data that follows.
+~raw~ or ~headerless~ formats do not contain this information, so the audio characteristics of these must be described.
+
+- sample rate
+  The sample rate in samples per second (`Hertz' or `Hz'). Digital telephony traditionally uses a sample rate of 8000 Hz (8 kHz), though these days, 16 and even 32 kHz are becoming more common. Audio Compact Discs use 44100 Hz (44.1 kHz). Digital Audio Tape and many computer systems use 48 kHz. Professional audio systems of‐ ten use 96 kHz.
+
+- sample size
+  The number of bits used to store each sample. Today, 16-bit is commonly used. 8-bit was popular in the early days of computer audio. 24-bit is used in the professional audio arena. Other sizes are also used.
+
+- data encoding
+  The  way in which each audio sample is represented (or `encoded').  Some encodings have variants with differ ent byte-orderings or bit-orderings.  Some compress the audio data so that the stored  audio  data  takes  up less  space  (i.e.  disk  space or transmission bandwidth) than the other format parameters and the number of samples would imply.  Commonly-used encoding types include floating-point, μ-law, ADPCM, signed-integer  PCM, MP3, and FLAC.
+
+- channels
+  The number of audio channels contained in the file. One (`mono') and two (`stereo') are widely used. `Sur‐ round sound' audio typically contains six or more channels
+
+** Stream raw radio
+
+Use either =aplay= or =play= (from =sox=)
+#+begin_src sh
+nix shell nixpkgs#rtl-sdr
+nix shell nixpkgs#sox
+nix shell nixpkgs#alsa-utils
+
+rtl_fm -M wbfm -f 89M -g 40 | aplay -r 32k -f S16_LE
+rtl_fm -M wbfm -f 89M -g 40 | play -r 32k -t raw -e s -b 16 -c 1 -V1 -
+rtl_fm -M wbfm -f 89M -g 40 | play -r 32k -t s16 -L -c 1 -V1 -
+#+end_src
+
+| flag               | value                                       |
+|--------------------+---------------------------------------------|
+| -b BITS            | 16                                          |
+| -e ENCODING        | signed-integer (abbreviated to signed or s) |
+| -c CHANNELS        | 1                                           |
+| -r RATE            | 32k                                         |
+| -t FILE-TYPE       | raw                                         |
+|--------------------+---------------------------------------------|
+| -t FILE-TYPE       | s16                                         |
+| -L --endian little |                                             |
+
+For raw, the sample rate and the data encoding must be  given  using  command line  format options;
+for the other listed types, the sample rate defaults to 8kHz (but may be overridden), and the data encoding is defined by the given suffix.
+
+Thus =-t 16 -L= and =-t raw -b 16 -e s= are equivalent. See =man soxformat= for more.
+
+-V[level] (Verbosity)
+|    0 | No messages are shown at all; use the exit status to determine if an error has occurred.                                                                                               |
+|    1 | Only error messages are shown.  These are generated if SoX cannot complete the requested commands.                                                                                     |
+|    2 | Warning messages are also shown. These are generated if SoX can complete the requested commands, but not exactly according to the requested command parameters, or if clipping occurs. |
+|    3 | Descriptions of SoX's processing phases are also shown.  Useful for seeing exactly how SoX is processing your audio.                                                                   |
+| 4 => | Messages to help with debugging SoX are also shown.                                                                                                                                    |
+By default, the verbosity level is set to 2 (shows errors and warnings).
+
+=S16_LE= is signed 16 bit, little endian
+
+
+: rtl_fm -M wbfm -f 89M
+=-M wbfm= says to use wideband FM mode, but this is really a shortcut for a tweaked narrowband FM mode. It expands fully into
+
+: rtl_fm -f 89M -M fm -s 170k -A fast -r 32k -l 0 -E deemp
+
+| flag     | description                                         |
+|----------+-----------------------------------------------------|
+| -f ...   | indicated the frequency to tune to                  |
+| -M fm    | means narrowband FM                                 |
+| -s 170k  | means to sample the radio at 170k/sec               |
+| -A fast  | uses a fast polynominal approximation of arctangent |
+| -r 32k   | means to lowpass/resample at 32kHz                  |
+| -l 0     | disables squelch                                    |
+| -E deemp | applies a deemphesis filter                         |
+| -g       | gain                                                |
+
+** ref
+https://web.archive.org/web/20230603213739/http://kmkeen.com/rtl-demod-guide/
+http://superkuh.com/rtlsdr.html
+
+https://web.archive.org/web/20230603214559/http://kmkeen.com/rtl-power/
