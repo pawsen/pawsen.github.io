@@ -3,6 +3,41 @@
 :END:
 #+title: sdr radio
 
+* stl_sdr info :ATTACH:
+
+https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Specifications
+
+In essence, an RTL dongle consists of two ICs: the ~RTL2832U~ and a tuner chip, for which various types are used. The ~RTL2832U~ on has two A/D converters, and a USB interface, and lots of digital logic in between. The tuner chip is an analog downconverter, from VHF/UHF to frequencies of a few MHz, which can be handled by the RTL chip's A/D converters.
+The ~RTL2832U~ outputs 8-bit I/Q-samples, and the highest theoretically possible sample-rate is 3.2 MS/s, however, the highest sample-rate without lost samples that has been tested wit regular USB controllers so far is 2.4 MS/s
+
+Hardware
+|    VID |    PID | tuner       | device name                       |
+|--------+--------+-------------+-----------------------------------|
+| 0x0bda | 0x2832 | all of them | Generic RTL2832U (e.g. hama nano) |
+
+| tuner              | Frequency range |
+|--------------------+-----------------|
+| Rafael Micro R820T | 24 - 1766 MHz   |
+
+#+CAPTION: block diagram for RTL2832U with different tuners. RTL-SDR blog V4 is shown in b)
+[[attachment:tn20fig1.png]]
+
+RTL-SDR cannot work as SDR and DVB-T receiver at the same time. Due to the limitations of the chip in SDR mode (bandwidth drops to ~3 MHz, when in DVB-T mode it is equal to 6-8 MHz), you cannot fully decode the DVB-T signal in SDR mode. You need to switch the driver in your OS and use different programs (such as VLC, HDTV Player or SDRSharp and GNU Radio).
+
+The rtl2832 does quadrature (IQ) sampling, thus the bandwidth is equal to the sample rate setting (as per its documented command parameters)
+
+Quadrature sampling produces twice as much data (2 8-bit components) per IQ sample,
+
+Data rate is how much IQ data it's listening to/watching, the sample rate is usually the bit rate of audio quality coming out.
+
+ e.g. FM broadcast data rate is about 250KHz, this is how wide it's transmission is (bandwidth). The sample rate is the rate of audio quality coming out, in broadcast FM, is about 32KHz.
+
+One is data bandwidth, the other is audio output quality.
+
+a 96 kHz wide SDR already needs about 3 Mbit/s for the raw stream (namely, 96000 (samples/sec) x 16 (bits/sample) x 2 (I and Q channel)
+
+https://www.pa3fwm.nl/technotes/tn20.html
+
 * Brief into to audio formats
 
 ~Self-describing~ formats (e.g. WAV, FLAC, MP3) have a header that completely describes the signal and encoding attributes of the audio data that follows.
@@ -15,51 +50,33 @@
   The number of bits used to store each sample. Today, 16-bit is commonly used. 8-bit was popular in the early days of computer audio. 24-bit is used in the professional audio arena. Other sizes are also used.
 
 - data encoding
-  The  way in which each audio sample is represented (or `encoded').  Some encodings have variants with differ ent byte-orderings or bit-orderings.  Some compress the audio data so that the stored  audio  data  takes  up less  space  (i.e.  disk  space or transmission bandwidth) than the other format parameters and the number of samples would imply.  Commonly-used encoding types include floating-point, μ-law, ADPCM, signed-integer  PCM, MP3, and FLAC.
+  The  way in which each audio sample is represented (or `encoded').  Some encodings have variants with different byte-orderings or bit-orderings.  Some compress the audio data so that the stored  audio  data  takes  up less  space  (i.e.  disk  space or transmission bandwidth) than the other format parameters and the number of samples would imply.  Commonly-used encoding types include floating-point, μ-law, ADPCM, signed-integer  PCM, MP3, and FLAC.
 
 - channels
-  The number of audio channels contained in the file. One (`mono') and two (`stereo') are widely used. `Sur‐ round sound' audio typically contains six or more channels
+  The number of audio channels contained in the file. One (`mono') and two (`stereo') are widely used. Surround sound audio typically contains six or more channels
 
-** Stream raw radio
+* Stream raw radio
 
-Use either =aplay= or =play= (from =sox=)
+** using rtl_fm
+https://web.archive.org/web/20230603213739/http://kmkeen.com/rtl-demod-guide/
+
+=rtl_fm= does demodulation and is outputting raw audio in ~S16_LE~ with  default sample rate ~-s 24k~.
+
+=S16_LE= is signed 16 bit, little endian. For raw format, the sample rate and the data encoding must be given to the audio player.
+
+Use either =aplay= (from =alsa-utils=) or =play= (from =sox=)
 #+begin_src sh
-nix shell nixpkgs#rtl-sdr
+nix shell nixpkgs#rtl-sd_osmocom
 nix shell nixpkgs#sox
 nix shell nixpkgs#alsa-utils
 
-rtl_fm -M wbfm -f 89M -g 40 | aplay -r 32k -f S16_LE
+rtl_fm -M wbfm -f 89M -g 40 | aplay -r 32000 -f S16_LE
 rtl_fm -M wbfm -f 89M -g 40 | play -r 32k -t raw -e s -b 16 -c 1 -V1 -
 rtl_fm -M wbfm -f 89M -g 40 | play -r 32k -t s16 -L -c 1 -V1 -
 #+end_src
 
-| flag               | value                                       |
-|--------------------+---------------------------------------------|
-| -b BITS            | 16                                          |
-| -e ENCODING        | signed-integer (abbreviated to signed or s) |
-| -c CHANNELS        | 1                                           |
-| -r RATE            | 32k                                         |
-| -t FILE-TYPE       | raw                                         |
-|--------------------+---------------------------------------------|
-| -t FILE-TYPE       | s16                                         |
-| -L --endian little |                                             |
 
-For raw, the sample rate and the data encoding must be  given  using  command line  format options;
-for the other listed types, the sample rate defaults to 8kHz (but may be overridden), and the data encoding is defined by the given suffix.
-
-Thus =-t 16 -L= and =-t raw -b 16 -e s= are equivalent. See =man soxformat= for more.
-
--V[level] (Verbosity)
-|    0 | No messages are shown at all; use the exit status to determine if an error has occurred.                                                                                               |
-|    1 | Only error messages are shown.  These are generated if SoX cannot complete the requested commands.                                                                                     |
-|    2 | Warning messages are also shown. These are generated if SoX can complete the requested commands, but not exactly according to the requested command parameters, or if clipping occurs. |
-|    3 | Descriptions of SoX's processing phases are also shown.  Useful for seeing exactly how SoX is processing your audio.                                                                   |
-| 4 => | Messages to help with debugging SoX are also shown.                                                                                                                                    |
-By default, the verbosity level is set to 2 (shows errors and warnings).
-
-=S16_LE= is signed 16 bit, little endian
-
-
+*** rtl_fm flags
 : rtl_fm -M wbfm -f 89M
 =-M wbfm= says to use wideband FM mode, but this is really a shortcut for a tweaked narrowband FM mode. It expands fully into
 
@@ -76,8 +93,107 @@ By default, the verbosity level is set to 2 (shows errors and warnings).
 | -E deemp | applies a deemphesis filter                         |
 | -g       | gain                                                |
 
-** ref
-https://web.archive.org/web/20230603213739/http://kmkeen.com/rtl-demod-guide/
+*** =sox= flags
+| flag               | value                                       |
+|--------------------+---------------------------------------------|
+| -b BITS            | 16                                          |
+| -e ENCODING        | signed-integer (abbreviated to signed or s) |
+| -c CHANNELS        | 1                                           |
+| -r RATE            | 32k                                         |
+| -t FILE-TYPE       | raw                                         |
+|--------------------+---------------------------------------------|
+| -t FILE-TYPE       | s16                                         |
+| -L --endian little |                                             |
+
+Thus =-t 16 -L= and =-t raw -b 16 -e s= are equivalent. See =man soxformat= for more.
+
+-V[level] (Verbosity)
+|    0 | No messages are shown at all; use the exit status to determine if an error has occurred.                                                                                               |
+|    1 | Only error messages are shown.  These are generated if SoX cannot complete the requested commands.                                                                                     |
+|    2 | Warning messages are also shown. These are generated if SoX can complete the requested commands, but not exactly according to the requested command parameters, or if clipping occurs. |
+|    3 | Descriptions of SoX's processing phases are also shown.  Useful for seeing exactly how SoX is processing your audio.                                                                   |
+| 4 => | Messages to help with debugging SoX are also shown.                                                                                                                                    |
+By default, the verbosity level is set to 2 (shows errors and warnings).
+
+*** UHF / walkie talkie :ATTACH:
+In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446][PMR446]]. Analogue PMR446 uses 16 FM channels separated by 12.5 kHz.
+
+| Channel | Frequency (MHz) | Channel Spacing (kHz) | Channel Spacing Known As |
+|---------+-----------------+-----------------------+--------------------------|
+|       1 |       446.00625 |                  12.5 | Narrow [NFM]             |
+|       2 |       446.01875 |                  12.5 | Narrow [NFM]             |
+|       3 |       446.03125 |                  12.5 | Narrow [NFM]             |
+|       4 |       446.04375 |                  12.5 | Narrow [NFM]             |
+|       5 |       446.05625 |                  12.5 | Narrow [NFM]             |
+|       6 |       446.06875 |                  12.5 | Narrow [NFM]             |
+|       7 |       446.08125 |                  12.5 | Narrow [NFM]             |
+|       8 |       446.09375 |                  12.5 | Narrow [NFM]             |
+|       9 |       446.10625 |                  12.5 | Narrow [NFM]             |
+|      10 |       446.11875 |                  12.5 | Narrow [NFM]             |
+|      11 |       446.13125 |                  12.5 | Narrow [NFM]             |
+|      12 |       446.14375 |                  12.5 | Narrow [NFM]             |
+|      13 |       446.15625 |                  12.5 | Narrow [NFM]             |
+|      14 |       446.16875 |                  12.5 | Narrow [NFM]             |
+|      15 |       446.18125 |                  12.5 | Narrow [NFM]             |
+|      16 |       446.19375 |                  12.5 | Narrow [NFM]             |
+
+Continuous Tone-Coded Squelch System (CTCSS) is a low continuous tone transmitted along with the voice. In CTCSS mode, the receiver only unmutes when the signal also carries the correct sub-audible audio tone. All users with different CTCSS tones on the same channel are still transmitting on the identical radio frequency. [[uhttps://www.sigidwiki.com/wiki/CTCSS#Additional_Images][CTSCC tones]] and further info.
+
+The CTCSS tone can be seen from a spectogram of the recorded audio. The audio is recorded with ~rtl_fm~ (which demodulates the signal and save it as ~raw~ audio samples) and converted to ~wav~ with ~sox~.
+
+#+begin_src sh
+rtl_fm -f 446.03125M -M fm -s 12k -g 50 -l 70 > channel3.pcm
+sox -r 12k -t raw  -es -b 16 -c 1 channel3.pcm channel3.wav
+# check whats in the header
+soxi channel3.wav
+#+end_src
+[[attachment:channel3.wav]]
+
+#+CAPTION: Spectogram for voice with constant tone CTCSS. The constant tone is seen to be around 77Hz. Plots from Audacity.
+[[attachment:channel3_spectrum.png]]
+
+The waterfall plot from ~sdr++~ looks like
+#+CAPTION: waterfall from SDR++
+[[attachment:channel3_waterfall2.png]]
+
+
+**** Scanning multiple frequencies
+#+begin_src sh
+rtl_fm -M fm \
+            -f 158.940M \
+            -f 150.7825M \
+            -f 154.175M \
+            -f 154.280M \
+            -f 154.265M \
+            -f 153.830M \
+            -f 154.145M \
+            -f 154.070M \
+            -f 453.7875M \
+            -f 37.260M \
+            -g 25 -l 60 \
+    | sox -t raw -r 24k -es -b 16 -c 1 - -p \
+            sinc 200-3.5k \
+            compand 0.1,0.8 6:0,-3 6 \
+    | play -p
+#+end_src
+
+** Convert IQ samples to audio
+#+begin_src sh
+
+#+end_src
+** using rtl_power
+
+** multimon-ng
+https://github.com/EliasOenal/multimon-ng
+The multimon-ng software can decode a variety of digital transmission modes commonly found on VHF/UHF radio.
+* websdr
+My SDR can be tuned from 0 to 30 MHz (or from 25 to 1900 MHz, or whatever). Can I offer all of that tuning range to the users?
+#+begin_quote
+No. Such an SDR does not feed the entire 0-30 or 25-1900 MHz spectrum to your computer: that would be way too much data. Instead, a small part (at most a few MHz) are filtered out in external hardware, centered around some frequency that you can tune. With the WebSDR software, users can only tune around within that small part of the spectrum. You (as the operator of the site) choose the centerfrequency.
+#+end_quote
+http://websdr.ewi.utwente.nl:8901/?tune=198am
+* ref
 http://superkuh.com/rtlsdr.html
 
 https://web.archive.org/web/20230603214559/http://kmkeen.com/rtl-power/
+https://arachnoid.com/software_defined_radios_II/index.html
