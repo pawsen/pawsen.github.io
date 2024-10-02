@@ -387,7 +387,7 @@ For ferrules
 
   The leading 6 is probably related to the max. size of the cable, i.e. the higher number, the larger diameter cable.
 
-*  power tools batteries
+* power tools batteries
 See this [[https://docs.google.com/spreadsheets/d/e/2PACX-1vRghl-44o7Nw_GGOGKN8PdnxJtbzF7UR7nYDt3zEPrRL_azznKE1w4QvBJRLxdQnecwIgQ6tuuzQ4bT/pub#][Spredsheet]] with battery and cell information for most brands, like Milwaukee, DeWALT, etc.
 
 NOTE!

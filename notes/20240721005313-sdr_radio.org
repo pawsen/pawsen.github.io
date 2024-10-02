@@ -151,6 +151,7 @@ soxi channel3.wav
 
 #+CAPTION: Spectogram for voice with constant tone CTCSS. The constant tone is seen to be around 77Hz. Plots from Audacity.
 [[attachment:channel3_spectrum.png]]
+(Note =sonic-visualiser= is a little easier to use if you only want to show a spectogram and peak frequencies)
 
 The waterfall plot from ~sdr++~ looks like
 #+CAPTION: waterfall from SDR++
