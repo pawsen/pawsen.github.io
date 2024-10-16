@@ -8,10 +8,6 @@
 
 (require 'ox-hugo)
 (require 'org-roam)
-
-(setq org-roam-directory default-directory)
-(org-roam-db-sync)
-
 (defun collect-backlinks-string (backend)
   (when (org-roam-node-at-point)
     (goto-char (point-max))
@@ -33,6 +29,13 @@
 (defun export-org-roam-files ()
   "Exports Org-Roam files to Hugo markdown."
   (interactive)
+
+  (setq org-hugo-external-file-extensions-allowed-for-copying
+        (append org-hugo-external-file-extensions-allowed-for-copying
+                '("wav" "raw" "epub")))
+
+  (print org-hugo-external-file-extensions-allowed-for-copying)
+ 
   (let ((org-id-extra-files (directory-files-recursively default-directory "notes")))
     (dolist (f (append (file-expand-wildcards "org/about.org")
                        (file-expand-wildcards "org/diary/*.org")

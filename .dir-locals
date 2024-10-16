@@ -1,2 +1,0 @@
-;; ((nil . ((org-hugo-base-dir . "~/path/to/weblog.masukomi.org/"))))
-((nil . ((org-hugo-base-dir . "~/git/org/"))))

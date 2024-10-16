@@ -1,0 +1,308 @@
+:PROPERTIES:
+:ID:       342198e5-38ba-4988-a5e3-d752b1ca109b
+:END:
+#+title: tension lines
+
+
+* Reeve systems:ATTACH:
+#+begin_quote
+reeve, verb
+
+To pass (a rope) through a hole or opening, especially so as to fasten it.
+#+end_quote
+
+A reeve setup can be used with a tension line to create a system that can lower or raise a load away from the anchor, as well as move it along the tension line.
+
+#+CAPTION: Example of a Norwegian reeve used to transport material down a slope
+[[attachment:IMG20241008144344.jpg]]
+** Norwegian reeve
+The Norwegian reeve is a simpler system, where the control line is terminated at the rigging hardware connected to the tension line.
+The system can only be operated from one side.
+
+In the following diagrams
+- red rope is the tension line (track line)
+- yellow moves the carriage on the tension line (tag line)
+- green lowers or raises the load (control line or reeve line)
+
+But an Norwegian reeve system is not always able to move down along the inclined tension line when the control line is attached at the high anchor.
+It depends on the angle between the control- and tension line, which we will look into below.
+
+*** No mechanical advantage / ie. not a reeve system
+
+If the load is light, one might be tempted to use a non-reeved, ie. 1:1, system as shown below
+
+#+NAME: fig__not_a_reeve_system
+#+CAPTION: Not a reeve system
+[[attachment:no reeve - angled tension line.png]]
+
+Ignoring the friction from the pulley on the tension line, the free body diagram for the "reeve" pulley looks as
+#+CAPTION: Free body diagram for the "reeve" pulley"
+[[attachment:no reeve - angled tension line.png]]
+
+where
+- φ is the angle between the tension line and horizontal and
+- θ is the angle between the tension line and the control rope.
+- axis \(x',y'\), is the rotated coordinate system, with \(x'\) along the tension line.
+- \(E_{eff}=0.9\) the efficiency of the pulley,
+
+The carriage goes up if the force from the pull side of the control rope is larger than the load side when projected onto \(x'\).
+
+Summing the forces projected onto the $x'$ axis gives
+#+NAME: eq:1
+\begin{align}
+\label{eq:1}
+T_w\cos(θ) E_{eff} > T_w\cos (π/2 - φ) \iff
+\newline
+\frac{\cos(θ)} {\cos (π/2 - φ)} = \frac{\cos(θ)} {\sin(φ)} > 1 / E_{eff}
+\end{align}
+
+As a reminder $\sin$ and $\cos$ are plotted below for \(x \in [0,π/2]\)
+
+# https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-gnuplot.html
+#+CAPTION: Sine and cosine from [0;π]
+#+begin_src gnuplot :file img/sine-cosine.png :export results
+reset
+set title "Sine and cosine"
+set key right box
+set samples 100
+set auto y
+set grid
+# set xtics pi
+# set xtics (0, "π/4" pi/4, "π/2" pi/2, "3π/4" 3*pi/4, "π" pi)
+set xtics (0, "π/4" pi/4, "π/2" pi/2)
+
+plot [0:pi/2]  sin(x),cos(x)
+#+end_src
+
+#+RESULTS:
+[[file:img/sine-cosine.png]]
+
+Note that
+- $\cos(0) = 1$
+- $\cos(π/2)$ = $\sin(0)$ = 0
+- $\cos(π/2-θ)$ = $\sin(θ)$
+- $\cos(θ) is monotonic decreasing for \(θ \in [0,π]\)
+- and θ is the angle between the tension- and control line,
+
+In the following I omit the efficiently of the pulley. The "reeve" pulley and static friction from the pulley on the tension line, allows the control line to be at a lower angle than the following scenarios predict.
+
+The minimum angle between the control line and tension line for the carriage not to go up, is found by taking \(\arccos\) of [[eq:1]]
+
+\begin{equation}
+\label{eq:5}
+θ = π/2 - φ
+\end{equation}
+
+# #+NAME: fig:norwegian_reeve1_1_tension_line
+# #+CAPTION: Control line angle wrt tension line
+# #+begin_src gnuplot :file img/norwegian_reeve_1_1_control_angle.png :exports results
+# reset
+# set title "Required control rope angle wrt tension line"
+# set samples 100
+# set grid
+# set xlabel "Tension line inclination, φ (°)"
+# set ylabel "Control line angle, θ (°)"
+# unset key
+
+# # plot [0:90] (pi/2-x*pi/180)*180/pi ,\
+# #      x - (pi/2-x*pi/180)*180/pi
+# plot [0:90] (pi/2-x*pi/180)*180/pi
+# # #+end_src
+
+In the figure below, θ is shifted to show the control angle with respect to horizontal
+#+NAME: fig:norwegian_reeve1_1_horizontal
+#+CAPTION: Control line angle wrt horizontal
+#+begin_src gnuplot :file img/norwegian_reeve_1_1_control_angl_horizontal.png :exports results
+reset
+# set term svg font "FantasqueSansMono Nerd Font,16"
+set title "Required control rope angle wrt horizontal"
+set samples 100
+set xtics
+set grid
+set xlabel "Tension line inclination, φ (°)"
+set ylabel "Control line angle wrt horizontal, (°)"
+unset key
+
+plot [0:90] x - (pi/2-x*pi/180)*180/pi
+#+end_src
+
+#+RESULTS: fig:norwegian_reeve1_1_horizontal
+[[file:img/norwegian_reeve_1_1_control_angl_horizontal.png]]
+
+
+#+begin_quote
+        The more inclined the tension line is, the smaller the angle between the control rope and the tension line has to be in order for the carriage to be able to move downwards.
+
+        But, unless the control rope and the tension line runs parallel, no matter the initial θ, as the carriage move downwards the angle between the control rope and the tension line will decrease and at some point the carriage will be unable to move downwards any further.
+
+        And as seen from fig [[fig:norwegian_reeve1_1_horizontal]], the carriage cannot move downwards if the control- and tension line are parallel(θ=0)
+#+end_quote
+
+We conclude that a 1:1 system is unusable to move loads down a tension line.
+
+**** Example, φ=π/4=45°
+
+\begin{align}
+φ=π/4=45°
+\\
+\cos(θ) > \sin(π/4)
+\end{align}
+
+i.e. the carriage goes up if \(θ<π/4\), (or above horizontal), as expected from fig [[fig:norwegian_reeve1_1_horizontal]]
+
+**** Limit case, \(φ \to 0\) , ie. horizontal tension line
+The limit case for \(φ \to 0\) (note that θ, the angle of the control rope, does not matter)
+
+\begin{equation}
+\lim_{φ\to 0}
+\frac{\cos(θ)}{\sin(φ)} \to ∞
+\end{equation}
+
+i.e. whenever there is a load, the carriage will always move towards the pull from the control line(which is left in fig [[fig__not_a_reeve_system]]).
+
+*** 2:1
+
+This is the typical reeve setup
+
+#+CAPTION: Norweegian reeve, 2:1 mech advantage
+[[attachment:norweegian reeve - angled tension line.png]]
+
+A free body diagram is shown below
+
+The carriage goes up if
+\begin{align}
+\label{eq:2}
+&1/2 T_{w} \cos(θ) > 1/2 T_{w}\cos(π/2 - φ) + 1/2 T_{w}\cos(π/2 - φ) \iff
+\\
+&\cos(θ) > 2\sin(φ)
+\end{align}
+
+That is only possible if \(\sin(φ) < 1/2\), and from the unit circle below we see that is the case when the inclination of the tension line is less than
+
+\begin{equation}
+φ < π/6 = 30°
+\end{equation}
+
+#+CAPTION: unit circle
+[[attachment:Unit-circle-with-90-degrees-highlighted.png]]
+
+The minimum angle θ from eq. \ref{2} is found [[https://www.wolframalpha.com/input?i2d=true&i=solve+%3Dcos%5C%2840%29x%5C%2841%29+%3D+2*cos%5C%2840%29Divide%5Bpi%2C2%5D-k%5C%2841%29%5C%2844%29x%5C%2844%29k%3E0][to be]]
+
+\begin{equation}
+\label{eq:6}
+θ = \cos^{-1}(2 \sin(φ))
+\end{equation}
+
+and shown below
+
+#+NAME: fig:norwegian_reeve2_1
+#+CAPTION: Control line angle wrt tension line
+#+begin_src gnuplot :file img/norwegian_reeve_2_1_control_angl.png :exports results
+reset
+set title "Required control rope angle wrt tension line"
+set samples 100
+set xtics
+set grid
+set xlabel "Tension line inclination, φ (°)"
+set ylabel "Control line angle wrt the tension line, θ (°)"
+unset key
+
+plot [0:90] acos(2*sin(x*pi/180)) * 180/pi
+#+end_src
+
+#+RESULTS: fig:norwegian_reeve2_1
+[[file:img/norwegian_reeve_2_1_control_angl.png]]
+
+Below is shown the control angle with respect to horizontal, ie \( φ - \cos^{-1}(2\sin(φ)) \). Included are "3:1" and "4:1" mechanical advantages.
+If the angle of the tension line is e.g. 20°, a 3:1 system allows the carriage to go down independent of the control line angle.
+
+Other options
+- If the tension line angle is low and the carriage is unable to travel down the tension line, a tag line from the lower anchor can be used to pull the carriage down.
+- put a prussik from the reeve pulley to the fastened side of the reeve line(or swap the pulley with a clutch/rig). It will hold the load and remove the force from the anchor side of the reeve line.
+The downside is that the carriage no longer can be lowered without a "load attendant" minding the prussik/rig.
+
+#+NAME: fig:norwegian_reeve2_1_horizontal
+#+CAPTION: Control line angle wrt horizontal
+#+begin_src gnuplot :file img/norwegian_reeve_2_1_control_angl_horizontal.png :exports results
+reset
+set title "Required control rope angle wrt horizontal"
+set samples 100
+set xtics
+set grid
+set xlabel "Tension line inclination, φ (°)"
+set ylabel "Control line angle wrt horizontal, (°)"
+set key
+
+plot [0:90] x - acos(1*sin(x*pi/180)) * 180/pi title "1:1" ,\
+     x - acos(2*sin(x*pi/180)) * 180/pi title "2:1" ,\
+     x - acos(3*sin(x*pi/180)) * 180/pi title "3:1" ,\
+     x - acos(4*sin(x*pi/180)) * 180/pi title "4:1"
+
+#+end_src
+
+#+RESULTS: fig:norwegian_reeve2_1_horizontal
+[[file:img/norwegian_reeve_2_1_control_angl_horizontal.png]]
+
+**** Example, φ=π/12=15°
+
+Find the the exact value of \( \sin(π/12) \) by using the [[https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Angle_sum_and_difference_identities][trigonometric angle addition formulae]]
+
+\begin{equation}
+\label{eq:4}
+\sin(α ± ϐ) = \sin(α)\cos(ϐ) ± \cos(α)\sin(ϐ)
+\end{equation}
+
+we get
+\begin{align}
+\sin(π/12) &= \sin(π/3 - π/4) = \sin(π/3) \cos(π/4) - \cos(π/3) \sin(π/4) \\
+           &= \sqrt{3}/2 * 1/\sqrt{2} - 1/2 * 1/\sqrt{2} \\
+           &= \frac{\sqrt{3}}{2 \sqrt{2}} - \frac{1}{2\sqrt{2}}
+           = \frac{\sqrt{6} - \sqrt{2}}{4}
+\end{align}
+
+Thus for \(φ=π/12=15°\), the angle between the control rope and the tension line has to satisfy
+
+\begin{align}
+\cos(θ) &> 2\sin(π/12) = \frac{\sqrt{6} - \sqrt{2}}{2} \iff \\
+      θ &> 2πn ± \cos^{-1} (1/2 (\sqrt{6} - \sqrt{2})) ≅ 1.03rad = 1.03 \frac{180}{π} = 59°
+\end{align}
+
+i.e. the carriage goes up if \(θ<59°\), as can also be seen on fig [[fig:norwegian_reeve2_1]]
+
+**** Limit case, \(φ \to 0\) , ie. horizontal tension line
+The limit case for \(φ \to 0\) is equal to the 1:1 system,
+
+\begin{equation}
+\lim_{φ\to 0}
+\frac{\cos(θ)}{\sin(φ)} \to ∞
+\end{equation}
+
+i.e. whenever there is a load, the carriage will always move towards the pull from the control line(which is left in fig [[fig__not_a_reeve_system]]).
+** English reeve :ATTACH:
+
+A english reeve can be controlled from both sides, i.e. both tag- and reeve lines terminates at the anchors and have to be twice the length of the tension line.
+
+A typical english reeve used in rescue scenarios is shown below.
+
+Note that
+- the prussiks on the tag line acts as a shock absorber
+- a load attendand minding the prussik on reeve line is needed to raise or lower the load
+
+#+CAPTION: "Textbook" English reeve. Requires an load attendant minding the reeve prussiks
+[[attachment:english-reeve-drawing.gif]]
+
+#+CAPTION: English reeve with load attendant and twin carriages
+[[attachment:english_reeve_litter.png]]
+
+*** Rich Delaneys version
+Rich Delaney [[https://www.facebook.com/RichardDelaneyRopeLab/photos/there-are-many-ways-to-construct-an-english-reeve-highlineeach-method-has-advant/1028643871999440/][posted this setup]].
+
+Dual main English Reeve that uses only single pulleys and carabiners.
+No rigging plates, quickdraws/Dogbones, double pulleys, ASAPs, Prusiks, or special big/Kootenay pulleys
+
+- The rethreaded bunny ears 8 through the pulleys can be tied to the lower pulleys. This saves the horizontal carabiner linking the upper reeve pulleys.
+However the linking biner might stops the load swinging so much when pulling the tag lines.
+
+
+#+CAPTION: Richard Delaneys favorite English Reeve
+[[attachment:452670694_1028643875332773_5014259502738878116_n.jpg]]

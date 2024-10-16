@@ -2,6 +2,18 @@
 :ID:       a1b57a39-78a7-4fc0-91a3-546a2a349a52
 :END:
 #+title: batteries
+#+HUGO_BASE_DIR: ../
+#+HUGO_SECTION: post/permanet
+#+toc: headlines 3
+#+hugo_custom_front_matter: :summary "Notes about Lithium batteries"
+# https://orgmode.org/manual/In_002dbuffer-Settings.html
+# The top section of a file, consisting of #+ things is a frontmatter, that is exported to the .md file.
+# +hugo_publishdate: 2024-09-26
+# +hugo_publishdate: (format-time-string "%Y-%m-%d")
+# +hugo_publishdate: (format-time-string "%Y-%m-%dT%T%z")
+#+hugo_tags: batteries li-ion connectors
+#+hugo_categories: index howto
+#+hugo_auto_set_lastmod: t
 
 * Connectors
 [[https://en.wikipedia.org/wiki/DC_connector][Wikipedia dc connectors]]
