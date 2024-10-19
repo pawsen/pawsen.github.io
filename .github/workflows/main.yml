@@ -29,6 +29,10 @@ jobs:
       # for Org-Roam to Markdown
       - name: Remove gpg file
         run: rm -fr org/private
+      - name: list folders
+        run: |
+          ls
+          ls themes/
       - name: Build org to markdown
         run: emacs --batch --load scripts/ox-roam.el --funcall export-org-roam-files
 

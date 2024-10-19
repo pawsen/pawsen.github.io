@@ -34,8 +34,7 @@ The RTL-SDR is an cheap software defined radio receiver-dongle based on [[https:
 In essence, an RTL dongle consists of two ICs: the ~RTL2832U~ and a tuner chip, for which various types are used. The ~RTL2832U~ on has two A/D converters, and a USB interface, and lots of digital logic in between. The tuner chip is an analog downconverter, from VHF/UHF to frequencies of a few MHz, which can be handled by the RTL chip's A/D converters.
 The ~RTL2832U~ outputs 8-bit I/Q-samples, and the highest theoretically possible sample-rate is 3.2 MS/s, however, the highest sample-rate without lost samples that has been tested wit regular USB controllers so far is 2.4 MS/s
 
-[[
-https://www.pa3fwm.nl/technotes/tn20.html][Hardware]]
+[[https://www.pa3fwm.nl/technotes/tn20.html][Hardware]]
 |    VID |    PID | tuner       | device name                       |
 |--------+--------+-------------+-----------------------------------|
 | 0x0bda | 0x2832 | all of them | Generic RTL2832U (e.g. hama nano) |
