@@ -1,6 +1,6 @@
 .orgids
 .org-roam.db
-themes/
+#themes/
 /.direnv/
 *.lock
 /go.sum
