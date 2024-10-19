@@ -60,7 +60,7 @@ As a reminder $\sin$ and $\cos$ are plotted below for \(x \in [0,π/2]\)
 
 # https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-gnuplot.html
 #+CAPTION: Sine and cosine from [0;π]
-#+begin_src gnuplot :file img/sine-cosine.png :export results
+#+begin_src gnuplot :file img/sine-cosine.png :exports results
 reset
 set title "Sine and cosine"
 set key right box
