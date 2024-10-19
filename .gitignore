@@ -6,7 +6,7 @@
 #/go.sum
 #/go.mod
 /resources/
-/content/
+# /content/
 /public/
 /package-lock.json
-/static/ox-hugo/
+# /static/ox-hugo/
