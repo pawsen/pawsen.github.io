@@ -3,8 +3,8 @@
 #themes/
 /.direnv/
 *.lock
-/go.sum
-/go.mod
+#/go.sum
+#/go.mod
 /resources/
 /content/
 /public/
