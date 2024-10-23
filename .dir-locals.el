@@ -10,7 +10,7 @@
          ;; org-hugo-base-dir should either be absolute or relative to the org-files.
          ;; Right now it is set to relative to the org-files
          (org-hugo-base-dir . "../")
-         (org-hugo-auto-set-lastmod . t)
+         ;;(org-hugo-auto-set-lastmod . t)
          (org-hugo-section . "post/")
          )))
 

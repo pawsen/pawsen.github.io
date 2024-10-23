@@ -3,29 +3,20 @@
 :END:
 #+title: sdr radio
 
-#+begin_src emacs-lisp :exports none
-(defun org-hugo--tag-processing-fn-remove-tags-maybe (tags-list info)
-  "Remove user-specified tags/categories.
-See `org-hugo-tag-processing-functions' for more info."
-  ;; Use tag/category string (including @ prefix) exactly as used in Org file.
-  (let ((tags-categories-to-be-removed '("DONE" "ATTACH"))) ;"my_tag" "@my_cat"
-    (cl-remove-if (lambda (tag_or_cat)
-                    (member tag_or_cat tags-categories-to-be-removed))
-                  tags-list)))
-(add-to-list 'org-hugo-tag-processing-functions
-             #'org-hugo--tag-processing-fn-remove-tags-maybe)
-
-
-#+end_src
-
-#+RESULTS:
-| org-hugo--tag-processing-fn-remove-tags-maybe | org-hugo--tag-processing-fn-replace-with-spaces-maybe | org-hugo--tag-processing-fn-replace-with-hyphens-maybe |
+#+HUGO_TAGS: sdr it spectogram
+#+filetags: sdr spectogram
+#+hugo_categories: it
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-09-20
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Use a SDR to determine CTCSS tone from a UHF walkie-talkie recording by looking at a soectogram"
 
 
 Software-defined radio (SDR) is a radio communication system where components that conventionally have been implemented in analog hardware (e.g. mixers, filters, amplifiers, modulators/demodulators, detectors, etc.) are instead implemented by means of software on a computer.
 
-
 * stl_sdr dongle info :ATTACH:
+:PROPERTIES:
+:ID:       b0049897-ce8a-4f66-b553-e43713bd6fcd
+:END:
 
 The RTL-SDR is an cheap software defined radio receiver-dongle based on [[https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Specifications
 ][DVB-T TV tuners with RTL2832U chips.]]
@@ -139,8 +130,9 @@ By default, the verbosity level is set to 2 (shows errors and warnings).
 
 *** UHF / walkie talkie :ATTACH:
 
-#+CAPTION: recording UHF radio and determining the CTCSS tone from a spectogram
+#+CAPTION: record UHF radio and determine the CTCSS tone from a spectogram
 [[attachment:IMG20240925154924.jpg]]
+
 In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446][PMR446]]. Analogue PMR446 uses 16 FM channels separated by 12.5 kHz.
 
 | Channel | Frequency (MHz) | Channel Spacing (kHz) | Channel Spacing Known As |

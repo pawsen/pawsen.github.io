@@ -3,8 +3,14 @@
 :END:
 #+title: tension lines
 
+#+hugo_tags: irata rope-access
+#+hugo_categories: ropes
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-10-01
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "A reeve setup can be used with a tension line to create a system that can lower or raise a load away from the anchor, as well as move it along the tension line."
 
-* Reeve systems:ATTACH:
+
+* Reeve systems :ATTACH:
 #+begin_quote
 reeve, verb
 
@@ -41,7 +47,7 @@ Ignoring the friction from the pulley on the tension line, the free body diagram
 
 where
 - φ is the angle between the tension line and horizontal and
-- θ is the angle between the tension line and the control rope.
+- θ is the angle between the tension line and the control rope
 - axis \(x',y'\), is the rotated coordinate system, with \(x'\) along the tension line.
 - \(E_{eff}=0.9\) the efficiency of the pulley,
 

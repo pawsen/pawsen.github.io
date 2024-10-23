@@ -2,122 +2,171 @@
 :ID:       a1b57a39-78a7-4fc0-91a3-546a2a349a52
 :END:
 #+title: batteries
-#+HUGO_BASE_DIR: ../
-#+HUGO_SECTION: post/permanet
-#+toc: headlines 3
-#+hugo_custom_front_matter: :summary "Notes about Lithium batteries"
-# https://orgmode.org/manual/In_002dbuffer-Settings.html
-# The top section of a file, consisting of #+ things is a frontmatter, that is exported to the .md file.
-# +hugo_publishdate: 2024-09-26
-# +hugo_publishdate: (format-time-string "%Y-%m-%d")
-# +hugo_publishdate: (format-time-string "%Y-%m-%dT%T%z")
-#+hugo_tags: batteries li-ion connectors
-#+hugo_categories: index howto
+
+#+MACRO: NEWLINE @@latex:\\@@ @@html:<br>@@
+# The top section of a file, consisting of #+, is frontmatter setting or keywords exported to the .md file.
+
+#+HUGO_TAGS: batteries li-ion connectors
+#+filetags: batteries li-ion connectors
+#+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-09-26
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about Lithium batteries, connectors and DIY"
 
 * Connectors
-[[https://en.wikipedia.org/wiki/DC_connector][Wikipedia dc connectors]]
+See a list on the [[https://en.wikipedia.org/wiki/DC_connector][Wikipedia article on dc connectors]]
 
-For batteries
+The most commonly used for batteries are
 ** JST
 A  large number of different types. See [[https://www.mattmillman.com/info/crimpconnectors/common-jst-connector-types/
 ][this usefule info]]. [[https://en.wikipedia.org/wiki/JST_connector][wikipedia]] has additional info.
-3d printed [[https://www.printables.com/model/475497-angled-jst-tweezers][tweezers]] for easy removal.
 
 Popular types are (with different pin-to-pin pitch)
 - SM, wire to wire and locking
-- XH, (larger version of the PH) which can be found on aliexpress with 2.54mm pitch(Note that the /official/ connectors has 2.5mm pitch) that fits with dupont headers.
-
+- XH, (larger version of the PH) which can be found on aliexpress with 2.54mm pitch that fits with dupont headers.
+  (Note that the /official/ connectors has 2.5mm pitch)
+- 3d printed [[https://www.printables.com/model/475497-angled-jst-tweezers][tweezers]] for easy removal.
  
 ** XT :ATTACH:
 XT60 and XT90 are often used for bicycle batteries, as Anderson connectors are considered too bulky(and the ampacity is lower than for e.g. LiFePO4 batteries)
 
-3d printed surface/flush [[https://www.thingiverse.com/thing:3340052/files][mount]] for XT60.
+- 3d printed surface/flush [[https://www.thingiverse.com/thing:3340052/files][mount]] for XT60.
 
 If more heavy duty XT-like connectors are needed, the [[https://www.google.com/search?q=QS8+connector][QS8 connector]] carries 110A, up to 6AWG wire and are anti-spark
 
-#+CAPTION: XT90 vs QS8
-[[attachment:_20240218_033152proxy.php.jpeg; charset=utf-8]]
-
+#+CAPTION: XT90 vs QS8 anti-spark
+[[attachment:xt90_vs_qs8_antispark.jpeg]]
 
 ** Anderson :ATTACH:
-Relevant here is the Powerpole(single pole) and SB(two or three poles) series. The connectors are genderless/hermaphroditic. See [[https://www.ctals.com.au/collections/what-size-anderson-plug][info]] and [[https://en.wikipedia.org/wiki/Anderson_Powerpole][wikipedia]] for area of uses.
+Relevant here are the Powerpole(single pole) and SB(two or three poles) series, see fig [[fig:anderson_single_vs_multipole]]
+The connectors are genderless/hermaphroditic. See [[https://www.ctals.com.au/collections/what-size-anderson-plug][info]] and [[https://en.wikipedia.org/wiki/Anderson_Powerpole][wikipedia]] for area of uses.
 
 
-NOTE: There's different keying for each colors of the SB series, so they cannot be interchanged(except black and grey). The colors also correspond to different suggested voltages.
-The plugs comes with different pin fits, i.e. the SB50(50A) have plugs for 6, 8 and 10-12 awg cables.
+#+NAME: fig:anderson_single_vs_multipole
+#+CAPTION: Powerpole and SB multipole
+[[attachment:single-Pole-vs-Multi-Pole-B.jpeg]]
 
-#+CAPTION: Different keying for each colour in the SB50 series
+- Single/Powerpoles can be stacked into any configuration or keying you want, by
+  locking the housings into each other, in rows or columns, and rotated from 0
+  to 90 to 180 to 270 degrees from each other.
+- Single/Powerpoles don't directly have a way to screw the housings to things,
+  but there are hardware pieces available to lock them together, and to mount
+  them to surfaces. If you have at least three housings in a row, you can put
+  screws thru the retaining pin holes to mount it to a surface.
+- You can create a four pin connector by screwing two SBs together back to back. You can "key" this connector in four ways depending on the rotation of each of the two.
+
+NOTE:
+ - There's different keying for each colors of the SB series, so they cannot be interchanged(except black and grey), see fig. [[fig:anderson_colour_keying]]
+   The colors also correspond to different suggested voltages.
+ - The plugs comes with different pin fits, i.e. the SB50(50A) have plugs for 6, 8 and 10-12 awg cables.
+
+#+NAME: fig:anderson_colour_keying
+#+CAPTION: Different keying for each colour in the *SB50* series
 [[attachment:_20240218_023440220px-Anderson_SB50_Colour_Keying.jpg]]
 
-Buy them from [[https://www.aliexpress.com/item/1005005237025318.html][aliexpress]], remember to select AWG size.
+- Buy them from [[https://www.aliexpress.com/item/1005005237025318.html][aliexpress]], remember to select AWG size for the pins.
+- The SB connectors can be flush mounted. Here's a 3d model from [[https://www.thingiverse.com/thing:5835998/files][thingiverse]]
 
-The SB connectors can be flush mounted. Here's a 3d model from [[https://www.thingiverse.com/thing:5835998/files][thingiverse]]
+* Strips
 
-#+CAPTION: Powerpole and SB multipole
-[[attachment:_20240218_024447Single-Pole-vs-Multi-Pole-B.jpg.jpeg]]
+Strips are used to spot weld battery cells together.
 
-PPs can be stacked into any configuration or keying you want, by locking the housings into each other, in rows or columns, and rotated from 0 to 90 to 180 to 270 degrees from each other.
+Pure nickel is the most common, but [[https://endless-sphere.com/sphere/threads/copper-nickel-sandwich-buses-for-series-connections.108006/][copper/nickel sandwich]] can be used if high current is needed.
 
-PPs don't directly have a way to screw the housings to things, but there are hardware pieces avalable to lock them together, and to mount them to surfaces. If you have at least three housings in a row, you can put screws thru the retaining pin holes to mount it to a surface.
+The parallel connections can be just about any material that is conductive, since the current is quite small for all cells (less than 1A under all conditions). Nickel, and nickel-plated steel ribbon will work quite well for paralleling. They act as a resistor to slow cell equalization.
 
- You can create a four pin connector by screwing two SBs together back to back. You can "key" this connector in four ways depending on the rotation of each of the two.
+However, the series connections handle the current of the pack, so using copper there is the best material.
 
-* Nickel strips
+#+CAPTION: Conductivity in IACS (International Annealed Copper Standard)
+| % IACS | Material   |
+|--------+------------|
+|    100 | Copper     |
+|     61 | Aluminum   |
+|     27 | Zinc       |
+|     22 | Nickel     |
+|      5 | Iron-Steel |
+
+
+Fig [[fig:ampacity_chart_strips]] shows the ampacity for different materials.
+
+#+NAME: fig:ampacity_chart_strips
+#+CAPTION: Conductor Strips Ampacity Charts (ratings are relatively conservative)
+#+CAPTION: {{{NEWLINE}}}
+#+CAPTION: https://endless-sphere.com/sphere/threads/nickel-strip-ratings.98849/post-1447486
+[[attachment:Ampacity (Powestream extrapolation).jpg]]
+** Nickel strips
 :PROPERTIES:
 :ID:       1de1b8e1-6474-4c69-b92e-63cbeea311a9
 :END:
+If using nickel, make sure it is pure nickel strips as it can carry a higher current than nickel plated steel strips.
 
-** dimensions
-8mm x 1.5mm
+*** dimensions
 
-According to the table below
+According to the table in fig [[fig:ampacity_chart_strips]], pure nickel strips of =8mm x 0.15mm= carries 4.9A, which is sufficient for my bike batteries.
+
+Rule of thumb
+- buy 8mm wide nickel for straight packs and 10mm for honeycomb packs
+
+**** Some notes
+Some testing at endless-sphere shows that =7mm x 0.15mm= is good for about 7A and becomes hot @ 10A.
+
+But consider this, before choosing a thinner strip:
+
+Current flows in series in a battery pack. A strip that connects one cell to the other in series might only be 3cm long, but...there are 15 of them in a 14S 52V pack.
+
+If the controller and motor are drawing 30A, then pass 30A at 52V through 45cm of nickel strip to see if there is any voltage drop. Now try 50A and see how much voltage drop there is. If you are happy with the results, then you will be fine.
+
+Note that if you make longer connections, the strip resistance increases linearly with length and so does the overall ohmic heat and therefore losses.
+
+*** Test if the strip is pure nickel
+As nickel and nickel plated steel are extremely difficult to difference at sight, there are an easy homemade test that could be done in order to check if you have one or another.
+
+This doesn't discard the steel for welding purposes: if the strips are in good condition would be enough for batteries that will be used *only* in dry environments.
+**** The salt water test - corrosion
+Take a strip sample and polish / scratch with a dremel tool or simply with a knife on a small area, and put into salty water for 12h to 24h.
+
+#+CAPTION: Pure nickel and nickel plated steel strips in salt water
+[[attachment:DSC_1394_E.jpg]]
+
+**** The sanding/grinding wheel test - sparks from grinding
+Nickel plated steel strips should give sparks if grinded with a dremel sanding wheel.
+Pure nickel should not give sparks.
+But use the salt water test as well.
+** copper
+
+Copper foil is inexpensive and readily available as a bus material, but it is notoriously difficult to weld directly to the ends of battery cells, because of the low resistance (resulting in low heat loss).
+
+A popular way to still use copper is [[https://endless-sphere.com/sphere/threads/copper-nickel-sandwich-buses-for-series-connections.108006/][copper/nickel sandwich buses]], where the copper is overlaid with 0.1mm nickel-plated steel strips at the cell tips.
+
+#+CAPTION: copper/nickel bus
+[[attachment:BatteryCopperNickel1.jpg]]
+
+0.15mm copper appears to be reliably welded when all of the components are optimized. That thickness of copper will support the highest-amp 21700 cell.
+Another option is to [[https://endless-sphere.com/sphere/threads/copper-nickel-sandwich-buses-for-series-connections.108006/page-6#post-1690164][DIY nickel electroplating copper]] strips.
 
 
-#+NAME: fig:amp
-#+CAPTION: https://endless-sphere.com/sphere/threads/nickel-strip-ratings.98849/post-1447486
+I have read that the slot in the nickel strip makes the current take the shortest path, which is though the tip of the cell, during a spot weld. This should reduce the wear on the spot welder electrodes.
+#+CAPTION: The slot in the nickel strips ensures that most current travels through the shorter path of the cell tip.
+[[attachment:SpotWeldCurrent1.png]]
 
+* Batteries
+** Reusing old cells :ATTACH:
 
-[[attachment:Ampacity (Powestream extrapolation).jpg]]
-
-
-** Test if it is pure nickel
-
-*** The salt water test - corrosion
-Nickel does not corrode easily, unlike steel which loves to rust. Take a piece
-of nickel strip and scratch it up aggressively with strong sandpaper or a metal
-file. Then mix up a cup of salt water (the exact amount doesn’t really matter).
-Drop your scratched nickel strips in the water and wait a few days. If you don’t
-see any rust forming, you’ve got pure nickel! If you see brown or orange rust,
-you’ve got nickel plated steel strips.
-
-*** The sanding/grinding wheel test - sparks from grinding
-I developed this test on accident while experimenting with the first test. I
-used a Dremel sanding wheel to scuff up the surface of a pure nickel strip and a
-nickel plated steel strip before doing the salt water test. The pure nickel
-strip was fairly uneventful, but when I used a sanding or grinding wheel on the
-nickel plated steel strip, I got brilliant sparks shooting from the strip as
-soon as the wheel ate through the thin nickel layer and contacted the steel.
-Makes sense - steel creates spark showers. Apparently though, nickel does not,
-and that makes this another great test. It’s also superior to the salt water
-test because you get the result instantly. But if you’re still in doubt, go
-ahead and toss the piece in salt water after you’re done grinding on it, and
-that will verify the results of the grinding wheel test.
-
-* Testing :ATTACH:
+This flow chart might help deciding if the cells are worth reusing
 
 #+CAPTION: flow chart for testing used batteries
+#+CAPTION: {{{NEWLINE}}}
 #+CAPTION: https://secondlifestorage.com/index.php?threads/18650-harvesting-flow-charts.9714
 [[attachment:_20240117_134522index.php.jpeg]]
 
-** Internal resistance
+*** Internal resistance
 DC and AC IR, [[https://secondlifestorage.com/index.php?threads/dc-ir-vs-ac-1kh-ir-measurements.9471/post-64654][thread]]. Theoretical info on how to measure IR can be found in this paper, [[https://sci-hub.se/10.3390/s100605604][Comparison of methods for determining IR]]
 
 Use the AC IR as screening tool before the C/D/C (charge/discharge/charge) cycle. Too high internal resistance and the cell should be discarded.
 
 The advantage of AC IR is that the cell can be tested at a lower voltage and still give accurate results. The same cannot be said for DC IR, where the cell needs to be charged.
 
-*** AC IR :ATTACH:
+**** AC IR :ATTACH:
 
 AC IR is most useful as a coarse first-level screening tool, to weed out unhealthy or damaged cells. It cannot be used for more refined analyses because it does not incorporate the non-ohmic components of IR
 
@@ -131,7 +180,7 @@ However, this [[https://docs.google.com/spreadsheets/d/1n6DU0VC7Yjksz2ah90VUcpw6
 The current observation is that AC IR so far has been a very good indicator of a cells SOH with DC IR confirming it.
 AC IR can indicate a cells SOH even at low V i.e. a cells cutoff V of ≈2.8V to 2.5V and even below that, where DC IR needs the cell to be at least ≈3.2V to get a reasonably respectable reading.
 
-*** dc IR
+**** dc IR
 DC IR match real life usage of cells best, but it's time consuming, requires 30<SoC<80% and expensive equipment to measure. [[https://secondlifestorage.com/index.php?threads/opus-bt-c3100-wire-mod-results.9374/post-64352][This post]] shows how DC IR changes for low and high SoC
 30<SoC<80% correspond approximately to OCV of 3.8-3.9V. See the link in the OCV section.
 
@@ -140,7 +189,7 @@ DC IR match real life usage of cells best, but it's time consuming, requires 30<
 - Possible to measure resistance of 1mΩ or less accurately
 - 4-terminal pair test leads required to measure low resistance with AC-IR
 - the cheap standard 1kHz ac IR measuring device does not correlate with DC IR. (ie. emphasise the low frequency of 1Hz)
-*** importance of IR matching
+**** importance of IR matching
 It is known that poor (DC) IR matching can lead to significant reduction in life, e.g. below
 #+begin_src quote
 Gogoana et al. [13] cycle-aged two cylindrical lithium iron phosphate (LFP) cells connected in parallel. They found that a 20% difference in internal resistance resulted in a 40% reduction in the useful life of the pair of cells compared to if the cells had approximately equal internal resistances. The authors attribute this to the uneven current distribution between the cells. Their results highlight that each cell will go through periods where it experiences high currents that will in turn age the cells more quickly.
@@ -148,6 +197,10 @@ Gogoana et al. [13] cycle-aged two cylindrical lithium iron phosphate (LFP) cell
 Gong et al. [1] drew similar conclusions from their experimental work with 32 Ah cells. When two cells with a 20% impedance difference were connected in parallel, the peak current experienced was 40% higher than if the cells were identical. The authors also performed simulation studies, using the Mathwork's Simscape extension to Simulink to connect two equivalent circuit models (ECMs) in parallel. This is one of the few examples of parallel cell modelling within the literature from Modelling and experimental evaluation of parallel connected lithium ion cells for an electric vehicle battery system
 #+end_src
 https://sci-hub.se/http://dx.doi.org/10.1016/j.jpowsour.2016.01.001
+
+*** Repacking
+See [[https://docs.google.com/spreadsheets/d/1e2962wuNumstvv6UMLi-F7xVHQFWlMr1/edit#gid=1526562313][Repackr with IR and 80x14.xlsm]] for creating matching battery packages.
+Found from https://drive.google.com/drive/folders/1UOQUXa4Kwa99KoeuNDe7EV3iSECb8iIs
 
 ** SoC or State of Charge :ATTACH:
 
@@ -172,10 +225,16 @@ Small measurement errors may occur, related to the sampling frequency. To correc
 ** SoH or State of Health
 
 SoH = Q_{max} Q_{rated}
-** Repacking
-See [[https://docs.google.com/spreadsheets/d/1e2962wuNumstvv6UMLi-F7xVHQFWlMr1/edit#gid=1526562313][Repackr with IR and 80x14.xlsm]] for creating matching battery packages.
-Found from https://drive.google.com/drive/folders/1UOQUXa4Kwa99KoeuNDe7EV3iSECb8iIs
+** Cell holder
+ Supplier of honeycomb configuration plastic cell holders, plus 30-degree angled nickel bus-strips
+ https://www.aliexpress.com/item/18650-battery-holder-Cylindrical-cell-2-10-plastic-holder-18650-lithium-ion-battery-bracket-plastic-case/32729220653.html
+** BMS
 
+http://liionbms.com/php/bms_options.php
+
+
+Paralleling, serialing, balancing, BMS
+http://liionbms.com/php/white_papers.php
 * PowerWall
 ** Fuses
 

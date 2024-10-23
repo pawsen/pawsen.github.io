@@ -2,6 +2,7 @@
 :ID:       a3a9dc3d-a1bd-4c2c-af52-3c6446317adb
 :END:
 #+title: cpr
+#+hugo
 
 | name                   |         cpr | address | misc |
 |------------------------+-------------+---------+------|
