@@ -1,0 +1,107 @@
+:PROPERTIES:
+:ID:       61043cab-df55-4498-817a-aa7b6ed4bd19
+:END:
+#+title: decrypting 802.11 (WPA2 in pre-shared mode)
+
+#+filetags: wireshark
+#+hugo_categories: it
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-10-27
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Decrypt 802.11 wireless traffic using wireshark"
+
+Wireshark can decrpt WiFi traffic in WEP and WPA/WPA2 in pre-shared(or personal) mode.
+(Technically it is [[https://en.wikipedia.org/wiki/IEEE_802.11][IEEE 802.11]]x(the standard that specifies WLAN) traffic)
+
+Here we will decode traffic between other machines and the AP. It requires
+- The WPA pass phrase (and SSID)
+- EAPOL handshake, which occurs when a machine joins a Wi-Fi network
+
+ie.. we need to capture the =EAPOL= for each of the machines where we want to decode the traffic.
+One way to force the handshake is to put the machine into sleep and wake it (like closing and opening the lid).
+
+* Setting a network device in monitor mode
+
+The network device should not be connected to the AP.
+I will be configured in =monitor mode=, set to the APs channel and record the WPA encrypted traffic.
+
+Find the access point channel
+#+begin_src sh
+nmcli -f NAME,SSID,BSSID,MODE,CHAN,FREQ,RATE,SIGNAL,BARS,SECURITY,IN-USE device wifi
+
+NAME   SSID                 BSSID              MODE   CHAN  FREQ      RATE        SIGNAL  BARS  SECURITY  IN-USE
+AP[1]  Dana & Asbi          D0:21:F9:B7:B4:0E  Infra  48    5240 MHz  130 Mbit/s  94      ▂▄▆█  WPA2      *
+AP[2]  StolPaaMig           90:DE:80:38:4B:13  Infra  6     2437 MHz  54 Mbit/s   74      ▂▄▆_  --
+#+end_src
+in this case the SSID is =Dana & Asbi=, channel 48.
+
+I am using a usb WiFi dongle (=wlp0s20f0u1=)
+#+begin_src sh
+nix shell nixpkgs#aircrack-ng nixpkgs#wireshark nixpkgs#iw nixpkgs#wirelesstools
+
+iwconfig
+wlp0s20f0u1  IEEE 802.11  ESSID:off/any
+          Mode:Managed  Access Point: Not-Associated   Tx-Power=3 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+
+sudo iwconfig wlp0s20f0u1 channel 48
+wlp0s20f0u1  IEEE 802.11  ESSID:off/any
+          ,*Mode:Managed*  Frequency:5.24 GHz  Access Point: Not-Associated
+          Tx-Power=3 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+
+# set the device in monitor mode
+sudo airmon-ng start wlp0s20f0u1
+
+iwconfig
+wlp0s20f0u1mon  IEEE 802.11  *Mode:Monitor*  Frequency:2.457 GHz  Tx-Power=3 dBm
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+
+# re-set the channel for the device (I do not know why it changes)
+sudo iwconfig wlp0s20f0u1mon channel 48
+#+end_src
+
+* Record and decrypt in wireshark :ATTACH:
+
+Start recording from the monitoring device.
+Follow the [[https://wiki.wireshark.org/HowToDecrypt802.11][wireshark guide to decrypt 802.11]] and add the keys.
+
+Remember that
+#+begin_quote
+        The WPA passphrase and SSID preferences let you encode non-printable or otherwise troublesome characters using URI-style percent escapes, e.g. %20 for a space. As a result you have to escape the percent characters themselves using %25. You also must escape colons in the passphrase or SSID, using %3a, in order to distinguish them from a colon as a separator between the passphrase and SSID.
+#+end_quote
+
+#+CAPTION: wireshark: go to Edit->Preferences->Protocols->IEEE 802.11
+[[attachment:IEEE-80211-Preferences.png]]
+
+If you want to input the 256bit =psk= key derived from the passphrase and SSID, use [[https://www.wireshark.org/tools/wpa-psk.html][this]] or [[http://jorisvr.nl/wpapsk.html][this]] page.
+
+
+WPA and WPA2 use keys derived from an EAPOL handshake, which occurs when a machine joins a Wi-Fi network, to encrypt traffic.
+Unless all four handshake packets are present for the session you're trying to decrypt, Wireshark won't be able to decrypt the traffic.
+You need to capture EAPOL packets for all the machines whos traffic you want to see.
+
+You can use the display filter =eapol= to locate EAPOL packets in your capture. The wireshark guide has some [[https://wiki.wireshark.org/HowToDecrypt802.11#examples][example files]] in case you want to check the procedure.
+
+#+CAPTION: EAPOL packets sent during initial handshake
+[[attachment:wireshark_eapol.png]]
+
+Now the traffic should be decrypted. But most traffic will probably be https/tls which is still not visible.
+#+CAPTION: Decrypted WiFi communication in wireshark. Collected from a monitoring device.
+[[attachment:wireshark_decrypted.png]]
+
+Remove the monitoring device when done
+#+begin_src sh
+sudo iw dev wlp0s20f0u1mon del
+#+end_src
+
+[[https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#Lack_of_forward_secrecy][Lack of forward secrecy]]
+#+begin_quote
+         an attacker can silently capture and decrypt others' packets if a WPA-protected access point is provided free of charge at a public place, because its password is usually shared to anyone in that place. In other words, WPA only protects from attackers who do not have access to the password. Because of that, it's safer to use Transport Layer Security (TLS) or similar on top of that for the transfer of any sensitive data.
+#+end_quote
+
+* Notes
+- https://wiki.wireshark.org/HowToDecrypt802.11
+- https://mrncciew.com/2014/08/16/decrypt-wpa2-psk-using-wireshark/

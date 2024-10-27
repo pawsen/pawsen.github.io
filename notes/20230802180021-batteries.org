@@ -258,17 +258,21 @@ Supplier of honeycomb configuration plastic cell holders, plus 30-degree angled 
 https://www.aliexpress.com/item/18650-battery-holder-Cylindrical-cell-2-10-plastic-holder-18650-lithium-ion-battery-bracket-plastic-case/32729220653.html
 ** Voltage
 
-Nominal voltage
-| Voltage (V) | Cells (s) |
-|-------------+-----------|
-|          24 |         7 |
-|          36 |        10 |
-|          44 |        12 |
-|          48 |        13 |
-|          52 |        14 |
-|          60 |        16 |
-|          72 |        20 |
-|          88 |        24 |
+
+#+CAPTION: Nominal, max and min voltage.
+#+CAPTION: Based on 4.2V for fully charged and 3.0V for empty cell.
+| Voltage (V) | Cells (s) | Max (V) | Min (V) |
+|-------------+-----------+---------+---------|
+|          24 |         7 |    29.4 |    21.0 |
+|          36 |        10 |    42.0 |    30.0 |
+|          44 |        12 |    50.4 |    36.0 |
+|          48 |        13 |    54.6 |    39.0 |
+|          52 |        14 |    58.8 |    42.0 |
+|          60 |        16 |    67.2 |    48.0 |
+|          72 |        20 |    84.0 |    60.0 |
+|          88 |        24 |   100.8 |    72.0 |
+#+TBLFM: $3 = $2*4.2;%0.1f
+#+TBLFM: $4 = $2*3.0;%0.1f
 
 ** Reusing old cells :ATTACH:
 
