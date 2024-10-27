@@ -1,14 +1,19 @@
 :PROPERTIES:
 :ID:       18a332ac-b7a3-433a-8049-3bcdda9cde90
 :END:
-
 #+title: Mechanical advantage and efficiency
+
+#+hugo_tags: irata rope-access
+#+hugo_categories: ropes
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-08-01
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Efficieny of friction devices and the influence on actual mechanical advantage"
 
 
 * Efficiency of friction devices :ATTACH:
 ** Measured :ATTACH:
 
- Richard Delayney measured the friction, the data is from https://www.ropelab.com.au/files/physics.pdf or [[attachment:physics.pdf][physics.pdf]] p. 90.
+Richard Delayney measured the friction, the data is from https://www.ropelab.com.au/files/physics.pdf (or [[attachment:physics.pdf][physics.pdf]]) p. 90.
 
 #+CAPTION: friction devices
 [[attachment:friction-devices.png]]
@@ -35,12 +40,12 @@
 |------------------------------+-------------------+--------------|
 #+TBLFM: $3=(1/$2) *100;%.2f
 
-
-** Theoratical :ATTACH:
+** Theoretical :ATTACH:
 The theoretical efficiency can be estimated using the [[https://en.wikipedia.org/wiki/Capstan_equation][capstan equation]] (belt friction equation)
 
 T_2 = T_1 \exp^{\mu \beta}
 
+#+attr_html: :width 50% :height 50%
 #+CAPTION: Capstan equation for belt friction
 [[attachment:capstan_equation.png]]
 

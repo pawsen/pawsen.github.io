@@ -52,6 +52,9 @@ One is data bandwidth, the other is audio output quality.
 IQ samples for a 96 kHz wide RTL-SDR needs about 1.5 Mbit/s for the raw stream (namely, 96000 (samples/sec) x 8 (bits/sample) x 2 (I and Q channel).
 
 * Brief into to audio formats
+:PROPERTIES:
+:ID:       29353dcb-e3b1-43f7-a3e8-e58c844906e4
+:END:
 
 ~Self-describing~ formats (e.g. WAV, FLAC, MP3) have a header that completely describes the signal and encoding attributes of the audio data that follows.
 ~raw~ or ~headerless~ formats do not contain this information, so the audio characteristics of these must be described.
@@ -156,21 +159,23 @@ In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446]
 
 Continuous Tone-Coded Squelch System (CTCSS) is a low continuous tone transmitted along with the voice. In CTCSS mode, the receiver only unmutes when the signal also carries the correct sub-audible audio tone. All users with different CTCSS tones on the same channel are still transmitting on the identical radio frequency. [[https://www.sigidwiki.com/wiki/CTCSS#Additional_Images][CTSCC tones]] and further info.
 
-The CTCSS tone can be seen from a spectogram of the recorded audio. The channel 3 audio is recorded with ~rtl_fm~ (which demodulates the signal and save it as ~raw~ audio samples) and converted to ~wav~ with ~sox~.
-
+The channel 3 audio is recorded with ~rtl_fm~ (which demodulates the signal and save it as ~raw~ audio samples) and converted to ~wav~ with ~sox~.
 #+begin_src sh
 rtl_fm -f 446.03125M -M fm -s 12k -g 50 -l 70 > channel3.pcm
 sox -r 12k -t raw  -es -b 16 -c 1 channel3.pcm channel3.wav
 # optionally, check whats in the header
 soxi channel3.wav
 #+end_src
-[[attachment:channel3.wav][recording of channel3 signal]]
+Link to recording of [[attachment:channel3.wav][channel3.wav]].
 
+The CTCSS tone can be seen from a spectogram of the recorded audio in fig. [[fig:uhf_spectogram]].
+#+NAME: fig:uhf_spectogram
 #+CAPTION: Spectogram for voice with constant tone CTCSS. The constant tone is seen to be around 77Hz. Plots from Audacity.
 [[attachment:channel3_spectrum.png]]
 (Note =sonic-visualiser= is a little easier to use if you only want to show a spectogram and peak frequencies)
 
 The waterfall plot from ~sdr++~ looks like
+#+NAME: fig:uhf_waterfall
 #+CAPTION: waterfall from SDR++
 [[attachment:channel3_waterfall2.png]]
 

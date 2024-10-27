@@ -3,11 +3,12 @@
 :END:
 #+title: tension lines
 
-#+hugo_tags: irata rope-access
+#+filetags: irata rope-access
 #+hugo_categories: ropes
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-01
 #+HUGO_CUSTOM_FRONT_MATTER: :summary "A reeve setup can be used with a tension line to create a system that can lower or raise a load away from the anchor, as well as move it along the tension line."
+#+HUGO_IMAGES[]: 
 
 
 * Reeve systems :ATTACH:

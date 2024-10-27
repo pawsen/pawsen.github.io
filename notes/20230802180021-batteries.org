@@ -13,10 +13,21 @@
 #+hugo_publishdate: 2024-09-26
 #+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about Lithium batteries, connectors and DIY"
 
+How to assemble Lithium batteries, like the nominal e-bike 36V battery in fig. [[fig:10s4p_liion_battery]].
+
+#+NAME: fig:10s4p_liion_battery
+#+CAPTION: 36V 10s4p liion ebike battery
+[[attachment:IMG_20211103_180619403.jpg]]
+
 * Connectors
 See a list on the [[https://en.wikipedia.org/wiki/DC_connector][Wikipedia article on dc connectors]]
 
-The most commonly used for batteries are
+Some of most commonly used for batteries are shown in fig. [[fig:commen_rc_connectors]].
+
+#+NAME: fig:commen_rc_connectors
+#+CAPTION: Some of the common RC connectors
+[[attachment:image_6dcaf98.webp]]
+
 ** JST
 A  large number of different types. See [[https://www.mattmillman.com/info/crimpconnectors/common-jst-connector-types/
 ][this usefule info]]. [[https://en.wikipedia.org/wiki/JST_connector][wikipedia]] has additional info.
@@ -28,9 +39,21 @@ Popular types are (with different pin-to-pin pitch)
 - 3d printed [[https://www.printables.com/model/475497-angled-jst-tweezers][tweezers]] for easy removal.
  
 ** XT :ATTACH:
-XT60 and XT90 are often used for bicycle batteries, as Anderson connectors are considered too bulky(and the ampacity is lower than for e.g. LiFePO4 batteries)
+XT60 and XT90 are often used for bicycle batteries, as Anderson connectors are considered too bulky(and the ampacity is lower than for e.g. LiFePO4 batteries).
+XT's uses(and fits with) bullet connectors.
 
 - 3d printed surface/flush [[https://www.thingiverse.com/thing:3340052/files][mount]] for XT60.
+- XT90-s is am anti-spark version of XT90. [[https://www.aliexpress.com/item/1005007308763534.html?src=google][Aliexpress, 10pcs, 10awg silicon wire.]]
+- When you are soldering to an XT60 or XT90 it helps to plug them into their
+  mate and solder them that way so you don’t overheat the plastic and shift the
+  pins. If you don’t have a lot of experience soldering you should just order
+  the XT60’s and XT90’s with pigtails.
+
+| model | current rating (A) | wire (AWG) | bullet size (mm) |
+|-------+--------------------+------------+------------------|
+| XT-30 | 15/30              |      16-18 |                2 |
+| XT-60 | 30/60              |      12-14 |              3.5 |
+| XT-90 | 60/90              |      10-12 |              4.5 |
 
 If more heavy duty XT-like connectors are needed, the [[https://www.google.com/search?q=QS8+connector][QS8 connector]] carries 110A, up to 6AWG wire and are anti-spark
 
@@ -67,6 +90,39 @@ NOTE:
 - Buy them from [[https://www.aliexpress.com/item/1005005237025318.html][aliexpress]], remember to select AWG size for the pins.
 - The SB connectors can be flush mounted. Here's a 3d model from [[https://www.thingiverse.com/thing:5835998/files][thingiverse]]
 
+** Crimpers
+Three recommended crimpers that can crimp most things
+- [[https://www.amazon.com/Insulated-Non-Insulated-Klein-Tools-1005/dp/B0006M6Y5M][Klein Tools 1005]], for 10-22 AWG or the cheaper [[https://www.amazon.com/dp/B00004SBDI][Channellock 909 9.5-Inch Wire Crimping Tool]] (I bought the latter)
+  Note: There's die for insulated and non-insulated connectors. The die possitions are (possible) reversed on the Klein- vs Channellock tool. That's the only difference between them.
+- [[https://www.amazon.com/gp/product/B017S9EINA][Hexagon crimping tool]], for 2-10 AWG, (iCrimp Cable Lug Crimping Tool, this version have AWG sizing. It can be found with [[https://www.12voltplanet.co.uk/copper-tube-terminal-hexagon-crimping-tool-6-50mm2.html][mm2 sizing]] as well)
+  For crimping Andersen Connectors pins, set the die to one size smaller than the actual pin, i.e. for 6awg(16mm2 with mm2 sizing), set the die to 4awg(10mm2), as recommended in [[https://youtu.be/cTRYkjGKx0M?feature=shared&t=117][this video]].
+- [[https://www.amazon.com/IWISS-Ratcheting-Anderson-Connectors-CONNECTORS/dp/B01MSQPTDS][Anderson connector tool]], for 15, 30 and 45 A connectors(10-22 awg wires).
+  Apparently these Anderson connectors requires a specific tool for crimping. This tool should be good and less expensive than the original.
+
+
+Other good crimpers
+For large sizes
+- [[https://www.amazon.com/TEMCo-Lug-Crimper-Tool-TH0020/dp/B00HJYY5GA][Dieless cable lug crimper]]. Heavy duty, makes very good [[https://youtu.be/uuTRLQOa5zk?feature=shared][crimps]] even when lug and wire doesn't match exactly.
+- [[https://www.aliexpress.com/item/4001255674082.html][IWISS IWS 38 crimper]] (choose the 38 version).
+
+For ferrules
+(Ferrules are the thin tubular end connectors used on cables that are going to mounted in screw terminals. Also called bootlace terminals)
+- [[https://www.amazon.com/IWISS-Self-adjusting-Hexagonal-AWG23-10-End-sleeves/dp/B00H950AK4][iCrimp HSC8 6-6A]], hexagonal crimping tool
+  The 6-6 stands for 6 ridges, 6 sides. The hex one.
+  The 6-4 stands for 6 ridges, 4 sides. The square one.
+  Go for the hexagonal one.
+
+  The leading 6 is probably related to the max. size of the cable, i.e. the higher number, the larger diameter cable.
+  
+* Wires :ATTACH:
+Use [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][wikipedias table of AWG wires]] to get initial recommendation.
+And depending on length, use the
+
+#+NAME: fig:awg_selection_chart
+#+CAPTION: AWG selection chart.
+#+CAPTION: [[http://assets.bluesea.com/files/resources/newsletter/images/DC_wire_selection_chartlg.jpg][source]]
+[[attachment:_20240218_005227DC_wire_selection_chartlg.jpg]]
+
 * Strips
 
 Strips are used to spot weld battery cells together.
@@ -75,7 +131,13 @@ Pure nickel is the most common, but [[https://endless-sphere.com/sphere/threads/
 
 The parallel connections can be just about any material that is conductive, since the current is quite small for all cells (less than 1A under all conditions). Nickel, and nickel-plated steel ribbon will work quite well for paralleling. They act as a resistor to slow cell equalization.
 
-However, the series connections handle the current of the pack, so using copper there is the best material.
+However, the series connections handle the current of the pack, so using copper is the best material for high performance batteries.
+
+#+CAPTION: Series current flow is 5A, for a total of 25A for this 5p battery. Parallel current(equalizing) is less than 1A.
+#+CAPTION: {{{NEWLINE}}}
+#+CAPTION: If the cells are 3400mAh, peak capacity is /(5p x 3.4Ah = 17Ah/).
+[[attachment:Battery186508.webp]]
+
 
 #+CAPTION: Conductivity in IACS (International Annealed Copper Standard)
 | % IACS | Material   |
@@ -105,6 +167,8 @@ If using nickel, make sure it is pure nickel strips as it can carry a higher cur
 According to the table in fig [[fig:ampacity_chart_strips]], pure nickel strips of =8mm x 0.15mm= carries 4.9A, which is sufficient for my bike batteries.
 
 Rule of thumb
+- 8x0.15mm for 5A (per 8A rated cell)
+- 8x0.20mm for 10A rated
 - buy 8mm wide nickel for straight packs and 10mm for honeycomb packs
 
 **** Some notes
@@ -149,7 +213,63 @@ I have read that the slot in the nickel strip makes the current take the shortes
 #+CAPTION: The slot in the nickel strips ensures that most current travels through the shorter path of the cell tip.
 [[attachment:SpotWeldCurrent1.png]]
 
-* Batteries
+* Cells
+
+~18650~ used to be the most popular, but ~21700~ are getting more popular for ebikes due to the higher energy density.
+
+The names are from the form factor, ie
+- 18650 measures 18 mm in diameter by 65 mm in length, giving them the name 18650.
+
+#+CAPTION: The two electrodes of a standard 18650 cell. The bottom and sides of the shell are the negative electrode. The negative side is protected by a thin PVC sleeve.
+[[attachment:Battery1865018.webp]]
+
+I have read that: *Do not spot weld or solder onto the center of the negative end of a cell*
+#+begin_quote
+    During assembly, when the jelly roll is inserted into the negative metal shell, a probe is inserted down the center and the “tab” for the negative electrical connection is bonded to the shell at the bottom-center of the 18650 cell. If you screw around with the center of the bottom of the 18650 cell, there is a chance you might loosen the internal connection between the jelly roll and the metal shell.    
+#+end_quote
+Soldering onto the positive end should be ok.
+
+Some prefer to use(ie. would newer build a pack without) [[https://endless-sphere.com/sphere/threads/18650-insulator-rings-redundant.100867/][fiber washers]] on the positive end to prevent shoulder shorts
+#+CAPTION: Shoulder short: while trying to prying the nickel bus, the plier broke the pvc sleeve and shorted the cell.
+[[attachment:18650cellShort.webp]]
+
+Some recommended 18650 cells are listed below. Other good cells can be found on [[https://www.e-cigarette-forum.com/blog/moochs-recommended-batteries.7593/][Mooch's recommended batteries]] list.
+
+#+CAPTION: Recommended high discharge cells
+| Rating (A) | models                            | capacity (mAh) |
+|------------+-----------------------------------+----------------|
+|         10 | LG MJ1, Samsung 35E, Panasonic GA |           3400 |
+|         15 | 30Q                               |           3000 |
+|         20 | Sony VTC6, LG HG2, Samsung 25R    |                |
+
+
+** Cell arrangement/holder
+*** honeycomb
+The side angle of the stacked cells is about 30-degrees for honeycomb configuration, (compared to 90-degree corners in a common rectangular pack).
+This makes it a natural fit into the lower part of the frame triangle space, as seen in fig. [[fig:honeycomb_stack]].
+
+#+NAME: fig:honeycomb_stack
+#+CAPTION: Picture from a Russian battery pack website: figure out how many cells fits in your frame
+#+CAPTION: {{{NEWLINE}}}
+#+CAPTiON: https://e4bike.ru/page/battery-shape-configurator
+[[attachment:Battery18650Allex.webp]]
+
+Supplier of honeycomb configuration plastic cell holders, plus 30-degree angled nickel bus-strips
+https://www.aliexpress.com/item/18650-battery-holder-Cylindrical-cell-2-10-plastic-holder-18650-lithium-ion-battery-bracket-plastic-case/32729220653.html
+** Voltage
+
+Nominal voltage
+| Voltage (V) | Cells (s) |
+|-------------+-----------|
+|          24 |         7 |
+|          36 |        10 |
+|          44 |        12 |
+|          48 |        13 |
+|          52 |        14 |
+|          60 |        16 |
+|          72 |        20 |
+|          88 |        24 |
+
 ** Reusing old cells :ATTACH:
 
 This flow chart might help deciding if the cells are worth reusing
@@ -225,18 +345,25 @@ Small measurement errors may occur, related to the sampling frequency. To correc
 ** SoH or State of Health
 
 SoH = Q_{max} Q_{rated}
-** Cell holder
- Supplier of honeycomb configuration plastic cell holders, plus 30-degree angled nickel bus-strips
- https://www.aliexpress.com/item/18650-battery-holder-Cylindrical-cell-2-10-plastic-holder-18650-lithium-ion-battery-bracket-plastic-case/32729220653.html
-** BMS
+
+** notes
+- https://www.electricbike.com/inside-18650-cell
+- [[https://youtu.be/9qi03QawZEk][Why lithium batteries dies]]
+- [[https://youtu.be/CxS7XeIh_i4][What is inside a 18650 cell]]
+* BMS
+The Battery Management System (BMS)
+
 
 http://liionbms.com/php/bms_options.php
 
 
 Paralleling, serialing, balancing, BMS
 http://liionbms.com/php/white_papers.php
-* PowerWall
-** Fuses
+
+#+NAME: figLliion_bms_cables
+#+CAPTION: BMS balancing wires taped to the cells(note the cells are in honeycomb arrangement)
+[[attachment:BatteryDIY11.webp]]
+* Fuses
 
 For powerwalls made of recycled cells of varying/unknown quality, fusing each cell is recommended. According to the following video it is not necessary to fuse both sides of the battery. One side is enough.
 [[https://youtu.be/iL6Td8R5C1g][Dead shorting an 18650 Battery to test cell level fuses]]
@@ -249,16 +376,18 @@ Three types of cell fuse
   Can be either spot welded or soldered between battery and bus bar. [[https://secondlifestorage.com/index.php?threads/experiment-soldering-18650-capacity-fade.8217/][Welding should not decrease battery performance]] if done properly
 - Glass fuses. Some recommend these over fuse wire, as they don't heat/glow. I prefer the fuse wire for ease of installation and it's neater.
 
-*** images
+** images :ATTACH:
 #+CAPTION: Spot welded fuse wire to bus bar
-[[file:~/git/org/.attach/files/20220713_190008.jpg]]
-[[file:~/git/org/.attach/files/20220713_190150.jpg]]
+[[attachment:20220713_190008.jpg]]
+
+#+CAPTION: soldered fuse wire to solid bus bar
+[[attachment:BatteryFuse1.webp]]
 
 #+CAPTION: Fusing current for AWG wires. From https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
-[[file:~/git/org/.attach/files/AWG-wire-sizes.jpg]]
+[[attachment:AWG-wire-sizes.jpg]]
 
 #+CAPTION: nickel fuse strip
-[[file:~/git/org/.attach/files/strip.jpg]]
+[[attachment:strip.jpg]]
 
 * LiFePO4 in car
 
@@ -427,36 +556,6 @@ https://www.mustsolar.com/must-products-updated-ep3000-plus/
 
 See [[https://diysolarforum.com/threads/this-could-be-interesting.7835/post-190627][this post]] for inside pictures of the inverter. Note the big and heavy coil.
 See [[https://github.com/PurpleAlien/must-power_grafana][his github]] for grafana plugins/modbus protocol to read from the MUST devices. He uploaded a description of the [[https://diysolarforum.com/resources/must-ep3000-modbus-rtu-protocol.308/][modbus protocol]] and [[https://diysolarforum.com/resources/must-ep3000-plus-inverter-charger-1-6-kw-version.98/][manual]].
-* Wires :ATTACH:
-Use [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][Table of AWG wires]] to get initial recommendation.
-And depending on length, use the [[http://assets.bluesea.com/files/resources/newsletter/images/DC_wire_selection_chartlg.jpg][awg selection chart]]
-
-#+CAPTION: AWG selection chart
-[[attachment:_20240218_005227DC_wire_selection_chartlg.jpg]]
-
-** Crimpers
-Three recommended crimpers that can crimp most things
-- [[https://www.amazon.com/Insulated-Non-Insulated-Klein-Tools-1005/dp/B0006M6Y5M][Klein Tools 1005]], for 10-22 AWG or the cheaper [[https://www.amazon.com/dp/B00004SBDI][Channellock 909 9.5-Inch Wire Crimping Tool]] (I bought the latter)
-  Note: There's die for insulated and non-insulated connectors. The die possitions are (possible) reversed on the Klein- vs Channellock tool. That's the only difference between them.
-- [[https://www.amazon.com/gp/product/B017S9EINA][Hexagon crimping tool]], for 2-10 AWG, (iCrimp Cable Lug Crimping Tool, this version have AWG sizing. It can be found with [[https://www.12voltplanet.co.uk/copper-tube-terminal-hexagon-crimping-tool-6-50mm2.html][mm2 sizing]] as well)
-  For crimping Andersen Connectors pins, set the die to one size smaller than the actual pin, i.e. for 6awg(16mm2 with mm2 sizing), set the die to 4awg(10mm2), as recommended in [[https://youtu.be/cTRYkjGKx0M?feature=shared&t=117][this video]].
-- [[https://www.amazon.com/IWISS-Ratcheting-Anderson-Connectors-CONNECTORS/dp/B01MSQPTDS][Anderson connector tool]], for 15, 30 and 45 A connectors(10, 12, 14, 16, 18, 20 awg wires).
-  Apparently these Anderson connectors requires a specific tool for crimping. This tool should be good and less expensive than the original.
-
-
-Other good crimpers
-For large sizes
-- [[https://www.amazon.com/TEMCo-Lug-Crimper-Tool-TH0020/dp/B00HJYY5GA][Dieless cable lug crimper]]. Heavy duty, makes very good [[https://youtu.be/uuTRLQOa5zk?feature=shared][crimps]] even when lug and wire doesn't match exactly.
-- [[https://www.aliexpress.com/item/4001255674082.html][IWISS IWS 38 crimper]] (choose the 38 version).
-
-For ferrules
-(Ferrules are the thin tubular end connectors used on cables that are going to mounted in screw terminals. Also called bootlace terminals)
-- [[https://www.amazon.com/IWISS-Self-adjusting-Hexagonal-AWG23-10-End-sleeves/dp/B00H950AK4][iCrimp HSC8 6-6A]], hexagonal crimping tool
-  The 6-6 stands for 6 ridges, 6 sides. The hex one.
-  The 6-4 stands for 6 ridges, 4 sides. The square one.
-  Go for the hexagonal one.
-
-  The leading 6 is probably related to the max. size of the cable, i.e. the higher number, the larger diameter cable.
 
 * power tools batteries
 See this [[https://docs.google.com/spreadsheets/d/e/2PACX-1vRghl-44o7Nw_GGOGKN8PdnxJtbzF7UR7nYDt3zEPrRL_azznKE1w4QvBJRLxdQnecwIgQ6tuuzQ4bT/pub#][Spredsheet]] with battery and cell information for most brands, like Milwaukee, DeWALT, etc.

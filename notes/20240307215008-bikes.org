@@ -1,21 +1,29 @@
 :PROPERTIES:
 :ID:       b87e63b0-7d21-4cb5-8418-ac5f93551ed7
 :END:
-#+title: bikes
+#+title: Converting an bike to ebike
+
+#+filetags: bikes bafang
+#+hugo_categories: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-10-26
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about motor kits for bikes, custom firmware, displays"
+
+It is relatively easy to convert your bike to an ebike.
+
+The main decision is whether to use a mid- or hubdrive motor.
+- The hubdrive is good for flat county. It is much simpler just to change a wheel.
+  It is either geared or gearless (Generally, the low-power motor is
+  geared and the high-power motor is gearless. The latter has regenerative
+  breaking, which can increase the range up till 10%). The geared hub is smaller
+  and lighter, climbs hills better but have a lower top speed.
+
+- middrives are good for hills/off road/high quality and seems to be more popular among the geeky segment of DIY ebikes.
+
+#+CAPTION: left: middrive, replacing the crank and reusing gears and chain. right: hubdrive, replacing a wheel.
+[[attachment:Mid-Drive-better-vs-Hub-Drive-Electric-Bicycle-Motors.jpg]]
 
 * Bafang middrives
-** M series kits (M510/M560/M820)
-M620 (Ultra) and other motors (model format "Mxx0") requires bafang proprietary frame mounts.
-Model format "Mxx5" are designed for converting bikes to ebikes with a bottom bracket attachment. See https://bafang-e.com/en/products/motors/m-series/.
-
-The M series is an "upgrade" of the BBS series, and has some improvements but also switches to the (currently) non-hackable CANBUS controls. There is also a modest change in the mounting.
-
-The M-series conversion kits have seen a bit of thrashing going on. Originally Bafang announced the M625 as the replacement for the BBSHD and the M325 for the BBS02. These new models have since disappeared. They now have the M615 and the M315 models, which appear to be the old models (BBSHD, BBS02) with new nomenclature, and the CANBUS controller instead of the UART one IIRC. There is a new model that is starting to roll out, the M635 (1000W), which adds torque sensing to the system. (The M620 has torque sensing, which I have and do like a lot.) Unless you want torque sensing then the old models will be fine, and if you want to hack the controller they are the way forward.
-
-If you are looking for power over budget then the 1000W Bafangs are hard to beat, and can be modded with even more powerful controllers ($$$$). If you want good power as well as less weight then the 750W BBS02 is a good choice. A comparable conversion kit (to the BBS02) is the 750W Tongsheng TSDZ2, and it adds torque sensing for a smoother experience (available with custom open source firmware). For general use either of the 750W motors will be fine - you will not generally be using all of the power anyway.
-
-If you are into hill climbing then there is never too much power...
-
 ** BBS models (BBS02/BBS02B/BBSHD) / only bottom brackets
 Get the BBSHD. You will never regret the extra power and torque. Also, its 'Heavy Duty' and not prone to burning out like the '02.
 *** Bottom Brackets Standards and how it fits :ATTACH:
@@ -29,19 +37,59 @@ The distance should be at least 7cm (2 2/3"). Move the ruler out to determine th
 #+CAPTION: Measuring the distance between BB and frame chain stay
 [[attachment:_20240307_215132IMG_2643_a3db526f-2196-4b43-958e-7651e76dea03_large.JPG.jpeg]]
 
-*** reprogrammking the controller
+*** reprogramming the controller
+
+https://github.com/danielnilsson9/bbs-fw/wiki
+Specific for flashing the BBS02B:
+https://endless-sphere.com/sphere/threads/bbs-fw-open-source-firmware-for-bbshd-bbs02-controller.117092/post-1824627
+
 
 https://electricbike-blog.com/2015/06/26/a-hackers-guide-to-programming-the-bbs02/
 https://electricbike-blog.com/2015/03/17/programming-the-bbs02-without-frying-your-controller-and-losing-your-sanity/
 
+** M series kits (M510/M560/M820)
+M620 (Ultra) and other motors (model format "Mxx0") requires bafang proprietary frame mounts.
+Model format "Mxx5" are designed for converting bikes to ebikes with a bottom bracket attachment. See https://bafang-e.com/en/products/motors/m-series/.
+
+The M series is an "upgrade" of the BBS series, and has some improvements but also switches to the (currently) non-hackable CANBUS controls. There is also a modest change in the mounting.
+(=M620=, =M300=, =M400= are exceptions and use UART communication, not CANbus.)
+
+The M-series conversion kits have seen a bit of thrashing going on. Originally Bafang announced the M625 as the replacement for the BBSHD and the M325 for the BBS02. These new models have since disappeared. They now have the M615 and the M315 models, which appear to be the old models (BBSHD, BBS02) with new nomenclature, and the CANBUS controller instead of the UART one IIRC. There is a new model that is starting to roll out, the M635 (1000W), which adds torque sensing to the system. (The M620 has torque sensing, which I have and do like a lot.) Unless you want torque sensing then the old models will be fine, and if you want to hack the controller they are the way forward.
+
+If you are looking for power over budget then the 1000W Bafangs are hard to beat, and can be modded with even more powerful controllers ($$$$). If you want good power as well as less weight then the 750W BBS02 is a good choice. A comparable conversion kit (to the BBS02) is the 750W Tongsheng TSDZ2, and it adds torque sensing for a smoother experience (available with custom open source firmware). For general use either of the 750W motors will be fine - you will not generally be using all of the power anyway.
+
+If you are into hill climbing then there is never too much power...
+
 ** Front Chainring size
 https://electricbike-blog.com/2017/05/26/take-a-wild-guess-selecting-the-best-front-chainring-size-for-a-mid-drive-ebike-on-the-first-try/
 ** displays
-https://electricbike-blog.com/bbs02-displays/
 
-I recommend the 500c but if you can’t get the 500c the DPC-14 is a good 2nd bet
+The display should be compatible with the battery voltage.
+- The =C965= is rated for =24V/36V= and estimates the SoC from the "Open Voltage". Using a 52V battery will show a wrong battery percentage, but motor/controller will still function.
+  If possible, get the display to show the actual voltage instead.
 
+The displays below should be good for nominal 52V batteries.
+
+[[https://electricbike-blog.com/bbs02-displays/][I recommend the 500c]] but if you can’t get the 500c the DPC-14 is a good 2nd bet.
 The DPC 14 is also called 850c
+
+[[https://manual.eggrider.com/displays/eggrider_v2/overview/][EggRider V2]] is a programming enabled display+app that can change controller settings(using =UART=) on the fly.
+* Other middrive motors
+** Tongsheng TSDZ2 (Or the newer TSDZ8)
+Alternative to the BBS02 700W.
+Have torque sensor, instead of cadence like the BBS model, which should give a smoother ride
+
+Is a bit delicate so for tough usage the BBS02 is a better choice, especially for uphill climbing(TSDZ2 seems to overheat).
+For normal city usage the TSDZ2 seems to be preferred.
+** CYC
+High-end motors with toque sensing. Smaller, lighter and higher quality than both Bafang and Tongsheng, but much more expensive.
+Ideal for the "true" offroad.
+
+Models include
+- 750W photon
+- 1500W X1 Stealth
+- 5000W X1 Pro
+
 * cases
 - HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V
   https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713
