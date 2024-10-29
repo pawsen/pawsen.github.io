@@ -34,7 +34,7 @@ In the following diagrams
 But an Norwegian reeve system is not always able to move down along the inclined tension line when the control line is attached at the high anchor.
 It depends on the angle between the control- and tension line, which we will look into below.
 
-*** No mechanical advantage / ie. not a reeve system
+*** No mechanical advantage / ie. not a reeve system :ATTACH:
 
 If the load is light, one might be tempted to use a non-reeved, ie. 1:1, system as shown below
 
@@ -43,8 +43,8 @@ If the load is light, one might be tempted to use a non-reeved, ie. 1:1, system 
 [[attachment:no reeve - angled tension line.png]]
 
 Ignoring the friction from the pulley on the tension line, the free body diagram for the "reeve" pulley looks as
-#+CAPTION: Free body diagram for the "reeve" pulley"
-[[attachment:no reeve - angled tension line.png]]
+#+CAPTION: Free body diagram for the 1:1 pulley (the pulley with the green rope in fig [[fig__not_a_reeve_system]])
+[[attachment:reeve_1_1_free_body.jpg]]
 
 where
 - φ is the angle between the tension line and horizontal and
@@ -167,7 +167,7 @@ The limit case for \(φ \to 0\) (note that θ, the angle of the control rope, do
 
 i.e. whenever there is a load, the carriage will always move towards the pull from the control line(which is left in fig [[fig__not_a_reeve_system]]).
 
-*** 2:1
+*** 2:1 :ATTACH:
 
 This is the typical reeve setup
 
@@ -175,6 +175,8 @@ This is the typical reeve setup
 [[attachment:norweegian reeve - angled tension line.png]]
 
 A free body diagram is shown below
+#+CAPTION: Free body diagram for the 2:1 reeve system
+[[attachment:reeve_2_1_free_body.jpg]]
 
 The carriage goes up if
 \begin{align}
@@ -297,9 +299,6 @@ Note that
 
 #+CAPTION: "Textbook" English reeve. Requires an load attendant minding the reeve prussiks
 [[attachment:english-reeve-drawing.gif]]
-
-#+CAPTION: English reeve with load attendant and twin carriages
-[[attachment:english_reeve_litter.png]]
 
 *** Rich Delaneys version
 Rich Delaney [[https://www.facebook.com/RichardDelaneyRopeLab/photos/there-are-many-ways-to-construct-an-english-reeve-highlineeach-method-has-advant/1028643871999440/][posted this setup]].
