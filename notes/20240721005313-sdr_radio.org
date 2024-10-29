@@ -168,17 +168,19 @@ soxi channel3.wav
 #+end_src
 Link to recording of [[attachment:channel3.wav][channel3.wav]].
 
-The CTCSS tone can be seen from a spectogram of the recorded audio in fig. [[fig:uhf_spectogram]].
+The CTCSS tone can be seen from a spectogram of the recorded audio, as shown in fig. [[fig:uhf_spectogram]].
 #+NAME: fig:uhf_spectogram
 #+CAPTION: Spectogram for voice with constant tone CTCSS. The constant tone is seen to be around 77Hz. Plots from Audacity.
 [[attachment:channel3_spectrum.png]]
 (Note =sonic-visualiser= is a little easier to use if you only want to show a spectogram and peak frequencies)
 
-The waterfall plot from ~sdr++~ looks like
-#+NAME: fig:uhf_waterfall
-#+CAPTION: waterfall from SDR++
-[[attachment:channel3_waterfall2.png]]
+Eyeballing it, the CTCSS tone is =77Hz= or [[https://www.sigidwiki.com/wiki/File:CTCSS_table.png][subchannel 4]].
 
+
+For completeness, the waterfall plot for a uhf radio looks like
+#+NAME: fig:uhf_waterfall
+#+CAPTION: waterfall for UHF radio, SDR++
+[[attachment:channel3_waterfall2.png]]
 **** Scanning multiple frequencies
 #+begin_src sh
 rtl_fm -M fm \

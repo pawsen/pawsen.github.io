@@ -215,7 +215,35 @@ I have read that the slot in the nickel strip makes the current take the shortes
 
 * Cells
 
-~18650~ used to be the most popular, but ~21700~ are getting more popular for ebikes due to the higher energy density.
+** Types
+There are many different li-ion type cells
+#+CAPTION: Different types of LI-ION cells
+[[attachment:aQnIswu.png]]
+
+#+CAPTION: Voltage and Chemistry
+| Voltage | Chemistries           |
+|---------+-----------------------|
+| 2.5 V   | Titanate (LTO)        |
+| 3.2 V   | LiFePO4 (LFP)         |
+|         | LiFeYPo4 (Thundersky) |
+| 3.6 V   | LiCoO2 (LCO)          |
+|         | LiNiMnCoO2 (NMC)      |
+|         | LiMnO2                |
+|         | LiMn2O4 (LMO)         |
+|         | LiNiCoAlO2 (NCA)      |
+
+
+Regardless of chemistry, they come in different formats
+
+
+- Pouch: soft plastic bag (incorrectly called "LiPos")
+- Small cylindrical: in metal case, no studs, less than 10 Ah (e.g.: 18650)
+- Large cylindrical: in plastic case, two threaded studs at either end, 10 Ah and larger
+- Small prismatic: housed in a thin metal (or plastic case), less than 10 Ah (e.g.: cell phone)
+- Large prismatic: housed in a hard plastic (or thin metal) case two bolts at top, 40 Ah and larger, used in electric vehicles, solar system
+
+** 18650 and 21700
+For most hobbyist, ~18650~ used to be the most popular but ~21700~ are getting more popular for ebikes due to the higher energy density.
 
 The names are from the form factor, ie
 - 18650 measures 18 mm in diameter by 65 mm in length, giving them the name 18650.
@@ -355,43 +383,19 @@ SoH = Q_{max} Q_{rated}
 - [[https://youtu.be/9qi03QawZEk][Why lithium batteries dies]]
 - [[https://youtu.be/CxS7XeIh_i4][What is inside a 18650 cell]]
 * BMS
-The Battery Management System (BMS)
+The Battery Management System (BMS) should prevent under- and overvoltage and balance the cells.
 
 
-http://liionbms.com/php/bms_options.php
-
-
-Paralleling, serialing, balancing, BMS
-http://liionbms.com/php/white_papers.php
-
-#+NAME: figLliion_bms_cables
+#+NAME: fig:li-ion_bms_cables
 #+CAPTION: BMS balancing wires taped to the cells(note the cells are in honeycomb arrangement)
 [[attachment:BatteryDIY11.webp]]
-* Fuses
 
-For powerwalls made of recycled cells of varying/unknown quality, fusing each cell is recommended. According to the following video it is not necessary to fuse both sides of the battery. One side is enough.
-[[https://youtu.be/iL6Td8R5C1g][Dead shorting an 18650 Battery to test cell level fuses]]
 
-5 Amps is sufficient
+The unmodified [[id:9f7ba240-5d80-441f-a38b-0c622bee5715][bafang BBS models (BBS02/BBS02B/BBSHD)]] uses up to 30A, but the BBSHD can be modified to >50A.
+So get a BMS that delivers >50A
 
-Three types of cell fuse
-- [[https://batteryhookup.com/products/nickel-fuse-2p-wide-continuous-roll-by-the-foot-18650-cell-level-fusing][Nickel fuse, continuous roll]]
-- Fuse wire, like 30AWG tinned copper. [[https://www.amazon.com/gp/product/B01LZBOSQJ][30AWG on amazon]] and [[https://youtu.be/QWZKIr5BcU0][fuse wire test]]. The [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][fusing current is seen in this table]]
-  Can be either spot welded or soldered between battery and bus bar. [[https://secondlifestorage.com/index.php?threads/experiment-soldering-18650-capacity-fade.8217/][Welding should not decrease battery performance]] if done properly
-- Glass fuses. Some recommend these over fuse wire, as they don't heat/glow. I prefer the fuse wire for ease of installation and it's neater.
-
-** images :ATTACH:
-#+CAPTION: Spot welded fuse wire to bus bar
-[[attachment:20220713_190008.jpg]]
-
-#+CAPTION: soldered fuse wire to solid bus bar
-[[attachment:BatteryFuse1.webp]]
-
-#+CAPTION: Fusing current for AWG wires. From https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
-[[attachment:AWG-wire-sizes.jpg]]
-
-#+CAPTION: nickel fuse strip
-[[attachment:strip.jpg]]
+Recommendations
+- [[https://antbms.aliexpress.com/store/1102984145][ANTBMS]], like the 7-16S 80A
 
 * LiFePO4 in car
 
@@ -539,6 +543,32 @@ I = a*d^{3/2}.
 
 I is the fusing current, d is the diameter of the wire, a is a constant depending on the material of the wire.
 
+** Fusing individual cells
+
+For powerwalls made of recycled cells of varying/unknown quality, fusing each cell is recommended. According to the following video it is not necessary to fuse both sides of the battery. One side is enough.
+[[https://youtu.be/iL6Td8R5C1g][Dead shorting an 18650 Battery to test cell level fuses]]
+
+5 Amps is sufficient
+
+Three types of cell fuse
+- [[https://batteryhookup.com/products/nickel-fuse-2p-wide-continuous-roll-by-the-foot-18650-cell-level-fusing][Nickel fuse, continuous roll]]
+- Fuse wire, like 30AWG tinned copper. [[https://www.amazon.com/gp/product/B01LZBOSQJ][30AWG on amazon]] and [[https://youtu.be/QWZKIr5BcU0][fuse wire test]]. The [[https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes][fusing current is seen in this table]]
+  Can be either spot welded or soldered between battery and bus bar. [[https://secondlifestorage.com/index.php?threads/experiment-soldering-18650-capacity-fade.8217/][Welding should not decrease battery performance]] if done properly
+- Glass fuses. Some recommend these over fuse wire, as they don't heat/glow. I prefer the fuse wire for ease of installation and it's neater.
+
+*** images :ATTACH:
+#+CAPTION: Spot welded fuse wire to bus bar
+[[attachment:20220713_190008.jpg]]
+
+#+CAPTION: soldered fuse wire to solid bus bar
+[[attachment:BatteryFuse1.webp]]
+
+#+CAPTION: Fusing current for AWG wires. From https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
+[[attachment:AWG-wire-sizes.jpg]]
+
+#+CAPTION: nickel fuse strip
+[[attachment:strip.jpg]]
+
 * Inverters
 ** High frequency
 High frequency inverters are generally more complex on the electronics side but do away with the giant, heavy copper transformer that a low frequency inverter uses.
@@ -576,3 +606,10 @@ Add 3.3K resistors over cell connections on the BMS, to trick it into thinking c
 - M18 have a BMS. However, some intelligence such as low voltage disconnect is in the tool. Makita and Ryobi keep the low voltage disconnect inside the batteries, making them great for DIY projects. Connecting loads directly to a Milwaukee M18 or M12 terminals without low voltage cutoff circuitry will overdischarge and ruin the battery.
 
 Cutoff voltage for M12 is around 9.74V(The tool will no longer turn). Set it to 10V to be on the safe side. Most 18650 cells can run down to 2.7V without destroying them, but going so low (ie. 3*2.7V=8.1V) could destroy some cells if they are slightly out of balance.
+
+* Notes
+
+Paralleling, serialing, balancing, BMS
+http://liionbms.com/php/white_papers.php
+
+http://liionbms.com/php/bms_options.php

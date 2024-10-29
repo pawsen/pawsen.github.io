@@ -25,7 +25,14 @@ The main decision is whether to use a mid- or hubdrive motor.
 
 * Bafang middrives
 ** BBS models (BBS02/BBS02B/BBSHD) / only bottom brackets
-Get the BBSHD. You will never regret the extra power and torque. Also, its 'Heavy Duty' and not prone to burning out like the '02.
+:PROPERTIES:
+:ID:       9f7ba240-5d80-441f-a38b-0c622bee5715
+:END:
+Get the BBSHD. You will never regret the extra power and torque. Also, its 'Heavy Duty' and not prone to burning out like the '02 if used for steep hill climbing.
+
+Standard current usage
+- BBS02: 25A
+- BBSHD: 30A, but can be modified to >50A.
 *** Bottom Brackets Standards and how it fits :ATTACH:
 
 https://www.empoweredcycles.com/blogs/news/101474694-bottom-bracket-standards-and-bafang-mid-drive-motors
@@ -37,7 +44,16 @@ The distance should be at least 7cm (2 2/3"). Move the ruler out to determine th
 #+CAPTION: Measuring the distance between BB and frame chain stay
 [[attachment:_20240307_215132IMG_2643_a3db526f-2196-4b43-958e-7651e76dea03_large.JPG.jpeg]]
 
+*** Higher current
+There are three ways to increase the current (and thus power)
+
+- [[https://endless-sphere.com/sphere/threads/how-to-50a-bbshd-controller-mod.83778/][Change shunts on stock controller (gives 50A)]]
+- Change the controller
+- Change the amp settings in the controller firmware
+
+The [[https://ebikes.ca/tools/simulator.html?motor=MBBS02&mid=true&gear=1&batt=B5213_GA&cont=cust_25_50_0.03_V&tf=44&tr=11&axis=mph&hp=0&cont_b=cust_30_60_0.03_V&motor_b=MBBS02&mid_b=true&gear_b=1&batt_b=B5213_GA&hp_b=0&tf_b=44&tr_b=11&bopen=true][ebikes.ca simulator]] will simulate a bike using different controllers/voltages/front- and rear rings.
 *** reprogramming the controller
+https://endless-sphere.com/sphere/threads/bbshd-voltage-problem-firmware-update-instructions.100064/
 
 https://github.com/danielnilsson9/bbs-fw/wiki
 Specific for flashing the BBS02B:
@@ -47,6 +63,7 @@ https://endless-sphere.com/sphere/threads/bbs-fw-open-source-firmware-for-bbshd-
 https://electricbike-blog.com/2015/06/26/a-hackers-guide-to-programming-the-bbs02/
 https://electricbike-blog.com/2015/03/17/programming-the-bbs02-without-frying-your-controller-and-losing-your-sanity/
 
+[[https://github.com/OpenSourceEBike/Bafang_BBS02_BBSHB/wiki][Additional pictures/info on the controller]]
 ** M series kits (M510/M560/M820)
 M620 (Ultra) and other motors (model format "Mxx0") requires bafang proprietary frame mounts.
 Model format "Mxx5" are designed for converting bikes to ebikes with a bottom bracket attachment. See https://bafang-e.com/en/products/motors/m-series/.

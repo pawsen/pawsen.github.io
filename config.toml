@@ -47,6 +47,9 @@ defaultContentLanguage = "en"           # Default language to use
   name = "tags"
   url = "/tags/"
 
+  [[params.navlinks]]
+  name = "categories"
+  url = "/categories/"
 
 
 # more information https://gohugo.io/getting-started/configuration-markup/#goldmark
