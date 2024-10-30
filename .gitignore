@@ -3,7 +3,7 @@
 /.direnv/
 *.lock
 /resources/
-/content/*
+/content/post/
 !/content/about.md
 /public/
 /package-lock.json

@@ -8,6 +8,10 @@ title = "Notes about things"
 theme = "hugo-theme-console"
 languageCode = "en-us"
 
+[outputs]
+  # create index file JSON  for the search(RSS and HTML are defaults)
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
   toc = true
   mathjax = true           # see https://www.mathjax.org/
@@ -33,6 +37,10 @@ languageCode = "en-us"
   [[params.navlinks]]
   name = "categories"
   url = "/categories/"
+
+  [[params.navlinks]]
+  name = "search"
+  url = "/search/"
 
 # more information https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
