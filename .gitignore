@@ -1,12 +1,10 @@
 .orgids
 .org-roam.db
-#themes/
 /.direnv/
 *.lock
-#/go.sum
-#/go.mod
 /resources/
-/content/
+/content/*
+!/content/about.md
 /public/
 /package-lock.json
 /static/ox-hugo/

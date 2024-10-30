@@ -5,29 +5,12 @@
 # baseURL = "http://localhost:1313/"
 baseURL = "http://pawsen.github.io/"
 title = "Notes about things"
-enableRobotsTXT = true
-enableEmoji = true
-# theme = "hugo-theme-jane"
-# theme = "hugo-take-theme"
 theme = "hugo-theme-console"
-
-rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
-
-[pagination]
-  pagerSize = 5           # Number of articles displayed on the homepage  # 首页每页显示的文章数
-
-defaultContentLanguage = "en"           # Default language to use
-
-[sitemap]                 # essential                     # 必需
-  changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"
-
+languageCode = "en-us"
 
 [params]
-
-  toc = true                                                                            # 是否开启目录
-  mathjax = true           # see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）
+  toc = true
+  mathjax = true           # see https://www.mathjax.org/
 
   # Cutting off the page title to two chars for mobile (console-demo -> co)
   titleCutting = true
@@ -50,7 +33,6 @@ defaultContentLanguage = "en"           # Default language to use
   [[params.navlinks]]
   name = "categories"
   url = "/categories/"
-
 
 # more information https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
