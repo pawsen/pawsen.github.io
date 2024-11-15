@@ -613,3 +613,6 @@ Paralleling, serialing, balancing, BMS
 http://liionbms.com/php/white_papers.php
 
 http://liionbms.com/php/bms_options.php
+
+Professor Jeff Dahn of Dalhousie University delivered a lecture entitled "Why do Li-ion batteries die and can they be immortal?".
+https://www.youtube.com/watch?v=9qi03QawZEk&t=1s

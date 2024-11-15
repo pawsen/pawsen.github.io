@@ -258,7 +258,21 @@ Get meta data for package (incl. version)
 [[https://gitea.tlater.net/tlaternet/tlaternet-server][another good server config]]
 * Fix package
 
-gsettings
+** shallow clone of nixpkgs
+https://discourse.nixos.org/t/nix-monorepo-size-and-contribution/5565
+
+** gsettings
+
+See [[https://discourse.nixos.org/t/gtk-file-dialog-causes-segfaults-glib-gio-error-settings-schema-org-gtk-settings-filechooser-does-not-contain-a-key-named-show-type-column/6853/6][nixos discourse]] for a temporary solution, show below
+#+begin_src sh
+mkdir -p ~/.local/share/glib-2.0/schemas
+cp -pi /nix/store/...-gtk+3-3.<LATEST>/share/gsettings-schemas/gtk+3-3.*/glib-2.0/schemas/gschemas.compiled ~/.local/share/glib-2.0/schemas/
+#+end_src
+
+The better solution is to add wrapGApps hook, see also the link above.
+
+
+*** OLD STUFF
 https://nixos.org/manual/nixpkgs/stable/#ssec-gnome-icons
 https://discourse.nixos.org/t/org-gtk-settings-filechooser-is-not-installed-when-running-i3/24373/5
 
@@ -279,5 +293,3 @@ https://github.com/NixOS/nixpkgs/pull/221768/files
 
 advanced example
 https://github.com/NixOS/nixpkgs/pull/190960/files
-** shallow clone of nixpkgs
-https://discourse.nixos.org/t/nix-monorepo-size-and-contribution/5565

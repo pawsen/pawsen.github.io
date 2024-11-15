@@ -72,17 +72,16 @@ IQ samples for a 96 kHz wide RTL-SDR needs about 1.5 Mbit/s for the raw stream (
   The number of audio channels contained in the file. One (`mono') and two (`stereo') are widely used. Surround sound audio typically contains six or more channels
 
 * Stream raw radio
-
 ** using rtl_fm
 https://web.archive.org/web/20230603213739/http://kmkeen.com/rtl-demod-guide/
 
-=rtl_fm= does demodulation and is outputting raw audio in ~S16_LE~ with  default sample rate ~-s 24k~.
+=rtl_fm= does demodulation and is outputting raw audio in ~S16_LE~ with default sample rate ~-s 24k~.
 
 =S16_LE= is signed 16 bit, little endian. For raw format, the sample rate and the data encoding must be given to the audio player.
 
 Use either =aplay= (from =alsa-utils=) or =play= (from =sox=)
 #+begin_src sh
-nix shell nixpkgs#rtl-sd_osmocom
+nix shell nixpkgs#rtl-sdr-osmocom  # better for rtl-sdr v4
 nix shell nixpkgs#sox
 nix shell nixpkgs#alsa-utils
 
@@ -131,10 +130,41 @@ Thus =-t 16 -L= and =-t raw -b 16 -e s= are equivalent. See =man soxformat= for 
 | 4 => | Messages to help with debugging SoX are also shown.                                                                                                                                    |
 By default, the verbosity level is set to 2 (shows errors and warnings).
 
-*** UHF / walkie talkie :ATTACH:
+*** Scanning multiple frequencies
+#+begin_src sh
+rtl_fm -M fm \
+            -f 158.940M \
+            -f 150.7825M \
+            -f 154.175M \
+            -f 154.280M \
+            -f 154.265M \
+            -f 153.830M \
+            -f 154.145M \
+            -f 154.070M \
+            -f 453.7875M \
+            -f 37.260M \
+            -g 25 -l 60 \
+    | sox -t raw -r 24k -es -b 16 -c 1 - -p \
+            sinc 200-3.5k \
+            compand 0.1,0.8 6:0,-3 6 \
+    | play -p
+#+end_src
 
-#+CAPTION: record UHF radio and determine the CTCSS tone from a spectogram
+** UHF / walkie talkie :ATTACH:
+
+Use an =rtl-sdr= to get the frequency of the Continuous Tone-Coded Squelch System (CTCSS).
+
+tl;dr
+
+- record raw demodulated audio using =rtl_fm=
+- convert to =wav= using =sox=
+- visualize spectogram using =audicity=
+
+The photo below shows the setup used to record UHF radio from a walkie talkie at 443MHz
+#+CAPTION: record UHF radio and determine the CTCSS tone from a spectogram using a half wave dipole antenna.
 [[attachment:IMG20240925154924.jpg]]
+
+*** intro
 
 In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446][PMR446]]. Analogue PMR446 uses 16 FM channels separated by 12.5 kHz.
 
@@ -181,35 +211,37 @@ For completeness, the waterfall plot for a uhf radio looks like
 #+NAME: fig:uhf_waterfall
 #+CAPTION: waterfall for UHF radio, SDR++
 [[attachment:channel3_waterfall2.png]]
-**** Scanning multiple frequencies
-#+begin_src sh
-rtl_fm -M fm \
-            -f 158.940M \
-            -f 150.7825M \
-            -f 154.175M \
-            -f 154.280M \
-            -f 154.265M \
-            -f 153.830M \
-            -f 154.145M \
-            -f 154.070M \
-            -f 453.7875M \
-            -f 37.260M \
-            -g 25 -l 60 \
-    | sox -t raw -r 24k -es -b 16 -c 1 - -p \
-            sinc 200-3.5k \
-            compand 0.1,0.8 6:0,-3 6 \
-    | play -p
-#+end_src
 
 ** Convert IQ samples to audio
-#+begin_src sh
+=rtl_sdr= output in IQ samples, (unsigned 8 bit interleaved I/Q samples (0 - 255)).
 
-#+end_src
+The following two links converts them to a normalized (between -1.0 and +1.0), interleaved, 32 bit floating point format (cfile)
+
+https://gist.github.com/DrPaulBrewer/917f990cc0a51f7febb5
+https://github.com/tegan-lamoureux/rtl_sdr-to-cfile
 ** using rtl_power
 
 ** multimon-ng
 https://github.com/EliasOenal/multimon-ng
 The multimon-ng software can decode a variety of digital transmission modes commonly found on VHF/UHF radio.
+* Antennas
+See [[https://www.antenna-theory.com/antennas/main.php][list of antenna types]]
+
+** Dipole
+A dipole antenna consists of two conductive rods or metals of equal lengths separated by an insulator.
+
+#+CAPTION: dipole antenna
+[[attachment:Dipole_Antenna_length.jpg]]
+
+The length of a half wave dipole antenna (the most common type), is calculated as
+
+$$ λ = c / f $$
+$$ L = λ/2 $$
+
+where  \( c ≈ 0.97% x c_0 \) is the reduced speed of radio waves in a conductor (\(c_0=299.792458E^6\)m/s the speed of light in vacuum) and λ is the wavelength.
+
+The bandwidth of a half length dipole is around 7%, ie  \( 96.5% x c_f < c_f < 103.5% x c_f \), where \( c_f \) is the center frequency.
+
 * websdr
 My SDR can be tuned from 0 to 30 MHz (or from 25 to 1900 MHz, or whatever). Can I offer all of that tuning range to the users?
 #+begin_quote

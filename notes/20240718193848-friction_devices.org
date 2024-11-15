@@ -66,10 +66,11 @@ Using this simple friction law leads us to conclude that the frictional forces f
 
 The friction is calculated as
 
-$\mu = \frac{\ln \frac{T_{raise}}{T_{lower}} }{2 \beta}$
 
-$\mu = \frac{\ln \frac{92 kgf}{53 kgf} }{2 \frac{\pi}{2} } = 0.175$
-
+\begin{align}
+\mu &= \frac{\ln \frac{T_{raise}}{T_{lower}} }{2 \beta} \iff \\
+\mu &= \frac{\ln \frac{92 kgf}{53 kgf} }{2 \frac{\pi}{2} } = 0.175
+\end{align}
 | Turns | Angle                          | 𝒆^{μβ} = $\frac{W}{T_{lower}}$ | T_{lower} required to lower 100kg |
 |-------+--------------------------------+------------------------------+-----------------------------------|
 |     ¼ | 90°  = π/2 radians             |                         1.32 |                             75.97 |
@@ -116,6 +117,7 @@ Notes from https://www.ropelab.com.au/pulley-system-analysis/
 ** Z-rig / 3:1
 The mechanical advantage for a 3:1(Z-rig)
 
+#+ATTR_HTML: :width 500px
 #+CAPTION: 3:1(or Z-rig) with forces in yellow
 [[attachment:z-rig-forces.jpg]]
 

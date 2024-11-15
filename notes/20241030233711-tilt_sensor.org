@@ -7,6 +7,6 @@
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-30
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Make a tilt-sensor for showing the angle of a Kilterboard"
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Make a tilt-sensor(LCD and accelerometer) to show the angle of a Kilterboard"
 
 [[https://github.com/pawsen/tilt-sensor/][files on github.]]
