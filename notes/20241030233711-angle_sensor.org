@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       aed7d0e0-3449-4a9c-a67f-f6d76b1a775e
+:END:
+#+title: Angle sensor
+
+#+filetags: 3d-print it electronics
+#+hugo_categories: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-10-30
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Make a angle-sensor(using an LCD, accelerometer and arduino) to show the angle of a Kilterboard"
+
+I made a angle-sensor for a Kilterboard(a Kilterboard is a specific type of climbing wall where the angle of the wall can be adjusted, to make the climbing harder or easier).
+The file for the arduino and =stl='s for 3d printing the cases, along with a lot of details in the readme, are [[https://github.com/pawsen/tilt-sensor/][on github]].
+
+#+CAPTION: Dispay and sensor, connected by I2C. Power input is the black cable going to the sensor-case (resting against the laptop bag).
+[[attachment:tilt_display_sensor.jpg]]
+
+
+The sensor and arduino communicates over I2C.
+The rise time, the time it takes a line between the devices to go from low(0V) to high(5V), is important for I2C and depends on the length and type of cable(the cables capacitance), pullup-resistors and connections.
+For I2C in =Standard Mode= =tf= should be below =1μs= and is found from measurements by attaching an oscilloscope to the =SCL= line and =gnd=.
+
+#+CAPTION: SCL signal for the system measured with an oscilloscope.
+[[attachment:scl_oscilloscope.jpg]]
+
+The Rise time =1.64μs= is higher than the allowed 1μs, but still works well at 100Hz. See the section on [[https://github.com/pawsen/tilt-sensor/?tab=readme-ov-file#resistor-sizing][resistor sizing]] in the readme for more info.
