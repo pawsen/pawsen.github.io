@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       46df4a45-add0-4732-af98-f74ecd27f362
+:END:
+#+title: Keyless entry systems
+
+#+filetags: it hacking
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-11-22
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about car keyless entry. I thought it would be easy-ish. It is not"
+
+RKE is an uni-directional authentication system. In RKE, besides advanced features that recently
+became available (e.g., start, stop, panic), user unlocks or locks the vehicle by pressing the cor-
+responding button on the key fob. When a button is pressed, Radio Frequency (RF) signals are
+emitted towards the car in the frequency bands of 315 MHz, 433 MHz, or 868 MHz depending on
+the geographic location.
+
+One way HF rolling code.
+
+The following is taken from the Locking docs for a 2004 Berlingo:
+Use of the remote control necessitates matching with the vehicle.
+The coded message sent to the receiver by each remote control is composed of the following codes :
+- A fixed code linked to the key
+- A rolling code matched with the vehicle’s receiver
+- A code corresponding to the action to be performed
+- A code corresponding to the condition of charge of the batteries
+
+[[attachment:A_Verstegen___Analysis,_reverse-engineering_and_implementation_of_HITAG2-based_remote_keyless_entry_systems.pdf][master thesis: Press to unlock: Analysis, reverse-engineering and implementation of HITAG2-based Remote Keyless Entry systems]]
+
+[[https://github.com/gusgorman402/keyfobDB][list of FCC IDs for car keyfobs]]
+[[https://arxiv.org/pdf/2210.11923][A New Time-Agnostic Replay Attack Against the Automotive Remote Keyless Entry Systems]]

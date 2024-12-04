@@ -20,6 +20,7 @@ S-r -> evil-multiedit-match-all
  - Highlight word (viw)
  - S-r
  - Change words OR C-n/C-p for next/prev word
+
 | Keybind | Description |
 |---------+-------------|
 | C-`     | toogle popup(useful for switching to terminal) |
@@ -74,7 +75,17 @@ https://hungyi.net/posts/tear-off-window-emacs/
 
 Generel usage, good for brushup
 https://noelwelsh.com/posts/doom-emacs/
+* registers (")
+example: store abc in register a by =yiw= (yank inner word).
+- type abc
+- copy to register ="ayiw=
 
+- copy from register ="ap= (normal mode) or =C-r a= in insert mode
+
+see content of all registers with =:reg=. [[https://www.brianstorti.com/vim-registers/][primer on registers]]
+* mark position (')
+- mark position to A, =mA=
+- goto position, ='A=
 * moving to text
 
 | Keybind  | Description                                                 |

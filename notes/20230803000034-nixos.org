@@ -191,50 +191,6 @@ In the first case, the derivation will be deleted from the nix store, and result
 Use this to find stray gcroots hidden in unexpected places (from building envs from shell.nix files, for example).
 : sudo -i nix-store --gc --print-roots | egrep -v '^(/nix/var|/run/current-system|/run/booted-system|/proc|{memory|{censored)'
 
-* python and ....
-Basically do this,
-https://www.reddit.com/r/NixOS/comments/y5ahg2/comment/isl6fdo/
-
-
-Here's a bit longer explanation with links to examples
-https://discourse.nixos.org/t/why-is-it-so-hard-to-use-a-python-package/19200/11?u=pawsen
-
-
-
-** mach-nix
-https://github.com/DavHau/mach-nix
-
-*** examples
-https://gist.github.com/sagittaros/32dc6ffcbc423dc0fed7eef24698d5ca
-
-#+begin_src nix
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-        python = "python39";
-        pythonPackages = pkgs.${python + "Packages"};
-
-        req = mach-nix.lib."${system}".buildPythonPackage rec {
-            inherit python;
-            pname = "requests";
-            version = "v2.28.1";
-            src = builtins.fetchGit {
-              url = "https://github.com/psf/requests";
-              # not nessecary to specify when cloning default branch
-              # ref = "main";
-              # commit id
-              rev ="7104ad4b135daab0ed19d8e41bd469874702342b";
-              shallow = true;
-            };
-            requirements = ''
-                charset_normalizer>=2,<4,
-                idna>=2.5,<4,
-                urllib3>=1.21.1,<1.27,
-                certifi>=2017.4.17,
-            '';
-            # use requirementsextra in case auto-detected requirements are incomplete
-            requirementsExtra = "pytest";
-          };
-#+end_src
 * misc useful commands
 Get =<nixpkgs>= commit-id for specific version of a program.
 https://lazamar.co.uk/nix-versions/
@@ -261,12 +217,19 @@ Get meta data for package (incl. version)
 ** shallow clone of nixpkgs
 https://discourse.nixos.org/t/nix-monorepo-size-and-contribution/5565
 
+** Closed PRs
+[[https://github.com/NixOS/nixpkgs/pull/293007][openscad: add wrapGAppsHook]]
+[[https://github.com/NixOS/nixpkgs/pull/357400][urh: add wrapGAppsHook3]]
+
 ** gsettings
 
 See [[https://discourse.nixos.org/t/gtk-file-dialog-causes-segfaults-glib-gio-error-settings-schema-org-gtk-settings-filechooser-does-not-contain-a-key-named-show-type-column/6853/6][nixos discourse]] for a temporary solution, show below
 #+begin_src sh
 mkdir -p ~/.local/share/glib-2.0/schemas
 cp -pi /nix/store/...-gtk+3-3.<LATEST>/share/gsettings-schemas/gtk+3-3.*/glib-2.0/schemas/gschemas.compiled ~/.local/share/glib-2.0/schemas/
+
+cp -pi /nix/store/3xs715zn5mm3isblz1qxa78zwnlhhjgx-gtk+3-3.24.43/share/gsettings-schemas/gtk+3-3.24.43/glib-2.0/schemas/gschemas.compiled ~/.local/share/glib-2.0/schemas/
+
 #+end_src
 
 The better solution is to add wrapGApps hook, see also the link above.
@@ -293,3 +256,129 @@ https://github.com/NixOS/nixpkgs/pull/221768/files
 
 advanced example
 https://github.com/NixOS/nixpkgs/pull/190960/files
+** desktop file
+When packages are included in environment.systemPackages, a nixos module for creating the system will look for <pkg>/share/applications/*.desktop paths, and add them to =/run/current-system/sw/share/applications= directory. Specifically: https://github.com/NixOS/nixpkgs/blob/7b2f9d4732d36d305d515f20c5caf7fe1961df80/nixos/modules/config/xdg/menus.nix
+
+IE,
+#+begin_src sh
+ls -l /run/current-system/sw/share/applications
+
+# and (the user-specific programs)
+ls -l /etc/profiles/per-user/paw/share/applications/
+#+end_src
+
+Use =pkgs.makeDesktopItem=. Examples from [[https://github.com/search?q=repo%3ANixOS%2Fnixpkgs+makeDesktopItem&type=code][nixpkgs repo]].
+Then either install the desktop file manually,
+#+begin_src nix
+{makeDesktopItem}:
+
+stdenv.mkDerivation {
+  # snip
+  desktopItem = makeDesktopItem {
+    name = "urh";
+    exec = "urh";
+    icon = "urh";
+    desktopName = "Universal Radio Hacker";
+    comment = meta.description;
+    categories = [ "HamRadio" ];
+  };
+  postInstall=''
+  mkdir -p $out/share/
+  cp --recursive ${desktopItem}/share/applications $out/share/
+'';
+  # snip
+}
+#+end_src
+
+OR use =pkgs.copyDesktopItems= with =desktopItems= from =mkDerivation=
+#+begin_src nix
+{makeDesktopItem, copyDesktopItems}:
+
+stdenv.mkDerivation {
+  # snip
+  nativeBuildInputs = [ copyDesktopItems ];
+  desktopItems = [
+    (makeDesktopItem {
+      name = "urh";
+      exec = "urh";
+      icon = "urh";
+      desktopName = "Universal Radio Hacker";
+      comment = meta.description;
+      categories = [ "HamRadio" ];
+    })
+  ];
+  # snip
+}
+#+end_src
+
+NOTE:
+use Exec=urh in the desktop file rather than an absolute path, so that the user can provide their own wrapper a round programs on their path if they want to.
+
+*** icons
+
+Convert .ico files to png
+#+begin_src nix
+{ iconConvTools}:
+let
+  src = fetchFromGitHub {};
+in
+stdenv.mkDerivation  {
+  inherit src;
+
+  postInstall = ''
+    icoFileToHiColorTheme $src/path/to/icon.ico appname $out
+  '';
+}
+#+end_src
+
+Or use =convert= to get the right size
+#+begin_src nix
+{imagemagick}:
+
+stdenv.mkDerivation {
+  nativeBuildInputs = [ imagemagick # to make icons
+                      ];
+
+  #install -Dm644 $src/data/icons/appicon.png $out/share/icons/hicolor/48x48/urh.png
+  postInstall = ''
+      mkdir -p $out/share/icons/hicolor/{48x48,128x128}/apps
+      convert $src/data/icons/appicon.png -resize 48x48 $out/share/icons/hicolor/48x48/apps/urh.png
+      convert $src/data/icons/appicon.png -resize 128x128 $out/share/icons/hicolor/128x128/apps/urh.png
+    '';
+}
+#+end_src
+* dev-shells
+Follow templates from here
+https://github.com/the-nix-way/dev-templates/tree/main?tab=readme-ov-file#available-templates
+
+A new thing for setting up DBs, VMs,
+https://devenv.sh/
+* get sha256
+
+[[https://github.com/NixOS/nixpkgs/issues/191128#issuecomment-2159553013][From this link]]
+Three ways
+#+begin_src sh
+nix shell nixpkgs#nix-prefetch
+nix-prefetch fetchFromGitHub --owner owner --repo repo --rev 65bb66d364e0d10d00bd848a3d35e2755654655b
+The fetcher will be called as follows:
+> fetchFromGitHub {
+>   owner = "owner";
+>   repo = "repo";
+>   rev = "65bb66d364e0d10d00bd848a3d35e2755654655b";
+>   sha256 = "sha256:0000000000000000000000000000000000000000000000000000";
+> }
+
+sha256-8EUDsWeTeZwJNrtjEsUNLMt9I9mjabPRBZG83u7xtPw=
+#+end_src
+
+OR
+
+#+begin_src sh
+nix-shell -p nix-prefetch-git jq --run "nix hash to-sri sha256:\$(nix-prefetch-git --url https://github.com/cli/cli --quiet --rev v2.49.2 | jq -r '.sha256')"
+#+end_src
+
+
+It seems that the =hash= output of the following is the sha256 to use.
+#+begin_src sh
+nix-shell -p nix-prefetch-git --run "nix-prefetch-git --url https://github.com/jopohl/urh --quiet --rev v2.9.8"
+#+end_src

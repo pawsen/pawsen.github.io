@@ -1,0 +1,79 @@
+:PROPERTIES:
+:ID:       e6150032-6c7e-402b-9c7e-ebfbb42aa0f8
+:END:
+#+title: Car immobilizer
+
+#+filetags: it hacking
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-11-22
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about car immobilizer. I thought it would be easy-ish. It is not"
+
+Immobilizing works as:
+
+A code is sent from a chip in the key fob(the transponder, passive RFID tag 125KHz) to the engine control unit(ECU). The transponder communicates with the ECU through an antenna close to the lock barrel. Without the right code, the car's ECU will not turn on the ignition- and fuel pump circuit.
+
+Some cars write info back to the transponder, like how km the car has driven. This can be used for insurance claims if the car get stolen and the owner still have the key.
+
+See the ccc/sigint talk on [[https://media.ccc.de/v/konferenz_mp6_og_-_2013-07-05_17:00_-_car_immobilizer_hacking_-_karsten_nohl_-_5034#t=1755][Car immobilizer hacking]] for learning more
+
+#+CAPTION: Immobilizer workflow for rolling codes
+[[attachment:immobilizer.png]]
+
+Until 2013, the immobilizer technology was as
+
+#+CAPTION: Technology for immobilizers
+[[attachment:immobilizer-technology.png]]
+
+- transponders, short for transmitter-responder (as they can only respond to transmissions and do not initiate their own transmissions
+
+
+* Hitag2
+See [[https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/verdult][Gone in 360 Seconds: Hijacking with Hitag2]], presentation and pdf. The pdf is technical and based on the [[https://www.cs.ru.nl/~rverdult/phd_thesis-roel_verdult.pdf][phd thesis by Roel Verdult]].
+
+My Berlingo, 2006, seems to use a Hitag2 ID46 chip.
+
+- Introduced in 1996
+- Key length of 48-bits
+- Complexity 2^37 encryptions (cryptanalytic)
+
+** Authentication protocol :ATTACH:
+- The reader starts the communication by sending an authenticate command,
+- the transponder answers by sending its identifier id. ::
+  From this point on, communication is encrypted, i.e., XOR-ed with the keystream.
+- The reader responds with its encrypted challenge(random number) $n_R$ and the answer $a_R$ = 0xFFFFFFFF, also encrypted to prove, knowledge of the key;
+- the transponder finishes with its encrypted answer $a_T$ to the challenge of the reader.
+
+
+#+CAPTION: Hitag2 authentication protocol
+[[attachment:hitag2_auth_protocol.png]]
+
+** Identified Hitag2 Weaknesses
+- Weak cryptographic algorithm
+  - Cipher design is obsolete (from the early ’90s)
+  - Weak and invertible cipher initialization
+  - Security is significantly lower than the key size
+- Implementation mistakes
+  - There is no random number (freshness) introduced by the transponder during authentication
+  - Secret key update is not one atomic operation
+- Improper usage by car manufacturers
+  - Many transponders are configured with the default (or easy to guess) passwords
+  - Many cars are configured with weak secret keys which drastically speeds-up key recovery
+
+** Practicality of Hitag2 Attacks
+1. Communicate with the genuine car-key
+   - (You need the identifier of the immobilizer to let the car know you are known)
+   - With maximum wireless distance of two inches
+2. Bypass other security measures of the car
+   - Force the door locks of the car
+   - Disable the alarm (separate protection)
+   - Force the ignition lock (hot-wire the car)
+3. Eavesdrop immobilizer messages from the car
+4. Communicate again with the car-key
+5. Perform a complex mathematical computation to recover the secret cryptographic key
+6. Emulate the car key and start the car
+
+Not so practical.
+
+* Megamos
+See the [[https://youtu.be/R_8eYSJlWic][Presentation: Dismantling Megamos Crypto: Wirelessly Lockpicking a Vehicle Immobilizer]], based on the paper [[https://flaviodgarcia.com/publications/Dismantling_Megamos_Crypto.pdf][Dismantling Megamos Crypto]]. It have more less the same weaknesses as Hitag2. See the link in [[Hitag2]] for technical details.
