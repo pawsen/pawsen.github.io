@@ -3,52 +3,183 @@
 :END:
 #+title: Car immobilizer
 
-#+filetags: it hacking
+#+filetags: it hacking sdr proxmark
 #+hugo_categories: hacking
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-11-22
 #+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about car immobilizer. I thought it would be easy-ish. It is not"
+
+The immobilizer system is preventing a car from starting without using a carkey with the right chip(called transponder).
+- For the keyless remote opening of a car see [[id:46df4a45-add0-4732-af98-f74ecd27f362][Keyless entry systems]]
+
+#+CAPTION: Immobilizer diagram for a petrol powered car
+[[attachment:immobilizer-diagram.png]]
+
 
 Immobilizing works as:
 
 A code is sent from a chip in the key fob(the transponder, passive RFID tag 125KHz) to the engine control unit(ECU). The transponder communicates with the ECU through an antenna close to the lock barrel. Without the right code, the car's ECU will not turn on the ignition- and fuel pump circuit.
 
 Some cars write info back to the transponder, like how km the car has driven. This can be used for insurance claims if the car get stolen and the owner still have the key.
+- transponders: short for transmitter-responder (as they can only respond to transmissions and do not initiate their own transmissions
 
 See the ccc/sigint talk on [[https://media.ccc.de/v/konferenz_mp6_og_-_2013-07-05_17:00_-_car_immobilizer_hacking_-_karsten_nohl_-_5034#t=1755][Car immobilizer hacking]] for learning more
 
 #+CAPTION: Immobilizer workflow for rolling codes
 [[attachment:immobilizer.png]]
 
-Until 2013, the immobilizer technology was as
+Until 2013, the immobilizer technology market share was as
 
-#+CAPTION: Technology for immobilizers
+#+CAPTION: Technology market share for immobilizers
 [[attachment:immobilizer-technology.png]]
 
-- transponders, short for transmitter-responder (as they can only respond to transmissions and do not initiate their own transmissions
 
-
-* Hitag2
+* Chips
+** Hitag2
 See [[https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/verdult][Gone in 360 Seconds: Hijacking with Hitag2]], presentation and pdf. The pdf is technical and based on the [[https://www.cs.ru.nl/~rverdult/phd_thesis-roel_verdult.pdf][phd thesis by Roel Verdult]].
+This [[https://troopers.de/downloads/troopers18/TR18_NGI_BR_Cracking-hitag2-crypto.pdf][Cracking HiTag2 Crypto]] presentation focus on the actual implementation and is the basis for the proxmark implementation.
 
-My Berlingo, 2006, seems to use a Hitag2 ID46 chip.
+A Berlingo, 2006, seems to use a Hitag2 ID46 chip.
 
 - Introduced in 1996
 - Key length of 48-bits
 - Complexity 2^37 encryptions (cryptanalytic)
 
-** Authentication protocol :ATTACH:
+*** Authentication protocol :ATTACH:
+**** HiTag2 crypto mode
+Crypto mode: uses pre-shared keys for authentication and encryption.
+This is what car immobilizers uses.
+
 - The reader starts the communication by sending an authenticate command,
 - the transponder answers by sending its identifier id. ::
   From this point on, communication is encrypted, i.e., XOR-ed with the keystream.
-- The reader responds with its encrypted challenge(random number) $n_R$ and the answer $a_R$ = 0xFFFFFFFF, also encrypted to prove, knowledge of the key;
+- The reader responds with its encrypted challenge(random number) $n_R$ and the answer $a_R$ = 0xFFFFFFFF, also encrypted, to prove knowledge of the key;
 - the transponder finishes with its encrypted answer $a_T$ to the challenge of the reader.
 
-
-#+CAPTION: Hitag2 authentication protocol
+#+CAPTION: HiTag2 crypto mode authentication protocol
 [[attachment:hitag2_auth_protocol.png]]
 
-** Identified Hitag2 Weaknesses
+(Alternative listing of the flow described above)
+- Reader sends START_AUTH (11000)
+- Tag sends UID (p0) - [in clear]
+- Reader sends nonce (nR) - [encrypted]
+- Reader sends 0xFFFFFFFF (aR) - [encrypted]
+- Tag sends config & tag password (p3) - [encrypted]
+- Reader sends commands - [encrypted]
+- Tag responds - [encrypted]
+
+**** HiTag2 password mode
+Password mode: uses pre-shared passwords for authentication
+
+- Reader sends START_AUTH (11000)
+- Tag sends UID (p0) - [in clear]
+- Reader sends password (p1) - [in clear!]
+- Tag sends config & tag password (p3) - [in clear!]
+- Reader sends commands - [in clear!]
+- Tag responds - [in clear!]
+
+*** Using proxmark3
+The user iceman(and developer of the proxmark firmware), posted a picture in the [[https://discordapp.com/channels/738045391416852520/738373452574097458/1221519625217511554][proxmark discord group]]
+
+#+CAPTION: 125kHz LF antenna around the transponder in the keyfob
+[[attachment:iceman-rfid-transponder.jpg]]
+
+See the video [[https://youtu.be/2Zf0w2rrgVA][Iceman on youtube: Hitag2 cracking techniques]] and [[https://youtu.be/b2eDksu0Aqw][Enhancing Hitag2 Support on Proxmark3]] for how to use the proxmark3 to crack the immobilizer.
+
+The HiTag2 have 8 pages. The =UID= is public.
+#+CAPTION: HiTag2 pages layout
+[[attachment:hitag2_pages.png]]
+
+**** Prepare the 125kHz LF antenna :ATTACH:
+1. Remove top PCB with LF coil
+2. Drill / dremel a hole in center of the coil (careful not to cut the traces)
+3. re-attach the top PCB "to the side" using only two screws
+4. run magnet wire (burning enamel off the ends) to connect the other "connection" post to the board
+
+#+CAPTION:PM3 Easy LF antenna modification
+[[attachment:Modified_PM3_For_Car.png]]
+
+*OR*
+1. put the fob on the lf antenna so it's slightly hanging off the side of with the loop being the part that remains on the proxmark
+2. then put a metal table spoon over the fob like a dome
+3. run
+   ~lf hitag dump -k BDF5E846~
+
+**** types of attack :ATTACH:
+The 4 types of attack listed in the [[https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/verdult][Gone in 360 Seconds: Hijacking with Hitag2]] article plus additional attacks, are described in the [[https://github.com/RfidResearchGroup/proxmark3/tree/master/tools/hitag2crack][proxmark3 github repo]] and detailed in [[https://troopers.de/downloads/troopers18/TR18_NGI_BR_Cracking-hitag2-crypto.pdf][Cracking HiTag2 Crypto]] presentation.
+
+- Gone in 360 Seconds ::
+  1. Nonce replay and length extension for key stream recovery.
+     The tag can be configured to prevent reading of pages 1 and 2, ie. it is not possible to do a full clone.
+     : lf hitag dump --crypto
+  2. Time/memory trade off for key recovery (requires 1.2tb lookup table)
+     : lf hitag crack2
+  3. Crypto-analytic attack for key recovery
+- Lock It and Still Lose It (2016 paper) ::
+  5. Fast correlation attack for key recovery
+
+See the [[https://github.com/RfidResearchGroup/proxmark3/tree/master/tools/hitag2crack/crack2][proxmark3/tools/hitag2crack]] folder for tools to carry out attacks 2-5.
+
+
+Attack sequence(see [[*HiTag2 crypto mode]]) for =Time/memory trade off= attack.
+- sniffing part: auth attempt, get nonce and answer from reader(nR and aR, 8 byte). ~30s
+- online part: talk to card only and extract keystream (2048bit). ~30s
+- offline part: lookup in the 1.2tb lookup file(take days to generate) and extract keys. lookup is ~10s
+
+Example:
+Load a HiTag2 crypto trace (included in the proxmark github repo and in the =./result= folder from doing =nix build=.
+#+begin_src sh
+trace load -f result/share/proxmark3/traces/lf_hitag_crypto_dump.trace
+trace list -t hitag2 -1
+#+end_src
+
+The beginning of the trace looks like (the =*= shows the decryptet content of the line above)
+#+begin_example
+      Start |        End | Src | Data (! denotes parity error)                                           | CRC | Annotation
+------------+------------+-----+-------------------------------------------------------------------------+-----+--------------------
+          0 |        164 | Rdr | 5: 18                                                                   |     | START AUTH
+        351 |       2242 | Tag |32: 10  BD  A8  10                                                       |     | UID
+ 4294967015 |       1193 | Rdr |64: 00  00  00  00  1D  1F  E0  49                                       |     | Nr Ar ( 4f4e4d494b52 )
+            |            |  *  |64: 00  00  00  00  FF  FF  FF  FF                                       |     | AUTH: Nr Ar
+#+end_example
+
+We have =UID = 10  BD  A8  10= and =nrar = 00  00  00  00  1D  1F  E0  49=. The key is found
+#+begin_src sh
+lf hitag lookup --nrar "00  00  00  00  1D  1F  E0  49" --uid "10  BD  A8  10"
+
+[+] Found valid key [ 4F4E4D494B52 ]
+#+end_src
+
+
+Random NrAr's can be generated with [[https://github.com/RfidResearchGroup/proxmark3/blob/master/tools/hitag2crack/hitag2_gen_nRaR.py][hitag2_gen_nRaR.py]] from a 6 bytes key and uid.
+#+begin_src sh
+./hitag2_gen_nRaR.py 000102030405 AABBCCDD 4  # generate 4 NrAr
+#+end_src
+
+and then test with (add 6 bytes dicts. The key we want to recover is 6 bytes)
+#+begin_src sh
+lf hitag --uid AABBCCDD --nr  --ar -f result/share/proxmark3/dictionaries/extras/6_byte_words.dic
+#+end_src
+
+**** random stuff
+
+#+begin_src sh
+lf hitag sniff
+lf hitag list
+lf hitag read --ht2 -OPTION
+#+end_src
+
+
+See this [[https://youtu.be/bN5Wp8FyG2M][iceman: How to low frequence sniff vs Hitag2 using your proxmark3]] video, on how to use the following commands to collect =n_R= and =a_R=
+#+begin_src sh
+lf config -t 40  # (configures the sniff to trigger when it senses a signal from the immobilizer)
+data plot  # opens a window to visualize the data
+lf sniff  # will capture the data
+data save -f hitag
+#+end_src
+One user [[https://discordapp.com/channels/738045391416852520/742618567605747803/1242026598664765511][gave a python sscript to extract n_R/a_R]].
+
+*** Identified Hitag2 Weaknesses
 - Weak cryptographic algorithm
   - Cipher design is obsolete (from the early ’90s)
   - Weak and invertible cipher initialization
@@ -60,7 +191,7 @@ My Berlingo, 2006, seems to use a Hitag2 ID46 chip.
   - Many transponders are configured with the default (or easy to guess) passwords
   - Many cars are configured with weak secret keys which drastically speeds-up key recovery
 
-** Practicality of Hitag2 Attacks
+*** Practicality of Hitag2 Attacks
 1. Communicate with the genuine car-key
    - (You need the identifier of the immobilizer to let the car know you are known)
    - With maximum wireless distance of two inches
@@ -74,6 +205,5 @@ My Berlingo, 2006, seems to use a Hitag2 ID46 chip.
 6. Emulate the car key and start the car
 
 Not so practical.
-
-* Megamos
+** Megamos
 See the [[https://youtu.be/R_8eYSJlWic][Presentation: Dismantling Megamos Crypto: Wirelessly Lockpicking a Vehicle Immobilizer]], based on the paper [[https://flaviodgarcia.com/publications/Dismantling_Megamos_Crypto.pdf][Dismantling Megamos Crypto]]. It have more less the same weaknesses as Hitag2. See the link in [[Hitag2]] for technical details.

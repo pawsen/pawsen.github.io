@@ -37,7 +37,12 @@ Popular types are (with different pin-to-pin pitch)
 - XH, (larger version of the PH) which can be found on aliexpress with 2.54mm pitch that fits with dupont headers.
   (Note that the /official/ connectors has 2.5mm pitch)
 - 3d printed [[https://www.printables.com/model/475497-angled-jst-tweezers][tweezers]] for easy removal.
- 
+
+** Dupont
+
+https://nerd-corner.com/3d-printed-dupont-connector-for-jumper-cable/
+#+CAPTION: 3D printed Dupont connector for jumper cable
+[[attachment:Dupont-jumper-cable-case-inside.webp]]
 ** XT :ATTACH:
 XT60 and XT90 are often used for bicycle batteries, as Anderson connectors are considered too bulky(and the ampacity is lower than for e.g. LiFePO4 batteries).
 XT's uses(and fits with) bullet connectors.
