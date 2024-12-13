@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       040e6d1b-0d69-445c-bffd-399694cdb58d
+:END:
+#+title: wiegand
+
+#+filetags: it hacking proxmark
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-12-13
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "notes about Wiegand protocol inception between card reader and controller"
+
+
+Wiegand (pronounced wee-gand) is a standardized interface protocol commonly utilized to communicate data between a simple reader and access controller
+
+#+CAPTION: Reader and access controller connected though their Wiegand interface
+[[attachment:Access_control_door_wiring.png]]
+
+By simple is meant that the reader reads card number or PIN(or other data), and forward it to a control panel without making any access decisions.
+
+The [[https://en.wikipedia.org/wiki/Wiegand_interface#Physical_layer][Wiegand interface]] uses three wires, one of which is a common ground and two of which are data transmission wires usually called DATA0 and DATA1, alternatively labeled "D0" and "D1" or "Data Low" and "Data High"
+
+
+* logic analyzers
+There are a number of esp-based sniffers(logic analyzers) that can be attached to the wires from the reader. They are transparent to both the card reader and the downstream panel. See the [[https://github.com/rfidtool/ESP-RFID-Tool/tree/master/Connector-Adapter-Options][pictures]] for means of connecting. The punchdown seems easy to use.
+
+They are quite simple, the benefit of buying a module is the small form factor.
+** espkey
+
+[[https://www.redteamtools.com/espkey][espkey]], [[https://www.redteamtools.com/content/ESPKey%20Tool%20Manual%20v1.0.0.pdf][manual]] and [[https://github.com/octosavvi/ESPKey][github repo]].
+
+** ESP-RFID-Tool
+The [[https://github.com/rfidtool/ESP-RFID-Tool][ESP-RFID-Tool]] is very similar to the [[*espkey]] and can be bought of aliexpress. The is a fork [[https://github.com/Einstein2150/ESP-RFID-Tool-v2/][ESP-RFID-Tool-v2]], but the difference seems minor.
+
+** Long range readers (weaponized readers)
+A tool that allows to capture RFID access card credentials from several feet away.
+
+Basically it is an Wiegand based RFID long range reader and a esp-based logic analyser.
+
+#+CAPTION: Tastic thief, battery powered long range RFID reader and esp32 based analyzer
+[[attachment:tastic_thief.png]]
+
+- [[https://github.com/TeamWalrus/tusk][tusk]], an esp32 updated version of the original [[https://shubs.io/guide-to-building-the-tastic-rfid-thief/][tastic-RFID-Thief]]
+- [[https://web.archive.org/web/20230510003220/https://www.x90x90.net/hardware/2022/11/11/Tastic-RFID-thief.html][RFID reader + espkey]]
+
+The three readers I have seen used are
+
+- HID Maxiprox 5375 (125kHz HID ProxII cards)
+- HID Indala ASR-620 (125kHz Indala cards)
+- HID iCLASS R90 (13.56mHz iClass cards)
+
+** doorsim
+[[https://github.com/evildaemond/doorsim][doorsim]] is a esp32 based access simulator.
+** libraries
+[[https://github.com/paulo-raca/YetAnotherArduinoWiegandLibrary.git][YetAnotherArduinoWiegandLibrary]]
+
+* alternatives to the Wiegand protocol.
+- Open Supervised Device Protocol, commonly referred to as =OSDP= ::
+  - a serial protocol standardized by the SIA that supports bi-directional communications among devices, as well as encryption.
+  - disadvantages of OSDP are (1) the use of symmetric key, and not public key, for secure channel communications, and (2) system latency, i.e. slow reader response.
