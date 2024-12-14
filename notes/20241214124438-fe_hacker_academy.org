@@ -1,0 +1,136 @@
+:PROPERTIES:
+:ID:       cc9657d0-e380-4084-82eb-022294e7694f
+:END:
+#+title: fe hacker academy
+
+#+filetags: hacking spectogram
+#+hugo_categories: it
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-12-14
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "FE created a 'hacker school' and hid a challenge in the announcement poster. This is how the challenge can be solved"
+
+In 2016 the Danish Defence Intelligence Service(DDIS in english; forsvarets efterretningstjeneste, fe, in danish) created a [[https://web.archive.org/web/20231201160703/https://hackerakademi.dk/][hacker academy]]. The creation was accompanied by a poster circulated in mainstream media.
+The poster had a hidden challenge, that when solved gave another challenge, and yet another, ending with a direct phone number for applying to the hacker academy.
+
+#+CAPTION: The 2016 poster for the Hacker Academy
+[[attachment:hackerannonce.jpg]]
+
+There was also a more formal "job posting" at https://fe-ddis.dk/Job/Ledige-stillinger/Pages/hackerakademi.aspx
+
+* first challenge: /* JS/koyPrmif2M */
+
+The title of the poster is: /Do you have what it takes to be part of a secret elite team/ and looking at the background text/code, the string
+: /* JS/koyPrmif2M */
+stands out. It is a non intelligible commented string in a strange place.
+
+Using the password cracker [[https://github.com/openwall/john][john the ripper]]
+#+begin_src sh
+echo JS/koyPrmif2M > fe_hash.txt
+john fe_hash.txt
+# or if john has been run previously
+john -show fe_hash.txt
+
+21316511
+#+end_src
+we see that =JS/koyPrmif2M= is a DES hash of =21316511=, a phone number
+
+* second challenge: 21316511 :ATTACH:
+
+Calling =21316511=, an automated receiver plays a sound recording([[attachment:fe-audio.mp3][fe-audio.mp3]]). It reminds me of the [[https://en.wikipedia.org/wiki/Dial-up_Internet_access#Performance][dial up sequence]] for old modems.
+
+
+** Dual-tone multi-frequency signaling (DTMF)
+dial-up modems used [[https://en.wikipedia.org/wiki/DTMF][DTMF]] for calling in
+
+#+begin_quote
+Multi-frequency signaling (MF) is a group of signaling methods that use a mixture of two pure tone (pure sine wave) sounds.
+
+The DTMF system uses a set of eight audio frequencies transmitted in pairs to represent 16 signals, represented by the ten digits, the letters A to D, and the symbols # and *.
+#+end_quote
+
+The DTMF keypad is a 4x4 matrix in which each row represents a low frequency and each column represents a high frequency. Pressing a single key sends a sinusoidal tone for each of the two frequencies. Eg, key =1= produces a superimposition of tones of 697 and 1209 Hz.
+
+#+CAPTION: DTMF keypad frequencies
+|       | 1209Hz | 1336Hz | 1477Hz | 1633Hz |
+|-------+--------+--------+--------+--------|
+| 687Hz |      1 |      2 |      3 | A      |
+| 770Hz |      4 |      5 |      6 | B      |
+| 852Hz |      7 |      8 |      9 | C      |
+| 941Hz |      * |      0 |      # | D      |
+
+The use of two super-imposed frequencies is seen from the dial up sequence below.
+#+NAME: fig:dial_up_handshake
+#+CAPTION: Sequence for a dial up modem. See the DTMF sequence used to dial a number
+[[attachment:Dial_up_modem_noises_explained_final.png]]
+
+** Using a spectogram to decode fe-audio.mp3 :ATTACH:
+
+Looking at the [[attachment:fe-audio.mp3][fe-audio.mp3]] using a spectogram we see 7 distinct tones.
+
+#+CAPTION: full spectrum
+[[attachment:frekvens-spektrum.png]]
+
+
+The ASCII standard uses 7bit for encoding. Zooming in and using the highest frequency as MSB(most significant bit), the content can be decoded to (writing the bits in [[attachment:binary.py][binary.py]], converting to int and print as char)
+: Would you tell me, pleasem which way I ought to go from here? https://hackerakademi.dk/tumbling-down-the-rabbit-hole --
+
+#+CAPTION: zoomed in and annotated with corresponding ASCII characters
+[[attachment:spectrum2.png]]
+
+
+Visiting https://hackerakademi.dk/tumbling-down-the-rabbit-hole/ (the trailing =/= was important, as the path to the downloadable file =chal.tgz= was relative)
+
+#+CAPTION: screenshot of https://hackerakademi.dk/tumbling-down-the-rabbit-hole/
+[[attachment:fe-hjemmeside.png]]
+
+
+For another use of spectogram see [[id:9a61aa06-a5cb-414d-9e32-b837c2d9227b][sdr radio]]
+
+* reversing/decompiling chal.tgz :ATTACH:
+[[attachment:chal.tgz][chal.tgz]] unpacks into a =runme.py= and =webkit.so=. The python file calls a function in the compiled =webkit.so= library which waits for a user input.
+
+#+begin_src sh
+> file webkit.so
+webkit.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=dfb5a81e3c40facc852c7824ad669b27050cead8, with debug_info, not stripped
+#+end_src
+
+The input should be a URL pointing to the FE logo(2016 version).
+#+CAPTION: logo from (now defunkt) https://fe-ddis.dk/SiteCollectionImages/Logoer/FE/FE-krone-ny2.jpg
+[[attachment:FE-krone-ny2.jpg]]
+
+With a url to the right logo on the right server, the program would respond with
+#+begin_example
+Fingerprint #1 OK
+Fingerprint #2 OK
+#+end_example
+(If the same logo was placed on a different url, like self-hosted, =Fingerprint #2= would not be ok.)
+and dump the file =webstore.jpg=
+
+#+CAPTION: the broken webstore.jpg =runme.py= spits out if both fingerprints are Ok
+[[attachment:webstore.jpg]]
+
+* corrupt jpg / extracting a phone number
+
+Hiding information in media is called [[https://en.wikipedia.org/wiki/Steganography][steganography]]. This is not the case here, instead looking at the hexdump of [[attachment:webstore.jpg][webstore.jpg]]
+
+#+begin_src
+❯ hexdump -C webstore.jpg
+
+00000000  ff d8 ff e1 00 18 45 78  69 66 00 00 49 49 2a 00  |......Exif..II*.|
+...
+000004a0  ff da 00 0c 03 01 00 02  11 03 11 00 3f 00 57 6f  |............?.Wo|
+000004b0  77 20 79 6f 75 20 64 69  64 20 69 74 2e 20 57 65  |w you did it. We|
+000004c0  20 72 65 61 6c 6c 79 20  77 61 6e 74 20 74 6f 20  | really want to |
+000004d0  67 65 74 20 74 6f 20 6b  6e 6f 77 20 79 6f 75 2e  |get to know you.|
+000004e0  20 50 6c 65 61 73 65 20  63 61 6c 6c 20 74 68 69  | Please call thi|
+000004f0  73 20 6e 75 6d 62 65 72  20 2b 34 35 20 35 31 32  |s number +45 512|
+00000500  34 36 33 30 31 20 20 61  6e 64 20 67 69 76 65 20  |46301  and give |
+00000510  75 73 20 79 6f 75 72 20  63 6f 6e 74 61 63 74 20  |us your contact |
+00000520  69 6e 66 6f 20 61 6e 64  20 77 65 20 77 69 6c 6c  |info and we will|
+00000530  20 67 65 74 20 62 61 63  6b 20 74 6f 20 79 6f 75  | get back to you|
+00000540  20 61 73 61 70 93 3a f7  8e 92 3c 89 ab e8 79 6b  | asap.:...<...yk|
+00000550  67 15 07 1f 39 2d 3b 4a  48 1b 75 f3 76 90 42 b8  |g...9-;JH.u.v.B.|
+...
+#+end_src
+
+and we get the phone number of +4551246301

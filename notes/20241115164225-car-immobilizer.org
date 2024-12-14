@@ -4,7 +4,7 @@
 #+title: Car immobilizer
 
 #+filetags: it hacking sdr proxmark
-#+hugo_categories: hacking
+#+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-11-22
 #+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about car immobilizer. I thought it would be easy-ish. It is not"
