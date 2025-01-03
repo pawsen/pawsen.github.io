@@ -88,3 +88,15 @@ Now we can e.g. ~loft~ between two sketches and edit the sketches if needed.
 
 #+CAPTION: Creating gusset by lofting between a sketch and it's reoriented copy
 [[attachment:loft_sketches_gusset.png]]
+* Check mesh for error
+
+.. wb "Mesh" --> "Check solid mesh" if the result is "not solid" you can use "Evaluate and repair mesh" to see what problems the mesh has, you can also use "Split components" to see if it is made up of multiple meshes and evaluate what actions to take to fix and solidify it.
+
+...sometimes slicers can compensate for errors but not always, so it is always better if the mesh is error-free in FreeCAD
+* Errors
+** Failed to compute left/right minimum bearings for "cursor.pcf"
+
+Fix by
+#+begin_src sh
+sed -i 's/>cursor.pcf</>monospace</g' ~/.config/FreeCAD/user.cfg
+#+end_src

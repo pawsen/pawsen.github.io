@@ -103,6 +103,18 @@ Very comprehensive description at [[https://3dprinting.stackexchange.com/a/1408]
 
 Video: [[https://youtu.be/FasWH3_gdlY?si=wSeBHoMGniR1mTvB][How to tune in new filament]]
 [[https://www.printables.com/model/39810-improved-all-in-one-temperature-and-bridging-tower][temp tower]]
+
+
+Rule of thumb: Dry in the oven at same temp as the bed.
+
+| filament | temp ℃ | time |
+|----------+---------+------|
+| [[https://www.reddit.com/r/3Dprinting/comments/vk5nbr/comment/idnb72i/][TPU]]      |      50 | 4-5h |
+| PETG     |      65 | 4-5  |
+| ABS      |      80 | 4-5  |
+
+
+
 * Printing sheets / PEI
 ** Silk like
 https://oseq.cz/products/oseq-safe-sheet-sale-254x241-for-prusa-mk4-mk3-3s-3s
