@@ -112,8 +112,11 @@ Rule of thumb: Dry in the oven at same temp as the bed.
 | [[https://www.reddit.com/r/3Dprinting/comments/vk5nbr/comment/idnb72i/][TPU]]      |      50 | 4-5h |
 | PETG     |      65 | 4-5  |
 | ABS      |      80 | 4-5  |
+* Custom G code
 
-
+https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-hardware-firmware-and-software-help/gcode-to-warm-up-enclose-before-printing/
+https://forum.prusa3d.com/forum/prusaslicer/how-to-configure-hot-end-heating-after-auto-leveling/
+https://www.reddit.com/r/3Dprinting/comments/14ti2dw/possibly_dumb_question_but_prusa_slicer_how_do_i/
 
 * Printing sheets / PEI
 ** Silk like

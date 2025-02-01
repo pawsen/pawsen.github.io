@@ -76,7 +76,7 @@ https://hungyi.net/posts/tear-off-window-emacs/
 Generel usage, good for brushup
 https://noelwelsh.com/posts/doom-emacs/
 * registers (")
-example: store abc in register a by =yiw= (yank inner word).
+example: store abc in register =a= by =yiw= (yank inner word).
 - type abc
 - copy to register ="ayiw=
 

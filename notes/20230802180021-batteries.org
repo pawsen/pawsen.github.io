@@ -219,7 +219,6 @@ I have read that the slot in the nickel strip makes the current take the shortes
 [[attachment:SpotWeldCurrent1.png]]
 
 * Cells
-
 ** Types
 There are many different li-ion type cells
 #+CAPTION: Different types of LI-ION cells
@@ -237,10 +236,7 @@ There are many different li-ion type cells
 |         | LiMn2O4 (LMO)         |
 |         | LiNiCoAlO2 (NCA)      |
 
-
 Regardless of chemistry, they come in different formats
-
-
 - Pouch: soft plastic bag (incorrectly called "LiPos")
 - Small cylindrical: in metal case, no studs, less than 10 Ah (e.g.: 18650)
 - Large cylindrical: in plastic case, two threaded studs at either end, 10 Ah and larger
@@ -275,8 +271,11 @@ Some recommended 18650 cells are listed below. Other good cells can be found on 
 |         15 | 30Q                               |           3000 |
 |         20 | Sony VTC6, LG HG2, Samsung 25R    |                |
 
-
 ** Cell arrangement/holder
+https://e4bike.ru/page/battery-shape-configurator
+https://www.repackr.com/
+[[https://docs.google.com/spreadsheets/d/1e2962wuNumstvv6UMLi-F7xVHQFWlMr1/edit#gid=1526562313][Repackr with IR and 80x14.xlsm]]
+
 *** honeycomb
 The side angle of the stacked cells is about 30-degrees for honeycomb configuration, (compared to 90-degree corners in a common rectangular pack).
 This makes it a natural fit into the lower part of the frame triangle space, as seen in fig. [[fig:honeycomb_stack]].
@@ -306,6 +305,12 @@ https://www.aliexpress.com/item/18650-battery-holder-Cylindrical-cell-2-10-plast
 |          88 |        24 |   100.8 |    72.0 |
 #+TBLFM: $3 = $2*4.2;%0.1f
 #+TBLFM: $4 = $2*3.0;%0.1f
+
+See the [[https://talesontwowheels.com/2019/10/02/li-ion-ebike-battery-charge-charts/][battery charge charts]].
+
+** Voltage sag
+
+https://electronics.stackexchange.com/a/463453
 
 ** Reusing old cells :ATTACH:
 
@@ -390,18 +395,19 @@ SoH = Q_{max} Q_{rated}
 * BMS
 The Battery Management System (BMS) should prevent under- and overvoltage and balance the cells.
 
-
 #+NAME: fig:li-ion_bms_cables
 #+CAPTION: BMS balancing wires taped to the cells(note the cells are in honeycomb arrangement)
 [[attachment:BatteryDIY11.webp]]
-
 
 The unmodified [[id:9f7ba240-5d80-441f-a38b-0c622bee5715][bafang BBS models (BBS02/BBS02B/BBSHD)]] uses up to 30A, but the BBSHD can be modified to >50A.
 So get a BMS that delivers >50A
 
 Recommendations
-- [[https://antbms.aliexpress.com/store/1102984145][ANTBMS]], like the 7-16S 80A
 
+** ANTBMS
+[[https://antbms.aliexpress.com/store/1102984145][ANTBMS]], like the 7-16S 80A
+** JKBMS
+- [[https://www.aliexpress.com/item/1005004233638105.html][JKBMS accessory RS485 CAN Module and LCD Display Adapter USBRJ45]]
 * LiFePO4 in car
 
 ** charger
@@ -480,6 +486,18 @@ Nickel plating was done with nickel acetate, made with vinegar and a pure nickel
 [[attachment:20210422_130857.jpg]]
 
 Consider using [[https://mgchemicals.com/products/grease-for-electronics/electrically-conductive-grease/conductive-paste/][Conductive Assembly Paste 847]] between the bus bar and terminals. Might equalize any potential issues from not having perfectly flat bus bars or difference in resistance contact from cell to cell.
+** Portable powerbank
+https://www.facebook.com/groups/215409542709308/permalink/1124136908503229/
+
+#+CAPTION: DIY 7s powerbank with 4000W inverter
+[[attachment:336641969_260578612981094_4576794305281260481_n.jpg]]
+
+#+CAPTION: DIY 7s powerbank with 4000W inverter
+[[attachment:341332985_249482387540216_4869565342427987087_n.jpg]]
+
+- 200Ah LifePO4, 7s
+- [[*JKBMS][JKBMS + display]]
+- inverter MppSolar 4000W.
 
 * tech
 ** Wire batteries in parallel :ATTACH:

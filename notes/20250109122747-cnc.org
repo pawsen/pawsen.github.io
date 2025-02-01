@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       acb6fc4d-7845-40ee-87a9-723b87d22a12
+:END:
+#+title: cnc
+
+Lots of info
+https://jacquesmattheij.com/cnc-lasers/
+
+Specific from
+https://jacquesmattheij.com/cnc-lasers/#making-the-design
+
+- https://festi.info/boxes.py/ makes available a whole slew of parametric generators for all kinds of stuff, much more than just boxes.
+- http://www.makercase.com/ simple box generator
+- http://www.jeromeleary.com/gears/ Gear designer
+- a large list on reddit: https://www.reddit.com/r/lasercutting/comments/ameo75/online_repository_of_designs/

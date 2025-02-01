@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       ec899e17-5251-4f38-b237-0bc8c8127431
+:END:
+#+title: linux
+
+
+* Useful commands
+** Public URLs for Localhost.
+Create HTTP, TCP, UDP, or TLS tunnels to localhost
+
+#+begin_src sh
+ssh -p 443 -R0:localhost:5000 a.pinggy.io
+#+end_src
+This way I get a public URL to locahost port 5000. See https://pinggy.io/

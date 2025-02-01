@@ -53,6 +53,10 @@ There are three ways to increase the current (and thus power)
 
 The [[https://ebikes.ca/tools/simulator.html?motor=MBBS02&mid=true&gear=1&batt=B5213_GA&cont=cust_25_50_0.03_V&tf=44&tr=11&axis=mph&hp=0&cont_b=cust_30_60_0.03_V&motor_b=MBBS02&mid_b=true&gear_b=1&batt_b=B5213_GA&hp_b=0&tf_b=44&tr_b=11&bopen=true][ebikes.ca simulator]] will simulate a bike using different controllers/voltages/front- and rear rings.
 *** reprogramming the controller
+Start by reading this (seems to be the most up-to-date)
+https://talesontwowheels.com/2023/08/09/bbshd-settings-for-a-pedaling-cyclist-2023-edition/
+
+
 https://endless-sphere.com/sphere/threads/bbshd-voltage-problem-firmware-update-instructions.100064/
 
 https://github.com/danielnilsson9/bbs-fw/wiki
@@ -108,7 +112,12 @@ Models include
 - 5000W X1 Pro
 
 * cases
-- HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V
-  https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713
+** Polly DP6
+The manufacture seems to be [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
 
-  [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
+I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713][HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V]] (as per 2025 the link is dead)
+
+[[attachment:dp6-10s7p-layout.jpg]]
+[[attachment:dp6-13s5p-layout.jpg]]
+[[attachment:dp6-14s5p-layout.jpg]]
+

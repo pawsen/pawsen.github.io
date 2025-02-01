@@ -3,7 +3,52 @@
 :END:
 #+title: paragliding
 
-** What to bring in a kit
+* Certifications
+** British Hang Gliding and Paragliding Association
+The BHPA club system runs on a badge competency system. The first two [[https://en.wikipedia.org/wiki/British_Hang_Gliding_and_Paragliding_Association#Proficiency_levels][BHGP levels]].
+- EP, Elementary Pilot badge
+- CP – Club Pilot badge
+
+With CP, the pilot can join a recreational club and fly outside of the school system, see more on [[https://www.bhpa.co.uk/safety/prs/][BHPA Pilot Rating Scheme(PRS)]] page.
+
+Note: When taking a course through the BHPA certified school, the student must also sign up for a one-year membership of BHPA. As of 2025 the annual cost is £175. This seems to be due to third party insurance.
+
+** International Pilot Proficiency Information, IPPI
+The IPPI specifies five stages of paragliding proficiency, from the entry level SafePro Para 1 to 5. SafePro Delta is for hanggliding.
+Note: There seems to be some renaming. =SafePro Para= was known as =ParaPro=
+
+Many countries recognise the IPPI system. For e.g. Denmark and Germany the requirement is
+
+- Minimum ratings are stage 4 for unsupervised flying and stage 5 for cross-country flights.
+
+See the [[https://www.bhpa.co.uk/safety/overseas/#ippi][BHPA to IPPI conversion]]
+
+* What to bring in a kit
 
 Maybe get inspired from his medical kit
 https://youtu.be/vZJ1icmiPHg?feature=shared
+
+* Places
+** Bir, Himachal Pradesh, India
+[[https://www.paraglidingforum.com/viewtopic.php?p=88569#88569][(old) info for indepenent stayng in Bir]]
+
+*** Getting there
+The two closest international airports are Delhi and Amritsar.
+
+There are many more flights to Delhi, so you”ll get cheaper deals if flying there, but Amritsar is closer to Bir, about six hours in a taxi or eight in a bus.
+From Delhi you have more options:
+- Quickest and most expensive is to fly to Dharamsala airport and take a taxi from there.
+- There is a good overnight train from Delhi to Pathankot, which is about 4 hours by taxi from Bir, or for those of you who want to experience old-style India travel, you can then take a narrow-gauge railway line from Pathankot that stops at Ahju, which is just three km from Bir. It will take you eight hours, though! Trains can be booked on the Indian Railways website.
+- There are overnight buses from Delhi too. Some go directly to Baijnath, which is half an hour from Bir, but there are many more plying the route to Manali and they all stop at Mandi, which is 2 hours from Bir.
+*** Where to stay
+[[https://www.colonelsresort.com/][Colonels Resort]]. Book well in advance. Tents should be ok.
+
+*** Paragliding Season in Bir Billing
+
+Generally Bir Billing remains open for paragliding from the mid of September to the 1st week of July. From July to August the valley remain closed due to heavy rainfall. Lots of tourists from the other countries and various parts of the country usually come here in two different period of time for paragliding:
+
+The best timing for paragliding starts from The 1st week of October till the Mid of December. The months of October and November are the best time for paragliding. During this period the wind remains clam and little warm almost every day which is good for normal flight. The paragliding competitions use to happen during this time.
+
+The second best period for paragliding starts from the beginning of March till June. This period is the longest season for paragliding in Bir Billing and good for cross country flying as you get lots of thermal. But the wind is quite strong during the day and thunderstorms may be frequent during this time.
+
+From the mid of December, January till the mid of February are valid for paragliding, but flight remain low as the cool air temperature does not encourage the para-glider to fly high or for longer duration.
