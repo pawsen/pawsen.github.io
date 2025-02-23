@@ -408,6 +408,11 @@ Recommendations
 [[https://antbms.aliexpress.com/store/1102984145][ANTBMS]], like the 7-16S 80A
 ** JKBMS
 - [[https://www.aliexpress.com/item/1005004233638105.html][JKBMS accessory RS485 CAN Module and LCD Display Adapter USBRJ45]]
+** JBDBMS
+Almost all the cheaper 'smart' bluetooth BMS are a JBD based BMS. The other vendors just add their own things on top. [[https://www.aliexpress.com/item/1005004634019368.html][QUCC]] should be good, but a bit more expensive that barebone JBD.
+
+This JBD 7-14S is awesome
+[[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm.
 * LiFePO4 in car
 
 ** charger
@@ -629,7 +634,8 @@ Add 3.3K resistors over cell connections on the BMS, to trick it into thinking c
 - M18 have a BMS. However, some intelligence such as low voltage disconnect is in the tool. Makita and Ryobi keep the low voltage disconnect inside the batteries, making them great for DIY projects. Connecting loads directly to a Milwaukee M18 or M12 terminals without low voltage cutoff circuitry will overdischarge and ruin the battery.
 
 Cutoff voltage for M12 is around 9.74V(The tool will no longer turn). Set it to 10V to be on the safe side. Most 18650 cells can run down to 2.7V without destroying them, but going so low (ie. 3*2.7V=8.1V) could destroy some cells if they are slightly out of balance.
-
+* powerbank
+[[https://www.thingiverse.com/thing:6953712][1S8P case]], [[https://www.aliexpress.com/item/1005003384846487.html][LED Dual USB 5V 2.4A Micro/Type-C USB Mobile Power Bank 18650 Charging Module]]
 * Notes
 
 Paralleling, serialing, balancing, BMS
