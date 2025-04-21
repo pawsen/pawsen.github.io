@@ -80,8 +80,44 @@ The M-series conversion kits have seen a bit of thrashing going on. Originally B
 If you are looking for power over budget then the 1000W Bafangs are hard to beat, and can be modded with even more powerful controllers ($$$$). If you want good power as well as less weight then the 750W BBS02 is a good choice. A comparable conversion kit (to the BBS02) is the 750W Tongsheng TSDZ2, and it adds torque sensing for a smoother experience (available with custom open source firmware). For general use either of the 750W motors will be fine - you will not generally be using all of the power anyway.
 
 If you are into hill climbing then there is never too much power...
+** Front chainrings
+Some chain rings have alternating wide-narrow teeth. This will grab the chain better.
+- Gustavo chainring, 7075 T6 alloy (good, better than 6061). Find it on AliExpress.
 
-** Front Chainring size
+The chainring might hit the chainstay on the frame. If so, either use bottom bracket spacers to move the motor, which will leave less thread on the opposite side for the locking nut. If there is too little thread left, use chainring spacers.
+
+If you have a full suspension bike with a 12speed cassette, you need the
+*** chain line
+
+#+APTION: Poor chainline for lowest gear on cassette using a Luna Mighty Mini 30T(no offset)
+[[attachment:chainline-problem.jpg]]
+
+Derailment can be a chainline issue. Either get a chain ring with an offset
+
+[[https://electricbike.com/forum/forum/knowledge-base/motors-and-kits/bbshd/49002-how-to-solve-chain-derailment-on-bbshd-and-bbs02?p=101288#post101288][Offset for BBSHD chain rings]]
+Chain Ring
+Brand / Model 	Chain
+Ring
+Offset 	Approx. Chain Line*
+68mm BB 73mm BB
+Luna Eclipse 42T 	-24.8 	43.05 	45.55
+Luna Eclipse 48T 	-24.8 	43.05 	45.55
+Lekkie 42T 	-20.4 	47.45 	49.95
+Bafang 46T 	-19.0 	48.85 	51.35
+Lekkie 52T 	-18.3 	49.55 	52.05
+Luna Alloy 40T 	-9.0 	58.85 	61.35
+Luna Alloy 42T 	-9.0 	58.85 	61.35
+Luna Alloy 44T 	-9.0 	58.85 	61.35
+Luna Eclipse 40T 	-8.0 	59.85 	62.35
+Luna Mini 30T 	-8.0 	59.85 	62.35
+Luna One 36T 	-8.0 	59.85 	62.35
+Lekkie 28T 	-7.2 	60.65 	63.15
+Lekkie 36T 	-7.2 	60.65 	63.15
+
+Or [[https://electricbike.com/forum/forum/knowledge-base/motors-and-kits/bbshd/39170-how-to-rework-rear-sprockets-for-mid-drive-systems][rework the cassette]] to have fewer gears
+[[attachment:cassette-reworked-3speed.jpeg]]
+
+*** Front Chainring size
 https://electricbike-blog.com/2017/05/26/take-a-wild-guess-selecting-the-best-front-chainring-size-for-a-mid-drive-ebike-on-the-first-try/
 ** displays
 
@@ -95,6 +131,19 @@ The displays below should be good for nominal 52V batteries.
 The DPC 14 is also called 850c
 
 [[https://manual.eggrider.com/displays/eggrider_v2/overview/][EggRider V2]] is a programming enabled display+app that can change controller settings(using =UART=) on the fly.
+** CANbus
+As of 2025 the bafang motors seems to be CANbus only. The internals of the motor are the same, so it is possible to replace the CANbus controller with an UART.
+
+It is possible to change some of the CANbus settings using the bafang GO+ app, but that requires a display that both have bluetooth AND is compatible with the bafang app.
+As of april 2025, only these displays works with the app.
+- DPC080
+- DPC010
+
+#+begin_quote
+         C010 controller and CANBUS setup - you can change a bunch of settings around assist levels, voltage, acceleration, startup angle, etc from with inside the display interface (my settings unlock code was 1919), or connect with the Bafang Go app via Bluetooth and do it from there. Very cool - most will say not as flexible as the old UART setup, but it's been great for me.
+#+end_quote
+
+Here are some notes on the [[https://kaspars.net/blog/bafang-canbus][Bafang CANbus]].
 * Other middrive motors
 ** Tongsheng TSDZ2 (Or the newer TSDZ8)
 Alternative to the BBS02 700W.
