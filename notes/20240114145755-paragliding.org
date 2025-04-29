@@ -52,3 +52,72 @@ The best timing for paragliding starts from The 1st week of October till the Mid
 The second best period for paragliding starts from the beginning of March till June. This period is the longest season for paragliding in Bir Billing and good for cross country flying as you get lots of thermal. But the wind is quite strong during the day and thunderstorms may be frequent during this time.
 
 From the mid of December, January till the mid of February are valid for paragliding, but flight remain low as the cool air temperature does not encourage the para-glider to fly high or for longer duration.
+* Varios
+** Airspace awereness / collision avoidance
+*** FLARM (Flight Alarm)
+A collision-avoidance system developed primarily for gliders, light aircraft and helicopters in the alps.
+
+How it works:
+- Transmits the aircraft's GPS position, altitude, and velocity.
+- Receives similar data from nearby FLARM-equipped aircraft.
+
+FLARM is proprietary.
+
+*** FANET (Flying Ad-hoc Network)
+A mesh network communication system developed specifically for paragliders and hang gliders.
+
+How it works:
+- Shares GPS position data among nearby FANET devices.
+- Supports live tracking and airspace awareness between paragliders.
+
+Not visible to sailplanes or helicopters unless those also have FANET, which is rare.
+
+*** stand-alone devices
+**** LilyGo T-Echo
+The [[https://lilygo.cc/products/t-echo-lilygo][LilyGo T-Echo]] is a standalone open-source device that can be configured to transmit and receive FLARM, FANET+ protocols.
+
+Depending on the installed firmware
+- Meshtastic: Off-grid, text-based messaging over LoRa, could be useful for Hikers, backcountry skiers, disaster preppers.
+- SoftRF: for Aviation, Broadcast and receive aircraft positions (FLARM/FANET/OGN).
+
+T-Echo can be used with a non-gps, non-FLARM vario to get the same functionality as full fledged FLARM vario but at a much lower price.
+** XC Tracer Mini V
+The [[https://www.xctracer.com/en/xctracerminiiiigps][Mini V]] is often recommended.
+- Accelerometer/Compass/Gyro/Baro/GPS/BLE/FLARM/FANET
+- Solar cell
+This is an "instant vario", meaning that it fuses the data from 9dof sensors (accelerometer, gyro, pressure) with Kalman filtering.
+
+It combines everything, but cost around 500€
+** BlueBip
+The [[https://www.stodeus.com/shop/en/][BlueBip]] is a bluetooth Vario (around 200€). It does not have GPS or FLARM, but combined with [[*LilyGo T-Echo]] it is a full-fledged alternative to XC Tracer Mini, but 200€ cheaper.
+It does have LEDs for visual vario which some [[https://www.paraglidingforum.com/viewtopic.php?p=p686003#p686003][like]].
+** MipBip+
+The [[https://shop.mipfly.com/index.php?route=product/product&product_id=81][MipBip+]] (95€) is probably the cheapest instant variometer.
+
+** DIY
+*** ESP32C3 based
+The [[https://pataga.net.in/pataga/varios.html][author has a page with notes on DIY varios]]
+
+[[https://github.com/har-in-air/ESP32C3_BLUETOOTH_AUDIO_VARIO][ESP32C3 BLE audio Vario]] is a instant vario, fusing accelerometer and pressure data using Kalman filtering.
+
+It uses a CJMCU-117 module for data
+- MS5611: High-resolution barometric pressure sensor (altimeter)
+- MPU-9250 (discontinued): 9-axis IMU: 3-axis gyroscope, 3-axis accelerometer, 3-axis magnetometer
+
+An IMU measures motion and orientation using a combination of sensors:
+| Sensor Type   | Measures                                      |
+|---------------+-----------------------------------------------|
+| Accelerometer | Linear acceleration (e.g., gravity, G-forces) |
+| Gyroscope     | Angular velocity (how fast you're rotating)   |
+| Magnetometer  | Magnetic field (like a compass) — optional    |
+
+[[https://www.reddit.com/r/AskElectronics/comments/ebbhgo/a_decent_replacement_for_the_mpu9250][The icm20948 is the official replacement of the mpu9250]], but as of 2024 the ICM-20948 is not recommended for new designs as the magnetometer used is no longer manufactured.
+
+The pcb + lipo cell is made to fit with inside a [[https://www.hammfg.com/electronics/small-case/plastic/1551][Hammond 1551K]] (80,40,20)mm enclosure. (length, width, depth(including lid). The walls are 2mm thick)
+
+There is a [[https://www.thingiverse.com/thing:1695285][3d scad version]] of a Hammond box.
+
+*** Android phone with XCVario App
+[[https://play.google.com/store/apps/details?id=org.theflightvario.simplevario.xc][XCVario App]] can be used on a phone with internal barometer, like googles pixel phones.
+
+See this [[https://youtu.be/5eLnei9-yFw][video]] for a comparison between the app and a XCTracer. The app performs just as well.

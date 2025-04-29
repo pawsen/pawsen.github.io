@@ -159,9 +159,15 @@ Models include
 - 750W photon
 - 1500W X1 Stealth
 - 5000W X1 Pro
+* Battery
+** Multiple batteries
 
-* cases
-** Polly DP6
+Two batteries can be connected to improve the range.
+It doesn't matter if they are different capacities but *MUST* be same voltage and state of charge when first connected.
+#+CAPTION: Connecting two batteries for improved range
+[[attachment:multiple_batteries_parallel.jpg]]
+** cases
+*** Polly DP6
 The manufacture seems to be [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
 
 I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713][HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V]] (as per 2025 the link is dead)
@@ -169,4 +175,3 @@ I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-
 [[attachment:dp6-10s7p-layout.jpg]]
 [[attachment:dp6-13s5p-layout.jpg]]
 [[attachment:dp6-14s5p-layout.jpg]]
-
