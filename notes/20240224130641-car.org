@@ -3,6 +3,8 @@
 :END:
 #+title: car
 
+# #+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes on "
+
 * Manuals
 https://workshop-manuals.com/ or for cars before 2014, find alldata (version 10.53) on a torrent site. After 2014, alldata is a online subscription site. It might also be possible to find a torrent of a [[https://haynes.com/][Haynes Manual]] for the car. Or buy a second hand copy on ebay.
 

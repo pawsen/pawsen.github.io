@@ -3,11 +3,12 @@
 :END:
 #+title: Car immobilizer
 
-#+filetags: it hacking sdr proxmark
+#+HUGO_SECTION: post
+#+filetags: it sdr proxmark
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-11-22
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about car immobilizer. I thought it would be easy-ish. It is not"
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about car immobilizer. I thought it would be easy-ish to steal my car. It is not"
 
 The immobilizer system is preventing a car from starting without using a carkey with the right chip(called transponder).
 - For the keyless remote opening of a car see [[id:46df4a45-add0-4732-af98-f74ecd27f362][Keyless entry systems]]

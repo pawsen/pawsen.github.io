@@ -3,16 +3,17 @@
 :END:
 #+title: Angle sensor
 
-#+filetags: 3d-print it electronics
-#+hugo_categories: diy
+#+HUGO_SECTION: post
+#+filetags: 3d-print it electronics diy
+# #+hugo_categories:
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-30
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Make a angle-sensor(using an LCD, accelerometer and arduino) to show the angle of a Kilterboard"
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "I made a angle-sensor(using an LCD, accelerometer and arduino) to show the angle of a Kilterboard(climbing wall)"
 
 I made a angle-sensor for a Kilterboard(a Kilterboard is a specific type of climbing wall where the angle of the wall can be adjusted, to make the climbing harder or easier).
 The file for the arduino and =stl='s for 3d printing the cases, along with a lot of details in the readme, are [[https://github.com/pawsen/tilt-sensor/][on github]].
 
-#+CAPTION: Dispay and sensor, connected by I2C. Power input is the black cable going to the sensor-case (resting against the laptop bag).
+#+CAPTION: Display and sensor, connected by I2C. Power input is the black cable going to the sensor-case (resting against the laptop bag).
 [[attachment:tilt_display_sensor.jpg]]
 
 

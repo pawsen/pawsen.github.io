@@ -3,11 +3,12 @@
 :END:
 #+title: fe hacker academy
 
-#+filetags: hacking spectogram
+#+HUGO_SECTION: post
+#+filetags: it hacking spectogram
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-12-14
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "FE created a 'hacker school' and hid a challenge in the announcement poster. This is how the challenge can be solved"
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "FE (Forsvarets Efterretningstjemeste) created a 'hacker school' and hid a challenge in the announcement poster. This is how the challenge can be solved"
 
 In 2016 the Danish Defence Intelligence Service(DDIS in english; forsvarets efterretningstjeneste, fe, in danish) created a [[https://web.archive.org/web/20231201160703/https://hackerakademi.dk/][hacker academy]]. The creation was accompanied by a poster circulated in mainstream media.
 The poster had a hidden challenge, that when solved gave another challenge, and yet another, ending with a direct phone number for applying to the hacker academy.

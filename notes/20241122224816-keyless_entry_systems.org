@@ -3,6 +3,7 @@
 :END:
 #+title: Keyless entry systems
 
+#+HUGO_SECTION: notes
 #+filetags: it hacking
 #+hugo_categories: hacking
 #+hugo_auto_set_lastmod: t

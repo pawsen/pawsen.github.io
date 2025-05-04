@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       e4172e2e-38e4-4d89-ba7e-b33391c66c68
+:END:
+#+title: rfid
+
+#+filetags: it hacking proxmark
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-05-05
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "RFID reading"
+
+
+This is about reading and writing RFID. See the notes on [[id:040e6d1b-0d69-445c-bffd-399694cdb58d][wiegand]] for communications between the reader and controller.
+
+
+* Chips
+There are a number of NFC chips with =NXP PN532= the most commonly used. It can only read/write =ISO 14443= and cannot emulate UID (the first byte of the UID is hardcoded to =0x08=, thus trying to set =0x11223344= will result in =0x08223344=).
+
+If we only want to read/write e.g. Mifare Classic =PN532= is a good choice due to the available libraries for Arduino/Rasperry/libNFC
+
+
+| Feature                          | NXP PN5180                                         | TI TRF7970A                                            | NXP PN532                                         |
+|----------------------------------+----------------------------------------------------+--------------------------------------------------------+---------------------------------------------------|
+| Manufacturer                     | NXP Semiconductors                                 | Texas Instruments                                      | NXP Semiconductors                                |
+| NFC Standards Supported          | ISO/IEC 14443 A/B, ISO/IEC 15693, FeliCa           | ISO/IEC 14443 A/B, ISO/IEC 15693                       | ISO/IEC 14443 A/B, FeliCa, MIFARE                 |
+| Operating Frequency              | 13.56 MHz                                          | 13.56 MHz                                              | 13.56 MHz                                         |
+| Tag Reader Support               | Full support for all common NFC tags               | Full support for all common NFC tags                   | Supported, but less robust at higher speeds       |
+| Tag Emulation                    | Partial; supports ISO 14443-4 Type A (UID fixed)   | Partial; supports some emulation (limited UID control) | Limited; mostly ISO 14443A, fixed UID             |
+| UID Customization                | Not supported; UID is fixed in hardware            | Partially possible through undocumented methods        | Not supported                                     |
+| Peer-to-Peer Mode                | Supported                                          | Supported                                              | Supported                                         |
+| Host Interface                   | SPI (5 Mbps), available reference drivers          | SPI, UART                                              | SPI, I²C, High-Speed UART                         |
+| Software Availability            | NXP NFC Reader Library (C), examples available     | TI TRF7970A stack and code examples                    | Wide support: libnfc, Adafruit libraries, Arduino |
+| Open Source Support              | Limited (NXP C libraries, some driver ports exist) | Moderate (TI examples and technical docs)              | Strong open-source support across platforms       |
+| Ease of Use                      | Moderate; low-level configuration via registers    | Moderate; requires TI examples or firmware dev         | High; widely used in hobbyist platforms           |
+| Power Consumption                | ~100 mA active                                     | ~100 mA active                                         | ~80–100 mA active                                 |
+| Development Boards               | Elektor PN5180 Breakout, Mikroe NFC 3 Click        | DLP-7970ABP BoosterPack (TI)                           | PN532 V3 NFC Module, Seeed, Adafruit, Elechouse   |
+| UID Cloning / Replay Feasibility | Not possible (UID locked down)                     | Possible only in specific cases (ISO 15693)            | Not feasible; UID locked in hardware              |
+
+[[https://github.com/ATrappmann/PN5180-Library][PN5189 Arduino librabry]]
+
+For full emulation a Proxmark3 Easy seems to be the best solution.
+
+* Reverse engineering
+- [[https://youtu.be/1JT_lTfK69Q?t=1215][Hacking a Bosten Transit card]]
+* Mifare Classic :ATTACH:
+
+#+CAPTION: Mifare Classic 1k memory layout
+[[attachment:mifare_classic_mem_layout.png]]
+* Famous hacks
+- [[https://web.archive.org/web/20160310114724/http://demoseen.com/bhpaper.html][Onity HT lock system for hotels]] and the [[https://www.wired.com/2017/08/the-hotel-hacker/][wired story on the man who exploited it and went on a hotel room stealing spree]]
+- [[https://youtu.be/dldX9UFhNTs][Laundering Money - Michael Orlitzky, doing laudry for free]]
+- [[https://youtu.be/DovunOxlY1k][AT&T Archives: Similiarities of Wave Behavior]]
+- [[https://youtu.be/fBICDODmCPI][DoS Denial of Shopping Analyzing and Exploiting Physical Shopping Cart]], how to lock and unlock shopping cart wheels using 7.8KHz RF signal
+- [[https://youtu.be/rnmcRTnTNC8][Tactics of Physical Pen Testers]]
+- [[https://youtu.be/B8DjTcANBx0][Exploiting Network Surveillance Cameras Like a Hollywood Hacker]], 2013. Exploiting poor security in CCTV aka video surveillance. WOW.
+- [[https://youtu.be/SyMUTqRQZPA][Blinded By The Ligh]], track phones proximity IR sensor. Description of the [[https://web.archive.org/web/20210424071039/http://www.devttys0.com/2016/08/defcon-24-blinded-by-the-light/][hardware]], [[https://github.com/devttys0/IRis][kicad files]] and [[https://github.com/tb69rr/Iris][ardiono code]].
+  On a related note, newer phones with multiple cameras uses a lidar to determine the distance to an object and thus determine if the "short"- or "long" distance lens should be used. These lidar patterns can be seen with a IR camera and used to e.g. determine if someone is trying to take a photo of you, see [[https://youtu.be/R5nMqju6crY?t=2239][Optical Espionage: Using Lasers to Hear Keystrokes Through Glass Windows - samy kamkar]]
+- [[https://youtu.be/2IT2oAzTcvU][Confessions of an Nespresso Money Mule]], the speaker unexpectedly gets a "free" Nespresso machine in a triangulation fraud scheme and starts to investigate.
+- [[https://youtu.be/vQtLms02PFM][Bill Swearingen - HAKC THE POLICE]], manipulate police speed radar detectors and laser guns.
+- [[https://youtu.be/pri4EJ0634c][What History’s Greatest Heist Can Teach Us About Defense In Depth]], the story of the biggest diamond heist done in Antwerp in 2003.
+- [[https://youtu.be/ZUvGfuLlZus][Elevator Hacking: From the Pit to the Penthouse]]

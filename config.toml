@@ -31,12 +31,15 @@ languageCode = "en-us"
   name = "post/"
   url = "post/"
   [[params.navlinks]]
+  name = "notes/"
+  url = "notes/"
+  [[params.navlinks]]
   name = "tags"
   url = "/tags/"
 
-  [[params.navlinks]]
-  name = "categories"
-  url = "/categories/"
+  # [[params.navlinks]]
+  # name = "categories"
+  # url = "/categories/"
 
   [[params.navlinks]]
   name = "search"

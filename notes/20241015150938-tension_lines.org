@@ -3,7 +3,8 @@
 :END:
 #+title: tension lines
 
-#+filetags: irata rope-access
+#+HUGO_SECTION: post
+#+filetags: irata rope-access climbing
 #+hugo_categories: ropes
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-01

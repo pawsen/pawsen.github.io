@@ -3,20 +3,21 @@
 :END:
 #+title: decrypting 802.11 (WPA2 in pre-shared mode)
 
-#+filetags: wireshark
+#+HUGO_SECTION: post
+#+filetags: wireshark it hacking
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-27
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Decrypt 802.11 wireless traffic using wireshark"
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Decrypt others 802.11 wireless traffic using wireshark"
 
-Wireshark can decrpt WiFi traffic in WEP and WPA/WPA2 in pre-shared(or personal) mode.
+Wireshark can decrypt WiFi traffic in WEP and WPA/WPA2 in pre-shared(or personal) mode.
 (Technically it is [[https://en.wikipedia.org/wiki/IEEE_802.11][IEEE 802.11]]x(the standard that specifies WLAN) traffic)
 
 Here we will decode traffic between other machines and the AP. It requires
 - The WPA pass phrase (and SSID)
 - EAPOL handshake, which occurs when a machine joins a Wi-Fi network
 
-ie.. we need to capture the =EAPOL= for each of the machines where we want to decode the traffic.
+ie. we need to capture the =EAPOL= for each of the machines where we want to decode the traffic.
 One way to force the handshake is to put the machine into sleep and wake it (like closing and opening the lid).
 
 * Setting a network device in monitor mode

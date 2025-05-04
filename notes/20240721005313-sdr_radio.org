@@ -3,12 +3,13 @@
 :END:
 #+title: sdr radio
 
+#+HUGO_SECTION: post
 #+HUGO_TAGS: sdr it spectogram
 #+filetags: sdr spectogram
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-09-20
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Use a SDR to determine CTCSS tone from a UHF walkie-talkie recording by looking at a soectogram"
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Use a SDR to determine CTCSS tone from a UHF walkie-talkie recording by looking at a soectogram. And much more"
 
 
 Software-defined radio (SDR) is a radio communication system where components that conventionally have been implemented in analog hardware (e.g. mixers, filters, amplifiers, modulators/demodulators, detectors, etc.) are instead implemented by means of software on a computer.
@@ -212,6 +213,8 @@ For completeness, the waterfall plot for a uhf radio looks like
 #+CAPTION: waterfall for UHF radio, SDR++
 [[attachment:channel3_waterfall2.png]]
 
+** Explanation of IQ signals, modulation and demodulation
+https://youtu.be/h_7d-m1ehoY
 ** Convert IQ samples to audio
 =rtl_sdr= output in IQ samples, (unsigned 8 bit interleaved I/Q samples (0 - 255)).
 

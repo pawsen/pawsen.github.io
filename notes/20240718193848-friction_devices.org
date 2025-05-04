@@ -3,7 +3,8 @@
 :END:
 #+title: Mechanical advantage and efficiency
 
-#+hugo_tags: irata rope-access
+#+HUGO_SECTION: post
+#+filetags: irata rope-access
 #+hugo_categories: ropes
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-08-01

@@ -3,6 +3,13 @@
 :END:
 #+title: paragliding
 
+#+HUGO_SECTION: notes
+#+filetags: diy paragliding
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-04-26
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes on paragliding, places, varios"
+# #+hugo_categories: notes
+
 * Certifications
 ** British Hang Gliding and Paragliding Association
 The BHPA club system runs on a badge competency system. The first two [[https://en.wikipedia.org/wiki/British_Hang_Gliding_and_Paragliding_Association#Proficiency_levels][BHGP levels]].
@@ -52,8 +59,15 @@ The best timing for paragliding starts from The 1st week of October till the Mid
 The second best period for paragliding starts from the beginning of March till June. This period is the longest season for paragliding in Bir Billing and good for cross country flying as you get lots of thermal. But the wind is quite strong during the day and thunderstorms may be frequent during this time.
 
 From the mid of December, January till the mid of February are valid for paragliding, but flight remain low as the cool air temperature does not encourage the para-glider to fly high or for longer duration.
+** Aguergour, Atlas mountains, Morocco
+
+
+[[https://maps.app.goo.gl/S9yd2zbJ1gLJocE76][Gite Aznag]] owned by Naima (WHatsApp:[[https://wa.me/+212660947872][+212660947872]]).
+
+Awesome place, simple life, possible to top-land. Strong thermals.
+
 * Varios
-** Airspace awereness / collision avoidance
+** Airspace awareness / collision avoidance
 *** FLARM (Flight Alarm)
 A collision-avoidance system developed primarily for gliders, light aircraft and helicopters in the alps.
 
@@ -114,8 +128,39 @@ An IMU measures motion and orientation using a combination of sensors:
 [[https://www.reddit.com/r/AskElectronics/comments/ebbhgo/a_decent_replacement_for_the_mpu9250][The icm20948 is the official replacement of the mpu9250]], but as of 2024 the ICM-20948 is not recommended for new designs as the magnetometer used is no longer manufactured.
 
 The pcb + lipo cell is made to fit with inside a [[https://www.hammfg.com/electronics/small-case/plastic/1551][Hammond 1551K]] (80,40,20)mm enclosure. (length, width, depth(including lid). The walls are 2mm thick)
-
 There is a [[https://www.thingiverse.com/thing:1695285][3d scad version]] of a Hammond box.
+
+https://www.pjrc.com/store/prop_shield.html
+https://github.com/PaulStoffregen/NXPMotionSense/
+https://github.com/PaulStoffregen/MotionCal
+https://github.com/PaulStoffregen/MotionCal/issues/8
+#+begin_quote
+        change the data type of the raw sensor data to int,
+
+         lsm.read();
+
+// Print the sensor data
+Serial.print("Raw:");
+Serial.print((int)lsm.accelData.x);
+Serial.print(',');
+Serial.print((int)lsm.accelData.y);
+Serial.print(',');
+Serial.print((int)lsm.accelData.z);
+Serial.print(',');
+Serial.print((int)lsm.gyroData.x);
+Serial.print(',');
+Serial.print((int)lsm.gyroData.y);
+Serial.print(',');
+Serial.print((int)lsm.gyroData.z);
+Serial.print(',');
+Serial.print((int)lsm.magData.x);
+Serial.print(',');
+Serial.print((int)lsm.magData.y);
+Serial.print(',');
+Serial.print((int)lsm.magData.z);
+Serial.println(); `
+#+end_quote
+https://forum.pjrc.com/threads/59277-Motion-Sensor-Calibration-Tool-Parameter-Understanding
 
 *** Android phone with XCVario App
 [[https://play.google.com/store/apps/details?id=org.theflightvario.simplevario.xc][XCVario App]] can be used on a phone with internal barometer, like googles pixel phones.

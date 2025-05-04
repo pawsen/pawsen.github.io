@@ -30,17 +30,30 @@ They are quite simple, the benefit of buying a module is the small form factor.
 
 ** ESP-RFID-Tool
 The [[https://github.com/rfidtool/ESP-RFID-Tool][ESP-RFID-Tool]] is very similar to the [[*espkey]] and can be bought of aliexpress. The is a fork [[https://github.com/Einstein2150/ESP-RFID-Tool-v2/][ESP-RFID-Tool-v2]], but the difference seems minor.
+** The Tick, ESP32 C3 based
+
+[[https://github.com/jkramarz/TheTick][The Tick]] is a new implementation of the espkey using a ESP32-C3. It seems to support more than just Wiegand protocol.
+** Paxton
+Paxton is a access control system
+
+[[https://github.com/00Waz/Paxtogeddon-Reader][Paxtogeddon-Reader]], like the espkey just for Paxton.
+[[*The Tick, ESP32 C3 based]] is also able to decode Paxton.
+
+https://static.badcfe.org/paxton-covert
+https://wiki.dangerousthings.com/en/guides/paxton-101
 
 ** Long range readers (weaponized readers)
 A tool that allows to capture RFID access card credentials from several feet away.
-
 Basically it is an Wiegand based RFID long range reader and a esp-based logic analyser.
 
 #+CAPTION: Tastic thief, battery powered long range RFID reader and esp32 based analyzer
 [[attachment:tastic_thief.png]]
 
-- [[https://github.com/TeamWalrus/tusk][tusk]], an esp32 updated version of the original [[https://shubs.io/guide-to-building-the-tastic-rfid-thief/][tastic-RFID-Thief]]
-- [[https://web.archive.org/web/20230510003220/https://www.x90x90.net/hardware/2022/11/11/Tastic-RFID-thief.html][RFID reader + espkey]]
+There are several ways to make a long range reader
+- [[https://github.com/TeamWalrus/tusk][tusk]], an diy esp32 updated version of the original [[https://shubs.io/guide-to-building-the-tastic-rfid-thief/][tastic-RFID-Thief]]
+- [[https://github.com/sh0ckSec/RFID-Gooseneck][ESP-RFID-Tool]] version of the above, ie. saves the hassle of programming an ESP32. Just connect the ESP-RFID and power to the reader. Have nice high-quality pictures.
+  This can also be fitted into a [[https://github.com/sh0ckSec/ClipboardCloner][Officemate Super Storage Supply Clipboard Case]].
+- [[https://web.archive.org/web/20230510003220/https://www.x90x90.net/hardware/2022/11/11/Tastic-RFID-thief.html][RFID reader + espkey]], just another example. It's better to go with the ESP-RFID-Tool, same functionality just cheaper.
 
 The three readers I have seen used are
 

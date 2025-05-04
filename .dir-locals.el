@@ -11,7 +11,7 @@
          ;; Right now it is set to relative to the org-files
          (org-hugo-base-dir . "../")
          ;;(org-hugo-auto-set-lastmod . t)
-         (org-hugo-section . "post/")
+         (org-hugo-section . "notes/")
          )))
 
 ;; ((nil . ((eval . (set (make-local-variable 'my-project-path)

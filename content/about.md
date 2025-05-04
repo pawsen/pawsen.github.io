@@ -1,6 +1,7 @@
 +++
 title = "About"
 date = "2019-01-25"
+toc = false
 +++
 
 ## Hi there
