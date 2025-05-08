@@ -3,6 +3,12 @@
 :END:
 #+title: emacs
 
+#+filetags: it
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2023-08-02
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "emacs notes/shotcuts."
+
 * movement
 
 K  / SPC c k : +lookup documentation
@@ -270,7 +276,8 @@ https://stackoverflow.com/questions/39342374/org-mode-s-table-export-to-html-how
 #+CAPTION: orb table with predefined cell colors and width when exported to html.
 [[attachment:_20240719_222630OMxur.png]]
 
-* code completion
+* code
+** completion
 company:
 
 By default, completion is triggered after a short idle period or with the
@@ -307,6 +314,21 @@ available to evil users to access specific company backends.
 | =C-x s=   | Complete spelling suggestions     |
 
 Fx, typing =/etc/f=, then pressing =C-x C-f= will complete the path
+** list errors
+
+lsp-mode integrates with flycheck or flymake.
+(flycheck is used if present, flymake is used as fallback, see the variable lsp-diagnostics-provider and [[https://emacs-lsp.github.io/lsp-mode/tutorials/CPP-guide/#diagnostics][lsp-mode tutorial]].)
+
+| keybind     | Description                 |
+|-------------+-----------------------------|
+| =SPC c X=   | lsp-treemacs-error-list     |
+| =SPC c x=   | +default/diagnostic         |
+| =C-c ! l=   | flycheck-list-errors        |
+| =C-c ! n=   | flycheck-next-error         |
+| =C-c ! p=   | flycheck-previous-error     |
+| =C-c ! C-w= | flycheck-copy-error-as-kill |
+
+To copy an error to the clipboard for easier searching use either =C-c ! C-w=. Or use the =lsp-treemacs-error-list= / =flycheck-list-errors= and press =Y= at the relevant line.
 
 * searching
 ivy:
