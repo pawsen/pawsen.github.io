@@ -59,3 +59,4 @@ For full emulation a Proxmark3 Easy seems to be the best solution.
 - [[https://youtu.be/vQtLms02PFM][Bill Swearingen - HAKC THE POLICE]], manipulate police speed radar detectors and laser guns.
 - [[https://youtu.be/pri4EJ0634c][What History’s Greatest Heist Can Teach Us About Defense In Depth]], the story of the biggest diamond heist done in Antwerp in 2003.
 - [[https://youtu.be/ZUvGfuLlZus][Elevator Hacking: From the Pit to the Penthouse]]
+- [[https://youtu.be/mkW3N-ufPe4][Eric Schmiedl: Advanced Physical Attacks]],

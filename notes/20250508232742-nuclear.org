@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       1bbc2de6-d4f1-4b90-8427-8d54e7374b08
+:END:
+#+title: nuclear
+
+#+filetags: isotopes radioactivity
+#+hugo_categories: physics
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-05-08
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Radioactive devay diagram"
+
+
+#+CAPTION: Radioactive decays,
+[[attachment:Decay.png]]
+[[https://github.com/dankamongmen/isotopechart][source]]

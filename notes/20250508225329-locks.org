@@ -1,0 +1,84 @@
+:PROPERTIES:
+:ID:       904dbfdd-e0b9-428e-991c-cb76a3feea19
+:END:
+#+title: locks
+
+#+filetags: locks hacking
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-05-08
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about physical locks"
+
+There is a [[https://www.goodreads.com/book/show/525753.Locks_Safes_and_Security][book with all the information about locks]] ([[https://libgen.is/book/index.php?md5=C18B8D8B64AAC6C073E3255938240B4C][libgen]]). It might not be practically relevant for lock picking, but it will tell you how a lock is designed.
+
+* Safe
+First, [[https://youtu.be/fdUZn9sJ6Bs][introduction to combination locks]]. If you didn't get it, there's a good [[https://youtu.be/CZ8WRDVgKrk][demonstration]] (same guy [[https://youtu.be/lQZmKNjbtXo][demonstrates Left-right-left combination]] and [[https://woodgears.ca/combolock/left.html][webpage]])
+
+Now you know
+
+- Spin the dial a few times to reset everything
+- Turn the dial in a certain direction until you get to the first combination number. Let’s call that AA.
+- Turn the dial in the opposite direction one full turn, then continue until you get to the second number - BB
+- Turn the dial in the opposite direction until get you get to the third number - CC
+- Pull on the handle to open lock
+
+and is ready to watch the [[https://youtu.be/4_lkYQ88kv0][defcon talk: Safecracking Without a Trace]], Eric Schmiedl.
+
+There is a long talk by [[https://youtu.be/mi3WIwq86t8][Devient about Safe Locks and Sushi Rolls]]. Some history, but if you seen Eric's talk, you can just skip ahead.
+
+** Auto picking
+Some [[https://web.archive.org/web/20100107094822/http://web.mit.edu:80/kvogt/www/safecracker.html][MIT students built an Autodialer]] to open a safe with a group 1 lock(locks are divided in group 1-3 with 1 being /unbreakable/)
+
+#+CAPTION: Homemade auto picker by MIT students, 2007
+[[attachment:safeopen_large.png]]
+
+*** [[https://learn.sparkfun.com/tutorials/building-a-safe-cracking-robot][Sparkfuns tutorial]], lock with a knob
+
+The algorithm is
+#+begin_example
+- Reset dials by spinning CCW, past zero, continue until we arrive at zero.
+- Continue CCW to 3. This sets disc A to 3.
+- Rotate CW to 3. Continue CW to 0. Disc B is now set to 0.
+- Rotate CCW to the first allowed indent; ours is 8. Disc C is now set to 8.
+- Try the handle. Failed? Continue…
+- Rotate CCW to next allowed indent; ours is 24.
+- Try the handle. Failed? Continue…
+- Rotate CCW to next allowed indent; ours is 66.
+- Try the handle. Failed? Continue…
+- Rotate CCW to next allowed indent; ours is 74.
+- Try the handle. Failed? Continue…
+- Rotate CW to 6. Disc B is now set to 6.
+- Loop to step 4.
+- Rotate CW to 9. Disc B is now set to 9.
+- etc...
+#+end_example
+
+*** Other examples, without a knob
+- [[https://youtu.be/BcfdyP5HKWw][Video demonstrating a 3d-printed, aurduino autodialer]]. Link to code and stl in description.
+- [[https://blog.enbewe.de/2023/01/26/opening-a-safe-the-diy-way][Opening a safe without a knob]]
+- [[https://github.com/darrylburke/ArduinoSafeDialer][another arduino model]]
+
+*** reducing the combination space
+
+From the [[https://en.wikipedia.org/wiki/Safe-cracking#Lock_manipulation][wiki article]]
+#+begin_quote
+Nearly all combination locks allow some "slop", or deviation, while entering a combination on the dial. On average, 1% radial rotation in either direction from the center of the true combination number allows the fence to fall despite slight deviation, so that for a given safe, it may be necessary only to try a subset of possible combinations. Such "slops" may allow for a margin of error of plus or minus two digits, which means that trying multiples of five would be sufficient in this case. This drastically reduces the time required to exhaust the number of meaningful combinations.
+A further reduction in solving time is obtained by trying all possible settings for the last wheel for a given setting of the first wheels before nudging the next-to-last wheel to its next meaningful setting, instead of zeroing the lock each time with a number of turns in one direction.
+#+end_quote
+
+The article [[https://web.archive.org/web/20100705023227/http://www.crypto.com/papers/safelocks.pdf][Safecacking for the computer scientist]] describes some manipulation attacks for group 2 locks.
+
+* Lock Picking
+[[http://www.lysator.liu.se/mit-guide/mit-guide.html][Guide to lock picking, ano 1991]]
+
+[[https://youtu.be/AayXf5aRFTI][Copying keys from photos, molds and more]]
+
+** U-locks
+There are many people that have made small devices to open u-locks. Specifically [[https://www.wikihow.com/Crack-a-%22Master-Lock%22-Combination-Lock][Master Lock]] has a flaw that makes them easier to crack
+
+Some students [[https://web.archive.org/web/20210413214341/http://www.bnpeters.com/2131-advanced-instrumentation-and-measurement.html][made a device]](this is the most advanced version) and then later [[https://youtu.be/8byAOaIM1cY][other students made another device]]. But this [[https://neil.fraser.name/hardware/locraker/][OG guy made the first version]].
+They are all useless for opening locks actually locking something.
+
+Instead [[https://youtu.be/qM5g1KPJYTQ][shim it]], Deviant opens the lock with just a cut-out piece from a alu-can.
+** Tubular locks
+[[https://youtu.be/pomW1QUkBtI][All about tubular locks]]

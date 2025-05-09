@@ -3,6 +3,13 @@
 :END:
 #+title: 3d printing
 
+#+filetags: 3d-printing diy
+#+hugo_categories: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2024-01-20
+#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about 3d printing and links to some designs"
+
+
 * Increasing model strength
 The strength of a model is mostly defined by the number of perimeters (not infill). If you want to have a stronger print, increase the number of perimeters. That said, infill does help with compression resistance.
 
@@ -50,6 +57,28 @@ A well know gun is the [[https://en.wikipedia.org/wiki/FGC-9][FGC-9 Mk2]] (FGC: 
 
 This zip file, [[attachment:794331711_ECM v2.1 Barrelmaking Package.zip][794331711_ECM v2.1 Barrelmaking Package.zip]] or [[https://odysee.com/@TheGatalog-Guides_Tutorials:b/DIY-ECM-Barrelmaking:d][online copy]], details the process (ie. stl files, readme, etc) and is a companion to the video.
 * Filaments
+From [[https://nick-black.com/dankwiki/index.php/Filaments][nick black]]
+
+Manufacturers employ additives to change the properties of their filaments, which I don't attempt to address here. Properties may change across different batches of the same filament. These are very rough comparisons based off oral wisdom.
+
+- *Impact strength*: ASA > ABS > PC > PETG > PLA
+- *Tensile strength*: PA >> PC >> ASA > ABS/PETG > PLA
+- *UV resistance*: ASA > ABS
+- *"Chemical" resistance*: PETG > ABS
+- *Melting temp*: PC > ASA > PETG > ABS >> PLA
+- *Heat resistance*: PC > ASA > ABS > PETG > PLA
+- *Printing speed*:
+- *Offensiveness (odor, VOCs while printing)*: ABS > ASA, PA, PC
+- *Acetone postprocessing*: ASA/ABS only
+- *Ease of sanding*: PLA > PETG > ABS/ASA
+- *Ease of painting*: PLA > PETG > ABS/ASA
+- *Tendency to warp*: PC > ABS/ASA > PLA > PETG
+- *Hygroscopicity*: PA/TPU > PC/PETG > ABS/ASA > PLA
+- *Filament density*: PETG/PLA > ABS/ASA
+- *Hotend temp required*: PC > ABS/ASA > PETG > PLA
+- *Cost*: PPS > PA > PC > ASA > ABS/PETG/PLA
+
+When it comes to polyamides (nylons), PA-12 is less susceptible to hydrolysis than PA-6, more flexible, less resistant to high temperatures, and much more expensive. PA-66 is generally more resistant to high temperatures and hydrolysis than PA-6, and slightly more expensive.
 ** Shrinkage :ATTACH:
 Print this file [[attachment:shrinkage+exposure_calibration.stl][shrinkage+exposure_calibration.stl]]
 
@@ -112,6 +141,11 @@ Rule of thumb: Dry in the oven at same temp as the bed.
 | [[https://www.reddit.com/r/3Dprinting/comments/vk5nbr/comment/idnb72i/][TPU]]      |      50 | 4-5h |
 | PETG     |      65 | 4-5  |
 | ABS      |      80 | 4-5  |
+
+*** Worlds best dryer
+
+The [[https://nick-black.com/dankwiki/index.php/A_case_study_in_full-stack_device_development:_the_dankdryer][dankdryer]] is the world's best dryer. At least it is fully [[https://github.com/dankamongmen/dankdryer][open source]]: code, KiCad, openSCAD. Pretty awesome and totally overkill unless you really need engineering matetrials and have a good printer.
+
 * Custom G code
 
 https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-hardware-firmware-and-software-help/gcode-to-warm-up-enclose-before-printing/

@@ -331,16 +331,14 @@ lsp-mode integrates with flycheck or flymake.
 To copy an error to the clipboard for easier searching use either =C-c ! C-w=. Or use the =lsp-treemacs-error-list= / =flycheck-list-errors= and press =Y= at the relevant line.
 
 * searching
-ivy:
-
 These keybindings are available while a search is active:
 
 | Keybind   | Description                                                        |
 |-----------+--------------------------------------------------------------------|
 | =C-RET=   | Open the selected candidate in other-window                        |
 | =C-SPC=   | Preview the current candidate                                      |
-| =C-c C-o= | Open a buffer with your search results                             |
-| =C-c C-e= | Open a writable buffer of your search results                      |
+| =C-;=     | Open a buffer with your search results                             |
+| ==        | Open a writable buffer of your search results                      |
 |-----------+--------------------------------------------------------------------|
 | =C-j/k=   | In buffer(=C-c C-o=): open next/prev result without changing focus |
 | =C-o=     | open result without changing focus                                 |
