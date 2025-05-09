@@ -11,8 +11,15 @@
 
 There is a [[https://www.goodreads.com/book/show/525753.Locks_Safes_and_Security][book with all the information about locks]] ([[https://libgen.is/book/index.php?md5=C18B8D8B64AAC6C073E3255938240B4C][libgen]]). It might not be practically relevant for lock picking, but it will tell you how a lock is designed.
 
-* Safe
+* Safe :ATTACH:
 First, [[https://youtu.be/fdUZn9sJ6Bs][introduction to combination locks]]. If you didn't get it, there's a good [[https://youtu.be/CZ8WRDVgKrk][demonstration]] (same guy [[https://youtu.be/lQZmKNjbtXo][demonstrates Left-right-left combination]] and [[https://woodgears.ca/combolock/left.html][webpage]])
+
+
+#+CAPTION: Combination lock, side view. The wheels engage with driving pins, ie after one full rotation wheel#3 will start rotation wheel#2, etc.
+[[attachment:combination_lock_side_view.png]]
+
+#+CAPTION: Combination lock with wheels, fence and lever
+[[attachment:combination_lock_fence_gates_bolt.png]]
 
 Now you know
 
@@ -23,6 +30,16 @@ Now you know
 - Pull on the handle to open lock
 
 and is ready to watch the [[https://youtu.be/4_lkYQ88kv0][defcon talk: Safecracking Without a Trace]], Eric Schmiedl.
+
+Eric recommends getting a Sargent And Greenleaf Cutaway safe Locks On mount from Ebay(he paid 40$). Another, probably cheaper option is to make your own cutaway
+
+#+CAPTION: Group 2(3 disks) cutaway combination lock
+[[attachment:combination_lock_gorup2_cutaway_diy.png]]
+
+
+The first book on the subject was [[https://archive.org/details/the-art-of-manipulation][The art of Manipulation]] written in 1953. In the preface the authors suggest you destroy the book after learning manipulation, to protect both the reader and the craft. A more comprehensive book is the [[https://libgen.is/search.php?req=The+National+Locksmith%3A+Guide+to+Manipulation&lg_topic=libgen][The National Locksmith: Guide to Manipulation]](1988) ([[attachment:The National Locksmith - Guide to Manipulation.pdf][local link - 58Mb]]). There are two pdf-versions(16Mb and 58Mb), same content but the 58Mb version is a better quality.
+
+The article [[https://web.archive.org/web/20100705023227/http://www.crypto.com/papers/safelocks.pdf][Safecacking for the computer scientist]] describes some manipulation attacks for group 2 locks, ie. how to [[*reducing the combination space][reduce the combination space]].
 
 There is a long talk by [[https://youtu.be/mi3WIwq86t8][Devient about Safe Locks and Sushi Rolls]]. Some history, but if you seen Eric's talk, you can just skip ahead.
 
@@ -66,7 +83,6 @@ Nearly all combination locks allow some "slop", or deviation, while entering a c
 A further reduction in solving time is obtained by trying all possible settings for the last wheel for a given setting of the first wheels before nudging the next-to-last wheel to its next meaningful setting, instead of zeroing the lock each time with a number of turns in one direction.
 #+end_quote
 
-The article [[https://web.archive.org/web/20100705023227/http://www.crypto.com/papers/safelocks.pdf][Safecacking for the computer scientist]] describes some manipulation attacks for group 2 locks.
 
 * Lock Picking
 [[http://www.lysator.liu.se/mit-guide/mit-guide.html][Guide to lock picking, ano 1991]]
