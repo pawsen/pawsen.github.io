@@ -1,0 +1,17 @@
+/* Apply responsive behavior to all video elements */
+video {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+.video-container {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+/* Prevent images from always being 100% width */
+/* But this naive solution will also destroy the responsiveness */
+/* https://github.com/mrmierzejewski/hugo-theme-console/issues/18#issuecomment-714417237 */
+/* img { */
+/*  width:unset; */
+/* } */

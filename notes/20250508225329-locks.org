@@ -9,7 +9,7 @@
 #+hugo_publishdate: 2025-05-08
 #+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about physical locks"
 
-There is a [[https://www.goodreads.com/book/show/525753.Locks_Safes_and_Security][book with all the information about locks]] ([[https://libgen.is/book/index.php?md5=C18B8D8B64AAC6C073E3255938240B4C][libgen]]). It might not be practically relevant for lock picking, but it will tell you how a lock is designed.
+There is a [[https://www.goodreads.com/book/show/525753.Locks_Safes_and_Security][book with all the information about locks]](Locks, Safes and Security, Marc Weber Tobias, [[https://libgen.is/book/index.php?md5=C18B8D8B64AAC6C073E3255938240B4C][libgen]]). It might not be practically relevant for lock picking, but it will tell you how a lock is designed.
 
 * Safe :ATTACH:
 First, [[https://youtu.be/fdUZn9sJ6Bs][introduction to combination locks]]. If you didn't get it, there's a good [[https://youtu.be/CZ8WRDVgKrk][demonstration]] (same guy [[https://youtu.be/lQZmKNjbtXo][demonstrates Left-right-left combination]] and [[https://woodgears.ca/combolock/left.html][webpage]])
