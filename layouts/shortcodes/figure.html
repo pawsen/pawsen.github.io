@@ -1,0 +1,50 @@
+
+
+<!-- Web page content width -->
+{{ $maxWidth := 800 }}
+
+{{ $original := .Page.Resources.GetMatch (.Get "src") }}
+
+{{ if $original }}
+    {{ if gt $original.Width $maxWidth }}
+        {{ .Scratch.Set "preview" ($original.Resize (print $maxWidth "x")).RelPermalink }}
+    {{ end }}
+{{ end }}
+
+{{ if (.Scratch.Get "preview") }}
+    {{ if .Get "link" }}
+        {{ .Scratch.Set "link" (.Get "src") }}
+    {{ end }}
+{{ else }}
+    {{ .Scratch.Set "preview" (.Get "src") }}
+{{ end }}
+
+<!-- Replace caption  -->
+{{ $caption := replaceRE "^Figure [0-9]+: " "" (.Get "caption") }}
+
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{- if .Scratch.Get "link" -}}
+    <a href="{{ .Scratch.Get "link" }}" {{ with .Get "target" }} target="{{ . }}"{{ end }}>
+    {{- end -}}
+    <img src="{{ .Scratch.Get "preview" }}"
+    {{- if or (.Get "alt") $caption }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify | plainify }}{{ end }}"
+    {{- end -}}
+    {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    />
+    {{- if .Scratch.Get "link" }}</a>{{ end -}}
+    {{- if or $caption (.Get "attr") -}}
+
+    <figcaption>
+        {{- if or $caption (.Get "attr") -}}<p>
+            {{- $caption | markdownify -}}
+            {{- with .Get "attrlink" }}
+                <a href="{{ . }}">
+            {{- end -}}
+            {{- .Get "attr" | markdownify -}}
+            {{- if .Get "attrlink" }}</a>{{ end }}</p>
+        {{- end }}
+    </figcaption>
+    {{- end }}
+</figure>
