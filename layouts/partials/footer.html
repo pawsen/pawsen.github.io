@@ -1,0 +1,36 @@
+<!-- This footer file is loaded by baseof.html inside the <body> tag. Add any customization to the foooter here -->
+
+<!-- light/dark theme toggling JS -->
+<script>
+(function () {
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  const setTheme = (theme) => {
+    if (theme === 'dark') {
+      root.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      root.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
+  // On page load, check localStorage or fall back to browser preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+
+  // Toggle theme on button click
+  themeToggle.addEventListener('click', () => {
+    const isDark = root.classList.contains('dark');
+    setTheme(isDark ? 'light' : 'dark');
+  });
+})();
+</script>
+
