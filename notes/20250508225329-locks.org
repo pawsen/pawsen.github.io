@@ -7,7 +7,12 @@
 #+hugo_categories: hacking
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-05-08
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about physical locks"
+#+hugo_bundle: 20250508-locks
+#+export_file_name: index
+#+macro: imgzoom #+attr_html: :link t
+
+Notes about physical locks
+#+hugo: more
 
 There is a [[https://www.goodreads.com/book/show/525753.Locks_Safes_and_Security][book with all the information about locks]](Locks, Safes and Security, Marc Weber Tobias, [[https://libgen.is/book/index.php?md5=C18B8D8B64AAC6C073E3255938240B4C][libgen]]). It might not be practically relevant for lock picking, but it will tell you how a lock is designed.
 
@@ -32,15 +37,12 @@ Now you know
 and is ready to watch the [[https://youtu.be/4_lkYQ88kv0][defcon talk: Safecracking Without a Trace]], Eric Schmiedl.
 
 Eric recommends getting a Sargent And Greenleaf Cutaway safe Locks On mount from Ebay(he paid 40$). Another, probably cheaper option is to make your own cutaway
-
 #+CAPTION: Group 2(3 disks) cutaway combination lock
 [[attachment:combination_lock_gorup2_cutaway_diy.png]]
-
 
 The first book on the subject was [[https://archive.org/details/the-art-of-manipulation][The art of Manipulation]] written in 1953. In the preface the authors suggest you destroy the book after learning manipulation, to protect both the reader and the craft. A more comprehensive book is the [[https://libgen.is/search.php?req=The+National+Locksmith%3A+Guide+to+Manipulation&lg_topic=libgen][The National Locksmith: Guide to Manipulation]](1988) ([[attachment:The National Locksmith - Guide to Manipulation.pdf][local link - 58Mb]]). There are two pdf-versions(16Mb and 58Mb), same content but the 58Mb version is a better quality.
 
 The article [[https://web.archive.org/web/20100705023227/http://www.crypto.com/papers/safelocks.pdf][Safecacking for the computer scientist]] describes some manipulation attacks for group 2 locks, ie. how to [[*reducing the combination space][reduce the combination space]].
-
 There is a long talk by [[https://youtu.be/mi3WIwq86t8][Devient about Safe Locks and Sushi Rolls]]. Some history, but if you seen Eric's talk, you can just skip ahead.
 
 ** Auto picking
@@ -82,7 +84,21 @@ From the [[https://en.wikipedia.org/wiki/Safe-cracking#Lock_manipulation][wiki a
 Nearly all combination locks allow some "slop", or deviation, while entering a combination on the dial. On average, 1% radial rotation in either direction from the center of the true combination number allows the fence to fall despite slight deviation, so that for a given safe, it may be necessary only to try a subset of possible combinations. Such "slops" may allow for a margin of error of plus or minus two digits, which means that trying multiples of five would be sufficient in this case. This drastically reduces the time required to exhaust the number of meaningful combinations.
 A further reduction in solving time is obtained by trying all possible settings for the last wheel for a given setting of the first wheels before nudging the next-to-last wheel to its next meaningful setting, instead of zeroing the lock each time with a number of turns in one direction.
 #+end_quote
+** Heists
+*** [[https://www.goodreads.com/book/show/197481656-flawless][Flawless: Inside the Largest Diamond Heist in History]]
+Describes the theft of diamonds from a vault in the "diamond center" of Antwerp, Belgium.
 
+The thieves used a nose puller to open the many individual boxes in the safe ([[https://youtu.be/dbJ7tCSemZs][video of a commercial nose puller]])
+
+#+CAPTION: Nose puller, animation
+[[attachment:nose_puller.png]]
+
+This worked because many of the locks had a plastic back plate, ie when the puller pulled at the lock, the lock bolt would bend through the back plate and snap out of the strike plate in the frame. A few boxes had a steel back plate. The thieves were unable to open these and would break the nose puller trying (the brought replacement parts into the vault)
+*** [[https://goodreads.com/book/show/7682.The_Great_Train_Robbery][The Great Train Robbery]]
+This is a dramatized account of the real train robbery in 1855.
+At that time safes where thought impossible to crack open and the thieves has to acquire replicas of the keys for the safe.
+
+The characters in the book are cunning, clever and it is an entertaining read. It is however not the truth behind the robberry.
 
 * Lock Picking
 [[http://www.lysator.liu.se/mit-guide/mit-guide.html][Guide to lock picking, ano 1991]]

@@ -109,7 +109,7 @@ It does have LEDs for visual vario which some [[https://www.paraglidingforum.com
 The [[https://shop.mipfly.com/index.php?route=product/product&product_id=81][MipBip+]] (95€) is probably the cheapest instant variometer.
 
 ** DIY
-*** ESP32C3 based
+*** Hari Nairs, ESP32C3 based design
 The [[https://pataga.net.in/pataga/varios.html][author has a page with notes on DIY varios]]
 
 [[https://github.com/har-in-air/ESP32C3_BLUETOOTH_AUDIO_VARIO][ESP32C3 BLE audio Vario]] is a instant vario, fusing accelerometer and pressure data using Kalman filtering.
@@ -166,3 +166,21 @@ https://forum.pjrc.com/threads/59277-Motion-Sensor-Calibration-Tool-Parameter-Un
 [[https://play.google.com/store/apps/details?id=org.theflightvario.simplevario.xc][XCVario App]] can be used on a phone with internal barometer, like googles pixel phones.
 
 See this [[https://youtu.be/5eLnei9-yFw][video]] for a comparison between the app and a XCTracer. The app performs just as well.
+*** GNUVario-E
+[[https://prunkdump.github.io/GNUVario-TTGO-T5-website-EN/][GNUVario-E]]
+
+- eps32 based
+- ms5611 barometer
+- 2.9" E-paper screen, resolution 296x128 ::
+  The use the Good Display [[https://www.good-display.com/product/355.html][GDEW029M06]] but on AliExpress the [[https://www.good-display.com/product/389.html][GDEY029T94]] is [[https://www.aliexpress.com/item/1005001839298038.html][available]]. They are very similar in specs, the =GDEY029T94= might even have a slight better refresh speed.
+  Both needs a driver HAT that connects the 24pin FPC interface of the E-paper display to a SPI pinouts (unless you design something yourself in KiCad). Good Display has the [[https://www.good-display.com/product/516.html][DESPI-C02]](see the download section for description) adapter on [[https://www.aliexpress.com/item/1005004633084221.html][AliExpress]].
+*** XCtracer sound profile editor
+https://www.windeckfalken.de/special/xctracer/handson/main.html
+* Apps
+** Vario Sounds
+- [[https://www.windeckfalken.de/special/xctracer/handson/main.html][XC Tracer Vario Sound & Config File Editor]]
+** Visualize flights
+- https://replay.flights/
+- https://paraglidinglogbook.com/
+** XC planers
+- https://flyxc.app/
