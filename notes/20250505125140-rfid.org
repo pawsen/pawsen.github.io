@@ -46,6 +46,9 @@ For full emulation a Proxmark3 Easy seems to be the best solution.
 
 #+CAPTION: Mifare Classic 1k memory layout
 [[attachment:mifare_classic_mem_layout.png]]
+* 433MHz
+- [[https://corra.fi/posts/sniffing-tpms-data/][Sniffing car tire (TPMS) data (and tracking cars)]] :: Capture 433 MHz traffic with rtl_433 for 75 days.
+- [[https://www.liwen.id.au/arduino-rf-codes/][Decoding and sending 433MHz RF codes with Arduino and rc-switch]] :: Open a garage door with an arduino and a cheap 433MHz RF transmitter([[https://www.aliexpress.com/item/1005008094215779.html][MX-FS-03V]])
 * Famous hacks
 - [[https://web.archive.org/web/20160310114724/http://demoseen.com/bhpaper.html][Onity HT lock system for hotels]] and the [[https://www.wired.com/2017/08/the-hotel-hacker/][wired story on the man who exploited it and went on a hotel room stealing spree]]
 - [[https://youtu.be/dldX9UFhNTs][Laundering Money - Michael Orlitzky, doing laudry for free]]
