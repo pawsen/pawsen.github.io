@@ -184,3 +184,15 @@ https://www.windeckfalken.de/special/xctracer/handson/main.html
 - https://paraglidinglogbook.com/
 ** XC planers
 - https://flyxc.app/
+* line check
+[[https://mountainrideaviation.com/products/paraglider-line-measurement-tool][Paraglider Line Measurement Tool]]: hang a 5kg weight from the carabiner, attach the risers and use a [[https://www.amazon.com/Leica-DISTO-Distance-Measure-Bluetooth/dp/B01M5CW7CT/][bluetooth laser]] to measure the distance from the trim attachment point to the card on the line measurement tool. [[https://youtu.be/9Gd_DVSFMJw][Video of the process]]
+
+#+CAPTION: Paraglider Line Measurement Tool
+[[attachment:IMG-2251.webp]]
+
+
+#+CAPTION: Closeup
+[[attachment:line_measurement_tool_closeup.jpg]]
+
+The measurements can be entered on the page [[https://we-measure.io][we-measure.io]], where manuals for most wings are found as well.
+See [[https://adnubes.info/en/paraglider-trim-check-with-we-measure/][this guide for using we-measure.io]] that also explains some trim basics.
