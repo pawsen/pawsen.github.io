@@ -43,7 +43,12 @@ See `org-hugo-tag-processing-functions' for more info."
   "Exports Org-Roam files to Hugo markdown."
   (interactive)
 
-  (message "org-hugo-base-dir is '%s'" org-hugo-base-dir)
+  ;; These are needed because .dir-locals.el is not loaded in batch mode
+  ;; org-hugo-base-dir should either be absolute or relative to the org-files.
+  ;; Right now it is set to relative to the org-files
+  (setq org-hugo-base-dir "../")
+  (setq org-hugo-section "notes/")
+
   ;; extend the list of file extentions that gets copied to the public/ox-hugo dir
   ;; default is
   ;; ("jpg" "jpeg" "tiff" "png" "svg" "gif" "bmp" "mp4" "pdf" "odt" "doc" "ppt" "xls"
@@ -66,6 +71,7 @@ See `org-hugo-tag-processing-functions' for more info."
 
   (message "default-directory is '%s'" default-directory)
   (message "org-attach-id-dir set to '%s'" org-attach-id-dir)
+  (message "org-hugo-base-dir is '%s'" org-hugo-base-dir)
 
   (let ((org-id-extra-files (directory-files-recursively default-directory "notes")))
     (dolist (f (append (file-expand-wildcards "org/about.org")
