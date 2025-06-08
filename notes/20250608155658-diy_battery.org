@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       dd356f88-407c-4554-8420-c5f7195ed450
+:END:
+#+title: diy-battery
+
+#+HUGO_SECTION: post
+#+filetags: betteries li-ion 3d-print
+#+hugo_categories: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-06-08
+#+hugo_bundle: diy-liion-battery
+#+export_file_name: index
+#+macro: imgzoom #+attr_html: :link t
+
+# set org-attach folder specifically for this file
+#+PROPERTY: DIR file:img/diy-liion-battery
+
+I made a lithium battery for a bicycle from scratch with a 3d-printed case.
+
+#+hugo: more
+
+For more details see the notes [[id:a1b57a39-78a7-4fc0-91a3-546a2a349a52][on batteries]] and [[id:b87e63b0-7d21-4cb5-8418-ac5f93551ed7][converting an bike to ebike]].
+
+* Electronic parts
+- [[https://www.aliexpress.com/item/1005008726633507.html][DC Power Socket Plug, 5.5*2.5]]
+- [[https://www.aliexpress.com/item/10000006487848.html][Waterproof cap DC099, DC Power Jack]]
+- [[https://www.aliexpress.com/item/1005007327685021.html][JST RCY]] two-wire connectors for connecting on/off switch internally
+- [[https://www.aliexpress.com/item/1005006600952774.html][XT30 plugs]] for connecting the charge port internally
+- 18awg wire for charging.
+- [[https://www.aliexpress.com/item/1005006727482998.html][round on/off switch]]
+- 12awg wire for discharging, with silicone insulated it should be good for 30A continuous, 60A peak. (14awg is good for 20A)
+- XT60 connector for discharging. Good for 30A cont. 60A peak.
+- [[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm.
+
+
+* Case
+
+- on/off switch should be on the top to avoid
+- XT60 Female panel mount does not seems to be a good idea for the triangle shape. Better with a discharge cable, sealed with gasket seal (like Flex Seal)

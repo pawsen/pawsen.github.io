@@ -140,8 +140,10 @@ As of april 2025, only these displays works with the app.
 - DPC010
 
 #+begin_quote
-         C010 controller and CANBUS setup - you can change a bunch of settings around assist levels, voltage, acceleration, startup angle, etc from with inside the display interface (my settings unlock code was 1919), or connect with the Bafang Go app via Bluetooth and do it from there. Very cool - most will say not as flexible as the old UART setup, but it's been great for me.
+C010 controller and CANBUS setup - you can change a bunch of settings around assist levels, voltage, acceleration, startup angle, etc from with inside the display interface (my settings unlock code was 1919), or connect with the Bafang Go app via Bluetooth and do it from there. Very cool - most will say not as flexible as the old UART setup, but it's been great for me.
 #+end_quote
+
+The gear sensor cut-off time is 300ms for =UART= and 500ms for CAN. The CANbus cut-off time can at the moment, 2025, not be changed.
 
 Here are some notes on the [[https://kaspars.net/blog/bafang-canbus][Bafang CANbus]].
 * Other middrive motors

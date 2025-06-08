@@ -36,6 +36,7 @@ Popular types are (with different pin-to-pin pitch)
 - SM, wire to wire and locking
 - XH, (larger version of the PH) which can be found on aliexpress with 2.54mm pitch that fits with dupont headers.
   (Note that the /official/ connectors has 2.5mm pitch)
+- RCY, small 2 position only connector, and like SM is exclusively wire-to-wire.
 - 3d printed [[https://www.printables.com/model/475497-angled-jst-tweezers][tweezers]] for easy removal.
 
 ** Dupont
@@ -94,6 +95,26 @@ NOTE:
 
 - Buy them from [[https://www.aliexpress.com/item/1005005237025318.html][aliexpress]], remember to select AWG size for the pins.
 - The SB connectors can be flush mounted. Here's a 3d model from [[https://www.thingiverse.com/thing:5835998/files][thingiverse]]
+** Coaxial / DC barrel
+[[https://en.wikipedia.org/wiki/Coaxial_power_connector][Also known as barrel connectors, concentric barrel connectors or tip connectors]].
+
+#+CAPTION: DC barrel jack male, 5.5mm outer, 2.1mm inner
+[[attachment:barrel-plug-dims.png]]
+
+The most common sizes are
+
+#+CAPTION: CUI's standard barrel plug offering: (top) outer diameter (middle) inner diameter (bottom) CUI part number designation
+[[attachment:cui-standard-barrel.png]]
+
+Note the *yellow tip* connectors on the right, they are [[https://www.accesscomms.com.au/eiaj-rc-5320a-plugs/][EIAJ RC-5320A]] plugs, different from the standard CUI standard.
+
+The current rating for barrel connectors varies but will often be ⋜5A, primarily dependent on the spring force. More expensive connectors can be up to 10A, found on digikey or mouser.
+They are borderline ok to use for charging LiIon batteries.
+
+- [[https://www.aliexpress.com/item/1005008726633507.html][DC Power Socket Plug, 5.5*2.5]]
+- [[https://www.aliexpress.com/item/10000006487848.html][Waterproof cap DC099, DC Power Jack]]
+
+The wire from the charge port should 18awg. 20awg might be sufficient but only if there's no peak current >5A.
 
 ** Crimpers
 Three recommended crimpers that can crimp most things
@@ -128,8 +149,16 @@ And depending on length, use the
 #+CAPTION: [[http://assets.bluesea.com/files/resources/newsletter/images/DC_wire_selection_chartlg.jpg][source]]
 [[attachment:_20240218_005227DC_wire_selection_chartlg.jpg]]
 
-* Strips
+** discharge
+For short cable lengths the main limiting factor is the temperature rating of the insulation. That's why silicon insulated wire can handle amps.
 
+- For silicone insulated wire, 30A for 12 AWG, 60A maximum for short periods, 20A for 14AWG.
+- For PVC insulated wire, 15A for 14AWG, 20A for 12AWG (same as house wiring, since the insulation temp ratings will be the same)
+
+  For current higher than 30A continuously, use XT90 connectors
+- XT90 with 10AWG silicone wire is great at up to 50A continuously
+
+* Strips
 Strips are used to spot weld battery cells together.
 
 Pure nickel is the most common, but [[https://endless-sphere.com/sphere/threads/copper-nickel-sandwich-buses-for-series-connections.108006/][copper/nickel sandwich]] can be used if high current is needed.
@@ -167,7 +196,7 @@ Fig [[fig:ampacity_chart_strips]] shows the ampacity for different materials.
 :END:
 If using nickel, make sure it is pure nickel strips as it can carry a higher current than nickel plated steel strips.
 
-*** dimensions
+*** Dimensions
 
 According to the table in fig [[fig:ampacity_chart_strips]], pure nickel strips of =8mm x 0.15mm= carries 4.9A, which is sufficient for my bike batteries.
 
@@ -186,6 +215,70 @@ Current flows in series in a battery pack. A strip that connects one cell to the
 If the controller and motor are drawing 30A, then pass 30A at 52V through 45cm of nickel strip to see if there is any voltage drop. Now try 50A and see how much voltage drop there is. If you are happy with the results, then you will be fine.
 
 Note that if you make longer connections, the strip resistance increases linearly with length and so does the overall ohmic heat and therefore losses.
+*** Pattern
+For DIY batteries there are three basic "brick" layouts, ie layouts that results in a rectangular battery.
+
+- square
+- W or Wave
+- oblique/slanted row
+
+In the picture horizontal layers are parallel and vertical layers are in series.
+The difference between =wave= and =oblique= is where the "flat edge" will be in the battery. For =wave= the flat end is along the series connection, while =oblique= is flat along the parallel.
+
+For most higher voltage batteries, like 10S5P, it would make sense to use =wave= layout as there is half the waste of space.
+
+#+CAPTION: Cell layouts, t) brick, m) Wave, b) oblique
+[[attachment:cell-layouts.webp]]
+
+*** ascii representation
+Yeah, I wasted time doing this.
+
+All schematics are 4S3P, seen from the top.
+The cell is  =0─[    ]─X 3.7v=, ie =0= is the negative and =X= is the positive terminal.
+
+#+CAPTION: Square
+#+begin_example
+    0 - 0 - 0    11.1V - 14.8V
+    |   |   |
+S   X - X - X    7.4V -  11.1V
+^    (connected on the rear side)
+|   0 - 0 - 0    3.7V -   7.4V
+|   |   |   |
+|   X - X - X    0V    -  3.7V
+-----> P
+#+end_example
+
+#+CAPTION: Wave
+#+begin_example
+    0       0   11.1 - 14.8V
+    | \   / |
+    |   0   |
+    |   |   |
+    X   |   X
+      \ | /
+        X
+        (connec.)
+    0       0
+    | \   / |
+S   |   0   |
+^   |   |   |
+|   X   |   X   0 - 3.7
+|     \ | /
+|       X
+----> P
+#+end_example
+
+#+CAPTION: Oblique
+#+begin_example
+    0 - 0 - 0    11.1 -  14.8V
+     \   \   \
+S     X - X - X   7.4 - 11.1
+^    (connected on the rear side)
+|   0 - 0 - 0     3.7 -  7.4
+|    \   \   \
+|     X - X - X   0V  -  3.7
+-----> P
+#+end_example
 
 *** Test if the strip is pure nickel
 As nickel and nickel plated steel are extremely difficult to difference at sight, there are an easy homemade test that could be done in order to check if you have one or another.
@@ -365,7 +458,6 @@ See [[https://docs.google.com/spreadsheets/d/1e2962wuNumstvv6UMLi-F7xVHQFWlMr1/e
 Found from https://drive.google.com/drive/folders/1UOQUXa4Kwa99KoeuNDe7EV3iSECb8iIs
 
 ** SoC or State of Charge :ATTACH:
-
 *** Open Circuit Voltage :ATTACH:
 Lead-acid batteries have a relatively discharge linear curve, which allows a good estimation of the state of charge.
 Lithium-ion batteries have a much flatter discharge curve, which means that over a wide operating range, the voltage at the battery terminals changes very slightly.
@@ -377,7 +469,6 @@ Lithium-ion batteries have a much flatter discharge curve, which means that over
 Experimental OCV vs SoC is found [[https://lygte-info.dk/info/BatteryChargePercent%20UK.html][here]](see *tables*  section after the images) and summarized here
 #+CAPTION: Estimated remaining capacity, OCV
 [[attachment:_20240117_142835BatteryChargePercent.png]]
-
 
 *** Coulomb Counting
 
@@ -413,6 +504,10 @@ Almost all the cheaper 'smart' bluetooth BMS are a JBD based BMS. The other vend
 
 This JBD 7-14S is awesome
 [[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm.
+* Displays
+** Open Circuit Voltage
+- [[https://www.aliexpress.com/item/1005005479929375.html][Battery Voltage Capacity Indicator LCD Display Tester]] (doesn't seem to have on/off button)
+- [[https://www.aliexpress.com/item/1005008406091763.html][3S-14S DC7-55V Battery Level indicator]] (cheaper, with on/off button)
 * LiFePO4 in car
 
 ** charger
