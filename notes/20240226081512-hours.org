@@ -40,6 +40,8 @@
 |                                                        |     |       |       | 35:30:00 |
 #+TBLFM: @2$5..@-1$5=$4-$3;T::@>$5=vsum(@2$5..@-1$5);T
 
+** udlæg
+
 udlæg, kvitteringer
 | beskrivelse         |   beløb |
 |---------------------+---------|
@@ -56,3 +58,42 @@ udlæg, kvitteringer
 #+TBLFM: T::@>$2=vsum(@2$2..@-1$2)
 
 udlæg; online
+
+*** ferry
+
+| Text                                                           | dato             | beløb |
+|----------------------------------------------------------------+------------------+-------|
+| Færgebillet, Topsoe tankarbejde m. Asbjørn, ud Betalt af Allan | uge 22           |       |
+| hjem                                                           | uge 22, fre 31/5 |   749 |
+| Færgebillet, fugearb. Trade Towers, ud,                        | uge 23, son 2/6  |   749 |
+| hjem                                                           | uge 23, fre 2/6  |   749 |
+| Færgebillet, Topsoe redning m. Tomas, ud                       | uge 26, son 23/6 |   749 |
+| hjem                                                           | uge 26, man 24/6 |   749 |
+|----------------------------------------------------------------+------------------+-------|
+| Total                                                          |                  |  3745 |
+#+TBLFM: T::@>$3=vsum(@2$3..@-1$3)
+
+*** car
+
+Ting til Varevogn
+| Text                                         |    eur | beløb (dkk) |
+|----------------------------------------------+--------+-------------|
+| Brugt stålkommode(IKEA Helmer), dba.dk       |        |         200 |
+| Kasse med nitter til bilen, 10.40EUR         |   10.4 |         78. |
+| Batteribox: lader til 230V,  82.79EUR        |  82.79 |     620.925 |
+| Batteribox: lader til generator, 127.83EUR   | 127.83 |     958.725 |
+| Batteribox: batteri, 379.99EUR               | 379.99 |    2849.925 |
+| Batteribox: 3000W Inverter, 199.63EUR        | 199.63 |    1497.225 |
+| Batteribox: USB-udtag, 15.96EUR              |  15.96 |       119.7 |
+| Batteribox: Sikringsholder stor,  8.23EUR    |   8.23 |      61.725 |
+| Batteribox: Sikringsholder mellem,  11.81EUR |  11.81 |      88.575 |
+| Batteribox: Sikringsholder lille,  5.45EUR   |   5.45 |      40.875 |
+| Batteribox: On/off switch, 16.03EUR          |  16.03 |     120.225 |
+| Batteribox: stik, 4.98EUR                    |   4.98 |       37.35 |
+| Batteribox: kabler, 15.98EUR                 |  15.98 |      119.85 |
+| tænd/sluk kontakt, 8.39EUR                   |   8.39 |      62.925 |
+| stik til indvendig forbind., 11.13EUR        |  11.13 |      83.475 |
+| clips., 6.4EUR                               |    6.4 |         48. |
+|----------------------------------------------+--------+-------------|
+| Total                                        |        |      6987.5 |
+#+TBLFM: T::@3$3..@-1$3=7.5*($2) :: @>$3=vsum(@2$3..@-1$3)
