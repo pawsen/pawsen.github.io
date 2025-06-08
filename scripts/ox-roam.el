@@ -43,6 +43,7 @@ See `org-hugo-tag-processing-functions' for more info."
   "Exports Org-Roam files to Hugo markdown."
   (interactive)
 
+  (message "org-hugo-base-dir is '%s'" org-hugo-base-dir)
   ;; extend the list of file extentions that gets copied to the public/ox-hugo dir
   ;; default is
   ;; ("jpg" "jpeg" "tiff" "png" "svg" "gif" "bmp" "mp4" "pdf" "odt" "doc" "ppt" "xls"
