@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       9168a2da-73ed-4534-89d0-ede79fe5dc28
+:END:
+#+title: Line measure tool
+
+#+HUGO_SECTION: post
+#+filetags: paragliding 3d-print
+#+hugo_categories: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-06-08
+#+hugo_bundle: line-measurement-tool
+#+export_file_name: index
+#+macro: imgzoom #+attr_html: :link t
+
+# set org-attach folder specifically for this file
+# #+PROPERTY: DIR file:img/diy-line-measure-tool
+
+Homemade fixture for adding a fixed tension to the lines of a paraglider and providing a target for measuring the line length with a laser. This is pretty neat.
+
+#+hugo: more
+
+A paraglider comes with very specific line length from the manufacture. As the glider get used, the lines stretch an uneven amount which can change the flight characteristic (specifically trim) and result in poorer performance.
+Most manufactures recommend to have the glider inspected every 2 years or 100 flight hours at a price of 200-300€.
+
+With this tool we can check the line length, compare with the manufacture values and adjust. It is a /shameless/ homemade copy of the [[https://mountainrideaviation.com/products/paraglider-line-measurement-tool][line measurement tool]]. See the [[https://youtu.be/9Gd_DVSFMJw][video]] for how it works.
+
+Note that professional inspection also check the permeability of the glider fabric.
+
+* Materials
+Buy this
+
+- 2x [[https://www.aliexpress.com/item/32762038019.html][U Groove nylon wheel with bearing]], 24x5x7mm (OD,ID,thk)
+- [[https://www.aliexpress.com/item/4000762343261.html][Miniature linear rail slide]]/guide, =MGN 9C= 150mm.
+- Laser distance measurement device with bluetooth
+
+#+CAPTION: Specs for the linear rail slide
+[[attachment:linear-rail-guide-spec.webp]]
+
+#+CAPTION: Specs for the nylon wheels
+[[attachment:BSU625-24-7K-nylon-wheel.webp]]
+
+and 3d-print the STL files. Any filament should be good. The FreeCAD drawings are here.
+
+* Measuring

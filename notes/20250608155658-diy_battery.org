@@ -4,7 +4,7 @@
 #+title: diy-battery
 
 #+HUGO_SECTION: post
-#+filetags: betteries li-ion 3d-print
+#+filetags: batteries li-ion 3d-print
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-06-08
@@ -13,7 +13,7 @@
 #+macro: imgzoom #+attr_html: :link t
 
 # set org-attach folder specifically for this file
-#+PROPERTY: DIR file:img/diy-liion-battery
+# +PROPERTY: DIR file:img/diy-liion-battery
 
 I made a lithium battery for a bicycle from scratch with a 3d-printed case.
 
