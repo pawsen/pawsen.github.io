@@ -1,0 +1,59 @@
+:PROPERTIES:
+:ID:       34a1d726-d4a4-41a5-8e25-1068bab3ba66
+:END:
+#+title: diy vario
+
+#+HUGO_SECTION: post
+#+filetags: paragliding 3d-print
+#+hugo_categories: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-06-10
+#+hugo_bundle: diy-vario
+#+export_file_name: index
+#+macro: imgzoom #+attr_html: :link t
+
+# set org-attach folder specifically for this file
+# #+PROPERTY: DIR file:img/diy-line-measure-tool
+
+DIY Vario for clim/sink rates. With BLE
+
+#+hugo: more
+
+audio vario using Kalman filter to fuse acceleration and pressure sensor data. Bluetooth transmission of LK8EX1 sentences.
+
+
+** Testing the GPS
+
+- baud rate =9600=
+*** u-blox center
+u-blox can be tested and configured through their free (windows only) [[https://www.u-blox.com/en/product/u-center][u-blox u-center]] software. Use a USB-to-Serial(UART) converter, like a =PL2303=. Make sure the voltage and logic to the u-blox is =3.3V=.
+
+#+CAPTION: u-blox with PL2303 Serial to USB converter
+[[attachment:ublox-serial2usb.jpg]]
+
+*** Arduino as a USB
+The arduino can bu used as a UART device.
+
+Arduinos have a Serial bridge chip. For old =Duemilanove= it is a =FTDI FT232RL= chip (true serial bridging), for Uno R1 it is =ATmega8U2= and R2/R3 it is =ATmega16U2=. The Unos thus uses a MCU programmed to act as a serial bridge, the firmware is [[https://github.com/arduino/ArduinoCore-avr/tree/master/firmwares/atmegaxxu2][here]].
+
+Upload an empty sketch
+#+begin_src c
+void setup() {}
+void loop() {}
+#+end_src
+and either remove the micro controller =ATmega328P= or tie =RESET= to =GND= to keep it permanently reset.
+
+| UART Device | Arduino Board |
+|-------------+---------------|
+| TX          | RX (pin 0)    |
+| RX          | TX (pin 1)    |
+| GND         | GND           |
+
+
+The arduinos uses 5V logic. To get 3.3V you need either
+- voltage divider (use 1㏀ and 2㏀) ::
+  =Arduino TX - [1㏀] - + Device RX + - [2㏀] - GND=
+- 1N4148 Diode + Pull-Up (UART only) ::
+  Connect a diode (like 1N4148) with cathode to Arduino TX, anode to device RX
+  Pull up the RX line on the device to 3.3V with ~10kΩ
+- Logic Level Converter Module
