@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f012e4e0-ba57-40c9-9677-950f4ea43049
+:END:
+#+title: rope rescue
+
+[[attachment:New NPS Tech Rescue Manual 12th -2023.pdf][New NPS Tech Rescue Manual 12th(2023).pdf]]
