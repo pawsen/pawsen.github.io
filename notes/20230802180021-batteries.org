@@ -66,6 +66,19 @@ If more heavy duty XT-like connectors are needed, the [[https://www.google.com/s
 #+CAPTION: XT90 vs QS8 anti-spark
 [[attachment:xt90_vs_qs8_antispark.jpeg]]
 
+There is a plastic cap for wall mounted XT connectors
+- search for =XT60E-F cover= on AliExpress (or =XT60E-M cover= for the male version). =E= is for panel-mount,
+
+#+CAPTION: XT60E-F and XT60E-M with cover. Also available for XT90
+[[attachment:XT60E-F_M_cover.png]]
+
+| Model    | description                        |
+|----------+------------------------------------|
+| XT60 F/M | Original                           |
+| XT60H    | "Housing" version with snap-on cap |
+| XT60E    |  Panel-mount                                   |
+
+
 ** Anderson :ATTACH:
 Relevant here are the Powerpole(single pole) and SB(two or three poles) series, see fig [[fig:anderson_single_vs_multipole]]
 The connectors are genderless/hermaphroditic. See [[https://www.ctals.com.au/collections/what-size-anderson-plug][info]] and [[https://en.wikipedia.org/wiki/Anderson_Powerpole][wikipedia]] for area of uses.
