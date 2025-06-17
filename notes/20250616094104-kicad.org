@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       cbab1856-a27c-487c-b651-4fc4f1316b47
+:END:
+#+title: kicad
+
+* Footprints
+[[https://klc.kicad.org/#_footprint_guidelines][KiCad footprint guidelines]]
+
+By convention, through-hole footprints have pin 1 located at (0,0) and are oriented with pin 1 in the top left. The SPST version of this switch does not have pin 1, so the footprint will leave (0,0) empty and place pads 2 and 3 at (0, 4.7 mm) and (0, 9.4 mm). Note that in KiCad’s default coordinate system, the positive Y-axis is oriented downwards.
+
+Through hole components should set the shape of Pin 1 to Rectangular or Rounded Rectangle, and all other pads to either Circular or Oval
+For drilled through-holes, the minimum annular ring width must be at least 0.15mm
+
+A good footprint will have the exact part outline drawn on the fabrication layer (F.Fab), a slightly larger outline on the silkscreen layer (F.Silkscreen), and a courtyard (F.Courtyard) surrounding the entire footprint to prevent overlaps with other footprints.
+
+We want the silkscreen outline to be just outside of the part outline, so the silkscreen lines will be drawn 0.11 mm to the outside of the lines on the fabrication layer (0.11 mm is half of the 0.10 mm fab line width, plus half of the 0.12 mm silkscreen line width).
+
+We want the courtyard outline to surround the part with a 0.25 mm clearance.
+
+** The footprint anchor (also called component origin)
+For through hole components the footprint anchor should be placed at the location of pin 1.
+
+For most standard SMD components, the anchor should generally be located on the centroid of the component body.
