@@ -503,7 +503,7 @@ The Battery Management System (BMS) should prevent under- and overvoltage and ba
 #+CAPTION: BMS balancing wires taped to the cells(note the cells are in honeycomb arrangement)
 [[attachment:BatteryDIY11.webp]]
 
-The unmodified [[id:9f7ba240-5d80-441f-a38b-0c622bee5715][bafang BBS models (BBS02/BBS02B/BBSHD)]] uses up to 30A, but the BBSHD can be modified to >50A.
+The unmodified [[id:b87e63b0-7d21-4cb5-8418-ac5f93551ed7][bafang BBS models (BBS02/BBS02B/BBSHD)]] uses up to 30A, but the BBSHD can be modified to >50A.
 So get a BMS that delivers >50A
 
 Recommendations

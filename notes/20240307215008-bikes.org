@@ -7,7 +7,11 @@
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-26
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about motor kits for bikes, custom firmware, displays"
+#+options: tags:nil
+
+Notes about motor kits for bikes, custom firmware, displays
+
+#+hugo: more
 
 It is relatively easy to convert your bike to an ebike.
 
@@ -158,21 +162,38 @@ Models include
 - 750W photon
 - 1500W X1 Stealth
 - 5000W X1 Pro
+** ToSeven :ATTACH:
+
+A new manufacturer of [[https://to7motor.com/mid-drive-motor-2][middrive motors]]. Up to 1000W with the biggest advantage to Bafang BBS is that ToSevens motors have a torque sensor.
+The controller/torque sensor should be better(less prone to breaking) and better at shredding heat than Yongsheng TSDZ2.
+
+The reason for better heat shredding is that the DM0* motor casing is cast then machined to give a press fit with the stator/casing, giving good heat transfer from stator to casing. The Tongsheng is just cast, resulting in a air gap between stator and casing and poorer heat transfer.
+
+The stock DM01 controller can handle up to 17S batteries (62.9V nominal, 71.4V max )
+
+#+CAPTION: DM01 and DM02 [[https://www.middrives.com/toseven-dm01-and-dm02-chainrings-][Chainrings]]
+[[attachment:ToSeven_chainrings_all.png]]
+
+The templates are obtained by writing an email to [[mailto:liying@to7motor.cn][liying@to7motor.cn]]
+- [[attachment:DM01-模板.pdf][DM01, (68mm BB)]]
+- [[attachment:DM02L-模板.pdf][DM02L, (100mm BB)]]
+The BB length doesn't matter for the template. Use it to see if the motor rub against the chainstay.
+
 * Battery
 ** cases
 [[https://www.amazon.com/gp/product/B09BH3ZJJK][Ebike Battery Mount Hose Clamps]]
 
 *** 18650
-**** Polly DP6
+**** Polly DP6 :ATTACH:
 The manufacture seems to be [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
 
 I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713][HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V]] (as per 2025 the link is dead). [[https://www.aliexpress.com/item/1005003719438738.html][Aliexpress link]]
 
-#+CAPTION DP6 10s7p layout
+#+CAPTION: DP6 10s7p layout
 [[attachment:dp6-10s7p-layout.jpg]]
-#+CAPTION DP6 13s5p layout
+#+CAPTION: DP6 13s5p layout
 [[attachment:dp6-13s5p-layout.jpg]]
-#+CAPTION DP6 14s5p layout
+#+CAPTION: DP6 14s5p layout
 [[attachment:dp6-14s5p-layout.jpg]]
 *** 21700
 
@@ -184,11 +205,11 @@ This is a huge down-tube case.
 
 Use the [[attachment:DP-2170-7 template_2pages.pdf][template]] to see if it fits in the frame. Build is shown [[https://youtu.be/DWkX6yH2wLQ][here]]
 
-#+CAPTION DP7 10s7p layout
+#+CAPTION: DP7 10s7p layout
 [[attachment:polly_dp7_21700_10s.png]]
-#+CAPTION DP7 13s5p layout
+#+CAPTION: DP7 13s5p layout
 [[attachment:polly_dp7_21700_13s.png]]
-#+CAPTION DP7 14s5p layout
+#+CAPTION: DP7 14s5p layout
 [[attachment:polly_dp7_21700_14s.png]]
 
 ***** How to make a template from a downloaded png :ATTACH:
