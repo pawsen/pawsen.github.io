@@ -25,24 +25,21 @@ The main decision is whether to use a mid- or hubdrive motor.
 
 * Bafang middrives
 ** BBS models (BBS02/BBS02B/BBSHD) / only bottom brackets
-:PROPERTIES:
-:ID:       9f7ba240-5d80-441f-a38b-0c622bee5715
-:END:
 Get the BBSHD. You will never regret the extra power and torque. Also, its 'Heavy Duty' and not prone to burning out like the '02 if used for steep hill climbing.
 
 Standard current usage
 - BBS02: 25A
 - BBSHD: 30A, but can be modified to >50A.
-*** Bottom Brackets Standards and how it fits :ATTACH:
+*** Bottom Brackets and fits :ATTACH:
 
-https://www.empoweredcycles.com/blogs/news/101474694-bottom-bracket-standards-and-bafang-mid-drive-motors
+The easiest is to print one of the [[https://intercom.help/bafangusadirect/en/articles/4649613-bbs02-bbshd-motor-fitment-templates][fitment templates]] (*REMEMBER to set paper size to US letter when printing this template*)
 
-To see if the BB motor and the frame will need bottom bracket spacers(could be stacked M6 washers), measure the distance from the center of the BB and to the frame chain stay(the rod going backwards towards the rear axle).
-The distance should be at least 7cm (2 2/3"). Move the ruler out to determine the needed spacing. See the picture below.
-
+Else, to see if the BB motor and the frame will need bottom bracket spacers(could be stacked M6 washers), measure the distance from the center of the BB and to the frame chain stay(the rod going backwards towards the rear axle).
+The distance should be [[https://www.empoweredcycles.com/blogs/news/101474694-bottom-bracket-standards-and-bafang-mid-drive-motors
+][at least]] 7cm (2 2/3"). Move the ruler out to determine the needed spacing. See the picture below.
 
 #+CAPTION: Measuring the distance between BB and frame chain stay
-[[attachment:_20240307_215132IMG_2643_a3db526f-2196-4b43-958e-7651e76dea03_large.JPG.jpeg]]
+[[attachment:bafang_distance_BB_chainstay.jpeg]]
 
 *** Higher current
 There are three ways to increase the current (and thus power)
@@ -162,18 +159,78 @@ Models include
 - 1500W X1 Stealth
 - 5000W X1 Pro
 * Battery
+** cases
+[[https://www.amazon.com/gp/product/B09BH3ZJJK][Ebike Battery Mount Hose Clamps]]
+
+*** 18650
+**** Polly DP6
+The manufacture seems to be [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
+
+I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713][HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V]] (as per 2025 the link is dead). [[https://www.aliexpress.com/item/1005003719438738.html][Aliexpress link]]
+
+#+CAPTION DP6 10s7p layout
+[[attachment:dp6-10s7p-layout.jpg]]
+#+CAPTION DP6 13s5p layout
+[[attachment:dp6-13s5p-layout.jpg]]
+#+CAPTION DP6 14s5p layout
+[[attachment:dp6-14s5p-layout.jpg]]
+*** 21700
+
+**** DP7 :ATTACH:
+This is a huge down-tube case.
+
+#+CAPTION: dp7 will hold 70 21700 cells. 80 cells if the cell spacers are not used.
+[[attachment:dp7_21700_case.png]]
+
+Use the [[attachment:DP-2170-7 template_2pages.pdf][template]] to see if it fits in the frame. Build is shown [[https://youtu.be/DWkX6yH2wLQ][here]]
+
+#+CAPTION DP7 10s7p layout
+[[attachment:polly_dp7_21700_10s.png]]
+#+CAPTION DP7 13s5p layout
+[[attachment:polly_dp7_21700_13s.png]]
+#+CAPTION DP7 14s5p layout
+[[attachment:polly_dp7_21700_14s.png]]
+
+***** How to make a template from a downloaded png :ATTACH:
+Find a [[https://lierskogenebikes.no/en/batteries][outline of the case]]([[attachment:DP-2170-7 dims.png][local copy]]) with dimensions. (=367x156mm=)
+
+In GIMP
+- crop the image to the case
+- measure a known dimension like the length, =tools/measure= (U). The distance is in pixels (=342px=)
+- change the X/Y resolution to =342px/367mm = 0.96px/mm= in =Image/print size=
+- in =tools/scale image=, note the width of the image (=876mm=). Change the resolution to =300px/in=, set the width to the previous value (=876mm=) and press scale.
+- measure the length, set the scale to =mm= to make sure the image has the right dimensions
+- add a =10x10mm= grid, =Image/Configure grid= and set spacing to 10mm.
+- add a =10x2cm= ruler which can used to check the printed template kept the correct scaling ::
+  make a selection box, inset position (=80,60mm=) and size (=100x20mm=).
+  draw the ruler, either using the pen tool with 2px width(and snapping to the grid) or use =Filters/pattern/grid=
+
+Export as png and convert to pdf
+
+#+begin_src sh
+convert DP-2170-7\ template.png DP-2170-7\ template.pdf
+pdfinfo DP-2170-7\ template.pdf
+> Page size: 1046.94 x 443.878 pt
+#+end_src
+- 1 point (pt) = 1/72 inch
+  So the physical size is:
+
+- Width (in) =1046.9472*14.54 in≈369.3 mm=
+- Height (in) =443.87872*6.17 in≈156.8 mm=
+(which is what we expected)
+
+Split the pdf into proper scaled pages
+#+begin_src sh
+nix shell nixpkgs#pdfposter
+pdfposter -m A4 -p 369x157mm  DP-2170-7\ template.pdf DP-2170-7\ template_2pages.pdf
+#+end_src
+
+The gimp [[attachment:DP-2170-7 template.xcf][DP-2170-7 template.xcf]] and [[attachment:Reention DP7 Sketch.pdf][another template]](from [[https://www.affordableebikes.ca/products/new-downtube-21700-xl-dp-7-21700][affordableebikes.ca]], *REMEMBER to set paper size to US letter when printing this template*)
+
 ** Multiple batteries
 
 Two batteries can be connected to improve the range.
 It doesn't matter if they are different capacities but *MUST* be same voltage and state of charge when first connected.
+
 #+CAPTION: Connecting two batteries for improved range
 [[attachment:multiple_batteries_parallel.jpg]]
-** cases
-*** Polly DP6
-The manufacture seems to be [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
-
-I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-case-empty-14S-52V/11713][HaiLong Reention Jaffa Bike-Frame Battery case empty 14S 52V]] (as per 2025 the link is dead)
-
-[[attachment:dp6-10s7p-layout.jpg]]
-[[attachment:dp6-13s5p-layout.jpg]]
-[[attachment:dp6-14s5p-layout.jpg]]
