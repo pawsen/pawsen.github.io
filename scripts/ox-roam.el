@@ -58,7 +58,7 @@ See `org-hugo-tag-processing-functions' for more info."
   ;; "docx" "pptx" "xlsx")
   (setq org-hugo-external-file-extensions-allowed-for-copying
         (append org-hugo-external-file-extensions-allowed-for-copying
-                '("wav" "raw" "epub" "webp" "py" "mp3" "tgz")))
+                '("wav" "raw" "epub" "webp" "py" "mp3" "tgz" "stl")))
 
   (message "org-hugo-external-file-extensions-allowed-for-copying are '%s'"
            org-hugo-external-file-extensions-allowed-for-copying)
