@@ -48,6 +48,9 @@ See `org-hugo-tag-processing-functions' for more info."
   ;; Right now it is set to relative to the org-files
   (setq org-hugo-base-dir "../")
   (setq org-hugo-section "notes/")
+  ;; dont fail on export if a link is broken, just make it visible in the exported file
+  ;; https://jeffkreeftmeijer.com/org-export-with-broken-links/
+  (setq org-export-with-broken-links 'mark)
 
   ;; extend the list of file extentions that gets copied to the public/ox-hugo dir
   ;; default is
