@@ -3,40 +3,37 @@
 :END:
 #+title: emacs
 
-#+filetags: it
+#+filetags: it doom
 #+hugo_categories: hacking
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2023-08-02
 #+HUGO_CUSTOM_FRONT_MATTER: :summary "emacs notes/shotcuts."
 
 * movement
+| Keybind                          | Description                                                |
+|----------------------------------+------------------------------------------------------------|
+| K / SPC c k                      | +lookup documentation                                      |
+| gd / SPC c d                     | +lookup/definition                                         |
+| gD / SPC c D                     | +lookup/references                                         |
+| SPC c j                          | Jump to symbol in current workspace                        |
+| SPC c J                          | Jump to symbol in any workspace                            |
+| C-o                              | jump back                                                  |
+| C-i                              | jump forward                                               |
+| gi                               | evil-insert-resume (jump back to insert pos)               |
+| ''                               | evil-goto-mark-line                                        |
+| ``                               | evil-goto-mark                                             |
+| SPC `                            | evil-switch-windows-last-buffer                            |
+| S-r                              | evil-multiedit-match-all                                   |
+| viw + S-r                        | Highlight word and match all                               |
+| C-n / C-p                        | Next/previous multiedit match                              |
+| C-`                              | toggle popup (useful for switching to terminal)            |
+| z =                              | ispell-word                                                |
+| yss <key>                        | sourround line. Fx. sourround by print() with =yssf print= |
+| SPC u / M-SPC u (in insert mode) | universal argument (C-u)                                   |
 
-K  / SPC c k : +lookup documentation
-gd / SPC c d : +lookup/definition
-gD / SPC c D : +lookup/references
-SPC c j   Jump to symbol in current workspace
-SPC c J	Jump to symbol in any workspace
-C-o -> jump back
-C-i -> jump forward
-gi -> evil-insert-resume (jump back to last position in insert mode)
-'' -> evil-goto-mark-line
-`` -> evil-goto-mark
-SPC ` -> evil-switch-windows-last-buffer
-S-r -> evil-multiedit-match-all
- - Highlight word (viw)
- - S-r
- - Change words OR C-n/C-p for next/prev word
-
-| Keybind | Description |
-|---------+-------------|
-| C-`     | toogle popup(useful for switching to terminal) |
-
-z = ispell-word
 https://github.com/emacs-evil/evil-collection#rationale
-
-
-yss <key> -> sourround line. Fx. sourround by print() with =yssf print=
 https://github.com/tpope/vim-surround/blob/master/doc/surround.txt
+[[https://github.com/doomemacs/doomemacs/issues/1975][How to unbind C-u in Evil]]
 
 Ivy
 =SPC SPC= and the =C-o= while opening files brings up a menu.
@@ -79,7 +76,7 @@ https://www.reddit.com/r/emacs/comments/68oukt/evilmode_problems_searching_and_s
 some comments on how to use windows/frames
 https://hungyi.net/posts/tear-off-window-emacs/
 
-Generel usage, good for brushup
+General usage, good for brush up
 https://noelwelsh.com/posts/doom-emacs/
 * registers (")
 example: store abc in register =a= by =yiw= (yank inner word).
