@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       b87e63b0-7d21-4cb5-8418-ac5f93551ed7
+:DIR:      ../.attach/ebike
 :END:
 #+title: Converting an bike to ebike
 
@@ -29,6 +30,10 @@ The main decision is whether to use a mid- or hubdrive motor.
 
 * Bafang middrives
 ** BBS models (BBS02/BBS02B/BBSHD) / only bottom brackets
+:PROPERTIES:
+:ID:       7b290853-736d-431c-aded-8eaf12f0fec2
+:END:
+
 Get the BBSHD. You will never regret the extra power and torque. Also, its 'Heavy Duty' and not prone to burning out like the '02 if used for steep hill climbing.
 
 Standard current usage
