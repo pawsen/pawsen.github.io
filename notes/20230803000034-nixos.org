@@ -1,7 +1,18 @@
 :PROPERTIES:
 :ID:       3750306f-bf6a-4da2-8735-e4a46e58cdf7
+:DIR:      ../.attach/nixos
 :END:
 #+title: nixos
+
+#+filetags: it nixos
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2023-08-03
+#+options: tags:nil
+
+Notes about NixOS. I'm in too deep... 😱
+
+#+hugo: more
+
 * flakes
 get template, see available here https://github.com/NixOS/templates/
 : nix flake new FOLDER --template templates#python
@@ -160,6 +171,15 @@ nix eval nixpkgs#prusa-slicer.meta | nixfmt | grep name
 nix eval github:nixos/nixpkgs#prusa-slicer.meta | nixfmt | grep name
 
 nix profile install --priority 4 github:nixos/nixpkgs#prusa-slicer
+#+end_src
+
+** Install a specific git revision
+If the latest nixpkgs fails to install/build, a previous working commit can be used.
+
+Find the status on https://hydra.nixos.org, example [[https://hydra.nixos.org/build/300278825][Build 300278825 of job nixpkgs:trunk:openscad-unstable.x86_64-linux]]. This build failed, latest successful build is [[https://hydra.nixos.org/build/300223842][300223842]]. Press the =Inputs= tab to get the git revision =1bfcb1539b8f0ac52b06a33ed0630d5077a4f998=
+
+#+begin_src sh
+nix profile install github:nixos/nixpkgs/1bfcb1539b8f0ac52b06a33ed0630d5077a4f998#openscad-unstable
 #+end_src
 
 ** garbage collecting

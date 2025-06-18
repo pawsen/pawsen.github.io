@@ -51,6 +51,7 @@ The distance should be [[https://www.empoweredcycles.com/blogs/news/101474694-bo
 [[attachment:bafang_distance_BB_chainstay.jpeg]]
 
 *** Higher current
+
 There are three ways to increase the current (and thus power)
 
 - [[https://endless-sphere.com/sphere/threads/how-to-50a-bbshd-controller-mod.83778/][Change shunts on stock controller (gives 50A)]]
@@ -220,7 +221,7 @@ Use the [[attachment:DP-2170-7 template_2pages.pdf][template]] to see if it fits
 ***** How to make a template from a downloaded png :ATTACH:
 Find a [[https://lierskogenebikes.no/en/batteries][outline of the case]]([[attachment:DP-2170-7 dims.png][local copy]]) with dimensions. (=367x156mm=)
 
-In GIMP
+In GIMP ([[https://www.gimp-forum.net/Thread-Image-size-in-Gimp][page size and pixel primer for GIMP]])
 - crop the image to the case
 - measure a known dimension like the length, =tools/measure= (U). The distance is in pixels (=342px=)
 - change the X/Y resolution to =342px/367mm = 0.96px/mm= in =Image/print size=
