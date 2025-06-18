@@ -8,6 +8,11 @@ title = "Notes about things"
 theme = "hugo-theme-console"
 languageCode = "en-us"
 
+# don't fail the build if some refs are not resolved. To see warnings, run hugo -v
+refLinksErrorLevel = "WARNING"
+refLinksNotFoundURL= "/pages/missing/"
+
+
 [outputs]
   # create index file JSON  for the search(RSS and HTML are defaults)
   home = ["HTML", "RSS", "JSON"]

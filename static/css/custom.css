@@ -52,6 +52,10 @@ html.dark {
   right: 1rem;
 }
 
+/* missing class for links that don't resolve */
+main#content a.missing {
+  color: #f00;
+}
 /* Prevent images from always being 100% width */
 /* But this naive solution will also destroy the responsiveness */
 /* https://github.com/mrmierzejewski/hugo-theme-console/issues/18#issuecomment-714417237 */

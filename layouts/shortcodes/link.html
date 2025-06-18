@@ -1,0 +1,4 @@
+
+<!-- replace links that doesn't resolve to "missing page"  -->
+{{- $link := (urls.RelRef . (cond (eq (len .Params) 2) (.Get 1) (.Get 0))) -}}
+<a href="{{ $link }}"{{ if eq $link (relref . "missing") }} class="missing"{{ end }}>{{ .Get 0 }}</a>
