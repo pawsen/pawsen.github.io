@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       1c18980a-dc71-4ad7-ac34-d0bb7f5d059a
+:DIR:      ../.attach/433mhz
+:END:
+#+title: 433MHz radio
+
+#+HUGO_SECTION: post
+#+filetags: it hacking rf
+#+hugo_categories: it
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-05-20
+#+hugo_bundle: 433mhz_radio
+#+export_file_name: index
+
+My brother bought a house. I tried to brute-force the wireless garage door open.
+
+#+hugo: more
+
+The garage door has a remote controlled opener.
+
+- [[https://www.aliexpress.com/item/4001119663080.html][15Mhz / 433Mhz RF Wireless Transmitter Module]]
+
+
+433 MHz is a UHF frequency often used in short-range wireless systems. It's popular for sensors, remote controls, and tracking.
+
+* Other usages
+
+- [[https://corra.fi/posts/sniffing-tpms-data/][Sniffing car tire (TPMS) data (and tracking cars)]] :: Capture 433 MHz traffic with rtl_433 for 75 days.
+- [[https://www.liwen.id.au/arduino-rf-codes/][Decoding and sending 433MHz RF codes with Arduino and rc-switch]] :: Open a garage door with an arduino and a cheap 433MHz RF transmitter([[https://www.aliexpress.com/item/1005008094215779.html][MX-FS-03V]])

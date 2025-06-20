@@ -2,13 +2,16 @@
 :ID:       8bc62c1e-9a19-4bce-9379-b09e572c6e40
 :DIR:      ../.attach/uhf-radio
 :END:
-#+title: uhf radio
+#+title: uhf radio CTCSS
 
 #+HUGO_SECTION: post
 #+filetags: sdr spectogram rf
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-06-20
+#+hugo_bundle: uhf-radio-ctccs
+#+export_file_name: index
+
 
 Use [[id:9a61aa06-a5cb-414d-9e32-b837c2d9227b][sdr]] to determine the CTCSS tone from a UHF walkie-talkie recording by looking at a spectogram.
 
@@ -64,9 +67,11 @@ soxi channel3.wav
 Link to recording of [[attachment:channel3.wav][channel3.wav]].
 
 The CTCSS tone can be seen from a spectogram of the recorded audio, as shown in fig. [[fig:uhf_spectogram]].
+
 #+NAME: fig:uhf_spectogram
 #+CAPTION: Spectogram for voice with constant tone CTCSS. The constant tone is seen to be around 77Hz. Plots from Audacity.
 [[attachment:channel3_spectrum.png]]
+
 (Note =sonic-visualiser= is a little easier to use if you only want to show a spectogram and peak frequencies)
 
 Eyeballing it, the CTCSS tone is =77Hz= or [[https://en.wikipedia.org/wiki/Continuous_Tone-Coded_Squelch_System#List_of_tones][subchannel 4]].

@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       9168a2da-73ed-4534-89d0-ede79fe5dc28
+:DIR:      ~/git/org/.attach/line-measurement-tool
 :END:
 #+title: Line measure tool
 
@@ -10,10 +11,6 @@
 #+hugo_publishdate: 2025-06-08
 #+hugo_bundle: line-measurement-tool
 #+export_file_name: index
-#+macro: imgzoom #+attr_html: :link t
-
-# set org-attach folder specifically for this file
-# #+PROPERTY: DIR file:img/diy-line-measure-tool
 
 Homemade fixture for adding a fixed tension to the lines of a paraglider and providing a target for measuring the line length with a laser. This is pretty neat.
 

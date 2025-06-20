@@ -1,7 +1,7 @@
 # -*- ispell-local-dictionary: "da" -*-
 :PROPERTIES:
 :ID:       801ada62-1a1b-4081-9082-cf328939e6b8
-:DIR:      ~/git/org/notes/file:img/2025-smc-meet
+:DIR:      img/2025_smc_meet
 :END:
 #+title: International winter climbing meet, Scotland 2025
 
@@ -12,10 +12,10 @@
 #+hugo_publishdate: 2025-05-20
 #+hugo_bundle: smc-winter-meet-2025
 #+export_file_name: index
-#+macro: imgzoom #+attr_html: :link t
 
 # set org-attach folder specifically for this file
-#+PROPERTY: DIR file:img/2025_smc_meet
+# XXX see :PROPERTIES: at the top of the file instead
+# +PROPERTY: DIR file:img/2025_smc_meet
 
 I participated in the [[https://www.mountaineering.scot/activities/mountaineering/international-winter-climbing-meet][Scottish International Winter Climbing Meet 2025]]. This is a write up I did for the [[https://www.dbkk.dk/][Danish Mountaineering and Climbing Club]].
 
@@ -35,14 +35,12 @@ Alle deltagere mødtes ved Glenmore Lodge og jeg var selvfølgelig spændt på h
 * Min vært Tom, et match made in heaven
 Jeg mødte min vært Tom på værelset. Jeg havde taget lidt hash med fra Marokko og syntes det var en god gestus at have en joint klar, det var Tom ikke interesseret i. Til gengæld blev det hurtigt klart at ingen af os havde pakke-skills. Vi spredte al udstyr på gulvet, endte med at pakke det hele tilbage i taskerne og dumpe dem i bilen.
 
-{{{imgzoom}}}
 #+CAPTION: Tom og jeg prøver at pakke
 [[file:img/2025-smc-meet/packing.jpg]]
 
 Alle deltagere var delt i tre grupper. Hver gruppe havde sin egen hytte som base for klatringen og efter et par dage roterede grupperne hytte. Der var altså ingen kontakt grupperne imellem under træffet da hytterne var spredt over et stort område.
 Tom og jeg var super heldige og skulle starte med at sove i CIC hytten, ved foden af Ben Nevis det højeste bjerg i Skotland. Heldige fordi vejrudsigten lovede varmt vejr i løbet af ugen og Ben Nevis ville have de bedste forhold til vinterklatring i løbet af de første par dage (f.eks. frost så der ikke falder sten ned).
 
-{{{imgzoom}}}
 #+CAPTION: CIC hytten ved Ben Nevis
 [[file:img/2025-smc-meet/CIC-hut.jpg]]
 
@@ -60,7 +58,6 @@ Jeg havde det på samme måde. Så længe min isøkse blev siddende var jeg sikk
 
 Jeg nedstemte Toms forslag om en IV rute og vi endte på [[https://routes.smc.org.uk/route/26950][Gargoyle Wall 120m, VI,6]], en populær og klassisk rute for graden.
 
-{{{imgzoom}}}
 #+CAPTION: Mig på Gargoyle Wall, VI, 6
 [[file:img/2025-smc-meet/paw_gargoyle.jpg]]
 
@@ -72,23 +69,19 @@ På vej fra hytten næste morgen fik jeg nævnt Vader. Tom var ikke interesseret
 Nu var planen at jeg skulle føre hele ruten, jeg kommer lidt op og sat en rød friend i en mosset sprække. Mosset var frossent, så jeg prøvede at skrabe det væk ved at trækken klemkilen frem og tilbage. Jeg var egentlig godt tilfreds men Tom foreslog jeg klatrede ned og vi lige testede sikringen. Han gav rebet et lille ryk og min "9/10" sikring kom flyvende ud.
 Det gjorde mig lidt bekymret, men jeg havde stadig Alex Hubers ord i baghovedet om "power to waste", så jeg konkluderede at jeg bare skulle være lidt mere omhyggelig og mestendels sikre med kiler og hexe. Selve ruten havde mange hooks, hvor spidsen på øksen synker ned i en sprække og ikke falder ud, perfekt til min "power to waste" tilgang, og forløb uden yderligere problemer.
 
-{{{imgzoom}}}
 #+CAPTION: Tom klemmer sig ud af skorstenen, første reblængde af Darth Vader, VII, 7
 [[file:img/2025-smc-meet/tom_darth_vader_chimney.jpg]]
 
 På toppen sagde Tom at ruten havde været på hans rader længe og han var glad for vi havde klatret den.
 
-{{{imgzoom}}}
 #+CAPTION: Tom på toppen af Darth Vader, VII, 7
 [[file:img/2025-smc-meet/tom_darth_vader_top.jpg]]
 
 Dagen efter skulle vi rotere hytte. Tom var ikke interesseret i mere klatring den dag, så jeg tog med tre andre på en solo af [[https://routes.smc.org.uk/route/26753][Tower Ridge, IV, 3]]. Den ene var den vært jeg to dage forinden havde set på Dart Vader. Hans Slovenske makker havde også fået nok efter en hård dag. Godt for mig, for jeg havde endnu en uge i Skotland efter mødet sluttede og var på udkig efter makkere.
 
-{{{imgzoom}}}
 #+CAPTION: Tower Ridge, IV, 3,
 [[file:img/2025-smc-meet/tower_ridge.jpg]]
 
-{{{imgzoom}}}
 #+CAPTION: Den hurtige vej ned fra toppen af Ben Nevis, glissading eller "kurrende på røven"
 [[file:img/2025-smc-meet/glissade_tower_ridge.jpg]]
 
@@ -100,7 +93,6 @@ Jeg var ikke klar over hvad det egentlig var Tom havde tænkt sig og hvilken typ
 
 Vi startede ved daggry næste morgen fra [[https://huts.mountaineering.scot/Hut/raeburn][Raeburn]]. Det blæste meget og småregnede, men de første kilometer var på stier og Tom forklarede at nogle af dem var fra Romersk tid.
 
-{{{imgzoom}}}
 #+CAPTION: Tom på en sti i starten, da alt stadig var behageligt
 [[file:img/2025-smc-meet/paw_tom_run_path.jpg]]
 
@@ -127,7 +119,6 @@ Det flade stykke varede måske bare 50m før vi skulle skifte tempo igen. At ove
 
 Jeg troede stadig turen var omkring 60 km og da Tom sagde vi havde passeret 55km, nægtede jeg at løbe mere. Hvis han ville fortsætte i løb var det fint med mig. Jeg havde en pandelampe og nu drejede sig bare om at komme til hytten, hvornår og i hvilken stil var ligegyldigt.
 
-{{{imgzoom}}}
 #+CAPTION: Mig på vej til Tom. Vi har passeret 55km og jeg nægter at løbe mere
 [[file:img/2025-smc-meet/paw_tom_run_walk.jpg]]
 
@@ -135,7 +126,6 @@ Kort efter kommer vi forbi en Bothie, det er bivuakhytter i afsidesliggende omr�
 Der var nogle i hytten, de havde medbragt brænde og prøvede at tørre støvler og tøj - som mig havde de heller ikke lært at det er umuligt at holde sig tør og i stedet for store støvler og goretex er det bedre at have sko der nemt drænes.
 De lavede kakao til os, forstod ikke helt hvor vi kom fra og jeg syntes det var alt for tidligt da Tom sagde vi skulle videre.
 
-{{{imgzoom}}}
 #+CAPTION: Hvil i en bothie. De var nysgerrige og lavede kakao til os
 [[file:img/2025-smc-meet/paw_tom_run_hut_rest.jpg]]
 
@@ -143,14 +133,12 @@ Det gik op for mig at turen var længere end 60km, hvor meget var ikke vigtigt. 
 
 Vi kom til en dæmning og denne gang var Tom med på at krydse hegnet. Han sagde at dæmningen var en af de ting han var usikker på inden vi startede. Ville der være for meget og kraftig vand til vi kunne krydse den.
 
-{{{imgzoom}}}
 #+CAPTION: Vi krydsede dæmningen. Jeg var glad for at se konkrete tegn på civilisation igen
 [[file:img/2025-smc-meet/paw_tom_run_dam1.jpg]]
 
 
 Efter dæmningen var der 5km med bogs og efter at have passeret et lille pas kunne vi se en vej og derefter [[https://huts.mountaineering.scot/Hut/lagangarbh][Lagagarbh hytten]]. Tom sagde han ville have været en del timer hurtigere hvis han havde været alene. Først da gik det op for mig at han er en ultraløber og deltager i konkurrencer. "I do this shit" var hans underspillede kommentar.
 
-{{{imgzoom}}}
 #+CAPTION: Før og efter, Toms og min gå/løbetur på 70km og 13timer mellem to hytter
 [[file:img/2025-smc-meet/paw-tom-run-before_after.jpeg]]
 
@@ -163,7 +151,6 @@ Fra hytteværten for CIC hytten ved Ben Nevis, hvor vi sov de to første dage, h
 Tom fortalte at arrangøren af dry-tool gruppen sikkert var en ved navn Willis, at Willis var medlem af Creag Dhu og en karakter.
 Vi var nød til at komme ind i hytten. Jeg fandt et par små kviste af rette beskaffenhed, fik hasperne af beslaget, lagt tagpap i karmen så det var nemmere at møve sig ind. Tom havde en flaske hjemmebrygget vin med vi drak. Jeg fik hasperne på igen og vi gik videre.
 
-{{{imgzoom}}}
 #+CAPTION: Jeg fik løftet hasperne af og vi klemmer os ind gennem det åbne vindue
 [[file:img/2025-smc-meet/paw_window_hut.jpg]]
 
@@ -180,7 +167,6 @@ Your browser does not support the video tag.
 
 Efter aftensmad er der opsummering og der bliver taget et fællesbillede
 
-{{{imgzoom}}}
 #+CAPTION: Deltagere ved SMC træf 2025, Glenmore Lodge
 [[file:img/2025-smc-meet/participants.jpg]]
 
@@ -195,14 +181,12 @@ Vejrudsigten lovede at vinteren tilbage, så jeg ville have en kompetent makker 
 
 Dagen efter får vi et lift af Steven, en vært jeg har læst at kende i løbet af ugen. Mens vi ventede på vinteren brugte vi tid på klatring i Glen Nevis. Ben, som i Ben Nevis, skotsk for bjerg mens Glen, som i Glen Nevis, er skotsk for dal. Dvs Glen Nevis er dalen ved foden af bjerget Ben Nevis. Steven hentede os i Riasg hytten de første par dage
 
-{{{imgzoom}}}
 #+CAPTION: Steven sikrer mig på [[https://www.ukclimbing.com/logbook/crags/polldubh_crags_glen_nevis-807/tobe_hooper-192587][Tobe Hooper, E4 6a]], Glen Nevis
 [[file:img/2025-smc-meet/paw_steven_tobe_hooper_E46a.jpeg]]
 
 Steven og jeg er ca samme alder og har samme uddannelse, Han er flyttet til Fort William(en større by tæt på Ben Nevis og massevis af klippeklatring) med sin hustru og to små børn for at bruge mere tid på klatring. En virkelig sød person og et indblik i hvordan mit kunne have været hvis jeg havde arbejdet i stedet for at strejfe rundt.
 Desværre får jeg en besked en måned senere om at Steven er faldet ned i Glen Nevis og er død. Det rammer mig noget hårdere end de få andre dødsfald jeg har været bekendt med, dels fordi han var så sympatisk, dels fordi han havde to små børn, dels fordi det hele jo bare er for sjov. Det er jo slet ikke meningen at nogen skal dø.
 
-{{{imgzoom}}}
 #+CAPTION: Steven og jeg, på toppen af en af klipperne i Glen Nevis
 [[file:img/2025-smc-meet/paw_steven.jpeg]]
 
@@ -225,14 +209,12 @@ I hytten møder jeg kokken Liam der er ved at forberede aftensmaden. Han er fest
 
 Under Vintermødet havde hver hyt en hyttevært der forberedte alle måltider. Dry-tool gruppen har medbragt deres egen kok Liam. Vi snakker lidt, jeg spiser deres rester og tager et billede af en rute jeg har tænkt mig at klatre fra guidebogen.
 
-{{{imgzoom}}}
 #+CAPTION: Kokken Liam
 [[file:img/2025-smc-meet/cic_chef_liam.jpg]]
 
 Da jeg kommer op til klippen går det op for mig at jeg har taget et billede af den forkerte side i guiden. I stedet starter jeg op af en linje jeg synes ser overkommelig ud([[https://routes.smc.org.uk/route/26890][Comb Gully IV,4]]). Det går godt indtil jeg kommer til det første stykke lodrette is. Jeg er klar over at herefter vil det være svært at vende om og en fejl vil sende mig kurende ned og først stoppe ved [[https://da.wikipedia.org/wiki/Ur_(geologi)][talus'en]](en: scree) 100m lavere.
 Jeg er også godt klar over at det er en irrationel frygt, lige her er der noget jeg rent faktisk har kendskab til, og efter et par indåndinger fortsætter jeg. På toppen af Ben Nevis møder jeg tilfældigt Willis med to makkere.
 
-{{{imgzoom}}}
 #+CAPTION: Willis, th, med to andre fra dry-tool gruppen.
 [[file:img/2025-smc-meet/willis_top_ben_nevis.jpg]]
 
@@ -241,7 +223,6 @@ Jeg har tidligere været fascineret af den skotske bjergbestiger, opfinder og al
 
 Dagen efter starter Dan og jeg på [[https://routes.smc.org.uk/route/38019][Sake, VIII,9]]. Det er den første rute hvor jeg ikke bare kan hook'e eller vride øksen fast. Nogle af klatrerne banker øksespidsen fast i små sprækker med siden af den anden økse, men det har jeg holdt mig fra. Efter min ene økse falder ud af et tyndt rids, omfavner jeg teknikken og den gode følelse af en økse der sidder rimelig godt fast. Desuden giver det et øksen et patinalook og du ligner en rigtig alpinist...
 
-{{{imgzoom}}}
 #+CAPTION: Dan følger efter på Sake, VIII, 9
 [[file:img/2025-smc-meet/dan_following_sake_VIII.jpg]]
 
@@ -268,6 +249,5 @@ En af hytteværterne, [[mailto:cm.huntley@btinternet.com][Chris Huntley]], huske
 
 Tom kaldte vores tur for "The Great Dane" på strava
 
-{{{imgzoom}}}
 #+CAPTION: The great dane, Toms navn til vores tur
 [[file:img/2025-smc-meet/paw_tom_run_strava_the_great_dane.jpg]]

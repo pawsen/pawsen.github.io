@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       bc441d5b-931c-4148-9419-d8c0f6131d8e
+:END:
+#+title: rf
+
+
+
+* Common ISM Bands (License-Free or Lightly Regulated)
+
+| Frequency | Region               | Common Uses                                             |
+|-----------+----------------------+---------------------------------------------------------|
+| 315 MHz   | Americas (Region 2)  | Car remotes, keyless entry, wireless sensors (USA only) |
+| 433 MHz   | Europe, Asia, Africa | Remote controls, weather stations, sensor networks      |
+| 868 MHz   | Europe               | LoRa, alarm systems, smart meters                       |
+| 915 MHz   | Americas             | LoRa, Zigbee, RFID, remote sensors                      |
+| 2.4 GHz   | Worldwide            | Wi-Fi, Bluetooth, Zigbee, drones, RC toys               |
+| 5.8 GHz   | Worldwide            | Wi-Fi (802.11a/ac), FPV video transmitters, radar       |
