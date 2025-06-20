@@ -1,5 +1,12 @@
 <!-- This footer file is loaded by baseof.html inside the <body> tag. Add any customization to the foooter here -->
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- For displaying latex formattet math -->
+{{ if .Param "mathjax" }}
+    {{ partialCached "math.html" . }}
+{{ end }}
+
 <!-- light/dark theme toggling JS -->
 <script>
 (function () {
@@ -33,4 +40,3 @@
   });
 })();
 </script>
-
