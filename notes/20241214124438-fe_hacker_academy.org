@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       cc9657d0-e380-4084-82eb-022294e7694f
+:DIR:      ../.attach/fe_hacker_academy
 :END:
 #+title: fe hacker academy
 
@@ -65,6 +66,9 @@ The use of two super-imposed frequencies is seen from the dial up sequence below
 [[attachment:Dial_up_modem_noises_explained_final.png]]
 
 ** Using a spectogram to decode fe-audio.mp3 :ATTACH:
+:PROPERTIES:
+:ID:       9f5994b5-814e-4a44-9b45-4736c67d041d
+:END:
 
 Looking at the [[attachment:fe-audio.mp3][fe-audio.mp3]] using a spectogram we see 7 distinct tones.
 

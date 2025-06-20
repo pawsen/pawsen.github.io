@@ -6,7 +6,7 @@
 #+title: International winter climbing meet, Scotland 2025
 
 #+HUGO_SECTION: post
-#+filetags: climbing traveling SMC
+#+filetags: climbing traveling SMC run
 #+hugo_categories: climbing
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-05-20

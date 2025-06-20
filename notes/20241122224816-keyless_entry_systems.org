@@ -4,7 +4,7 @@
 #+title: Keyless entry systems
 
 #+HUGO_SECTION: notes
-#+filetags: it hacking
+#+filetags: it hacking rfid
 #+hugo_categories: hacking
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-11-22

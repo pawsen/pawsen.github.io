@@ -3,21 +3,18 @@
 :END:
 #+title: sdr radio
 
-#+HUGO_SECTION: post
-#+HUGO_TAGS: sdr it spectogram
-#+filetags: sdr spectogram
+#+HUGO_SECTION: notes
+#+filetags: sdr spectogram rf
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-09-20
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Use a SDR to determine CTCSS tone from a UHF walkie-talkie recording by looking at a soectogram. And much more"
 
 
 Software-defined radio (SDR) is a radio communication system where components that conventionally have been implemented in analog hardware (e.g. mixers, filters, amplifiers, modulators/demodulators, detectors, etc.) are instead implemented by means of software on a computer.
 
+#+hugo: more
+
 * stl_sdr dongle info :ATTACH:
-:PROPERTIES:
-:ID:       b0049897-ce8a-4f66-b553-e43713bd6fcd
-:END:
 
 The RTL-SDR is an cheap software defined radio receiver-dongle based on [[https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Specifications
 ][DVB-T TV tuners with RTL2832U chips.]]
@@ -151,67 +148,6 @@ rtl_fm -M fm \
     | play -p
 #+end_src
 
-** UHF / walkie talkie :ATTACH:
-
-Use an =rtl-sdr= to get the frequency of the Continuous Tone-Coded Squelch System (CTCSS).
-
-tl;dr
-
-- record raw demodulated audio using =rtl_fm=
-- convert to =wav= using =sox=
-- visualize spectogram using =audicity=
-
-The photo below shows the setup used to record UHF radio from a walkie talkie at 443MHz
-#+CAPTION: record UHF radio and determine the CTCSS tone from a spectogram using a half wave dipole antenna.
-[[attachment:IMG20240925154924.jpg]]
-
-*** intro
-
-In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446][PMR446]]. Analogue PMR446 uses 16 FM channels separated by 12.5 kHz.
-
-| Channel | Frequency (MHz) | Channel Spacing (kHz) | Channel Spacing Known As |
-|---------+-----------------+-----------------------+--------------------------|
-|       1 |       446.00625 |                  12.5 | Narrow [NFM]             |
-|       2 |       446.01875 |                  12.5 | Narrow [NFM]             |
-|       3 |       446.03125 |                  12.5 | Narrow [NFM]             |
-|       4 |       446.04375 |                  12.5 | Narrow [NFM]             |
-|       5 |       446.05625 |                  12.5 | Narrow [NFM]             |
-|       6 |       446.06875 |                  12.5 | Narrow [NFM]             |
-|       7 |       446.08125 |                  12.5 | Narrow [NFM]             |
-|       8 |       446.09375 |                  12.5 | Narrow [NFM]             |
-|       9 |       446.10625 |                  12.5 | Narrow [NFM]             |
-|      10 |       446.11875 |                  12.5 | Narrow [NFM]             |
-|      11 |       446.13125 |                  12.5 | Narrow [NFM]             |
-|      12 |       446.14375 |                  12.5 | Narrow [NFM]             |
-|      13 |       446.15625 |                  12.5 | Narrow [NFM]             |
-|      14 |       446.16875 |                  12.5 | Narrow [NFM]             |
-|      15 |       446.18125 |                  12.5 | Narrow [NFM]             |
-|      16 |       446.19375 |                  12.5 | Narrow [NFM]             |
-
-Continuous Tone-Coded Squelch System (CTCSS) is a low continuous tone transmitted along with the voice. In CTCSS mode, the receiver only unmutes when the signal also carries the correct sub-audible audio tone. All users with different CTCSS tones on the same channel are still transmitting on the identical radio frequency. [[https://www.sigidwiki.com/wiki/CTCSS#Additional_Images][CTSCC tones]] and further info.
-
-The channel 3 audio is recorded with ~rtl_fm~ (which demodulates the signal and save it as ~raw~ audio samples) and converted to ~wav~ with ~sox~.
-#+begin_src sh
-rtl_fm -f 446.03125M -M fm -s 12k -g 50 -l 70 > channel3.pcm
-sox -r 12k -t raw  -es -b 16 -c 1 channel3.pcm channel3.wav
-# optionally, check whats in the header
-soxi channel3.wav
-#+end_src
-Link to recording of [[attachment:channel3.wav][channel3.wav]].
-
-The CTCSS tone can be seen from a spectogram of the recorded audio, as shown in fig. [[fig:uhf_spectogram]].
-#+NAME: fig:uhf_spectogram
-#+CAPTION: Spectogram for voice with constant tone CTCSS. The constant tone is seen to be around 77Hz. Plots from Audacity.
-[[attachment:channel3_spectrum.png]]
-(Note =sonic-visualiser= is a little easier to use if you only want to show a spectogram and peak frequencies)
-
-Eyeballing it, the CTCSS tone is =77Hz= or [[https://www.sigidwiki.com/wiki/File:CTCSS_table.png][subchannel 4]].
-
-
-For completeness, the waterfall plot for a uhf radio looks like
-#+NAME: fig:uhf_waterfall
-#+CAPTION: waterfall for UHF radio, SDR++
-[[attachment:channel3_waterfall2.png]]
 
 ** Explanation of IQ signals, modulation and demodulation
 https://youtu.be/h_7d-m1ehoY

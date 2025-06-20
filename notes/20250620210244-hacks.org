@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       c5f5b81d-b307-4075-96c5-d416f7d9c052
+:END:
+#+title: hacks
+
+#+filetags: it hacks
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-06-20
+
+
+Feeling bored or have time to kill? Here are some famous or interesting hacks
+
+#+hugo: more
+
+* unordered
+- [[https://web.archive.org/web/20160310114724/http://demoseen.com/bhpaper.html][Onity HT lock system for hotels]] and the [[https://www.wired.com/2017/08/the-hotel-hacker/][wired story on the man who exploited it and went on a hotel room stealing spree]]
+- [[https://youtu.be/dldX9UFhNTs][Laundering Money - Michael Orlitzky, doing laudry for free]]
+- [[https://youtu.be/DovunOxlY1k][AT&T Archives: Similiarities of Wave Behavior]]
+- [[https://youtu.be/fBICDODmCPI][DoS Denial of Shopping Analyzing and Exploiting Physical Shopping Cart]], how to lock and unlock shopping cart wheels using 7.8KHz RF signal
+- [[https://youtu.be/rnmcRTnTNC8][Tactics of Physical Pen Testers]]
+- [[https://youtu.be/B8DjTcANBx0][Exploiting Network Surveillance Cameras Like a Hollywood Hacker]], 2013. Exploiting poor security in CCTV aka video surveillance. WOW.
+- [[https://youtu.be/SyMUTqRQZPA][Blinded By The Ligh]], track phones proximity IR sensor. Description of the [[https://web.archive.org/web/20210424071039/http://www.devttys0.com/2016/08/defcon-24-blinded-by-the-light/][hardware]], [[https://github.com/devttys0/IRis][kicad files]] and [[https://github.com/tb69rr/Iris][ardiono code]].
+  On a related note, newer phones with multiple cameras uses a lidar to determine the distance to an object and thus determine if the "short"- or "long" distance lens should be used. These lidar patterns can be seen with a IR camera and used to e.g. determine if someone is trying to take a photo of you, see [[https://youtu.be/R5nMqju6crY?t=2239][Optical Espionage: Using Lasers to Hear Keystrokes Through Glass Windows - samy kamkar]]
+- [[https://youtu.be/2IT2oAzTcvU][Confessions of an Nespresso Money Mule]], the speaker unexpectedly gets a "free" Nespresso machine in a triangulation fraud scheme and starts to investigate.
+- [[https://youtu.be/vQtLms02PFM][Bill Swearingen - HAKC THE POLICE]], manipulate police speed radar detectors and laser guns.
+- [[https://youtu.be/pri4EJ0634c][What History’s Greatest Heist Can Teach Us About Defense In Depth]], the story of the biggest diamond heist done in Antwerp in 2003.
+- [[https://youtu.be/ZUvGfuLlZus][Elevator Hacking: From the Pit to the Penthouse]]
+- [[https://youtu.be/mkW3N-ufPe4][Eric Schmiedl: Advanced Physical Attacks]],
+
+* rfid
+:PROPERTIES:
+:ID:       cdfbb224-e8d9-4f8f-8272-a0b88fb8e82d
+:END:
+
+- [[https://youtu.be/1JT_lTfK69Q?t=1215][Hacking a Bosten Transit card]]

@@ -4,7 +4,7 @@
 #+title: Car immobilizer
 
 #+HUGO_SECTION: post
-#+filetags: it sdr proxmark
+#+filetags: it sdr proxmark rfid
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-11-22
