@@ -23,6 +23,18 @@ The garage door has a remote controlled opener.
 
 433 MHz is a UHF frequency often used in short-range wireless systems. It's popular for sensors, remote controls, and tracking.
 
+* Antenna
+
+#+CAPTION: Moxon antenna, notice the radiator gap on the right.
+[[attachment:moxon_antenna.jpg]]
+
+[[https://web.archive.org/web/20160116105956/http://www.moxonantennaproject.com/2E0RHM/2E0RHM.htm][Physical dimensions for Moxon antenna]]
+stl for [[https://www.thingiverse.com/make:262913][Moxon Antenna Frame (LRS 433MHz)]] and some [[https://qczek.beyondrc.com/lrs-moxon-antenna-v2-tuned/][guy who made it, incl pictures and measurements]]
+- use 8mm wire round the frame. Attach with glue or zip-ties
+[[attachment:moxon_soldering.jpg]]
+
+
+
 * Other usages
 
 - [[https://corra.fi/posts/sniffing-tpms-data/][Sniffing car tire (TPMS) data (and tracking cars)]] :: Capture 433 MHz traffic with rtl_433 for 75 days.

@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       73f75f73-f7c6-4a9e-8b57-43e2c3043674
+:DIR:      ../.attach/tpms
+:END:
+#+title: TPMS
+
+#+filetags: sdr rf tpms
+#+hugo_categories: it
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-06-22
+
+Tire pressure monitoring systems (TPMS) are becoming common on automobiles,
+and in certain countries, are required as a condition of sale. Most TPMS
+devices use simple wireless communication techniques such as:
+
+- FSK modulation
+- Manchester bit coding
+- Small CRCs or checksums
+- Unique device identifiers
+
+* Background
+
+For more background on this project, please watch Jared Boone's talk from ToorCon 15:
+
+"Dude, Where's My Car?: Reversing Tire Pressure Monitors with a Software Defined Radio"
+[[http://www.youtube.com/watch?v=bKqiq2Y43Wg][video]]
+[[http://sharebrained.com/downloads/toorcon/dude_wheres_my_car_toorcon_sd_2013.pdf][slides]]
+
+...or this interview with Darren Kitchen of Hak5:
+
+"Hak5 1511 – Tracking Cars Wirelessly And Intercepting Femtocell Traffic"
+[[http://hak5.org/episodes/hak5-1511][video]]

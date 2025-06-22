@@ -1,10 +1,11 @@
 :PROPERTIES:
 :ID:       9a61aa06-a5cb-414d-9e32-b837c2d9227b
+:DIR:      ../.attach/sdr-radio
 :END:
 #+title: sdr radio
 
 #+HUGO_SECTION: notes
-#+filetags: sdr spectogram rf
+#+filetags: sdr spectogram rf rtl
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-09-20
@@ -147,8 +148,10 @@ rtl_fm -M fm \
             compand 0.1,0.8 6:0,-3 6 \
     | play -p
 #+end_src
+** Trunked Radio
 
-
+Extensive writeup
+https://www.andrewmohawk.com/2020/06/12/trunked-radio-a-guide/
 ** Explanation of IQ signals, modulation and demodulation
 https://youtu.be/h_7d-m1ehoY
 ** Convert IQ samples to audio
@@ -163,10 +166,14 @@ https://github.com/tegan-lamoureux/rtl_sdr-to-cfile
 ** multimon-ng
 https://github.com/EliasOenal/multimon-ng
 The multimon-ng software can decode a variety of digital transmission modes commonly found on VHF/UHF radio.
-* Antennas
+* Antennas :ATTACH:
+:PROPERTIES:
+:ID:       13108c4c-f84e-4685-92fe-320b0c13f6a4
+:END:
 See [[https://www.antenna-theory.com/antennas/main.php][list of antenna types]]
 
 ** Dipole
+
 A dipole antenna consists of two conductive rods or metals of equal lengths separated by an insulator.
 
 #+CAPTION: dipole antenna
@@ -181,12 +188,38 @@ where  \( c ≈ 0.97% x c_0 \) is the reduced speed of radio waves in a conducto
 
 The bandwidth of a half length dipole is around 7%, ie  \( 96.5% x c_f < c_f < 103.5% x c_f \), where \( c_f \) is the center frequency.
 
+The [[http://www.csgnetwork.com/antennaedcalc.html][dipole calculater]] is simple to use. To optimize the antenna for a frequency RANGE, do the calculations twice, once for the low end of the range and once for the high end; then average the two and plan to adjust the VSWR on both ends of the range as needed.
+Remember that there is about 2cm of metal inside the antenna itself which needs to be added on.
+
+Cheat sheet for various lengths and frequencies
+- Large Antenna, 5 Sections, 100cm + 2cm is resonant @ ~70 MHz
+- Large Antenna, 4 Sections, 80cm + 2cm is resonant @ ~87MHz
+- Large Antenna, 3 Sections, 60cm + 2cm is resonant @ ~115 MHz
+- Large Antenna, 2 Sections, 42cm + 2cm is resonant @ ~162 MHz
+- Large Antenna, 1 Section, 23cm + 2cm is resonant @ ~ 285 MHz
+- Small Antenna, 4 Sections, 14cm + 2cm is resonant @ ~445 MHz
+- Small Antenna, 3 Sections, 11cm + 2cm is resonant @ ~550 MHz
+- Small Antenna, 2 Sections, 8cm + 2cm is resonant @ ~720MHz
+- Small Antenna, 1 Section, 5cm + 2cm is resonant @ ~1030 MHz.
+
+VHF/UHF frequencies are most often vertically polarized signals.
+* Frequencies
+- [[http://www.dkscan.dk/maritim.htm][danish maritime VHF]] (NFM)
+- [[http://www.dkscan.dk/wrap.php?13][danish radio and tv]] ([[https://www.dkradio.dk/lrkoeben.htm][greater copenhagen]]) (WFM)
 * websdr
 My SDR can be tuned from 0 to 30 MHz (or from 25 to 1900 MHz, or whatever). Can I offer all of that tuning range to the users?
 #+begin_quote
 No. Such an SDR does not feed the entire 0-30 or 25-1900 MHz spectrum to your computer: that would be way too much data. Instead, a small part (at most a few MHz) are filtered out in external hardware, centered around some frequency that you can tune. With the WebSDR software, users can only tune around within that small part of the spectrum. You (as the operator of the site) choose the centerfrequency.
 #+end_quote
 http://websdr.ewi.utwente.nl:8901/?tune=198am
+* software
+- [[https://github.com/jopohl/urh][Universal Radio Hacker]] – A graphical tool for investigating unknown wireless protocols; supports analysis, decoding, and replay of RF signals.
+- [[https://github.com/miek/inspectrum/][Inspectrum]] – A tool for analyzing captured RF signals visually; ideal for inspecting frequency, phase, and timing of digital signals.
+- [[https://github.com/merbanan/rtl_433][rtl_433]] – Receives and decodes data from a wide range of low-power 433 MHz devices using RTL-SDR dongles.
+** various meters
+- [[https://www.auteleshop.com/][Autel TPMS Products]] – Tire Pressure Monitoring Systems (TPMS) and diagnostic tools for vehicles, commonly used in RF reverse engineering.
+- [[https://github.com/bemasher/rtlamr][rtlamr]] - decode various utility smart meters. See the [[https://github.com/bemasher/rtlamr/wiki][wiki]]
+
 * ref
 http://superkuh.com/rtlsdr.html
 

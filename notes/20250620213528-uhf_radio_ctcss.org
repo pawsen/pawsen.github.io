@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       8bc62c1e-9a19-4bce-9379-b09e572c6e40
-:DIR:      ../.attach/uhf-radio
+:DIR:      ../.attach/uhf-radio-ctcss
 :END:
 #+title: uhf radio CTCSS
 
@@ -30,7 +30,7 @@ The photo below shows the setup used to record UHF radio from a walkie talkie at
 This reminded me of the /7 bit/ spectogram in the [[id:9f5994b5-814e-4a44-9b45-4736c67d041d][fe hacker academy audio]]
 ** intro
 
-In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446][PMR446]]. Analogue PMR446 uses 16 FM channels separated by 12.5 kHz.
+In Europe the frequencies are defined in [[https://en.wikipedia.org/wiki/PMR446][PMR446]]. Analogue PMR446 uses 16 FM channels separated by 12.5 kHz, FM modulated(NFM)
 
 | Channel | Frequency (MHz) | Channel Spacing (kHz) | Channel Spacing Known As |
 |---------+-----------------+-----------------------+--------------------------|
@@ -57,6 +57,7 @@ Thus CTCSS is a way to extend the 16 FM channels. Several groups can use the sam
 
 ** record the walktie talkie talk :ATTACH:
 
+From the [[http://www.csgnetwork.com/antennaedcalc.html][dipole calculater]] a total length of the dipole should be 0.32m for 446 Mhz, mounted vertical. See [[id:13108c4c-f84e-4685-92fe-320b0c13f6a4][the sdr radio/dipole]] section.
 The channel 3 audio is recorded with ~rtl_fm~ (which demodulates the signal and save it as ~raw~ audio samples) and converted to ~wav~ with ~sox~.
 #+begin_src sh
 rtl_fm -f 446.03125M -M fm -s 12k -g 50 -l 70 > channel3.pcm
