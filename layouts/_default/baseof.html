@@ -33,17 +33,14 @@
         <div class="terminal-nav">
           <header class="terminal-logo">
             <div class="logo terminal-prompt">
-                {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-                {{ $.Scratch.Add "path" .Site.BaseURL }}
-                <a href="{{ .Site.BaseURL }}" class="no-style {{ with .Site.Params.TitleCutting }}site-name{{ end }}">{{ .Site.Title
-                    }}</a>:~#
-                {{ range $index, $element := split $url "/" }}
-                {{ $.Scratch.Add "path" $element }}
-                {{ if ne $element "" }}
-                <a href='{{ $.Scratch.Get "path" | absURL }}'>{{ . }}</a>/
-                {{ $.Scratch.Add "path" "/" }}
-                {{ end }}
-                {{ end }}
+              {{ $path := .RelPermalink | strings.TrimPrefix "/" | strings.TrimSuffix "/" }}
+              {{ $parts := split $path "/" }}
+              {{ $.Scratch.Set "accumulatedPath" "" }}
+              {{/*Whitespace in Hugo templates includes line breaks and spaces.
+                  Putting {{ ... }} and <a> tags all on the same line with no space between them avoids it.
+                */}}
+              <a href="{{ .Site.BaseURL }}" class="no-style {{ with .Site.Params.TitleCutting}}site-name{{ end }}">{{ .Site.Title }}</a>:~#
+              {{ range $i, $part := $parts }}{{ $.Scratch.Add "accumulatedPath" (printf "/%s" $part) }}<a href="{{ $.Scratch.Get "accumulatedPath" | relURL }}">{{ $part }}</a>/{{ end }}
             </div>
           </header>
           <nav class="terminal-menu">
