@@ -1,18 +1,25 @@
 :PROPERTIES:
 :ID:       342198e5-38ba-4988-a5e3-d752b1ca109b
+:DIR:      ../.attach/reeve-system-2024
 :END:
-#+title: tension lines
+#+title: Reeve setup on a tension line
 
 #+HUGO_SECTION: post
-#+filetags: irata rope-access climbing
+#+filetags: irata rope-access climbing tension-line
 #+hugo_categories: ropes
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-10-01
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "A reeve setup can be used with a tension line to create a system that can lower or raise a load away from the anchor, as well as move it along the tension line."
-#+HUGO_IMAGES[]: 
+#+hugo_bundle: reeve-setup
+#+export_file_name: index
 
+I made a rope system for lifting and transporting 200kg down a slope on the north coast of Sealand. This is a deep dive into reeves.
 
-* Reeve systems :ATTACH:
+# IT actually works!! Now the image just need to be styled better and clicking the img on the front page should redirect to the post
+# #+CAPTION: Example of a Norwegian reeve used to transport material down a slope
+# [[attachment:IMG20241008144344.jpg]]
+
+#+HUGO: more
+
 #+begin_quote
 reeve, verb
 
@@ -23,7 +30,8 @@ A reeve setup can be used with a tension line to create a system that can lower 
 
 #+CAPTION: Example of a Norwegian reeve used to transport material down a slope
 [[attachment:IMG20241008144344.jpg]]
-** Norwegian reeve
+
+* Norwegian reeve
 The Norwegian reeve is a simpler system, where the control line is terminated at the rigging hardware connected to the tension line.
 The system can only be operated from one side.
 
@@ -35,7 +43,7 @@ In the following diagrams
 But an Norwegian reeve system is not always able to move down along the inclined tension line when the control line is attached at the high anchor.
 It depends on the angle between the control- and tension line, which we will look into below.
 
-*** No mechanical advantage / ie. not a reeve system :ATTACH:
+** No mechanical advantage / ie. not a reeve system :ATTACH:
 
 If the load is light, one might be tempted to use a non-reeved, ie. 1:1, system as shown below
 
@@ -139,16 +147,16 @@ plot [0:90] x - (pi/2-x*pi/180)*180/pi
 
 
 #+begin_quote
-        The more inclined the tension line is, the smaller the angle between the control rope and the tension line has to be in order for the carriage to be able to move downwards.
+The more inclined the tension line is, the smaller the angle between the control rope and the tension line has to be in order for the carriage to be able to move downwards.
 
-        But, unless the control rope and the tension line runs parallel, no matter the initial θ, as the carriage move downwards the angle between the control rope and the tension line will decrease and at some point the carriage will be unable to move downwards any further.
+But, unless the control rope and the tension line runs parallel, no matter the initial θ, as the carriage move downwards the angle between the control rope and the tension line will decrease and at some point the carriage will be unable to move downwards any further.
 
-        And as seen from fig [[fig:norwegian_reeve1_1_horizontal]], the carriage cannot move downwards if the control- and tension line are parallel(θ=0)
+And as seen from fig [[fig:norwegian_reeve1_1_horizontal]], the carriage cannot move downwards if the control- and tension line are parallel(θ=0)
 #+end_quote
 
 We conclude that a 1:1 system is unusable to move loads down a tension line.
 
-**** Example, φ=π/4=45°
+*** Example, φ=π/4=45°
 
 \begin{align}
 φ=π/4=45°
@@ -158,7 +166,7 @@ We conclude that a 1:1 system is unusable to move loads down a tension line.
 
 i.e. the carriage goes up if \(θ<π/4\), (or above horizontal), as expected from fig [[fig:norwegian_reeve1_1_horizontal]]
 
-**** Limit case, \(φ \to 0\) , ie. horizontal tension line
+*** Limit case, \(φ \to 0\) , ie. horizontal tension line
 The limit case for \(φ \to 0\) (note that θ, the angle of the control rope, does not matter)
 
 \begin{equation}
@@ -168,7 +176,7 @@ The limit case for \(φ \to 0\) (note that θ, the angle of the control rope, do
 
 i.e. whenever there is a load, the carriage will always move towards the pull from the control line(which is left in fig [[fig__not_a_reeve_system]]).
 
-*** 2:1 :ATTACH:
+** 2:1 :ATTACH:
 
 This is the typical reeve setup
 
@@ -253,7 +261,7 @@ plot [0:90] x - acos(1*sin(x*pi/180)) * 180/pi title "1:1" ,\
 #+RESULTS: fig:norwegian_reeve2_1_horizontal
 [[file:img/norwegian_reeve_2_1_control_angl_horizontal.png]]
 
-**** Example, φ=π/12=15°
+*** Example, φ=π/12=15°
 
 Find the the exact value of \( \sin(π/12) \) by using the [[https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Angle_sum_and_difference_identities][trigonometric angle addition formulae]]
 
@@ -279,7 +287,7 @@ Thus for \(φ=π/12=15°\), the angle between the control rope and the tension l
 
 i.e. the carriage goes up if \(θ<59°\), as can also be seen on fig [[fig:norwegian_reeve2_1]]
 
-**** Limit case, \(φ \to 0\) , ie. horizontal tension line
+*** Limit case, \(φ \to 0\) , ie. horizontal tension line
 The limit case for \(φ \to 0\) is equal to the 1:1 system,
 
 \begin{equation}
@@ -288,7 +296,7 @@ The limit case for \(φ \to 0\) is equal to the 1:1 system,
 \end{equation}
 
 i.e. whenever there is a load, the carriage will always move towards the pull from the control line(which is left in fig [[fig__not_a_reeve_system]]).
-** English reeve :ATTACH:
+* English reeve :ATTACH:
 
 A english reeve can be controlled from both sides, i.e. both tag- and reeve lines terminates at the anchors and have to be twice the length of the tension line.
 
@@ -301,7 +309,7 @@ Note that
 #+CAPTION: "Textbook" English reeve. Requires an load attendant minding the reeve prussiks
 [[attachment:english-reeve-drawing.gif]]
 
-*** Rich Delaneys version
+** Rich Delaneys version
 Rich Delaney [[https://www.facebook.com/RichardDelaneyRopeLab/photos/there-are-many-ways-to-construct-an-english-reeve-highlineeach-method-has-advant/1028643871999440/][posted this setup]].
 
 Dual main English Reeve that uses only single pulleys and carabiners.
