@@ -33,3 +33,9 @@ Feeling bored or have time to kill? Here are some famous or interesting hacks
 :END:
 
 - [[https://youtu.be/1JT_lTfK69Q?t=1215][Hacking a Bosten Transit card]]
+
+* Arduino
+** knielsen
+- [[https://knielsen-hq.org/w/arduino-to-the-max-11x11x11-led-cube/][Arduino to the max: 11x11x11 LED cube]] :: This LED-cube pulls a number of tricks to get the most out of just a single normal Arduino Uno. A meager 16 MHz and 2048 bytes of RAM goes a long way with sufficient ingenuity and creativity. Amazing
+- [[https://knielsen-hq.org/w/hacking-a-box-of-240x320-displays-with-the-esp8266/][Hacking a box of 240×320 displays with the ESP8266]] :: Implement 3-wire support for the 4 wire [[https://github.com/Bodmer/TFT_eSPI][TFT_eSPI]] library.
+- [[https://knielsen-hq.org/w/lpbi14042-bicycle-light/][LPBi14042 bicycle light]] :: reverse-engineering of a simp'lish LED light.

@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       a1b57a39-78a7-4fc0-91a3-546a2a349a52
+:DIR:      ~/git/org/.attach/batteries/
 :END:
 #+title: batteries
 
@@ -11,7 +12,12 @@
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-09-26
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about Lithium batteries, connectors and DIY"
+#+hugo_bundle: batteries
+#+export_file_name: index
+
+Notes about Lithium batteries, connectors and DIY
+
+#+hugo: more
 
 How to assemble Lithium batteries, like the nominal e-bike 36V battery in fig. [[fig:10s4p_liion_battery]].
 
@@ -368,7 +374,8 @@ Some prefer to use(ie. would newer build a pack without) [[https://endless-spher
 #+CAPTION: Shoulder short: while trying to prying the nickel bus, the plier broke the pvc sleeve and shorted the cell.
 [[attachment:18650cellShort.webp]]
 
-Some recommended 18650 cells are listed below. Other good cells can be found on [[https://www.e-cigarette-forum.com/blog/moochs-recommended-batteries.7593/][Mooch's recommended batteries]] list.
+Some recommended cells are listed below. Other good cells can be found on [[https://www.e-cigarette-forum.com/blog/moochs-recommended-batteries.7593/][Mooch's recommended batteries]] list.
+*** 18650
 
 #+CAPTION: Recommended high discharge cells
 | Rating (A) | models                            | capacity (mAh) |
@@ -376,6 +383,13 @@ Some recommended 18650 cells are listed below. Other good cells can be found on 
 |         10 | LG MJ1, Samsung 35E, Panasonic GA |           3400 |
 |         15 | 30Q                               |           3000 |
 |         20 | Sony VTC6, LG HG2, Samsung 25R    |                |
+
+*** 21700
+
+| Rating (A) | models             | capacity (mAh) |
+|------------+--------------------+----------------|
+|       14.6 | LG M50LT [[https://www.nkon.nl/en/m50lt.html][link]]      |           4932 |
+|         35 | Samsumg 50S ([[https://www.nkon.nl/en/samsung-inr21700-50s-5000mah-35a.html][link]]) |           5000 |
 
 ** Cell arrangement/holder
 https://e4bike.ru/page/battery-shape-configurator
@@ -744,6 +758,25 @@ Add 3.3K resistors over cell connections on the BMS, to trick it into thinking c
 Cutoff voltage for M12 is around 9.74V(The tool will no longer turn). Set it to 10V to be on the safe side. Most 18650 cells can run down to 2.7V without destroying them, but going so low (ie. 3*2.7V=8.1V) could destroy some cells if they are slightly out of balance.
 * powerbank
 [[https://www.thingiverse.com/thing:6953712][1S8P case]], [[https://www.aliexpress.com/item/1005003384846487.html][LED Dual USB 5V 2.4A Micro/Type-C USB Mobile Power Bank 18650 Charging Module]]
+* Load testing
+** ATORCH
+- [[https://www.aliexpress.com/item/1005001445448822.html][Atorch DL24P 180W]]
+
+Long [[https://www.eevblog.com/forum/testgear/cheezeball-dc-load-dl24p-pump-or-dump/][eevblog.com thread on DL24P]]
+
+Keep the load under 100W or even less with higher voltages.
+To get stable dissipation, use the CC-mode and a power resistor in series to the electronic load.
+If you e.g. use a 50Ω-resistor in series with the load and set the current to 1A with 60V of source voltage, then 50W are dissipated at the resistor and 10W at the MOSFET.
+
+To get a higher load capacity, the [[https://www.aliexpress.com/item/1005004773128494.html][DL24EW]] can be spliced with [[https://www.aliexpress.com/item/1005004536206429.html][DL24MP]] modules. Note there is a purple and black version. Up to [[https://www.reddit.com/r/18650masterrace/comments/1irbyyw/attorch_dl24ew_3000w_load_tester/][3000W]].
+
+#+CAPTION: ATORCH electronic load testers
+[[attachment:atorch_electronic_load_tester.webp]]
+
+
+** Software / data collector
+- [[https://lygte-info.dk/project/TestControllerIntro%20UK.html][lygte-info.dk Test controller]]
+
 * Notes
 
 Paralleling, serialing, balancing, BMS

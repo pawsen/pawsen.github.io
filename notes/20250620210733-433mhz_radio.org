@@ -32,6 +32,12 @@ The garage door has a remote controlled opener.
 stl for [[https://www.thingiverse.com/make:262913][Moxon Antenna Frame (LRS 433MHz)]] and some [[https://qczek.beyondrc.com/lrs-moxon-antenna-v2-tuned/][guy who made it, incl pictures and measurements]]
 - use 8mm wire round the frame. Attach with glue or zip-ties
 [[attachment:moxon_soldering.jpg]]
+* TMPS
+Tire Pressure Monitoring Systems (TPMS) are present on all US automobiles sold as of 2008.
+
+The initial presentation that kicked of the frenzy, [[https://youtu.be/bKqiq2Y43Wg][Jared Boone: Reversing Tire Pressure Monitors with a Software-Defined Radio]]
+- US/Asian cars use 315MHz
+- EU cars use 433MHz
 
 
 
