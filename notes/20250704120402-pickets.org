@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       226eb882-ad05-4b94-b86b-d49e5101f9a1
+:DIR:      ../.attach/pickets
+:END:
+#+title: pickets
+
+#+filetags: irata rope-access climbing
+#+hugo_categories: rope
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-07-04
+#+hugo_bundle: pickets
+#+export_file_name: index
+
+Contrary to my "intuitive" belief, pickets and ice screws holds better when inclined around 20° in the direction of pull. Intuition would say 15°-20° back, that is 105°-110° to the force, which has less holding power.
+
+#+hugo: more
+
+Essentially you want the picket compressing the area in front of it, downward, into to the substance. Away from load direction means that the picket is compressing the material in front of it upward into the air, leading to a failure much earlier. This is of course assuming that your load direction is parallel to the surface.
+
+#+CAPTION: Compression area for pickets. We want it to compress the area downwards.
+[[attachment:picket_compressing_area.jpg]]
+
+
+From [[attachment:Picket Testing Jun19.pdf][pdf with a collection of picket pull test]]
+#+begin_quote
+Pickets have the most favorable bearing and deformation behavior when inclined at 20° to the vertical in the loading direction.
+#+end_quote
+
+The pdf also list these values from a test (without stating the precise angles)
+| Initial Position  | Load (lbs) | Load (kN) |
+|-------------------+------------+-----------|
+| Leaning Back      | 1,350      | 6.00      |
+|                   | 1,690      | 7.52      |
+| Vertical          | 2,400      | 10.68     |
+|                   | 2,130      | 9.47      |
+| Leaning Forward   | 3,480      | 15.48     |
+|                   | 2,410      | 10.72     |
+
+The same is true for snow anchors. Here is [[https://youtu.be/sbRSFdsnb-Q][Presentation on snow anchors]] and collection of [[https://drive.google.com/drive/folders/1lIY2C_y3Pkg_Jy2OeepIqXhvZEMwJaSo][documents on snow anchors]].
+
+A bit related is this comprehensive page on [[http://www.bolt-products.com/Glue-inBoltDesign.htm][Glue In bolts and more]]

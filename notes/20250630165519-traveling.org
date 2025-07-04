@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       f7389a87-45c7-4a41-8d22-8e80ca2ba96b
+:END:
+#+title: traveling
+
+#+hugo_draft: true
+#+HUGO_SECTION: notes
+#+filetags: traveling
+#+hugo_categories: traveling
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-06-30
+#+hugo_bundle: traveling
+#+export_file_name: index
+
+
+* Ferry
+https://www.seat61.com/buy-a-ferry-ticket-online.htm
+
+** stockholm - Turku (Finland)
+- https://booking.tallink.com/?voyageType=ROUTETRIP&ewithVehicle=false&from=sto&to=tur&adults=1&children=0&juniors=0&youths=0&locale=en&country=XZ
+- https://www.sales.vikingline.com/find-trip/timetable/stockholm-turku/
+- [[https://www.sales.vikingline.com/ferry/eng/en/select-ferry/?searchParams=eyJhIjoiT05FIiwiYiI6IjIwMjUtMDctMDQiLCJjIjoiMjAyNS0wNy0xOCIsImQiOiJTVE8iLCJlIjoiVEtVIiwiZiI6IiIsImciOiIiLCJoIjoxLCJpIjpbXSwiaiI6MiwiayI6W10sImwiOmZhbHNlLCJtIjp7IkFEVUxUIjpbXSwiQ0hJTEQiOltdLCJJTkZBTlQiOltdLCJZT1VUSCI6W119LCJuIjp7IkFEVUxUIjpbXSwiQ0hJTEQiOltdLCJJTkZBTlQiOltdLCJZT1VUSCI6W119LCJvIjpmYWxzZSwicCI6eyJjb2RlIjoiTk9ORSIsInF1YW50aXR5IjoxfSwicSI6eyJjb2RlIjoiTk9ORSIsInF1YW50aXR5IjoxfSwiciI6ZmFsc2UsInMiOiJOT05FIiwidCI6IiJ9][sales.vinkingline.com]] - horrible way to do links from vikingline
+- [[https://ssl.directferries.com/ferry/secure/booking_redirect_df.aspx?stdc=DF10COM&grid=0&rfid=224&psgr=1&curr=9&retn=false&rfidr=-1&outd=2025-07-12&outt=9&dfusrpid=762c9886-f3a6-4e45-995e-5ce08df25355&exp-dealfinderVersion=B&exp-moduleVariant=A&exp-bookingVariant=A&rebrand=true][directferries.com]] - could be cheaper to get the ticket through them for some reason
