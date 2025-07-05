@@ -1,41 +1,132 @@
 :PROPERTIES:
 :ID:       9168a2da-73ed-4534-89d0-ede79fe5dc28
-:DIR:      ~/git/org/.attach/line-measurement-tool
+:DIR:      ../.attach/pg-line-measurement-tool
 :END:
-#+title: Line measure tool
+#+title: DIY paraglider line measure tool
 
 #+HUGO_SECTION: post
 #+filetags: paragliding 3d-print
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-06-08
-#+hugo_bundle: line-measurement-tool
+#+hugo_bundle: pg-line-measurement-tool
 #+export_file_name: index
 
-Homemade fixture for adding a fixed tension to the lines of a paraglider and providing a target for measuring the line length with a laser. This is pretty neat.
+Homemade fixture for adding a fixed amount of tension to the lines of a paraglider and providing a target for measuring the line length with a laser. This is pretty neat. The lines need readjustment for proper trim.
 
 #+hugo: more
 
-A paraglider comes with very specific line length from the manufacture. As the glider get used, the lines stretch an uneven amount which can change the flight characteristic (specifically trim) and result in poorer performance.
+A paraglider comes with very specific line length from the manufacture. As the glider get used, the lines might contract(yes, not streach) an uneven amount which can change the flight characteristic (specifically trim) and result in poorer performance.
 Most manufactures recommend to have the glider inspected every 2 years or 100 flight hours at a price of 200-300€.
 
 With this tool we can check the line length, compare with the manufacture values and adjust. It is a /shameless/ homemade copy of the [[https://mountainrideaviation.com/products/paraglider-line-measurement-tool][line measurement tool]]. See the [[https://youtu.be/9Gd_DVSFMJw][video]] for how it works.
 
-Note that professional inspection also check the permeability of the glider fabric.
+#+CAPTION: I made a simple alu-version from a few pieces of scrap and a M5(4.2 mm hole) and M3(2mm hole) tap.
+[[attachment:alu-tool.jpg]]
 
-* Materials
+
+* Build a thing
 Buy this
 
-- 2x [[https://www.aliexpress.com/item/32762038019.html][U Groove nylon wheel with bearing]], 24x5x7mm (OD,ID,thk)
+- 2x [[https://www.aliexpress.com/item/32762038019.html][U Groove nylon wheel with bearing]], =24x5x7mm= (OD,ID,thk)
 - [[https://www.aliexpress.com/item/4000762343261.html][Miniature linear rail slide]]/guide, =MGN 9C= 150mm.
-- Laser distance measurement device with bluetooth
+[[attachment:linear-rail-guide-spec.webp][Specs for the linear rail slide]] and [[attachment:BSU625-24-7K-nylon-wheel.webp][Specs for the nylon wheels]]
 
-#+CAPTION: Specs for the linear rail slide
-[[attachment:linear-rail-guide-spec.webp]]
+Use a Laser distance measurement device(ideally with bluetooth, we could end up doing this many times. [[https://duckduckgo.com/?t=h_&q=leica%20disto%20d2][Leica Disto D2]](or D1 if found second hand) are recommended).
 
-#+CAPTION: Specs for the nylon wheels
-[[attachment:BSU625-24-7K-nylon-wheel.webp]]
+and 3d-print the STL files, use at least 5 perimeters. Any filament should be good. The FreeCAD drawing/stl is [[https://github.com/pawsen/3dmodels/tree/main/paragliding/line-measure-tool][here]].
 
-and 3d-print the STL files. Any filament should be good. The FreeCAD drawings are here.
+#+CAPTION: The 3d-printed version. Printed with to few perimeters; the plate around the pulley buckle
+[[attachment:3d-printed-tool.jpg]]
+
+Instead of reprinting the model, I used the alu version shown above.
 
 * Measuring
+
+1. It is important to know exactly what length to measure. For my BGD magic(and probably yours), the [[https://we-measure.io/file/show/1515/8f9fde/BGD%20-%20Magic-Manual%20EN%20v1.4%20-%20REF%2015985342282adlPiMo1F.pdf][manual states]] (find yours at the [[https://we-measure.io/database]])
+#+begin_quote
+The lengths are measured from the lower surface of the canopy to the inside edge of the maillon connecting them to the risers.
+#+end_quote
+(The lengths we are using are including the risers, ie. from the inside of the riser connection to the carabiner)
+
+2. Know what knot is used to tie the lines to the maillons. Different knots uses different lengths of line, which is used for the simulation/adjustment. See [[https://we-measure.io/manual/loops][loops]].
+
+#+CAPTION: Knots shown in increasing order of line usage
+[[attachment:knots_mailon_line_usage.png]]
+
+
+1. Create a profile on [[https://we-measure.io/]], setup the wing and note down the maillon knots
+
+2. clamp the ting to a table. Set another table/chair where the lines attach to the wing.
+3. The second table is for the laptop and support while using the laser
+4. If using a laser without bluetooth, open a spreadsheet and enter the measurements.
+5. Hold the back of the laser against the wing. Check the measurement against the manufacture data as a validation
+6. Fill and upload the template(can be downloaded from the =impor t= page on we-measure.io's )
+
+(If the orders are reversed in the spreadsheet
+- insert a new column "to the left"
+- enter 1, 2, 3 and fill the rest by dragging
+- Select all the columns, press the menu =data / sort decending=)
+
+7. Follow the workflow, try to get at least relative trim. Surprising to me, line set tends to [[https://youtu.be/4vhv4xI0cNA?t=405][shrink with usage]]. That was also the case for my glider (to to 30mm)
+   The reason for the shrinking are: fiber relaxation(lines are pre-stretched), water absorption and thermal cycling causing contraction of the fiber matrix and UV (for Aramid)
+
+Done!
+
+** pictures
+
+[[https://we-measure.io]] shows the Angle of Incidence(AoI), line deviations from median and how changing loops at the maillons changes these values.
+
+#+CAPTION: Initial measurement showing trim. Notice the AoI difference of around 30mm. Nose is down(A lines shorter than C lines) giving a slower flight speed. Multiple relative offsets are ⪭10mm
+[[attachment:initial_aoi_symmetry.png]]
+
+#+CAPTION: After readjustment. Better trim(within the 10mm limit). Done by shortening all lines except the shortest =AR1=s. This can be seen by the median diff now being -36mm, compared to -16mm before the adjustment.
+[[attachment:after_aoi_symmetry.png]]
+
+I had trouble finding good pictures of the pile hitch and variants. They are easier to tie in the maillon than the corresponding girth hitch'es. I made these. The pile- and double pile hitch are [[https://knots.neocities.org/pilehitch][described here]].
+#+CAPTION: pile hitch
+[[attachment:pile_hitch.jpg]]
+#+CAPTION: pile hitch plus
+[[attachment:pile_hitch_p.jpg]]
+#+CAPTION: double pile hitch
+[[attachment:double_pile_hitch.jpg]]
+
+- Down-trim is a slow and forgiving configuration: extra drag, early stall, but calmer pitch
+- Up-trim is the performance or "race" side: faster, flatter polar, yet higher workload and collapse sensitivity - comparable to flying ¼-bar all the time
+
+The measurement are simple done as
+
+#+CAPTION: Measuring from the inside of the attachment point(the line lengths from https://we-measure.io will most likely say *Riser length included*
+[[attachment:riser_attachemnt_carabiner.jpg]]
+
+#+CAPTION: Measuring from the lower surface of the canopy.
+[[attachment:measuring_lower_surface_canopy.jpg]]
+
+** porosity
+Note that professional inspection also check the permeability of the glider fabric.
+
+It is quite simple, I got my wing tested in Zermatt.
+- using 10 mbar pressure, testing how long it takes 0.25 L of air to pass through the fabric.
+
+Here is the design of the device Bruno had in Zermatt.
+#+begin_example
+[Atmosphere]    <- fabric sample (air can flow through)
+───────┬──────────
+       │ Fabric seal
+       ▼
+  [ Cylinder chamber ]
+       ▼
+   Airtight piston
+       ▼
+     Pulley + weight  ← pulls piston down to create underpressure
+#+end_example
+
+Per EN 926:
+- 10 sec, not usable
+- 20 sec, lower limit for continued usage
+- Test locations: Usually 3–5 samples from the top surface (center, leading edge, trailing edge).
+There is of course [[https://vimeo.com/124682223][DIY Porosity Meter]] out there made with [[https://www.amazon.com/gp/product/B07FVFNW5X][EAI Oil Seal 70mm X 110mm X 10mm]] ([[https://www.paraglidingforum.com/viewtopic.php?p=p624007#p624007][more info]])
+
+Otherwise this [[https://youtu.be/ErRbhevAFw0][PoROTest]] with a flexible cylinder/hose is a smart design. And just fyi,
+\[ ΔP=\frac{mg}{a} \]
+A mass of ~0.8 kg pulling the piston down over a 10 cm diameter creates 10 mbar of underpressure.
