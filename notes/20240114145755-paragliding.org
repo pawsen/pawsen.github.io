@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       a29f1a2c-0649-4029-8ac3-9bcc60c11102
+:DIR:      ../.attach/notes-paragliding
 :END:
 #+title: paragliding
 
@@ -189,14 +190,22 @@ https://www.windeckfalken.de/special/xctracer/handson/main.html
 ** XC planers
 - https://flyxc.app/
 * line check
+See [[id:9168a2da-73ed-4534-89d0-ede79fe5dc28][DIY paraglider line measure tool]].
+
+
 [[https://mountainrideaviation.com/products/paraglider-line-measurement-tool][Paraglider Line Measurement Tool]]: hang a 5kg weight from the carabiner, attach the risers and use a [[https://www.amazon.com/Leica-DISTO-Distance-Measure-Bluetooth/dp/B01M5CW7CT/][bluetooth laser]] to measure the distance from the trim attachment point to the card on the line measurement tool. [[https://youtu.be/9Gd_DVSFMJw][Video of the process]]
 
 #+CAPTION: Paraglider Line Measurement Tool
 [[attachment:IMG-2251.webp]]
 
-
 #+CAPTION: Closeup
 [[attachment:line_measurement_tool_closeup.jpg]]
 
+- [[https://www.instagram.com/easytrim.para/][EasyTrim]], compact 3d printed model
+
+
 The measurements can be entered on the page [[https://we-measure.io][we-measure.io]], where manuals for most wings are found as well.
 See [[https://adnubes.info/en/paraglider-trim-check-with-we-measure/][this guide for using we-measure.io]] that also explains some trim basics.
+* posts
+- [[https://aviation.stackexchange.com/questions/47514/how-do-paraglider-controls-work][How do paraglider controls work?]]
+- [[https://youtu.be/j09ji0o0wTM][How to do a cascade loop?]]
