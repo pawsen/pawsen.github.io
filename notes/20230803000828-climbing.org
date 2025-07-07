@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       81c7c1b3-33ab-40c9-b195-f86bb234c3df
-:DIR:      ../.attach/climbing-notes
+:DIR:      ../.attach/notes-climbing
 :END:
 #+title: climbing
 
