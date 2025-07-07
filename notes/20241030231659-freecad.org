@@ -1,14 +1,19 @@
 :PROPERTIES:
 :ID:       8a517a77-f336-4f67-991c-2906aad3795c
+:DIR:      ../.attach/notes-freecad
 :END:
 #+title: FreeCad
 
-#+filetags: 3d-print
+#+filetags: 3d-print diy
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-03-12
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes for making 3D models in freecad. Only interesting for me"
+#+hugo_bundle: notes-3d-printing
+#+export_file_name: index
 
+Notes for making 3D models in freecad. Only interesting for me
+
+#+hugo: more
 
 Freecad is one of the more popular open source CAD programs. I use it for making simple containers, like the [[id:aed7d0e0-3449-4a9c-a67f-f6d76b1a775e][tilt sensor]], some stuff for rope solo [[id:81c7c1b3-33ab-40c9-b195-f86bb234c3df][climbing]].
 
