@@ -126,12 +126,8 @@ Or use generic TPU profile, fx =flex/AmazonBasic=
 ** PETG
 https://www.amazon.com/Polymaker-PolyLite-Printer-Filament-Packaging/dp/B09ZY56ZCH
 
-*** Drying
-PETG absorbs more moisture than PLA or ABS filament. I
+PETG absorbs more moisture than PLA or ABS filament.
 
-- Food hydrator, https://amzn.to/3FtLqK4 This one will work any circular one with an adjustable temp should do fine. You will have to cut out the grate between the levels to get the spool to fit.
-- CNC Kitchen made a great video on making a dry box from scratch. https://youtu.be/WEFtUKGAd7k I would also recommend drying your filament for 24 hours.
-- get a dryer, https://www.amazon.com/dp/B08C9RZPMN this is the one I use.
 ** drying
 Very comprehensive description at [[https://3dprinting.stackexchange.com/a/1408][se]], including drying temp.
 
@@ -147,8 +143,23 @@ Rule of thumb: Dry in the oven at same temp as the bed.
 | PETG     |      65 | 4-5  |
 | ABS      |      80 | 4-5  |
 
-*** Worlds best dryer
+*** dryers
+- Food hydrator, https://amzn.to/3FtLqK4. This one will work any circular one with an adjustable temp should do fine. You will have to cut out the grate between the levels to get the spool to fit.
+- CNC Kitchen made a video on making a dry box from scratch. https://youtu.be/WEFtUKGAd7k 
+- get a dryer, https://www.amazon.com/dp/B08C9RZPMN 
+- [[https://www.printables.com/model/1004352-heated-filament-dryer-box][DIY ikea box with PTC heater]]
 
+Without fan
+- 140°C at plastic
+- 230°C inside, against metal
+
+
+With fan
+- 120°C against metal
+
+150°C thermo fuse
+
+*** Worlds best dryer
 The [[https://nick-black.com/dankwiki/index.php/A_case_study_in_full-stack_device_development:_the_dankdryer][dankdryer]] is the world's best dryer. At least it is fully [[https://github.com/dankamongmen/dankdryer][open source]]: code, KiCad, openSCAD. Pretty awesome and totally overkill unless you really need engineering matetrials and have a good printer.
 
 * Custom G code
