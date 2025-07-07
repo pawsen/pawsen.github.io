@@ -1,14 +1,19 @@
 :PROPERTIES:
-:ID:       8a517a77-f336-4f67-991c-2906aad3795c
+:ID:       ac508e4a-a523-4515-8fdc-a01282381db7
+:DIR:      ../.attach/notes-3d-print
 :END:
 #+title: 3d printing
 
-#+filetags: 3d-printing diy
+#+filetags: 3d-print diy
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2024-01-20
-#+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes about 3d printing and links to some designs"
+#+hugo_bundle: notes-3d-printing
+#+export_file_name: index
 
+Notes about 3d printing and links to some designs
+
+#+hugo: more
 
 * Increasing model strength
 The strength of a model is mostly defined by the number of perimeters (not infill). If you want to have a stronger print, increase the number of perimeters. That said, infill does help with compression resistance.
@@ -18,16 +23,16 @@ The strength of a model is mostly defined by the number of perimeters (not infil
 [[https://www.printables.com/model/120194-infill-stiffness-demo-test-collection-from-tpu][Infill stiffness demo]], pictures below
 
 #+CAPTION: Infill patters
-[[attachment:_20240120_212856271950264_10222111009867444_8256496233515063002_n.webp]]
+[[attachment:infill_patterns.webp]]
 
 #+CAPTION: Filament usage and print time
-[[attachment:_20240120_212924271961371_10222111009787442_7182615361503010877_n.webp]]
+[[attachment:infill_print_time.webp]]
 
 - The two stiffest ones are cubic and gyroid, but cubic is stiffer and much faster! Printing the same size of infill takes 50% longer with gyroid
 - if you look for filament efficient option, go for adaptive cubic. It’s still quite strong, but very quick and efficient!
 
 From [[https://help.prusa3d.com/article/infill-patterns_177130][prusa documentation]]
-- The Gyroid is our favorite and one of the best infills. It’s one of the few 3D structures that provide great support in every direction.
+- The *Gyroid is our favorite and one of the best infills*. It’s one of the few 3D structures that provide great support in every direction.
 
 * Things
 ** Tools
