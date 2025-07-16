@@ -366,8 +366,314 @@ https://github.com/emacs-evil/evil-collection/blob/master/modes/dired/evil-colle
 | SPC-u I             | Change ls flags; fx add -R to list all subdirs |
 | dired-narrow-regexp | narrow dired to expression                     |
 
-** multiedit
-=R= to select all occurences in visual mode
+
+| Key / Chord | What it does                                   | Under-the-hood command |
+|-------------+------------------------------------------------+------------------------|
+| C-x d       | Open Dirvish (prompt for path)                 | dirvish / dired        |
+| q           | Quit current Dirvish session                   | dirvish-quit           |
+| g or r      | Refresh / revert listing                       | revert-buffer          |
+| n / p (j / k) | Next / previous line (evil or vanilla)       | dired-next/previous    |
+| RET or e    | Visit file / descend into directory            | dired-find-file        |
+| ^           | Go to parent directory                         | dired-up-directory     |
+| TAB         | Expand / collapse subtree                      | dirvish-subtree-toggle |
+| a           | Jump to a “quick-access” entry                 | dirvish-quick-access   |
+| ?           | Pop up Dirvish help / dispatch menu            | dirvish-dispatch       |
+| S           | Sort buffer (time, size, ext, …)               | dirvish-quicksort      |
+| o           | Toggle omit / cycle sort*                      | dired-omit-mode (cfg)  |
+| y …         | Copy file names / paths (sub-menu)             | dirvish-file-info-menu |
+| s …         | Make symlink / hard-link (sub-menu)            | dirvish-symlink…       |
+| M-f / M-b   | Forward / back through Dirvish history         | dirvish-history-…      |
+| M-n         | Live-filter (narrow) current buffer            | dirvish-narrow         |
+| M-t         | Toggle full-frame preview layout               | dirvish-layout-toggle  |
+| M-s         | UI / attributes & layout setup                 | dirvish-setup-menu     |
+| C-c C-e     | Edit names in place (wdired)                   | wdired-change-mode     |
+
+
+DOOM only
+| Key / Chord | What it does (Doom remap)            | Under-the-hood command                      |
+|-------------+--------------------------------------+---------------------------------------------|
+| b           | Quick-access jump menu               | dirvish-quick-access                        |
+| f           | File-info transient                  | dirvish-file-info-menu                      |
+| p           | Yank/copy-paste clipboard            | dirvish-yank                                |
+| F           | Toggle full-frame preview layout     | dirvish-layout-toggle                       |
+| z           | Jump to recent-directory history     | dirvish-history-jump                        |
+| gh / gl     | Subtree-up  ↕  toggle subtree        | dirvish-subtree-up / dirvish-subtree-toggle |
+| h / l       | Up a dir  ↔  visit file (Evil-style) | dired-up-directory / dired-find-file        |
+| [h / ]h     | Back / forward in Dirvish history    | dirvish-history-go-backward / -forward      |
+| [e / ]e     | Next / previous *emerge* group       | dirvish-emerge-next-group / -previous-group |
+| M-m         | Mark-&-actions transient             | dirvish-mark-menu                           |
+| M-e         | Emerge menu (group files view)       | dirvish-emerge-menu                         |
+| C-c C-r     | Asynchronous rsync                   | dirvish-rsync                               |
+| SPC f d     | Open Dirvish, prompt for directory   | (leader) find-directory                     |
+| SPC o -     | Dirvish on current file’s directory  | (leader) dired-jump                         |
+
+
+** From mode help
+
+Not necessarily working in doom/evil
+| Key / Chord                               | Binding                                 |
+|-------------------------------------------+-----------------------------------------|
+| RET                                       | dired-find-file                         |
+| C-o                                       | dired-display-file                      |
+| SPC                                       | dired-next-line                         |
+| !                                         | dired-do-shell-command                  |
+| #                                         | dired-flag-auto-save-files              |
+| $                                         | dired-hide-subdir                       |
+| &                                         | dired-do-async-shell-command            |
+| (                                         | dired-hide-details-mode                 |
+| +                                         | dired-create-directory                  |
+| -                                         | negative-argument                       |
+| .                                         | dired-clean-directory                   |
+| 1 .. 9                                    | digit-argument                          |
+| <                                         | dired-prev-dirline                      |
+| =                                         | dired-diff                              |
+| >                                         | dired-next-dirline                      |
+| ?                                         | dired-summary                           |
+| A                                         | dired-do-find-regexp                    |
+| B                                         | dired-do-byte-compile                   |
+| C                                         | dired-do-copy                           |
+| D                                         | dired-do-delete                         |
+| F                                         | dired-do-find-marked-files              |
+| G                                         | dired-do-chgrp                          |
+| H                                         | dired-do-hardlink                       |
+| I                                         | dired-do-info                           |
+| L                                         | dired-do-load                           |
+| M                                         | dired-do-chmod                          |
+| N                                         | dired-do-man                            |
+| O                                         | dired-do-chown                          |
+| P                                         | dired-do-print                          |
+| Q                                         | dired-do-find-regexp-and-replace        |
+| R                                         | dired-do-rename                         |
+| S                                         | dired-do-symlink                        |
+| T                                         | dired-do-touch                          |
+| U                                         | dired-unmark-all-marks                  |
+| V                                         | dired-do-run-mail                       |
+| W                                         | browse-url-of-dired-file                |
+| X                                         | dired-do-shell-command                  |
+| Y                                         | dired-do-relsymlink                     |
+| Z                                         | dired-do-compress                       |
+| ^                                         | dired-up-directory                      |
+| a                                         | dired-find-alternate-file               |
+| c                                         | dired-do-compress-to                    |
+| d                                         | dired-flag-file-deletion                |
+| e .. f                                    | dired-find-file                         |
+| g                                         | revert-buffer                           |
+| i                                         | dired-maybe-insert-subdir               |
+| j                                         | dired-goto-file                         |
+| k                                         | dired-do-kill-lines                     |
+| l                                         | dired-do-redisplay                      |
+| m                                         | dired-mark                              |
+| n                                         | dired-next-line                         |
+| o                                         | dired-find-file-other-window            |
+| p                                         | dired-previous-line                     |
+| q                                         | quit-window                             |
+| s                                         | dired-sort-toggle-or-edit               |
+| t                                         | dired-toggle-marks                      |
+| u                                         | dired-unmark                            |
+| v                                         | dired-view-file                         |
+| w                                         | dired-copy-filename-as-kill             |
+| x                                         | dired-do-flagged-delete                 |
+| y                                         | dired-show-file-type                    |
+| ~                                         | dired-flag-backup-files                 |
+| DEL                                       | dired-unmark-backward                   |
+| S-SPC                                     | dired-previous-line                     |
+| <follow-link>                             | mouse-face                              |
+| <mouse-2>                                 | dired-mouse-find-file-other-window      |
+| C-c C-e                                   | wdired-change-to-wdired-mode            |
+| C-c C-r                                   | dirvish-rsync                           |
+| C-t C-t                                   | image-dired-dired-toggle-marked-thumbs  |
+| C-t .                                     | image-dired-display-thumb               |
+| C-t a                                     | image-dired-display-thumbs-append       |
+| C-t c                                     | image-dired-dired-comment-files         |
+| C-t d                                     | image-dired-display-thumbs              |
+| C-t e                                     | image-dired-dired-edit-comment-and-tags |
+| C-t f                                     | image-dired-mark-tagged-files           |
+| C-t i                                     | image-dired-dired-display-image         |
+| C-t j                                     | image-dired-jump-thumbnail-buffer       |
+| C-t r                                     | image-dired-delete-tag                  |
+| C-t t                                     | image-dired-tag-files                   |
+| C-t x                                     | image-dired-dired-display-external      |
+| C-M-d                                     | dired-tree-down                         |
+| C-M-n                                     | dired-next-subdir                       |
+| C-M-p                                     | dired-prev-subdir                       |
+| C-M-u                                     | dired-tree-up                           |
+| M-!                                       | dired-smart-shell-command               |
+| M-$                                       | dired-hide-all                          |
+| M-(                                       | dired-mark-sexp                         |
+| M-G                                       | dired-goto-subdir                       |
+| M-{                                       | dired-prev-marked-file                  |
+| M-}                                       | dired-next-marked-file                  |
+| M-DEL                                     | dired-unmark-all-files                  |
+| % &                                       | dired-flag-garbage-files                |
+| % C                                       | dired-do-copy-regexp                    |
+| % H                                       | dired-do-hardlink-regexp                |
+| % R                                       | dired-do-rename-regexp                  |
+| % S                                       | dired-do-symlink-regexp                 |
+| % Y                                       | dired-do-relsymlink-regexp              |
+| % d                                       | dired-flag-files-regexp                 |
+| % g                                       | dired-mark-files-containing-regexp      |
+| % l                                       | dired-downcase                          |
+| % m                                       | dired-mark-files-regexp                 |
+| % r                                       | dired-do-rename-regexp                  |
+| % u                                       | dired-upcase                            |
+| * C-n                                     | dired-next-marked-file                  |
+| * C-p                                     | dired-prev-marked-file                  |
+| * !                                       | dired-unmark-all-marks                  |
+| * %                                       | dired-mark-files-regexp                 |
+| * (                                       | dired-mark-sexp                         |
+| * *                                       | dired-mark-executables                  |
+| * .                                       | dired-mark-extension                    |
+| * /                                       | dired-mark-directories                  |
+| * ?                                       | dired-unmark-all-files                  |
+| * @                                       | dired-mark-symlinks                     |
+| * N                                       | dired-number-of-marked-files            |
+| * O                                       | dired-mark-omitted                      |
+| * c                                       | dired-change-marks                      |
+| * m                                       | dired-mark                              |
+| * s                                       | dired-mark-subdir-files                 |
+| * t                                       | dired-toggle-marks                      |
+| * u                                       | dired-unmark                            |
+| * DEL                                     | dired-unmark-backward                   |
+| : d                                       | epa-dired-do-decrypt                    |
+| : e                                       | epa-dired-do-encrypt                    |
+| : s                                       | epa-dired-do-sign                       |
+| : v                                       | epa-dired-do-verify                     |
+| <normal-state> RET                        | dired-find-file                         |
+| <normal-state> !                          | dired-do-shell-command                  |
+| <normal-state> #                          | dired-flag-auto-save-files              |
+| <normal-state> &                          | dired-do-async-shell-command            |
+| <normal-state> (                          | dired-hide-details-mode                 |
+| <normal-state> +                          | dired-create-directory                  |
+| <normal-state> -                          | dired-up-directory                      |
+| <normal-state> .                          | dired-clean-directory                   |
+| <normal-state> <                          | dired-prev-dirline                      |
+| <normal-state> =                          | dired-diff                              |
+| <normal-state> >                          | dired-next-dirline                      |
+| <normal-state> A                          | dired-do-find-regexp                    |
+| <normal-state> B                          | dired-do-byte-compile                   |
+| <normal-state> C                          | dired-do-copy                           |
+| <normal-state> D                          | dired-do-delete                         |
+| <normal-state> H                          | dired-do-hardlink                       |
+| <normal-state> I                          | dired-maybe-insert-subdir               |
+| <normal-state> J                          | dired-goto-file                         |
+| <normal-state> L                          | dired-do-load                           |
+| <normal-state> M                          | dired-do-chmod                          |
+| <normal-state> O                          | dired-do-chown                          |
+| <normal-state> P                          | dired-do-print                          |
+| <normal-state> Q                          | dired-do-find-regexp-and-replace        |
+| <normal-state> R                          | dired-do-rename                         |
+| <normal-state> S                          | dired-do-symlink                        |
+| <normal-state> T                          | dired-do-touch                          |
+| <normal-state> U                          | dired-unmark-all-marks                  |
+| <normal-state> W                          | browse-url-of-dired-file                |
+| <normal-state> X                          | dired-do-shell-command                  |
+| <normal-state> Y                          | dired-copy-filename-as-kill             |
+| <normal-state> Z                          | dired-do-compress                       |
+| <normal-state> ^                          | dired-up-directory                      |
+| <normal-state> a                          | dired-find-alternate-file               |
+| <normal-state> c                          | dired-do-compress-to                    |
+| <normal-state> d                          | dired-flag-file-deletion                |
+| <normal-state> i                          | dired-toggle-read-only                  |
+| <normal-state> j                          | dired-next-line                         |
+| <normal-state> k                          | dired-previous-line                     |
+| <normal-state> m                          | dired-mark                              |
+| <normal-state> o                          | dired-sort-toggle-or-edit               |
+| <normal-state> q                          | quit-window                             |
+| <normal-state> r                          | dired-do-redisplay                      |
+| <normal-state> t                          | dired-toggle-marks                      |
+| <normal-state> u                          | dired-unmark                            |
+| <normal-state> x                          | dired-do-flagged-delete                 |
+| <normal-state> ~                          | dired-flag-backup-files                 |
+| <normal-state> S-SPC                      | dired-previous-line                     |
+| <normal-state> S-<return>                 | dired-find-file-other-window            |
+| <normal-state> <delete>                   | dired-unmark-backward                   |
+| <normal-state> <follow-link>              | mouse-face                              |
+| <normal-state> <mouse-2>                  | dired-mouse-find-file-other-window      |
+| <remap> <advertised-undo>                 | dired-undo                              |
+| <remap> <next-line>                       | dired-next-line                         |
+| <remap> <previous-line>                   | dired-previous-line                     |
+| <remap> <read-only-mode>                  | dired-toggle-read-only                  |
+| <remap> <undo>                            | dired-undo                              |
+| <remap> <vc-next-action>                  | dired-vc-next-action                    |
+| C-x M-o                                   | dired-omit-mode                         |
+| M-s f C-s                                 | dired-isearch-filenames                 |
+| M-s a C-s                                 | dired-do-isearch                        |
+| <normal-state> ; d                        | epa-dired-do-decrypt                    |
+| <normal-state> ; e                        | epa-dired-do-encrypt                    |
+| <normal-state> ; s                        | epa-dired-do-sign                       |
+| <normal-state> ; v                        | epa-dired-do-verify                     |
+| <normal-state> C-t C-t                    | image-dired-dired-toggle-marked-thumbs  |
+| <normal-state> C-t .                      | image-dired-display-thumb               |
+| <normal-state> C-t a                      | image-dired-display-thumbs-append       |
+| <normal-state> C-t c                      | image-dired-dired-comment-files         |
+| <normal-state> C-t d                      | image-dired-display-thumbs              |
+| <normal-state> C-t e                      | image-dired-dired-edit-comment-and-tags |
+| <normal-state> C-t f                      | image-dired-mark-tagged-files           |
+| <normal-state> C-t i                      | image-dired-dired-display-image         |
+| <normal-state> C-t j                      | image-dired-jump-thumbnail-buffer       |
+| <normal-state> C-t r                      | image-dired-delete-tag                  |
+| <normal-state> C-t t                      | image-dired-tag-files                   |
+| <normal-state> C-t x                      | image-dired-dired-display-external      |
+| <normal-state> <remap> <advertised-undo>  | dired-undo                              |
+| <normal-state> <remap> <next-line>        | dired-next-line                         |
+| <normal-state> <remap> <previous-line>    | dired-previous-line                     |
+| <normal-state> <remap> <read-only-mode>   | dired-toggle-read-only                  |
+| <normal-state> <remap> <toggle-read-only> | dired-toggle-read-only                  |
+| <normal-state> <remap> <undo>             | dired-undo                              |
+| <normal-state> ] ]                        | dired-next-dirline                      |
+| <normal-state> [ [                        | dired-prev-dirline                      |
+| <normal-state> * C-n                      | dired-next-marked-file                  |
+| <normal-state> * C-p                      | dired-prev-marked-file                  |
+| <normal-state> * !                        | dired-unmark-all-marks                  |
+| <normal-state> * %                        | dired-mark-files-regexp                 |
+| <normal-state> * (                        | dired-mark-sexp                         |
+| <normal-state> * *                        | dired-mark-executables                  |
+| <normal-state> * .                        | dired-mark-extension                    |
+| <normal-state> * /                        | dired-mark-directories                  |
+| <normal-state> * ?                        | dired-unmark-all-files                  |
+| <normal-state> * @                        | dired-mark-symlinks                     |
+| <normal-state> * O                        | dired-mark-omitted                      |
+| <normal-state> * c                        | dired-change-marks                      |
+| <normal-state> * m                        | dired-mark                              |
+| <normal-state> * s                        | dired-mark-subdir-files                 |
+| <normal-state> * t                        | dired-toggle-marks                      |
+| <normal-state> * u                        | dired-unmark                            |
+| <normal-state> * <delete>                 | dired-unmark-backward                   |
+| <normal-state> % &                        | dired-flag-garbage-files                |
+| <normal-state> % C                        | dired-do-copy-regexp                    |
+| <normal-state> % H                        | dired-do-hardlink-regexp                |
+| <normal-state> % R                        | dired-do-rename-regexp                  |
+| <normal-state> % S                        | dired-do-symlink-regexp                 |
+| <normal-state> % d                        | dired-flag-files-regexp                 |
+| <normal-state> % g                        | dired-mark-files-containing-regexp      |
+| <normal-state> % l                        | dired-downcase                          |
+| <normal-state> % m                        | dired-mark-files-regexp                 |
+| <normal-state> % r                        | dired-do-rename-regexp                  |
+| <normal-state> % u                        | dired-upcase                            |
+| <normal-state> C-M-d                      | dired-tree-down                         |
+| <normal-state> M-RET                      | dired-display-file                      |
+| <normal-state> C-M-n                      | dired-next-subdir                       |
+| <normal-state> C-M-p                      | dired-prev-subdir                       |
+| <normal-state> C-M-u                      | dired-tree-up                           |
+| <normal-state> M-$                        | dired-hide-all                          |
+| <normal-state> M-{                        | dired-prev-marked-file                  |
+| <normal-state> M-}                        | dired-next-marked-file                  |
+| <normal-state> C-M-?                      | dired-unmark-all-files                  |
+| <normal-state> g $                        | dired-hide-subdir                       |
+| <normal-state> g ?                        | dired-summary                           |
+| <normal-state> g G                        | dired-do-chgrp                          |
+| <normal-state> g O                        | dired-find-file-other-window            |
+| <normal-state> g j                        | dired-next-dirline                      |
+| <normal-state> g k                        | dired-prev-dirline                      |
+| <normal-state> g o                        | dired-view-file                         |
+| <normal-state> g r                        | revert-buffer                           |
+| <normal-state> g y                        | dired-show-file-type                    |
+| <normal-state> Z Q                        | evil-quit                               |
+| <normal-state> Z Z                        | quit-window                             |
+
+
+* multiedit
+=R= to select all occurrences in visual mode
 =M-d= and =M-D= match symbol and next/prev
 =C-M-d= to restore selection
 =RET= to toogle selection
@@ -407,7 +713,7 @@ https://github.com/emacs-evil/evil-collection/blob/master/modes/dired/evil-colle
   :nv "C-p" #'evil-mc-make-and-goto-prev-cursor
   :nv "C-P" #'evil-mc-make-and-goto-first-cursor)
 #+END_SRC
-** company
+* company
 https://github.com/hlissner/doom-emacs/tree/develop/modules/completion/company
 the following insert mode keybinds are available to evil users to access
 specific company backends:
@@ -422,7 +728,7 @@ C-x C-n	Complete next symbol at point
 C-x C-p	Complete previous symbol at point
 C-x C-s	Complete snippet
 C-x s	Complete spelling suggestions
-** tips
+* tips
 =gv= visual restore. Reselect the text
 =gc= comment
 =ea= insert at the end of the word
@@ -433,7 +739,7 @@ with =C-c C-c= and aborted with =C-c C-k= (=ZZ= or =ZQ= for evil)
 =C-w= n: evil-window-map
 ="ayy= This will store the line in register a.
 ="ap= This will put the contents of register a at the cursor.
-** insert mode
+* insert mode
 - =C-w= evil-delete-backward-word
 - C-k evil-insert-digraph( =C-k aa= inserts å)
 - C-r evil-paste-from-register.
