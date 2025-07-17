@@ -1,0 +1,22 @@
+{{/* layouts/shortcodes/gallery.html  – keeps ratio, no Fill error */}}
+
+{{- $id       := (.Get "id")    | default (printf "gallery-%d" now.UnixNano) -}}
+{{- $match    := (.Get "match") | default "*.{jpg,jpeg,png,webp}"           -}}
+{{- $thumbW   := (.Get "thumb") | default 240                               -}}
+
+<div class="pswp-gallery" id="{{ $id }}">
+  {{- range (.Page.Resources.Match $match) -}}
+    {{ $full  := . }}
+    {{ $thumb := .Resize (printf "%dx" $thumbW) }}  {{/* auto height  */}}
+
+    <a href="{{ $full.RelPermalink }}"
+       data-pswp-width="{{ $full.Width }}"
+       data-pswp-height="{{ $full.Height }}">
+      <img loading="lazy"
+           src="{{ $thumb.RelPermalink }}"
+           width="{{ $thumb.Width }}"
+           height="{{ $thumb.Height }}"
+           alt="{{ $full.Name }}">
+    </a>
+  {{- end -}}
+</div>

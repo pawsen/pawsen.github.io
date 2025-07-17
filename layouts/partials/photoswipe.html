@@ -1,0 +1,14 @@
+{{/* Partial: loads CSS + sets up the light-box */}}
+<link rel="stylesheet" href="{{ "css/photoswipe.css" | relURL }}"/>
+<link rel="stylesheet" href="{{ "css/gallery.css" | relURL }}">
+
+<script type="module">
+  import PhotoSwipeLightbox from "{{ "photoswipe/photoswipe-lightbox.esm.js" | relURL }}";
+
+  const lightbox = new PhotoSwipeLightbox({
+      gallery: '.pswp-gallery',      // each gallery gets this class
+      children: 'a',                 // the links we output below
+      pswpModule: () => import('{{ "photoswipe/photoswipe.esm.js" | relURL }}'),
+  });
+  lightbox.init();
+</script>

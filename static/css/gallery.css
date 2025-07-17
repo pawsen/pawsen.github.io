@@ -1,0 +1,33 @@
+/* Custom modifications to photoswipe.css */
+
+/* 1. Arrange the anchors side-by-side */
+.pswp-gallery {
+  display: flex;          /* horizontal row */
+  flex-wrap: wrap;        /* drop to the next line when full  */
+  justify-content: center;   /* centres the row(s)            */
+  gap: 0.75rem;           /* space between thumbs             */
+}
+
+/**********************************************************************/
+/* /* single-line, scrollable strip */                                */
+/* .pswp-gallery {                                                    */
+/*   display: flex;                                                   */
+/*   flex-wrap: nowrap;      /* stay on one line                   */ */
+/*   overflow-x: auto;       /* horizontal scrollbar when needed   */ */
+/*   gap: 0.75rem;                                                    */
+/* }                                                                  */
+/**********************************************************************/
+
+/* 2. Make each thumb a neat tile */
+.pswp-gallery a {
+  display: block;         /* cancel any inherited inline styles */
+  overflow: hidden;       /* keep rounded corners tidy          */
+  border-radius: 4px;
+}
+
+.pswp-gallery img {
+  display: block;         /* remove bottom whitespace gap       */
+  width: 250px;           /* pick a thumb size                  */
+  height: 200px;          /* keep them even                     */
+  object-fit: cover;      /* crop centre without distortion     */
+}
