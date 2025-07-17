@@ -1,0 +1,159 @@
+# -*- ispell-local-dictionary: "da" -*-
+:PROPERTIES:
+:ID:       a1891901-03ee-46f2-9cfc-d330fe3c8e02
+:link-img:   ../.attach/tafraout-2025/boulder*.jpg
+:DIR:      ../.attach/tafraout-2025
+:END:
+#+title: Climbing in tafraout 2025
+
+#+HUGO_SECTION: post
+#+filetags: climbing traveling
+#+hugo_categories: climbing
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-07-16
+#+hugo_bundle: tafraout-2025
+#+export_file_name: index
+
+I went to Tafraout in Morocco to meet a man from the internet for rock climbing. This is a write up I did for the [[https://www.dbkk.dk/][Danish Mountaineering and Climbing Club]].
+
+#+hugo: more
+
+I vinters sagde en af mine venner at jeg var blevet lidt magelig. Det nægtede jeg selvfølgelig, men jeg kunne godt se han havde en pointe og måtte skubbe lidt til mig selv.
+
+Jeg gik på internettet og faldt i snak med Steve, en ældre fyr fra Wales der sagde han var fri i februar og foreslog vi tog til Tafraout i sydmarokko, et sted med tusindvis af traditionelt sikret 200-300m lange ruter.
+
+Det var ikke helt hvad jeg havde håbet på, men måske var jeg bare magelig. Vi aftalte at tage et halvreb med hver, sende et billede af hvad vi havde af trad-udstyr og koordinere.
+
+Efter at have set Steves udstyr fortrød jeg lidt: mest kiler og nogle gamle cams. Jeg har brugt nogle af den type cams før og synes de er ustabile i brede crags; i forhold til moderne cams er de smalle i forhold til højden, hvilket giver følelsen af de kan vælte hvis de f.eks. får et spark efter at være placeret. Men måske var jeg bare magelig.
+
+#+CAPTION: Steves trad gear. Old school og med en vibe af en der ikke klatrer de ruter jeg gerne vil
+[[attachment:steves_trad_gear.jpg]]
+
+
+* Første indtryk
+Jeg landede i Agadir en dag før jeg skulle mødes med Steve i lufthavnen. Jeg ville sove et sted uden for megen larm, tog den første bus ud mod kysten og stod af i en lille by. Fandt et værelse, efterlod mine ting og gik langs stranden.
+
+Efter en time mødte jeg tre der var i gang med at samle kviste til et bål. Jeg var nysgerrig, gik hen og sagde hej
+
+#+CAPTION: Et tilfældigt møde på stranden. Jeg var stadig ikke klar over hvad de var i gang med
+[[attachment:IMG-20250208-WA0019.jpg]]
+
+De havde fået en pose afklip marihuanaplanter fra Ketama, et område i de nordlige Rifbjerge. Ketama er kendt i Marokko for at producere god hash. Jeg har tidligere boet et par uger hos en hashbonde i Ketama, tilfældigvis i den periode hvor hashen "laves".
+
+De store marihuana-planter fældes om efteråret og stilles til tørre. I februar fremstilles hashen ved at de tørrede planter lægges på et fintmasket net spændt stramt ud over en tønde. Planterne dækkes af et stykke stof og trichomers(små hårlingende gevækster på planten der indeholer cannabinoider) opsamles i tønden ved at slå på stoffet, så de slås af planten og falder gennem nettet. Ketama-hash er bare rent trichomers fra marihuanaplanterne der trykkes sammen.
+I de uger hvor hashen fremstilles, genlyder Rif bjergene af trommelyd.
+
+Planterne var altså uden trichomers men blade- og plantedele indeholder stadig små mængder af cannabinoider og de havde en masse. Bladene blev separeret fra kvistene, puttet i en gryde sammen med olie og vand, kogt bålet et par timer for at ekstrahere det lave indhold af primært CBD i bladene.
+
+
+Det er blevet mørkt og de syntes endelig at bryggen har kogt længe nok. Det filtreres gennem et klæde(en syntetisk stofpose; de flød overalt)
+#+CAPTION: Efter at have kogt nogle timer blev væsken filtreret gennem et klæde
+[[attachment:IMG20250208202333.jpg]]
+
+# [[attachment:IMG20250208201603.jpg]]
+Efter flere filtreringer blev væsken hældt på flaske og blandet med tørkager
+
+#+CAPTION: Afkoget blandes med tørkager og er klar til at blive spist
+[[attachment:IMG20250208204744.jpg]]
+
+Efter at have delt blandingen kører de mig tilbage. Jeg kommer ind i bygningen, magter ikke at lukke nogle døre, falder i dyb søvn og vågner frisk med følelsen af at jeg har rystet mageligheden af mig.
+
+* Ksar Rock Guesthouse
+
+Jeg møder Steve i lufthavnen. Han har lejet en bil og vi kører 2.5t syd mod Tafraout. Klatreområdet er delt i to med Jebel El Kest, det højeste lokale bjerg på 2359m og en del af et større quartzite massiv, som skillelinje. Nord for Lkest bor man hos Berbere der driver små hostels, mod syd sandsynligvis i Tafraout, den eneste større by i området med ca 5000 indbyggere.
+
+Vi startede med at bo en uge nord for Lkest ved Ksar Rock guesthouse der drives af Fatima.
+
+#+CAPTION: Fatima uden for Ksar Rock. Fatima er berber, en etnisk befolkningsgruppe der traditionelt bor i bjergrige egne i nordafrika.
+[[attachment:20250214_091110.jpg]]
+
+Fatima laver fælles aftensmad til alle. Steve og jeg deler værelse, prisen incl. aftensmad er 25€ for begge.
+
+#+CAPTION: Fælles aftensmad hos Ksar Rock Guesthouse
+[[attachment:20250212_200451.jpg]]
+
+
+Jeg er spændt på første dag, vi har ikke snakket om hvor svære ruter vi skal klatre. Området er udviklet af briter og graderet [[https://en.wikipedia.org/wiki/Grade_(climbing)#British_system][britisk]], med to graderinger f.eks. E4 6a. Den første er overordnet for hele ruten og den anden gælder den hårdeste sektion. Forholdet mellem de to grader kan bruges til at vurdere hvor /seriøs/ ruten er.
+E4 6a(omkring 7a) er normal for E4, en E4 5c er teknisk nemmere men med højere risiko som løs klippe eller dårlige sikringer mens en E4 6b er sværere men med bedre sikringer.
+
+#+CAPTION: En af de første ruter, E2.
+[[attachment:1000024763.jpg]]
+
+Steve er old school. Hans sele ligner noget der er syet sammen af sikkerhedsseler og han bruger en grisetryne(stich plate) til at sikre med. Jeg har set en grisetryne, en forgænger til ATC, en flad plade med to ovale huller, i "museumssamlingen" i det optiske tårn over B&W. Men aldrig set den brugt og aldrig troet jeg skulle gribes af en, bundet ind med tynde halvreb
+
+#+CAPTION: Steve på vej ned. Bemærk hans måde at afbinde bremsen ved at vikle rebet et par gange rundt om låret og grisetrynen. Jeg overvejede at tvinge ham til at love ikke at gøre det igen, men jeg må respektere folks ret til at gøre ting på egne vilkår.
+[[attachment:20250215_160033.jpg]]
+
+Jeg vil se hvor svære ruter jeg kan klatre. Klippen er solid, sammenlignet med Bohuslän er der ikke crags, så sikringerne er lidt sværere at sætte, til gengæld er klatringen lettere hvis man ikke har god jam-teknik.
+
+#+CAPTION: Typisk quartzite rute. Forholdsvis solid klippe, lister og kanter at hive i og sprækker til sikringer
+[[attachment:20250216_152257.jpg]]
+
+* Syd for Jebel El Kast
+
+Efter en uge nord for Jebel El Kast kører vi til Tafraout. Vi deler igen værelse på et lille Riad i udkanten af byen bestyret af Brahim, en ældre herre der hver morgen møder op ulastelig klædt, insisterer på at vaske vores tøj, snakker fire sprog men desværre ikke engelsk.
+
+#+CAPTION: Steve viser Brahim hvor vi har været i løbet af dagen
+[[attachment:20250218_180342.jpg]]
+
+På hviledage scrambler vi op af lettere ruter. Det er fedt at være effektiv
+
+#+CAPTION: På vej op af Jebel El Kast, hvad Steve kalder "solo style" eller scrambling
+[[attachment:20250219_114820.jpg]]
+
+På en af scrable-turerne møder vi en lille fyr der har en cafe fyldt med ting. Han passer en kat og får et lift tilbage til Tafraout
+
+#+CAPTION: En lille cafe. Fyren gav kaffe og fik til gengæld et lift tilbage til Tafraout
+[[attachment:20250222_170245.jpg]]
+
+Lige omkring Tafraout er klippen granit med riss ruter
+#+CAPTION: Tredje reblængde. De to tidligere reblængder var lodrette
+[[attachment:20250218_151929.jpg]]
+
+Jeg savner quartziten. Der var så få der klatrede ruterne at der ikke var kalk, de lå øde steder og havde en lidt mere eventyrlig stemning
+#+CAPTION: Overhængende lænende crag, E5.
+[[attachment:20250218_154557.jpg]]
+
+
+* På egen hånd
+
+Efter en uge i Tafraout tog Steve videre og han havde bilen. Jeg troede det ville være så nemt at leje et køretøj i Tafraout at jeg slet ikke havde forholdt mig til det. Det gik op for mig at der ikke var nogle udlejningssteder.
+Efter at have spurgt blandt lokale, fik jeg fat på en lille mc, betalte forsikring og kørte afsted. Den manglede både sidespejle og nummerplade, but who cares..
+Jeg mødte politiet ved en vejafspærring efter 5 minutter, de ville have 150dh(15eur) for manglede nummerplade og sidespejle. Jeg nægtede og efter at have siddet i vejkanten i 45 minutter lod de mig køre.
+Dagen efter var jeg hos en baggårdsmekaniker, fik sidespejle og en nummerplade (der dog ikke matchede papirerne. Ham der gav mig den kaldte det for en dekoration; et pragmatisk folkefærd)
+
+#+CAPTION: Montering af sidespejle og nummerplade
+[[attachment:20250225_110441.jpg]]
+
+#+CAPTION: Klar til at køre ud. Bemærk de nye sidespejle.
+[[attachment:IMG-20250225-WA0009.jpg]]
+
+Jeg kører ud til nogle af de ruter jeg ikke fik Steve med op af. Jeg havde forestillet mig at føre nogle af dem reb-solo, rebet bundet fast ved jorden og selvsikret af en grigri.
+
+Men efter at have taget fejl af en klippes orientering, stedet hed Crag K eller "North wall" og jeg troede den var nordvendt. Den viste det sig at være den norlige af to vægge og sydvendt, men nu var jeg investeret og troede jeg kunne klatre et par ruter til trods for at være i direkte sol.
+
+Jeg havde 3d-printet nogle gummi-dimser til at holde rebet fastklemt i slyngerne, så rebets vægt ikke ville få det til at løbe gennem grigri'en. Valgte en E3 til at øve mig på systemet.
+Ruten var tre reblængder. Efter hver reblængde laves et anker, rebet bindes fast, rapeller ned og renser og klatrer op igen toprebs-solo sikret af en MicroTraxion.
+
+Jeg havde undervurderet hvor meget ekstra tid det betød jeg skulle have klatresko på og der ingen steder var at gemme sig for solen. Halvejs oppe er smerten i tæerne intens, det gør mig rasende men alternativet til at fortsætte er at efterlade noget udstyr og rapelle ned, hvilket jeg ikke kan få mig til.
+
+Oppe skal jeg stadig gå en halv time for at komme ned, tilbage til tasken og mine sandaler. Jeg er lykkelig da jeg endelig får skoene af. Min lyst til at føre rebsolo er forduftet.
+
+Jeg kører hjem og køber en kage til Brahim og mig
+
+#+CAPTION: Brahim og jeg, kage og the
+[[attachment:20250225_114243.jpg]]
+
+
+
+* Mingling
+
+Forfatteren til den ene guidebog bor på samme Riad(der er to konkurrence guides). Vi flyver fra Agadir samme dag og dagen inden har han arrangeret fest ved et boulderområde, noget ham og det engelske slæng gør hver uge. Nogle lokale er betalt for at forberede mad, grill og Tagine, folk drikker øl købt i Agadir.
+
+#+begin_export hugo
+{{< gallery match="boulder*.jpg" id="bouldering" >}}
+#+end_export
+
+
+Det er en fin vinterdestination, især hvis man er interesseret i lange let- til middelsvære trad ruter. Der er mange ruter fra VS(4c) til og med E5(7b) og enkelte E6. Der er helt sikkert sværere ruter men de er endnu ikke fundet.
+Det nemmeste er at leje en bil fra Agadir. Fra de forskellige Riads eller guesthouses er der massevis af ruter i kort afstand og det er usandsynligt at møde andre klatre ved klippen. Maden er god og folk er gæstfrie.
