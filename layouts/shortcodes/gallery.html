@@ -4,10 +4,14 @@
 {{- $match    := (.Get "match") | default "*.{jpg,jpeg,png,webp}"           -}}
 {{- $thumbW   := (.Get "thumb") | default 240                               -}}
 
+{{/* Filter for rotating images. */}}
+{{/* When hugo generates a new file via .Resize, the EXIF rotation metadata is missing and the browser shows the raw pixel matrix */}}
+{{- $orient := images.AutoOrient -}}
+
 <div class="pswp-gallery" id="{{ $id }}">
   {{- range (.Page.Resources.Match $match) -}}
-    {{ $full  := . }}
-    {{ $thumb := .Resize (printf "%dx" $thumbW) }}  {{/* auto height  */}}
+    {{ $full  := . | images.Filter $orient }}  {{/* auto-rotate */}}
+    {{ $thumb := $full.Resize (printf "%dx" $thumbW) }}
 
     <a href="{{ $full.RelPermalink }}"
        data-pswp-width="{{ $full.Width }}"
