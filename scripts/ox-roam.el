@@ -93,52 +93,69 @@ See `org-hugo-tag-processing-functions' for more info."
               #'my/ox-hugo-copy-wim-advice))
 
 (defun export-org-roam-files ()
-  "Exports Org-Roam files to Hugo markdown."
+  "Export all Org-Roam files, or a single file if one CLI arg is provided.
+In batch usage:
+  emacs ... --funcall export-org-roam-files            # all
+  emacs ... --funcall export-org-roam-files FILE.org   # single
+
+Example
+  emacs --init-directory .emacs/ --batch --load scripts/ox-roam.el --funcall export-org-roam-files notes/test.org"
   (interactive)
+  (let* ((single (car command-line-args-left))
+         ;; normalize early if present
+         (single (and single (expand-file-name single))))
 
-  ;; These are needed because .dir-locals.el is not loaded in batch mode
-  ;; org-hugo-base-dir should either be absolute or relative to the org-files.
-  ;; Right now it is set to relative to the org-files
-  (setq org-hugo-base-dir "../")
-  (setq org-hugo-section "notes/")
-  ;; dont fail on export if a link is broken, just make it visible in the exported file
-  ;; https://jeffkreeftmeijer.com/org-export-with-broken-links/
-  (setq org-export-with-broken-links 'mark)
+    ;; These are needed because .dir-locals.el is not loaded in batch mode
+    ;; org-hugo-base-dir should either be absolute or relative to the org-files.
+    ;; Right now it is set to relative to the org-files
+    (setq org-hugo-base-dir "../")
+    (setq org-hugo-section "notes/")
+    ;; dont fail on export if a link is broken, just make it visible in the exported file
+    ;; https://jeffkreeftmeijer.com/org-export-with-broken-links/
+    (setq org-export-with-broken-links 'mark)
 
-  ;; extend the list of file extentions that gets copied to the public/ox-hugo dir
-  ;; default is
-  ;; ("jpg" "jpeg" "tiff" "png" "svg" "gif" "bmp" "mp4" "pdf" "odt" "doc" "ppt" "xls"
-  ;; "docx" "pptx" "xlsx")
-  (setq org-hugo-external-file-extensions-allowed-for-copying
-        (append org-hugo-external-file-extensions-allowed-for-copying
-                '("wav" "raw" "epub" "webp" "py" "mp3" "tgz" "stl")))
+    ;; extend the list of file extentions that gets copied to the public/ox-hugo dir
+    ;; default is
+    ;; ("jpg" "jpeg" "tiff" "png" "svg" "gif" "bmp" "mp4" "pdf" "odt" "doc" "ppt" "xls"
+    ;; "docx" "pptx" "xlsx")
+    (setq org-hugo-external-file-extensions-allowed-for-copying
+          (append org-hugo-external-file-extensions-allowed-for-copying
+                  '("wav" "raw" "epub" "webp" "py" "mp3" "tgz" "stl")))
 
-  (message "org-hugo-external-file-extensions-allowed-for-copying are '%s'"
-           org-hugo-external-file-extensions-allowed-for-copying)
+    (message "org-hugo-external-file-extensions-allowed-for-copying are '%s'"
+             org-hugo-external-file-extensions-allowed-for-copying)
 
-  ;; "Sets up org's attachment system."
-  ;; see doom emacs org-attch initialization
-  (setq
-   org-attach-store-link-p 'attached     ; store link after attaching files
-   org-attach-use-inheritance t ; inherit properties from parent nodes
-   org-attach-id-dir (expand-file-name ".attach/" default-directory))
-  ;; no need to set the org-directory
-  ;; (setq-default org-attach-id-dir (expand-file-name ".attach/" org-directory))
+    ;; "Sets up org's attachment system."
+    ;; see doom emacs org-attch initialization
+    (setq
+     org-attach-store-link-p 'attached     ; store link after attaching files
+     org-attach-use-inheritance t ; inherit properties from parent nodes
+     org-attach-id-dir (expand-file-name ".attach/" default-directory))
+    ;; no need to set the org-directory
+    ;; (setq-default org-attach-id-dir (expand-file-name ".attach/" org-directory))
 
-  (message "default-directory is '%s'" default-directory)
-  (message "org-attach-id-dir set to '%s'" org-attach-id-dir)
-  (message "org-hugo-base-dir is '%s'" org-hugo-base-dir)
+    (message "default-directory is '%s'" default-directory)
+    (message "org-attach-id-dir set to '%s'" org-attach-id-dir)
+    (message "org-hugo-base-dir is '%s'" org-hugo-base-dir)
 
-  (let ((org-id-extra-files (directory-files-recursively default-directory "notes")))
-    (dolist (f (append (file-expand-wildcards "org/about.org")
-                       (file-expand-wildcards "org/diary/*.org")
-                       (file-expand-wildcards "org/fleeting/*.org")
-                       (file-expand-wildcards "org/index/*.org")
-                       (file-expand-wildcards "org/literature/*.org")
-                       (file-expand-wildcards "org/permanent/*.org")
-                       (file-expand-wildcards "org/structure/*.org")
-                       (file-expand-wildcards "notes/*.org")
-                       (file-expand-wildcards "org/poem/*.org")
-                       ))
-      (with-current-buffer (find-file f)
-        (org-hugo-export-wim-to-md)))))
+    (let ((org-id-extra-files (directory-files-recursively default-directory "notes")))
+      (if single
+          (progn
+            (unless (file-readable-p single)
+              (error "Single export file not found or unreadable: %s" single))
+            (message "Exporting single file: %s" single)
+            (with-current-buffer (find-file single)
+              (org-hugo-export-wim-to-md)))
+        ;; else: loop all
+        (dolist (f (append
+                    (file-expand-wildcards "org/about.org")
+                    (file-expand-wildcards "org/diary/*.org")
+                    (file-expand-wildcards "org/fleeting/*.org")
+                    (file-expand-wildcards "org/index/*.org")
+                    (file-expand-wildcards "org/literature/*.org")
+                    (file-expand-wildcards "org/permanent/*.org")
+                    (file-expand-wildcards "org/structure/*.org")
+                    (file-expand-wildcards "notes/*.org")
+                    (file-expand-wildcards "org/poem/*.org")))
+          (with-current-buffer (find-file f)
+            (org-hugo-export-wim-to-md)))))))
