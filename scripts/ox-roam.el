@@ -1,10 +1,14 @@
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-refresh-contents)
 (package-initialize)
-(package-install 'ox-hugo)
-(package-install 'org-roam)
+
+;; Refresh only *if* we have never fetched archive contents this session.
+(unless package-archive-contents
+  (package-refresh-contents))
+(dolist (pkg '(ox-hugo org-roam))
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 
 (require 'ox-hugo)
 (require 'org-roam)
