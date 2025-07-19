@@ -3,19 +3,20 @@
 generate Org-Roam to Markdown:
 
 #+begin_src shell
-emacs --batch --load scripts/ox-roam.el --funcall export-org-roam-files
+emacs --init-directory .emacs/ --batch --load scripts/ox-roam.el --funcall export-org-roam-files
 #+end_src
 
 run Hugo server:
-
 #+begin_src shell
-hugo server
+hugo serve -D --logLevel debug --disableFastRender --destination=tmp/
+#+end_src
+
+Cleanup, deleting all auto-generated .md and html files
+#+begin_src sh
+./nuke
 #+end_src
 
 ** Update theme
 #+begin_src shell :results output none
 git submodule update --remote --recursive
 #+end_src
-** Photo modules
-- https://github.com/mfg92/hugo-shortcode-gallery
-- Something with PhotoSwipe

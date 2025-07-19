@@ -4,9 +4,14 @@
 *.lock
 /resources/
 /content/post/
+/content/notes/
 !/content/about.md
+!/content/search.md
 /public/
 /package-lock.json
 /static/ox-hugo/
 *.ods#
 *.xlsx#
+/.emacs/
+/tmp/
+/node_modules/
