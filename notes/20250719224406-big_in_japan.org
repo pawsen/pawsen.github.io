@@ -1,7 +1,8 @@
 # -*- ispell-local-dictionary: "da" -*-
 :PROPERTIES:
 :ID:       9ec5ffb5-3c37-4ffc-9f37-062b75d2b6ca
-# :link-img:   ../.attach/tafraout-2025/boulder*.jpg
+:DIR:      ../.attach/japan-2023
+:link-img:   ../.attach/japan-2023/yotei_*.jpg
 :END:
 #+title: Big in Japan
 
@@ -10,7 +11,7 @@
 #+hugo_categories: traveling
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2023-04-26
-#+hugo_bundle: japan-2022
+#+hugo_bundle: japan-2023
 #+export_file_name: index
 
 I spent three months on Hokkaido, the northern most island in Japan. I quit my job, this was my story to my colleagues
@@ -18,7 +19,6 @@ I spent three months on Hokkaido, the northern most island in Japan. I quit my j
 #+hugo: more
 
 
-* Indledning
 Kære magenta-folk.
 
 Her er en sidste fortælling fra mig, fra et ansvarsfrit liv uden arbejde i Japan.
@@ -28,7 +28,12 @@ Jeg var på øen Hokkaido i tre måneder. Turister kommer her om vinteren for at
 Jeg har en tjekkisk kammerat jeg kender fra klatring. Han ringede i november og spurgte om jeg ville med til Japan og hjælpe ham med sit ski guide-firma i skisæsonen, der strækker sig over januar og februar. Han lejer et større hus i byen Kutchan hvor der ellers kun bor japanere, får besøg af 12 klienter 10 dage ad gangen der bor i huset. Hver morgen kl 08 bliver de læsset i vans og kørt rundt til hvor der er nyt sne. Jeg fulgte i hælene på dem, lånte udstyr og tog med ud for at stå på ski, mod at jeg lavede morgenmad (og en masse andet, skulle det vise sig). Jeg stod op klokken 05.30 hver dag for at lave morgenmad.
 
 * Mt. Yotei og lavinen
-Min første tur op af Mt Yotei, den lokale vulkan der er dækket af sne og næsten perfekt kegle-formet - dvs vi kan gå med ski til randen (gå fra 300m til 1800m) var en oplevelse. Efter trægrænsen føles det som en isørken. Vinden har blæst al sne af blotlagte flader, så der kun er et islag tilbage og de klipper der stikker op hist og her er indkapslet i is.
+Min første tur op af Mt Yotei, den lokale vulkan der er dækket af sne og næsten perfekt kegle-formet - dvs vi kan gå med ski til randen (gå fra 300m til 1800m) var en oplevelse.
+
+#+CAPTION: Mt Yotei i baggrunden ("mini Mt Fuji").
+[[attachment:yotei.jpg]]
+
+Efter trægrænsen føles det som en isørken. Vinden har blæst al sne af blotlagte flader, så der kun er et islag tilbage og de klipper der stikker op hist og her er indkapslet i is.
 
 Det var den første uge i januar med den første gruppe, så min kammerat og guide på turen ville gerne sikre at alle havde en god oplevelse. Det er svært at stå på ski på islagte skråninger, så på vej ned søgte han væk fra de sikre blotlagte skråninger og vi endte på højre indvendige side af en kløft.
 
@@ -40,58 +45,78 @@ Fordi det var en guidet tur, og jeg er ven med guiden blev vi afhørt af politie
 
 Det var selvfølgelig trist men jeg kendte hende ikke personligt, så jeg ser det mere som en dyr lærestreg. Jeg kunne lige så godt have kørt på ski der hvor hun lavede et sving og satte lavinen i gang. Huset har kun en hukommelse på gruppernes ophold, så da gruppen involveret i lavinen tog hjem, var det som om ulykken var sket i en anden tid.
 
-\#+CAPTION: Begravet under 1.5 m sne. Her bliver hun hentet af helikopteren.
-\[\[file\:IMG\_20230113\_152136.jpg]]
+#+CAPTION: Begravet under 1.5 m sne. Her bliver hun hentet af helikopteren.
+[[attachment:avalanche_heli_rescue.jpg]]
 
-Der var oprindeligt to guider på turen; den ene vendte om tidligt og var ikke med på toppen, og da lavinen ramte. Han blev plaget af skyldfølelse og det satte gang i en mental deroute (tror jeg). Han blev så dårlig at han intet kunne, fik antidepressive piller og måtte hentes hjem af sin kone og blev indlagt på et psykiatrisk hospital. En slovakisk UIAGM guide der for under et år siden var to gange på toppen af Denali (højeste bjerg i Nordamerika). Vi snakkede en del sammen efter hans deroute (de andre tjekkiske "staff" behandlede ham ret dårligt (som et barn)), og det var trist at se ham forvandlet til en opgivende skal. I dag er han heldigvis bedre og jeg håber han får håndteret sine problemer. Jeg glæder mig til at besøge ham i Slovakiet på et tidspunkt.
 
-\#+CAPTION: Toppen af Mt Yotei igen. Total whiteout.
-\[\[file\:WhatsApp\_Image\_2023-03-09\_at\_04.22.52.jpeg]]
+Der var oprindeligt to guider på turen; den ene vendte om tidligt, var ikke med på toppen og senere da lavinen ramte. Han blev plaget af skyldfølelse og det satte gang i en mental deroute (tror jeg). Han blev så dårlig at han intet kunne, fik antidepressive piller og måtte hentes hjem af sin kone og blev indlagt på et psykiatrisk hospital.
+En slovakisk UIAGM guide der for under et år siden var to gange på toppen af Denali (højeste bjerg i Nordamerika). Vi snakkede en del sammen efter hans deroute (de andre tjekkiske "staff" behandlede ham ret dårligt (som et barn)), og det var trist at se ham forvandlet til en opgivende skal. I dag er han heldigvis bedre og jeg håber han får håndteret sine problemer. Jeg glæder mig til at besøge ham i Slovakiet på et tidspunkt.
 
-\#+CAPTION: Mt Yotei i baggrunden ("mini Mt Fuji").
-\[\[file\:yotei.JPG]]
+* På toppen igen
+Der var en anden slovakisk UIAGM guide ansat. Han kom først til Japan efter lavinen og ville gerne til toppen af Yotei. Jeg var stadig frisk og vi tog afsted. Det blæste enormt meget, over trægrænsen var det svært at se noget og vi søgte midlertidlig tilflugt i en bivuakhytte halvvejs oppe.
+
+#+CAPTION: Toppen af Mt Yotei igen. Total whiteout.
+[[attachment:yotei_whiteout.jpg]]
+
+Sneen var blæst væk hvor vi stod på ski, det var svært at køre ned og dreje på den blotlagte is. Slovakken lavede en form hop når han drejede. Det prøvede jeg at eftergøre, men faldt og mens jeg gled ned af skråningen faldt den ene ski.
+
+Ski stopperen blev ikke udløst, skien fortsatte ned af bjerget uden mig og ud af syne. Utroligt så vi senere skien stikkende ud af sneen i samme kløft hvor lavinen blev startet. Lidt paranoid sikrede jeg guiden fra et træ, med et langt tyndt reb vi havde med, mens han skiede ned, fik fat på skien og skiede ud af kløften igen.
+
+#+CAPTION: Touring op af Yotei
+#+begin_export hugo
+{{< gallery match="youtei_*.jpg" id="yotei" >}}
+#+end_export
+
 
 * Skitouring og forår
-Jeg har lært en hel del om skitouring, så det er ret godt. Sæsonen er slut, det er gået fra pulversne til forår, alle guides og klienter tog hjem og jeg havde huset for mig selv den sidste måned. Her er jeg med nogle japanere jeg mødte tilfældigt mens jeg var ude for at "toure". Sneen er dyb. Uden ski ville jeg synke i til hoften.
+Jeg har lært en hel del om skitouring, og det er ret godt. Sæsonen er slut, det er gået fra pulversne til forår, alle guides og klienter tog hjem og jeg havde huset for mig selv den sidste måned.
+Her er jeg med nogle japanere jeg mødte tilfældigt mens jeg var ude for at "toure". Jeg så deres spor og vidste jeg ville indhente dem på et tidspunkt. Som altid var de venlige og lod mig følges, men det lykkedes ikke at få en aftale om senere ture med nogle af de japanere jeg mødte.
 
-\[\[file\:WhatsApp\_Image.jpeg]]
+#+CAPTION: Tilfældige japanere. De var altid venlige og lod mig følge med dem, men de ville ikke mødes til senere ture.
+[[attachment:touring_random_partners.jpg]]
 
-Jeg tager nogle forårsturer alene. Sneen er stabil, solen skinner og jeg ville lave en travers fra Niseko til det japanske hav. En travers betyder her at krydse alle bjerge/toppe på min vej. En slags haute route i Japan.
+Jeg tager forårsturer alene. Sneen er stabil, solen skinner og jeg ville lave en travers fra Niseko til det japanske hav. En travers betyder her at krydse alle bjerge/toppe på min vej. [[https://hokkaidowilds.org/ski-touring/niseko-haute-route][Niseko Haute Route]]
 
-[[https://hokkaidowilds.org/ski-touring/niseko-haute-route][Niseko Haute Route]]
+#+CAPTION: Ruten fra Niseko til havet.
+[[attachment:annupuri_haute_route.jpg]]
 
-\[\[file\:traversing-annupuri-16-map.jpg]]
+Undervejs fik jeg den ide at jeg sikkert også kunne gå tilbage igen. Jeg havde en pandelampe og tænkte det nok skulle gå. Min makker var glad da vi nåede havet og tog bussen tilbage.
 
-Undervejs fik jeg den ide at jeg sikkert også kunne gå tilbage igen. Jeg havde en pandelampe, så jeg tænkte det nok skulle gå. Min makker var glad da vi nåede havet og tog bussen tilbage.
+#+CAPTION: Sidste top inden det begynder at gå nedad mod havet.
+[[attachment:travers1.jpg]]
 
-\#+CAPTION: Sidste top inden det begynder at gå nedad mod havet.
-\[\[file:336062756\_736925784705630\_7177154585889314445\_n.jpg]]
-
-\#+CAPTION: 300 m højde – sneen sluttede og vi måtte gå.
-\[\[file:336153493\_209434198370631\_7279002004949428175\_n.jpg]]
+#+CAPTION: 300 m højde – sneen sluttede og vi måtte gå.
+[[attachment:travers2.jpg]]
 
 Jeg havde sat kl 13 som seneste tidspunkt til at starte tilbageturen. Men vi var forsinket og jeg kom først fra stranden kl 16.
 
-\[\[file:336158949\_1187110445155943\_7888453275509253099\_n.jpg]]
+#+CAPTION: Næsten ved stranden. Den første hvide top på tilbageturen kan lige ses i baggrunden. Der var 2000m højdeforskel og jeg nåede toppen lige som solen gik ned.
+[[attachment:travers3.jpg]]
 
-Den første top på tilbageturen kan lige ses i baggrunden. Der var 2000 m højdeforskel og som jeg nåede toppen gik solen ned.
+#+CAPTION: På vej mod første top på tilbageturen. Solen er ved at gå ned over havet.
+[[attachment:travers4.jpg]]
 
-\[\[file\:DSC\_0078.JPG]]
+Solen på vej ned over havet. Det gik op for mig at der stadig var ret langt hjem. Jeg har nogle "skins" klæbet under skiene så jeg kan gå opad. Når solen skinner, smelter lidt af sneen og skins'ne bliver våde. Da solen gik ned og det blev koldt, holdt limen op med at klæbe pga. fugten så jeg tapede dem fast. Tapen gjorde at skiene ikke rigtig gled og jeg måtte løfte dem ved hvert skridt. Det lærte jeg noget af. F.eks. det er surt når ens skins falder af - og tape ødelægger evnen til at glide.
 
-Solen på vej ned over havet. Det gik op for mig at der stadig var ret langt hjem. Jeg har nogle "skins" klæbet under skiene så jeg kan gå opad. Når solen skinner, smelter lidt af sneen og skins'ne bliver våde. Da solen gik ned og det blev koldt, holdt limen op med at klæbe pga. fugten så jeg tapede dem fast. Det betød at skiene ikke rigtig gled og jeg måtte løfte dem ved hvert skridt. Det lærte jeg noget af. Fx, det er surt når ens skins falder af - og tape ødelægger evnen til at glide.
+#+CAPTION: Skins'ne blev våde i løbet af dagen i den bløde sne. Da solen gik ned og det blev koldt, klæbede limen ikke længere og jeg var nød til at tape dem fast.
+[[attachment:ski_gaffa.jpg]]
 
 Jeg lærte også at det ikke var helt så romantisk og hyggeligt som jeg havde forestillet mig, dels fordi månen ikke var fremme og det blæste. Det var aldrig farligt, mere ukomfortabelt og jeg var ret glad da jeg nåede frem til bilen ved midnat. Vi forlod bilen 05.40.
 
-\[\[file:336257236\_770401457976116\_7999993091903877652\_n.jpg]]
 
 * Bilen og små eventyr
-Her er min bil. En dødsfælde. Den har airbag, hvilket fik mig til at smile. Så hvis jeg kører ind i noget brækker jeg nok ikke næsen. Til gengæld bliver mine ben klippet af. Jeg havde lejet den af en der er kendt af de lokale som Dodgy Yoshi.
+Jeg mistede mit internationale kørekort mens jeg ude på ski. Jeg kunne ikke leje en bil ved de officielle udlejningsfirmaer uden dette, så jeg søgte rundt efter alternativer.
 
-\[\[file\:WhatsApp\_Image\_2023-03-09\_at\_04.14.46.jpeg]]
+Her er min bil. En dødsfælde. Den har airbag, hvilket fik mig til at smile. Så hvis jeg kører ind i noget brækker jeg nok ikke næsen. Til gengæld bliver mine ben klippet af. Jeg havde lejet den af en der er kendt af de lokale som =Dodgy Yoshi=.
+
+
+#+CAPTION: En K-car. Der var rusthuller gennem bunden af bilen. Når jeg flyttede måtten under pedalerne kunne jeg se asfalten.
+[[attachment:car_rusty.jpg]]
 
 Min første blaffer, samme dag jeg fik bilen. Eller han ville tage bussen og jeg spurgte om han ikke hellere ville med mig. Japansk mand på 87 år.
 
-\[\[file\:DSC\_0001.JPG]]
+#+CAPTION: Gammel japansk blaffer
+[[attachment:car_old_hitchhiker.jpg]]
 
 Bilen havde et dårligt batteri. En dag kom jeg tilbage til bilen, med våde sokker og egentlig bare gerne ville hjem, og så at højre styrepind stadig stod på "lys tændt", var jeg klar over at batteriet var fladt.
 
