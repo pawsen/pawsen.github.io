@@ -1,40 +1,56 @@
 {{ define "main" }}
 
-<h1>About</h1>
+<!--
+  • title left / date right
+  • summary fills all space until the thumb
+  • thumb priority: Params.image → first image resource → none
+  • mobile ≤750 px stacks vertically
+-->
 
-<p>My notes about things that at some point occupied me.  <a href="about/">(more)</a></p>
-<p><a href="post/">post</a> are blog-style notes and <a href="notes/">notes</a> are unordered notes</p>
-<br/>
+<h1>About</h1>
+<p>My notes about things that at some point occupied me. <a href="/about/">(more)</a></p>
+<p><a href="/post/">posts</a> are blog‑style notes &amp; <a href="/notes/">notes</a> are unordered snippets.</p>
 
 <h1>Latest posts</h1>
 
-<div class="posts-list">
-{{ with .Site.GetPage "/post" }}
-    {{ range first 30 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="post">
-            <p>
-                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-        </div>
-    {{ end }}
-{{ end }}
-</div>
+<style>
+  .post{display:flex;gap:1rem;margin-bottom:1.5rem}
+  .content{flex:1 1 auto;min-width:0}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.25rem}
+  .meta h2{margin:0;font-size:1.1rem;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .meta time{white-space:nowrap;font-size:.9rem;opacity:.7}
+  .thumb{flex:0 0 220px;max-width:220px}
+  .thumb img{width:100%;border-radius:4px}
+  @media(max-width:750px){.post{flex-direction:column}.meta h2{white-space:normal}.thumb{max-width:100%}}
+</style>
 
-<!-- <h1>Latest photos</h1>
-<div class="image-grid">
-{{ with .Site.GetPage "/photos" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
-        {{ $image := .Page.Resources.GetMatch .Params.image }}
-        {{ with $image }}
-            {{ $thumb := .Resize "400x" }}
-            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
-        {{end}}
-        </a>
+{{ $posts := first 30 (where .Site.RegularPages "Section" "post") }}
+
+{{ range $posts }}
+  {{/* ---------- choose thumbnail ---------- */}}
+  {{ $thumb := "" }}
+  {{ if .Params.image }}
+    {{ with .Resources.GetMatch .Params.image }}
+      {{ $thumb = (.Resize "400x").RelPermalink }}
+    {{ else }}
+      {{ $thumb = .Params.image }}  {{/* external or static path */}}
     {{ end }}
+  {{ else if gt (len (.Resources.ByType "image")) 0 }}
+    {{ $thumb = ((index (.Resources.ByType "image" ) 0).Resize "400x").RelPermalink }}
+  {{ end }}
+
+  <article class="post">
+    <div class="content">
+      <header class="meta">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <time>{{ .Date.Format "2006-01-02" }}</time>
+      </header>
+      <p>{{ .Summary | plainify }}</p>
+    </div>
+    {{ if $thumb }}
+      <a class="thumb" href="{{ .RelPermalink }}"><img src="{{ $thumb }}" alt="{{ .Title }}"></a>
+    {{ end }}
+  </article>
 {{ end }}
-</div>
- -->
+
 {{ end }}
