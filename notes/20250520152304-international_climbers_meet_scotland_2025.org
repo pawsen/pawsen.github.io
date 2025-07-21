@@ -7,7 +7,7 @@
 
 #+HUGO_SECTION: post
 #+filetags: climbing traveling SMC run
-#+hugo_categories: climbing
+#+hugo_categories: stories
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-05-20
 #+hugo_bundle: smc-winter-meet-2025

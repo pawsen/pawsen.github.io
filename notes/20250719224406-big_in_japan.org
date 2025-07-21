@@ -8,7 +8,7 @@
 
 #+HUGO_SECTION: post
 #+filetags: skiing climbing traveling
-#+hugo_categories: traveling
+#+hugo_categories: stories
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2023-04-26
 #+hugo_bundle: japan-2023
@@ -67,7 +67,6 @@ Ski stopperen blev ikke udløst, skien fortsatte ned af bjerget uden mig og ud a
 {{< gallery match="youtei_*.jpg" id="yotei" >}}
 #+end_export
 
-
 * Skitouring og forår
 Jeg har lært en hel del om skitouring, og det er ret godt. Sæsonen er slut, det er gået fra pulversne til forår, alle guides og klienter tog hjem og jeg havde huset for mig selv den sidste måned.
 Her er jeg med nogle japanere jeg mødte tilfældigt mens jeg var ude for at "toure". Jeg så deres spor og vidste jeg ville indhente dem på et tidspunkt. Som altid var de venlige og lod mig følges, men det lykkedes ikke at få en aftale om senere ture med nogle af de japanere jeg mødte.
@@ -103,14 +102,13 @@ Solen på vej ned over havet. Det gik op for mig at der stadig var ret langt hje
 
 Jeg lærte også at det ikke var helt så romantisk og hyggeligt som jeg havde forestillet mig, dels fordi månen ikke var fremme og det blæste. Det var aldrig farligt, mere ukomfortabelt og jeg var ret glad da jeg nåede frem til bilen ved midnat. Vi forlod bilen 05.40.
 
-
 * Bilen og små eventyr
-Jeg mistede mit internationale kørekort mens jeg ude på ski. Jeg kunne ikke leje en bil ved de officielle udlejningsfirmaer uden dette, så jeg søgte rundt efter alternativer.
+Jeg mistede mit internationale kørekort mens jeg ude på ski(det er bare et papkort der udstedes hos borgerservice for ) Jeg kunne ikke leje en bil ved de officielle udlejningsfirmaer uden dette, så jeg søgte rundt efter alternativer.
 
 Her er min bil. En dødsfælde. Den har airbag, hvilket fik mig til at smile. Så hvis jeg kører ind i noget brækker jeg nok ikke næsen. Til gengæld bliver mine ben klippet af. Jeg havde lejet den af en der er kendt af de lokale som =Dodgy Yoshi=.
 
 
-#+CAPTION: En K-car. Der var rusthuller gennem bunden af bilen. Når jeg flyttede måtten under pedalerne kunne jeg se asfalten.
+#+CAPTION: En K-car. Motoren ligger bagi. Der var rusthuller gennem bunden af bilen. Når jeg flyttede måtten under pedalerne kunne jeg se asfalten.
 [[attachment:car_rusty.jpg]]
 
 Min første blaffer, samme dag jeg fik bilen. Eller han ville tage bussen og jeg spurgte om han ikke hellere ville med mig. Japansk mand på 87 år.
@@ -118,46 +116,39 @@ Min første blaffer, samme dag jeg fik bilen. Eller han ville tage bussen og jeg
 #+CAPTION: Gammel japansk blaffer
 [[attachment:car_old_hitchhiker.jpg]]
 
-Bilen havde et dårligt batteri. En dag kom jeg tilbage til bilen, med våde sokker og egentlig bare gerne ville hjem, og så at højre styrepind stadig stod på "lys tændt", var jeg klar over at batteriet var fladt.
+Bilen havde et dårligt batteri. En dag kom jeg tilbage til bilen, med våde sokker og egentlig bare gerne ville hjem. Da jeg bemærkede at højre styrepind stadig stod på "lys tændt", var jeg klar over at batteriet var fladt.
 
 Jeg prøvede først at skubbe rundt med bilen alene, få den lidt i fart, hoppe ind, sætte den i 2. gear og se om den ville starte. Men jeg kunne ikke skubbe den hurtigt nok. Heldigvis kom der først en lastbil og dernæst en motorcykel ind hvor jeg holdt. Jeg fik dem til at hjælpe med at skubbe (jeg stillede mig foran deres køretøjer, så de var klar over at der ikke var anden mulighed... :)). Men der var stadig ikke nok fart i bilen.
 
-Så fik vi den ide at lastbilen kunne trække den i gang. Jeg holdt ved havet, og efter et par minutters søgen på stranden fandt jeg et reb. Desværre var det stadig ikke muligt at trække bilen i gang, vi tog ellers et par omgange.
+Så fik jeg den ide at lastbilen kunne trække den i gang. Jeg holdt ved havet og efter et par minutters søgen på stranden fandt jeg et reb. Men selv mens bilen trukket rundt i gear, kunne jeg ikke få motoren til at starte. Vi tog ellers et par omgange. Jeg forstår stadig ikke, hvorfor det ikke virkede.
 
-\[\[file\:WhatsApp\_Image\_2023-03-28\_at\_02.22.53.jpeg]]
-\[\[file\:WhatsApp\_Image\_2023-03-28\_at\_02.22.53(1).jpeg]]
+#+CAPTION: Vi binder min bil efter lastbilen. Jeg fandt rebet som vraggods på stranden
+[[attachment:car_towing1.jpg]]
+
+#+CAPTION: Selv efter flere omgange på pladsen kunne jeg ikke få bilen igang.
+[[attachment:car_towing2.jpg]]
 
 Jeg tænkte batteriet var fuldstændig drænet, bilen havde brug for lidt strøm og kunne se at vi ikke ville få den startet. Mine hjælpere forsvandt ret hurtigt, men heldigvis kom endnu en lastbil. Han havde heller ikke startkabler men indvilligede i at køre mig til nærmeste by (8 km), hvor vi fandt en mekaniker. Han ville have nogle penge for at hjælpe mig, men det var ikke noget problem. For jeg vidste at jeg havde 30.000 yen (1500 dkk) i kontanter. Desværre var de ikke i min pung og da jeg smilende åbnede den og sagde intet problem, grinede de da de så jeg havde hvad svarer til 50 kr.
 
-Heldigvis har de humor og det er bedre at grine af absurde situationer. Nå, jeg hiver lidt i hans ærme, nogle andre blander sig og til sidst peger han på sin bil, jeg hopper ind og vi kører tilbage til min. Det tager et øjeblik, kablerne er forbundet og min bil starter. Således kører jeg smilende hjem. Med våde tæer, lidt forundret over det ikke lykkedes at trække bilen i gang og spændt på hvor mange gange jeg vil glemme at slukke for lyset (tre gange. Rimelig dumt).
+Heldigvis har de humor og det er bedre at grine af absurde situationer. Nå, jeg hiver lidt i hans ærme, nogle andre blander sig og til sidst peger han på sin bil, jeg hopper ind og vi kører tilbage til min. Det tager et øjeblik, kablerne er forbundet og min bil starter. Jeg kører smilende hjem. Med våde tæer, lidt forundret over det ikke lykkedes at trække bilen i gang og spændt på hvor mange gange jeg vil glemme at slukke for lyset (tre gange. Rimelig dumt).
 
-\[\[file\:WhatsApp\_Image\_2023-03-28\_at\_02.26.56.jpeg]]
+#+CAPTION: Jeg fik hjælp af en mekaniker. Han gav mig et lift til bilen og vi fik den startet
+[[attachment:car_jumpstart.jpg]]
 
+* Videoer
 Sidst, en video af mig der prøver at køre over en "pillow" (busk dækket af sne) for første gang. Tilbage i januar, totalt begynder.
 
-\#+CAPTION: Video (WhatsApp 2023-03-10).
-\[\[file\:WhatsApp\_Video\_2023-03-10\_at\_03.04.00.mp4]]
-\#+CAPTION: Video (17. marts 2023).
-\[\[file\:VIDEO-2023-03-17-08-09-11.mp4]]
+#+attr_html: :controls t :class video-container
+#+begin_video
+<source src="pillow_jump.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+end_video
+([[attachment:pillow_jump.mp4][Mit første pillow jump]])
 
-* Tilbage i Danmark
-Jeg er nu tilbage i Danmark.
-
-Jeg har fået eftergivet hele min gæld på 250.000 dkk af DFIM. Det startede med en artikel i TV2 Syd om en mand der havde haft en gammel motorcykel i laden og nu skyldte ca 250.000. Artiklen fik nogle politikere til at kommentere på sagen, der kom yderligere nogle artikler og manden endte med at få eftergivet sin gæld.
-
-Jeg ringede til DFIM og ville have samme ordning. Det blev til at jeg skulle dokumentere at jeg var i Belgien da loven trådte i kraft, jeg skilte motorcykel totalt ad og sendte dem billederne inden jeg tog til Japan. En måned efter fik jeg at vide at min gæld også var eftergivet. De fleste andre har fået deres gæld reduceret til en ny maksgrænse på 25.000 dkk.
-
-Jeg har spurgt mange om hvad jeg skulle gøre. DFM sagde afdragsordning. Morten er den eneste der sagde jeg ikke skulle erklære mig skyldig. Det gjorde jeg selvfølgelig ikke og det er så endt med jeg ikke skal betale. Men jeg er stadig forundret over at man bare kan få en indkaldelse på 250.000 til fogedretten, som en popup i e-boks, uden at nogen myndighedsperson tænker der er sket en fejl. Først når journalister tager sagen op, sker der noget.
-
-Jeg er nu i Danmark. Jeg har søgt et arbejde. Hvis jeg får det, skal jeg spare nogle penge op og flytte til et land uden e-boks og med bjerge.
-
-Jeg håber I får en rigtig god sommer. Jeg tager til Sverige, til fødselsdag for Göteborgs klippe-klatreklub på fredag.
-
-Mange hilsner,
-Paw
-
-* PS
-Den første gruppe i Japan lavede en video med mig.
-
-* Metadata / Importnote
-Denne fil er konverteret fra en multipart e-mail til Org-mode. Vedhæftede billeder og videoer refereres som lokale filer med deres oprindelige (let normaliserede) filnavne. Sørg for at placere filerne i samme mappe som denne *.org* fil for at få inline-visning i Emacs (se =org-display-inline-images=).
+Den første gruppe vi havde lavede en video med mig.
+#+attr_html: :controls t :class video-container
+#+begin_video
+<source src="paw_compilation.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+end_video
+([[attachment:paw_compilation.mp4][Den første gruppe lavede en video med mig]])
