@@ -11,7 +11,8 @@
 #+hugo_publishdate: 2024-12-14
 #+hugo_bundle: fe-hacker-academy
 #+export_file_name: index
-#+HUGO_CUSTOM_FRONT_MATTER: :thumbnail hackerannonce.jpg
+#+HUGO_CUSTOM_FRONT_MATTER: :image hackerannonce.jpg
+
 
 FE (Forsvarets Efterretningstjemeste) created a 'hacker school' and hid a challenge in the announcement poster. This is how the challenge can be solved
 

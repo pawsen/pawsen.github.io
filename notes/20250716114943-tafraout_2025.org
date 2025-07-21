@@ -13,6 +13,7 @@
 #+hugo_publishdate: 2025-07-16
 #+hugo_bundle: tafraout-2025
 #+export_file_name: index
+#+HUGO_CUSTOM_FRONT_MATTER: :image faulty_towers__hot_Rats_hvs5a.jpg
 
 I went to Tafraout in Morocco to meet a man from the internet for rock climbing. This is a write up I did for the [[https://www.dbkk.dk/][Danish Mountaineering and Climbing Club]].
 
@@ -146,14 +147,12 @@ Jeg kører hjem og køber en kage til Brahim og mig
 #+CAPTION: Brahim og jeg, kage og the
 [[attachment:20250225_114243.jpg]]
 
-
 * Mingling
 Forfatteren til den ene guidebog bor på samme Riad(der er to konkurrence guides). Vi flyver fra Agadir samme dag og dagen inden har han arrangeret fest ved et boulderområde, noget ham og det engelske slæng gør hver uge. Nogle lokale er betalt for at forberede mad, grill og Tagine, folk drikker øl købt i Agadir.
 
 #+begin_export hugo
 {{< gallery match="boulder*.jpg" id="bouldering" >}}
 #+end_export
-
 
 * HowTo
 Det er en fin vinterdestination, især hvis man er interesseret i lange let- til middelsvære trad ruter i spektakulære omgiver. Ofte er ruterne velsikrede og med god friktion og klippen solid.

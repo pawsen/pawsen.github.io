@@ -12,6 +12,7 @@
 #+hugo_publishdate: 2025-05-20
 #+hugo_bundle: smc-winter-meet-2025
 #+export_file_name: index
+#+HUGO_CUSTOM_FRONT_MATTER: :image img/2025-smc-meet/paw_gargoyle.jpg
 
 # set org-attach folder specifically for this file
 # XXX see :PROPERTIES: at the top of the file instead

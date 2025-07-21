@@ -2,7 +2,7 @@
 :PROPERTIES:
 :ID:       9ec5ffb5-3c37-4ffc-9f37-062b75d2b6ca
 :DIR:      ../.attach/japan-2023
-:link-img:   ../.attach/japan-2023/yotei_*.jpg
+:link-img: ../.attach/japan-2023/yotei_*.jpg
 :END:
 #+title: Big in Japan
 
@@ -13,6 +13,7 @@
 #+hugo_publishdate: 2023-04-26
 #+hugo_bundle: japan-2023
 #+export_file_name: index
+#+HUGO_CUSTOM_FRONT_MATTER: :image touring_random_partners.jpg
 
 I spent three months on Hokkaido, the northern most island in Japan. I quit my job, this was my story to my colleagues
 

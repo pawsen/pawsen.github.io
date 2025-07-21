@@ -11,6 +11,8 @@
 #+hugo_publishdate: 2025-06-08
 #+hugo_bundle: pg-line-measurement-tool
 #+export_file_name: index
+#+HUGO_CUSTOM_FRONT_MATTER: :image alu-tool.jpg
+
 
 Homemade fixture for adding a fixed amount of tension to the lines of a paraglider and providing a target for measuring the line length with a laser. This is pretty neat. The lines need readjustment for proper trim.
 
