@@ -1,6 +1,7 @@
 :PROPERTIES:
 :ID:       9168a2da-73ed-4534-89d0-ede79fe5dc28
 :DIR:      ../.attach/pg-line-measurement-tool
+:link-img:   ../.attach/pg-line-measurement-tool/3d-printed-tool*.jpg
 :END:
 #+title: DIY paraglider line measure tool
 
@@ -38,8 +39,14 @@ Use a Laser distance measurement device(ideally with bluetooth, we could end up 
 
 and 3d-print the STL files, use at least 5 perimeters. Any filament should be good. The FreeCAD drawing/stl is [[https://github.com/pawsen/3dmodels/tree/main/paragliding/line-measure-tool][here]].
 
+
+I printed with to few perimeters; the plate around the pulley buckle
+
 #+CAPTION: The 3d-printed version. Printed with to few perimeters; the plate around the pulley buckle
-[[attachment:3d-printed-tool.jpg]]
+#+begin_export hugo
+{{< gallery match="3d-printed-tool*.jpg" id="3d-tool" >}}
+#+end_export
+
 
 Instead of reprinting the model, I used the alu version shown above.
 
