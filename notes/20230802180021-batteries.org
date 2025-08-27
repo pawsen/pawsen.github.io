@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       a1b57a39-78a7-4fc0-91a3-546a2a349a52
-:DIR:      ~/git/org/.attach/batteries/
+:DIR:      ../.attach/batteries/
 :END:
 #+title: batteries
 
@@ -526,6 +526,7 @@ Recommendations
 [[https://antbms.aliexpress.com/store/1102984145][ANTBMS]], like the 7-16S 80A
 ** JKBMS
 - [[https://www.aliexpress.com/item/1005004233638105.html][JKBMS accessory RS485 CAN Module and LCD Display Adapter USBRJ45]]
+- [[https://www.aliexpress.com/item/1005007345361911.html][B2A8S20P]], 4-8S, 200A, 2A balancing, heating
 ** JBDBMS
 Almost all the cheaper 'smart' bluetooth BMS are a JBD based BMS. The other vendors just add their own things on top. [[https://www.aliexpress.com/item/1005004634019368.html][QUCC]] should be good, but a bit more expensive that barebone JBD.
 
@@ -625,6 +626,10 @@ https://www.facebook.com/groups/215409542709308/permalink/1124136908503229/
 - 200Ah LifePO4, 7s
 - [[*JKBMS][JKBMS + display]]
 - inverter MppSolar 4000W.
+* Pouch cells
+- [[https://youtu.be/01GqOijUC-s][lithium ion NCM prismatic pouch battery build]] ::
+  assembling the cells, creating custom circuit boards, and securing them with rivet nuts.
+-
 
 * tech
 ** Wire batteries in parallel :ATTACH:
@@ -723,7 +728,6 @@ Three types of cell fuse
 ** High frequency
 High frequency inverters are generally more complex on the electronics side but do away with the giant, heavy copper transformer that a low frequency inverter uses.
 
-
 ** Low Frequency
 Uses a giant, heavy copper transformer.
 
@@ -758,6 +762,8 @@ Add 3.3K resistors over cell connections on the BMS, to trick it into thinking c
 Cutoff voltage for M12 is around 9.74V(The tool will no longer turn). Set it to 10V to be on the safe side. Most 18650 cells can run down to 2.7V without destroying them, but going so low (ie. 3*2.7V=8.1V) could destroy some cells if they are slightly out of balance.
 * powerbank
 [[https://www.thingiverse.com/thing:6953712][1S8P case]], [[https://www.aliexpress.com/item/1005003384846487.html][LED Dual USB 5V 2.4A Micro/Type-C USB Mobile Power Bank 18650 Charging Module]]
+* cases
+- [[https://www.alibaba.com/product-detail/YIXIANG-EU-USA-STOCK-48V-280_1601375351894.html][YIXIANG 48V diy box]]
 * Load testing
 ** ATORCH
 - [[https://www.aliexpress.com/item/1005001445448822.html][Atorch DL24P 180W]]

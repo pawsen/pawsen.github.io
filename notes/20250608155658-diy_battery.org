@@ -1,5 +1,9 @@
 :PROPERTIES:
 :ID:       dd356f88-407c-4554-8420-c5f7195ed450
+:DIR:      ../.attach/diy-battery
+:link-img:   ../.attach/diy-battery/*.dwg
+:link-img:   ../.attach/diy-battery/*.stp
+:link-img:   ../.attach/diy-battery/*.pdf
 :END:
 #+title: diy-battery
 
@@ -15,8 +19,7 @@
 # set org-attach folder specifically for this file
 # +PROPERTY: DIR file:img/diy-liion-battery
 
-I made a lithium battery for a bicycle from scratch with a 3d-printed case.
-
+I have assembled several lithium batteries for ebikes. Follow along if you want to try it.
 #+hugo: more
 
 For more details see the notes [[id:a1b57a39-78a7-4fc0-91a3-546a2a349a52][on batteries]] and [[id:b87e63b0-7d21-4cb5-8418-ac5f93551ed7][converting an bike to ebike]].
@@ -37,3 +40,31 @@ For more details see the notes [[id:a1b57a39-78a7-4fc0-91a3-546a2a349a52][on bat
 
 - on/off switch should be on the top to avoid
 - XT60 Female panel mount does not seems to be a good idea for the triangle shape. Better with a discharge cable, sealed with gasket seal (like Flex Seal)
+
+
+* Files
+I wrote the manufacturer([[mailto:sale_08@reention.com][sale_08@reention.com]], [[https://www.reention.com/en/xzdch/yingwuxilie/][reention/down-tube/polly]]) for a cell layout. I got a autodesk files(=dwg=) for the cell holders and =pdf= for the cell layout/nickel strips, both for the =-5= and =-5C= version.
+
+** DP2170-5 (14s4p)
+Layouts
+#+begin_export hugo
+{{< listfiles "*14s4p.pdf" >}}
+#+end_export
+
+Autodesk files
+
+#+CAPTION: Screenshot of one of the dwg files from https://viewer.autodesk.com
+[[attachment:polly-dp2170-5-cell-holders.png]]
+
+#+begin_export hugo
+{{< listfiles "PLA06*.dwg" >}}
+#+end_export
+
+
+** DP2170-5C (13s4p)
+#+begin_export hugo
+{{< listfiles "F20*.pdf" >}}
+#+end_export
+#+begin_export hugo
+{{< listfiles "PLA04*.dwg" >}}
+#+end_export
