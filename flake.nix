@@ -18,6 +18,13 @@
               # go  # for hugo modules
             ];
 
+            shellHook = ''
+            echo "###########"
+            echo "run"
+            echo "emacs --batch --load scripts/ox-roam.el --funcall export-org-roam-files"
+            echo "hugo serve -D --logLevel debug --disableFastRender"
+            echo "###########"
+            '';
           };
         });
       packages = forAllSystems (system: {

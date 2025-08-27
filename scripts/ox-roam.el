@@ -1,7 +1,11 @@
 (require 'package)
 
+;; use my local packages if available
+(setq package-user-dir (expand-file-name "~/.emacs.d/elpa"))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+
+;; Emacs 30 does NOT auto-activate installed packages
+(package-activate-all)
 
 ;; Refresh only *if* we have never fetched archive contents this session.
 (unless package-archive-contents
