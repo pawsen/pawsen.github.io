@@ -1,0 +1,6 @@
+<!-- layouts/shortcodes/listfiles.html -->
+<ul>
+{{ range .Page.Resources.Match (.Get 0) }}
+  <li><a href="{{ .RelPermalink }}">{{ .Name }}</a></li>
+{{ end }}
+</ul>
