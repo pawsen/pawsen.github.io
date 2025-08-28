@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       6e8b9de5-f68a-4106-a25b-0a6ba0b878aa
+:DIR:      ../.attach/garage-door-opener
+:END:
+#+title: garage door opener
+
+#+HUGO_SECTION: post
+#+filetags: it hacking rf
+#+hugo_categories: it
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-08-29
+#+hugo_bundle: garage_door_opener
+#+export_file_name: index
+
+My brother bought a house. I tried to open the garage door without a remote
+
+#+hugo: more
+
+The remote is a ~Genie ACSCTG type 1~, [[https://fcc.report/FCC-ID/B8QACSCT][FCC ID B8QACSCT]], transmitting with a frequency of 390MHz.
+
+[[https://www.semiconductorforu.com/slug-tuned-inductor/][slug tuned inductor]]
+
+12V battery, voltage divider 10㏀x2 10->5V
+200μs pulse width
+
+sigrok-cli, pulseview
+sigrok-cli --driver=ols:conn=/dev/ttyACM1 --config samplerate=20khz --samples 40000 --channels 1
+
+
+https://github.com/pawsen/garage_door_opener/blob/main/readme.org
+
+- [[https://youtu.be/33vbFFFn04k][How semiconductors work]]
+- [[https://youtu.be/DXvAlwMAxiA][How a transistor work]]

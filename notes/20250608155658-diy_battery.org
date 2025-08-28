@@ -53,7 +53,7 @@ Layouts
 
 Autodesk files
 
-#+CAPTION: Screenshot of one of the dwg files from https://viewer.autodesk.com
+#+CAPTION: Screenshot of one of the dwg files, viewed at https://viewer.autodesk.com
 [[attachment:polly-dp2170-5-cell-holders.png]]
 
 #+begin_export hugo

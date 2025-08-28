@@ -1,9 +1,16 @@
 :PROPERTIES:
 :ID:       151c5bb7-60e6-492d-bec2-a82880121c8e
+:DIR:      ../.attach/notes-car
 :END:
 #+title: car
+#+filetags: diy
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-08-29
+#+hugo_bundle: notes-car
+#+export_file_name: index
 
-# #+HUGO_CUSTOM_FRONT_MATTER: :summary "Notes on "
+Notes on cars
+#+hugo: more
 
 * Manuals
 https://workshop-manuals.com/ or for cars before 2014, find alldata (version 10.53) on a torrent site. After 2014, alldata is a online subscription site. It might also be possible to find a torrent of a [[https://haynes.com/][Haynes Manual]] for the car. Or buy a second hand copy on ebay.
@@ -131,10 +138,10 @@ Du kan med begge dokumenter få/købe korttidsnummerplader koster i gebyr 13 Eur
 Jeg kan dog anbefale dig før du køber bilen at få lavet en bindende afgiftsvurdering, så ved du 100% hvad det koster at skifte til DK plader ( automentor koster 500 kr , svar indenfor få timer , bindede 30 dage )
 
 #+CAPTION: Fahrzeugsbrief
-[[attachment:426831180_10228071699010623_7679763049741976987_n.jpg]]
+[[attachment:fahrzeugsbrief.jpg]]
 
 #+CAPTION: Fahrzeugsschein
-[[attachment:426870907_10228071700290655_8568478493588432539_n.jpg]]
+[[attachment:farhzeugsschein.jpg]]
 
 googleoversættelse [[https://www-adac-de.translate.goog/rund-ums-fahrzeug/auto-kaufen-verkaufen/kfz-zulassung/fahrzeugschein/?_x_tr_sl=de&_x_tr_tl=da&_x_tr_hl=da&_x_tr_pto=wapp][Fahrzeugschein]]
 googleoversætelse [[https://www-adac-de.translate.goog/rund-ums-fahrzeug/auto-kaufen-verkaufen/kfz-zulassung/fahrzeugbrief/?_x_tr_sl=de&_x_tr_tl=da&_x_tr_hl=da&_x_tr_pto=wapp][Fahrzeugsbrief]]
@@ -146,7 +153,6 @@ https://www.automentor.dk/vaerd-at-vide/
 Afgift: Find ca 10 tilsvarende biler i DK hos en FORHANDLER med ca samme årgang og kilometer. Tag prisen og multiplicér den med 0,6. Find gennemsnit for alle 10 priser. Det er ca prisen for afgift i DK.
 ** Fiat Ducato
 https://da.wikipedia.org/wiki/Fiat_Ducato
-
 
 
 ** Sprinter
@@ -163,3 +169,11 @@ f.eks.
 
 *** Engine number 651
 Rene siger at du SKAL købe en sprinter med motor nummer 651. Den holder en million km. 646 motor nummer holder kun 300 k så springer de i luften.
+
+* Extra
+** Parking sensor
+https://github.com/rmesnard/sonar_parking/tree/master
+https://www.amazon.fr/gp/product/B00X9UCN8K
+
+https://github.com/FernandoGarcia/ParkingSensor
+https://www.aliexpress.com/item/1005001570169898.html

@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       1c18980a-dc71-4ad7-ac34-d0bb7f5d059a
-:DIR:      ../.attach/433mhz
+:DIR:      ../.attach/notes-433mhz
 :END:
 #+title: 433MHz radio
 
-#+HUGO_SECTION: post
+# #+HUGO_SECTION: post
 #+filetags: it hacking rf
 #+hugo_categories: it
 #+hugo_auto_set_lastmod: t
@@ -12,7 +12,7 @@
 #+hugo_bundle: 433mhz_radio
 #+export_file_name: index
 
-My brother bought a house. I tried to brute-force the wireless garage door open.
+Notes about 433MHz radio
 
 #+hugo: more
 
