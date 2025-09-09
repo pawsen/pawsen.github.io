@@ -367,26 +367,27 @@ https://github.com/emacs-evil/evil-collection/blob/master/modes/dired/evil-colle
 | dired-narrow-regexp | narrow dired to expression                     |
 
 
-| Key / Chord | What it does                                   | Under-the-hood command |
-|-------------+------------------------------------------------+------------------------|
-| C-x d       | Open Dirvish (prompt for path)                 | dirvish / dired        |
-| q           | Quit current Dirvish session                   | dirvish-quit           |
-| g or r      | Refresh / revert listing                       | revert-buffer          |
-| n / p (j / k) | Next / previous line (evil or vanilla)       | dired-next/previous    |
-| RET or e    | Visit file / descend into directory            | dired-find-file        |
-| ^           | Go to parent directory                         | dired-up-directory     |
-| TAB         | Expand / collapse subtree                      | dirvish-subtree-toggle |
-| a           | Jump to a “quick-access” entry                 | dirvish-quick-access   |
-| ?           | Pop up Dirvish help / dispatch menu            | dirvish-dispatch       |
-| S           | Sort buffer (time, size, ext, …)               | dirvish-quicksort      |
-| o           | Toggle omit / cycle sort*                      | dired-omit-mode (cfg)  |
-| y …         | Copy file names / paths (sub-menu)             | dirvish-file-info-menu |
-| s …         | Make symlink / hard-link (sub-menu)            | dirvish-symlink…       |
-| M-f / M-b   | Forward / back through Dirvish history         | dirvish-history-…      |
-| M-n         | Live-filter (narrow) current buffer            | dirvish-narrow         |
-| M-t         | Toggle full-frame preview layout               | dirvish-layout-toggle  |
-| M-s         | UI / attributes & layout setup                 | dirvish-setup-menu     |
-| C-c C-e     | Edit names in place (wdired)                   | wdired-change-mode     |
+| Key / Chord   | What it does                           | Under-the-hood command |
+|---------------+----------------------------------------+------------------------|
+| C-x d         | Open Dirvish (prompt for path)         | dirvish / dired        |
+| q             | Quit current Dirvish session           | dirvish-quit           |
+| g or r        | Refresh / revert listing               | revert-buffer          |
+| n / p (j / k) | Next / previous line (evil or vanilla) | dired-next/previous    |
+| RET or e      | Visit file / descend into directory    | dired-find-file        |
+| ^             | Go to parent directory                 | dired-up-directory     |
+| TAB           | Expand / collapse subtree              | dirvish-subtree-toggle |
+| J             | Find file                              | dired-goto-file        |
+| a             | Jump to a “quick-access” entry         | dirvish-quick-access   |
+| ?             | Pop up Dirvish help / dispatch menu    | dirvish-dispatch       |
+| S             | Sort buffer (time, size, ext, …)       | dirvish-quicksort      |
+| o             | Toggle omit / cycle sort*              | dired-omit-mode (cfg)  |
+| y …           | Copy file names / paths (sub-menu)     | dirvish-file-info-menu |
+| s …           | Make symlink / hard-link (sub-menu)    | dirvish-symlink…       |
+| M-f / M-b     | Forward / back through Dirvish history | dirvish-history-…      |
+| M-n           | Live-filter (narrow) current buffer    | dirvish-narrow         |
+| M-t           | Toggle full-frame preview layout       | dirvish-layout-toggle  |
+| M-s           | UI / attributes & layout setup         | dirvish-setup-menu     |
+| C-c C-e       | Edit names in place (wdired)           | wdired-change-mode     |
 
 
 DOOM only

@@ -4,6 +4,9 @@
 :link-img:   ../.attach/diy-battery/*.dwg
 :link-img:   ../.attach/diy-battery/*.stp
 :link-img:   ../.attach/diy-battery/*.pdf
+:link-img:   ../.attach/diy-battery/*.bd3
+:link-img:   ../.attach/diy-battery/*.jpg
+:link-img:   ../.attach/diy-battery/14s4p_*.png
 :END:
 #+title: diy-battery
 
@@ -11,39 +14,61 @@
 #+filetags: batteries li-ion 3d-print
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
-#+hugo_publishdate: 2025-06-08
-#+hugo_bundle: diy-liion-battery
+#+hugo_publishdate: 2025-08-08
+#+hugo_bundle: diy-battery
 #+export_file_name: index
-#+macro: imgzoom #+attr_html: :link t
-
-# set org-attach folder specifically for this file
-# +PROPERTY: DIR file:img/diy-liion-battery
 
 I have assembled several lithium batteries. For ebikes, usb-c PD powerbanks and larger LiFePO4 for vans. Follow along if you want to try it.
 #+hugo: more
 
 For more details see the notes [[id:a1b57a39-78a7-4fc0-91a3-546a2a349a52][on batteries]] and [[id:b87e63b0-7d21-4cb5-8418-ac5f93551ed7][converting an bike to ebike]].
 * Bikes
-** Electronic parts
-- [[https://www.aliexpress.com/item/1005008726633507.html][DC Power Socket Plug, 5.5*2.5]]
-- [[https://www.aliexpress.com/item/10000006487848.html][Waterproof cap DC099, DC Power Jack]]
-- [[https://www.aliexpress.com/item/1005007327685021.html][JST RCY]] two-wire connectors for connecting on/off switch internally
-- [[https://www.aliexpress.com/item/1005006600952774.html][XT30 plugs]] for connecting the charge port internally
+
+** 14s
+I had some troubles finding a suitable case. I wanted a 52V(14s) battery which for a 14s4p battery is 56 cells. I previously assembled a battery using a [[id:73e43e46-7c36-406f-857a-9c6470ee3891][Polly DP 6]], but that is for 18650 cells and this time I wanted to use 21700 due to the higher capacity.
+
+Initially I thought about [[id:c7277909-5013-4c2a-bdd4-dff9c3ad389d][3d printing a case]] but was unable to find a printer that would fit the whole case and print in ABS.
+Then, from [[https://www.reention.com/en/xzdch/yingwuxilie/][reention.com/down-tube/polly]], I knew there should be a ~Polly DP2170-5~ which fits 56 21700 cells. But searching AliExpress I only found ~Polly DP2170-5C~, which includes space for a controller (hence the *C*) and space for 52 cells (13s4p).
+After much looking I finally found a [[https://ebikestuff.eu/en/e-bike-battery-case/296-downtube-battery-case-for-56-cells-10s-36v-21700-polly-dp-2170-5-dp-5-5904107772240.html][seller]](55€). I wrote them an email, to be sure it was the non-C version and asked for a discount code. They gave me *CYW8PC1A*.
+
+#+CAPTION: Polly DP2170-5, I spent a long time looking for this case
+[[attachment:polly-dp2170-5.png]]
+
+*** Electronic parts
+The case came with cell holders(the plastic spacing), charging port([[https://www.reention.com/en/xzdch/yingwuxilie/220.html][the manufacturer]] says 2.1mm, which is the [[https://en.wikipedia.org/wiki/Coaxial_power_connector#IEC_60130-10][dc barrel 5.5x2.1]]) and charge indicator but nothing else
+
+You need
 - 18awg wire for charging.
-- [[https://www.aliexpress.com/item/1005006727482998.html][round on/off switch]]
-- 12awg wire for discharging, with silicone insulated it should be good for 30A continuous, 60A peak. (14awg is good for 20A)
-- XT60 connector for discharging. Good for 30A cont. 60A peak.
-- [[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm.
+- 12awg wire for discharging, silicone insulated, should be good for 30A continuous, 60A peak. (14awg is good for 20A)
+- XT60 female connector for discharging. Good for 30A cont. 60A peak.
+- [[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm. The BMS has Bluetooth, which is very convenient. I use [[https://play.google.com/store/apps/details?id=com.marchingband.overkillsolar][OverkillSolar]] for checking the state of the battery
+- [[https://www.aliexpress.com/item/1005007083394347.html][Tangspower 58.8V 3A charger]], DC 5.5x2.1 tip (Or [[https://www.aliexpress.com/item/1005004678064524.html][58.8V 4A]])
 
-** Case
+Additionally, to assemble the battery you need
+- 0.2mm thick pure nickel strip on a roll
+- spot welder
+- capton tape for electrical insulation
+- Fish paper for extra insulation under the bms
+- low heat glue for heat gun
 
-- on/off switch should be on the top to avoid
-- XT60 Female panel mount does not seems to be a good idea for the triangle shape. Better with a discharge cable, sealed with gasket seal (like Flex Seal)
+3A charging around 58.8V is probably outside specs for a 5.5x2.1 barrel(wiki says up to 5A, but that is probably for quality connectors). This connector is probably the worst of all the connectors we can buy for the charger
 
-** Files
-I wrote the manufacturer([[mailto:sale_08@reention.com][sale_08@reention.com]], [[https://www.reention.com/en/xzdch/yingwuxilie/][reention/down-tube/polly]]) for a cell layout. I got a autodesk files(=dwg=) for the cell holders and =pdf= for the cell layout/nickel strips, both for the =-5= and =-5C= version.
+*** Cell layout
+:PROPERTIES:
+:ID:       e1bbd719-0205-49c1-ae7f-4fd64c373bfe
+:END:
 
-*** DP2170-5 (14s4p)
+The cell layout, how the parallel and serial groups are connected, is important. The seller was unable to provide a layout so knielsen from the local hackerspace helped me make my own.
+A good layout ideally has the same number of connections in the series connection. This is the connection that carries the current. The current between the cells in one parallel group should only be due to balancing or if one cell is poorer(lower capacity or higher internal resistance).
+
+#+NAME: fig:knielse_layout
+#+CAPTION: The layout. Pink is the negative end; yellow the positive end of a cell. Blue are cells that are connected on one side(the front); green are cells connected on the backside. i.e. green connects 1-2, blue 2->3, ...)
+[[attachment:14s4p_knielsen_drawing.jpg]]
+
+
+This was the most /balanced/ layout we could come up with. Later I wrote the manufacturer([[mailto:sale_08@reention.com][sale_08@reention.com]]) for a cell layout. I got autodesk files(=dwg=) for the cell holders and =pdf= for the cell layout/nickel strips, both for the =-5= and =-5C= version.
+
+**** DP2170-5 (14s4p)
 Layouts
 #+begin_export hugo
 {{< listfiles "*14s4p.pdf" >}}
@@ -58,23 +83,97 @@ Autodesk files
 {{< listfiles "PLA06*.dwg" >}}
 #+end_export
 
-
-*** DP2170-5C (13s4p)
+**** DP2170-5C (13s4p)
 #+begin_export hugo
 {{< listfiles "F20*.pdf" >}}
 #+end_export
 #+begin_export hugo
 {{< listfiles "PLA04*.dwg" >}}
 #+end_export
+
+**** Comparison of layouts
+I recently found a webpage/app called [[https://electronicsworkshawp.com/tools/batteryDesigner3.1.8/batteryDesigner3.1.8.html][batteryDesigner]]. It makes it easier to create cell layouts. I compared knielsen and my layout with the manufactures and a third I found on the batteryDesigner's plugin for sharing designs, [[https://electronicsworkshawp.com/tools/BatteryViewer/BatteryViewer.html][batteryViewer]].
+
+knielsen and mine
+#+begin_export hugo
+{{< gallery match="14s4p_knielsen*.png" id="cell_layouts" >}}
+#+end_export
+
+F27, from manufacturer
+#+begin_export hugo
+{{< gallery match="14s4p_F27*.png" id="cell_layouts" >}}
+#+end_export
+
+Found on batteryViewer
+#+begin_export hugo
+{{< gallery match="14s4p_batteryviewer*.png" id="cell_layouts" >}}
+#+end_export
+
+Even though the one on batteryViewer has a higher consistency(I don't know how it's calculated, maybe total number of series connection divided by cells in series), 69% vs 68%, that is misleading.
+We want all the groups to have the same number of connections, the one from batteryViewer has 1(13->14) the rest 3 or higher. Ours has 3 or higher.
+I terms of balanced connections ours is the best design.
+
+The worst is the manufactures with 1(7->8) and 2(8->9).
+
+Layout files for batteryDesigner, i.e. they can be imported into the app.
+#+begin_export hugo
+{{< listfiles "*.bd3" >}}
+#+end_export
+*** Assembling
+- Using the layout in fig [[fig:knielse_layout]], scaling and mirroring gave templates for both front and back which I printed and cut with a scissor.
+- precut lengths of nickel strips with a scissor. I used three lengths
+- put cells in cell holders, put connection templates on top
+- place strip, spot weld. When doing the other side, shorting cells can be bad. I covered the cells in a tea tower
+  Remember to add taps for the balance wires. Some people prefer to solder the wires to the taps before welding to prevent unnecessary heat transfer.
+- Wrap the battery in capton tape
+- Place the BMS on a piece of fish paper, glue it to the battery.
+- Glue temperature sensor(s) to cells
+- Cut and solder balance wires to cells
+- Check the voltage of each group using the balance wires.
+- Solder on/off button to BMS and "battery negative" to BMS
+- Solder wires from discharge port to capacity indicator and charge port, glue them in place
+- Solder negative wire from BMS and positive from battery to discharge port. Take care to get the length right.
+- Check charging, use the app to see the status of the BMS.
+- If possible, do a full charge/discharge cycle using a DC load to check the capacity is a expected. Maybe you forgot to weld one of the cells? That will remove 1/4 of the total capacity.
+
+The cell layout and spot welding
+#+begin_export hugo
+{{< gallery match="14s4p_cells*.jpg" id="14s40_layout" >}}
+#+end_export
+
+The assembly
+#+begin_export hugo
+{{< gallery match="assembly*.jpg" id="assembly" >}}
+#+end_export
+
+The battery has five pins for connecting to the battery holder(mounted on the bike). I use two pins for negative and three for positive. On the connector part from the holder, a XT60F wrapped in heat shrink and glue, if for connecting to the motor.
+
+#+CAPTION: XT60F between the battery mount and motor
+[[attachment:connector_xt60F.jpg]]
+
+
+*** Mounting on the bike
+
+The battery is supposed to be attached the frame using the screws for water bottles. On one of the bikes the screws and the mounting plate did not fit (a full suspension bike with very limited space for the battery inside the triangle due to the rear suspension)
+
+Instead I took the mounting plate apart - removed the metal part - and cut three holes on each side for pressing a metal strap through. I flattened the strap with a hammer and secured the straps around the bike
+
+#+begin_export hugo
+{{< gallery match="mount_strap*.jpg" id="mounting" >}}
+#+end_export
+
+#+CAPTION: The finished bike. Complete with 14s4p battery and 1000W motor
+[[attachment:bike.jpg]]
+
 * Powerbanks
-** 100W biderction PD with builtin BMS
-*** [[https://www.aliexpress.com/item/1005007792926192.html][MYZL-YD24-2.3]]
+** 100W bidirectional PD
+*** MYZL-YD24-2.3 with builtin BMS
 :PROPERTIES:
 :ID:       162485ee-4a16-43a0-a812-522fa0ad84bd
 :END:
+[[https://www.aliexpress.com/item/1005007792926192.html][MYZL-YD24-2.3]]
 
 This is a 100W bidirectional PD module with built-in BMS for 3-5S.
-- [[https://www.aliexpress.com/item/1005007792926192.html][MYZL-YD24-2.3]]
 
 There is not much information online.
 - One comment said efficiency is around 70-80 % at high current (probably 20V5A PD) for a 4S configuration.
@@ -116,12 +215,26 @@ Resistor ~R18~ sets the function of the button.
 #+CAPTION: Resistor R24 seen on a microscope. Otherwise I couldn't make out the marking
 [[attachment:r24-14c-microscope.jog]]
 
+
+**** testing
+BMS switch off
+- low cell voltage of 3.3V
+- high cell voltage at 4.2V, but cells are not balanced. ::
+  - 0-1: 4.11V
+  - 1-2: 4.13V
+  - 2-3: 4.12V
+  - 3-4: 4.23V
+
+Discharge at 100W heats the inductor to ~77℃
+
+
 *** IP2368 with external BMS
-Another option is to get a [[https://www.aliexpress.com/item/1005003954338954.html][IP2368]] module, also 100W bidirection, but without a bms. This is 4S by default but can be changed by changing ~R7~ (2-6S).
-- Get a 4S20A bms
+Another option is to get a [[https://www.aliexpress.com/item/1005003954338954.html][IP2368]] module, also 100W bidirection but without a bms. This is 4S by default but can be changed by changing ~R7~ (2-6S).
+- Get a 4S 20A bms
 - add a heatsink on the four mosfet
 - optioanlly, extend the leds. Ie. wire and 4 small leds, solder to D1-D4.
 - optionally, move the two capacitors and inductor on the backside to the side, extending with wires, for flush mount
+- [[https://www.aliexpress.com/item/1005009420164605.html][AliExpress seller]]
 See this [[https://youtu.be/QPQXsRYFZLs&t=514][video]].
 
 I would get this module over the [[id:162485ee-4a16-43a0-a812-522fa0ad84bd][WYZL-YD24-2.3]]
@@ -131,6 +244,9 @@ I found an old lead/acid battery and cut off the top with a hacksaw(around where
 
 #+CAPTION: Old lead/acid box with a 4S4P 18650 battery.
 [[attachment:100w-case-4s4p.jpg]]
+** USB-c cables
+[[https://www.aliexpress.com/store/911460067][Anker(AliExpress)]] has a good reputation. There is a comparison of cables from Amazon here:
+https://whatthecable.com/usb-c-cable-finder-choose-the-best-cable-for-your-specs/
 
 
 

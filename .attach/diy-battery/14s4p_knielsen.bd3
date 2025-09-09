@@ -1,0 +1,634 @@
+{
+  "battery": {
+    "gridOptions": {
+      "canvasId": "gridCanvas",
+      "scaler": 2.78,
+      "cellDiameter": 18.5,
+      "cellSpacing": 0.8,
+      "gridType": "hex",
+      "frameMargin": 3,
+      "gridRotation": 0
+    },
+    "currentZoom": 0.6875775466956005,
+    "panOffsetX": 226.3983582364333,
+    "panOffsetY": 648.8121524201648,
+    "batteryOptions": {
+      "cellCapacity": 3,
+      "maxCurrent": 10,
+      "continuousCurrent": 5,
+      "loadCurrent": 50,
+      "continousCurrent": 15,
+      "cellResistance": 25,
+      "cellNominalVoltage": 3.6
+    },
+    "frameEdges": 32,
+    "frameType": "rounded",
+    "frameThickness": 7,
+    "stopperRingHeight": 0.4,
+    "connectionStats": null,
+    "stopperRingThickness": 0.8,
+    "hullType": "rounded",
+    "visibility": {
+      "showFrame": true,
+      "showCellGrid": true,
+      "showNumberedCells": true,
+      "showCellNumbers": true,
+      "showBoundingBox": true
+    },
+    "centerCell": {
+      "row": -6,
+      "col": 20
+    },
+    "gridRotation": 0,
+    "holderPoints": 32,
+    "holderRotation": 0,
+    "selectedFillNumber": 10,
+    "cells": [
+      {
+        "x": 115.8,
+        "y": -100.285742,
+        "z": 0,
+        "number": 5
+      },
+      {
+        "x": 135.1,
+        "y": -100.285742,
+        "z": 0,
+        "number": 7
+      },
+      {
+        "x": 154.4,
+        "y": -100.285742,
+        "z": 0,
+        "number": 8
+      },
+      {
+        "x": 173.7,
+        "y": -100.285742,
+        "z": 0,
+        "number": 14
+      },
+      {
+        "x": 193,
+        "y": -100.285742,
+        "z": 0,
+        "number": 14
+      },
+      {
+        "x": 212.3,
+        "y": -100.285742,
+        "z": 0,
+        "number": 13
+      },
+      {
+        "x": 231.6,
+        "y": -100.285742,
+        "z": 0,
+        "number": 13
+      },
+      {
+        "x": 250.9,
+        "y": -100.285742,
+        "z": 0,
+        "number": 12
+      },
+      {
+        "x": 48.25,
+        "y": -83.571451,
+        "z": 0,
+        "number": 1
+      },
+      {
+        "x": 67.55,
+        "y": -83.571451,
+        "z": 0,
+        "number": 1
+      },
+      {
+        "x": 86.85,
+        "y": -83.571451,
+        "z": 0,
+        "number": 3
+      },
+      {
+        "x": 106.15,
+        "y": -83.571451,
+        "z": 0,
+        "number": 4
+      },
+      {
+        "x": 125.45,
+        "y": -83.571451,
+        "z": 0,
+        "number": 5
+      },
+      {
+        "x": 144.75,
+        "y": -83.571451,
+        "z": 0,
+        "number": 7
+      },
+      {
+        "x": 164.05,
+        "y": -83.571451,
+        "z": 0,
+        "number": 8
+      },
+      {
+        "x": 183.35,
+        "y": -83.571451,
+        "z": 0,
+        "number": 14
+      },
+      {
+        "x": 202.65,
+        "y": -83.571451,
+        "z": 0,
+        "number": 14
+      },
+      {
+        "x": 221.95,
+        "y": -83.571451,
+        "z": 0,
+        "number": 13
+      },
+      {
+        "x": 241.25,
+        "y": -83.571451,
+        "z": 0,
+        "number": 13
+      },
+      {
+        "x": 260.55,
+        "y": -83.571451,
+        "z": 0,
+        "number": 12
+      },
+      {
+        "x": 38.6,
+        "y": -66.857161,
+        "z": 0,
+        "number": 1
+      },
+      {
+        "x": 57.9,
+        "y": -66.857161,
+        "z": 0,
+        "number": 1
+      },
+      {
+        "x": 77.2,
+        "y": -66.857161,
+        "z": 0,
+        "number": 3
+      },
+      {
+        "x": 96.5,
+        "y": -66.857161,
+        "z": 0,
+        "number": 4
+      },
+      {
+        "x": 115.8,
+        "y": -66.857161,
+        "z": 0,
+        "number": 5
+      },
+      {
+        "x": 135.1,
+        "y": -66.857161,
+        "z": 0,
+        "number": 6
+      },
+      {
+        "x": 154.4,
+        "y": -66.857161,
+        "z": 0,
+        "number": 7
+      },
+      {
+        "x": 173.7,
+        "y": -66.857161,
+        "z": 0,
+        "number": 8
+      },
+      {
+        "x": 193,
+        "y": -66.857161,
+        "z": 0,
+        "number": 8
+      },
+      {
+        "x": 212.3,
+        "y": -66.857161,
+        "z": 0,
+        "number": 11
+      },
+      {
+        "x": 231.6,
+        "y": -66.857161,
+        "z": 0,
+        "number": 11
+      },
+      {
+        "x": 250.9,
+        "y": -66.857161,
+        "z": 0,
+        "number": 12
+      },
+      {
+        "x": 270.2,
+        "y": -66.857161,
+        "z": 0,
+        "number": 12
+      },
+      {
+        "x": 28.95,
+        "y": -50.142871,
+        "z": 0,
+        "number": 2
+      },
+      {
+        "x": 48.25,
+        "y": -50.142871,
+        "z": 0,
+        "number": 2
+      },
+      {
+        "x": 67.55,
+        "y": -50.142871,
+        "z": 0,
+        "number": 3
+      },
+      {
+        "x": 86.85,
+        "y": -50.142871,
+        "z": 0,
+        "number": 4
+      },
+      {
+        "x": 106.15,
+        "y": -50.142871,
+        "z": 0,
+        "number": 5
+      },
+      {
+        "x": 125.45,
+        "y": -50.142871,
+        "z": 0,
+        "number": 6
+      },
+      {
+        "x": 144.75,
+        "y": -50.142871,
+        "z": 0,
+        "number": 7
+      },
+      {
+        "x": 164.05,
+        "y": -50.142871,
+        "z": 0,
+        "number": 9
+      },
+      {
+        "x": 183.35,
+        "y": -50.142871,
+        "z": 0,
+        "number": 9
+      },
+      {
+        "x": 202.65,
+        "y": -50.142871,
+        "z": 0,
+        "number": 10
+      },
+      {
+        "x": 221.95,
+        "y": -50.142871,
+        "z": 0,
+        "number": 10
+      },
+      {
+        "x": 241.25,
+        "y": -50.142871,
+        "z": 0,
+        "number": 11
+      },
+      {
+        "x": 260.55,
+        "y": -50.142871,
+        "z": 0,
+        "number": 11
+      },
+      {
+        "x": 38.6,
+        "y": -33.428581,
+        "z": 0,
+        "number": 2
+      },
+      {
+        "x": 57.9,
+        "y": -33.428581,
+        "z": 0,
+        "number": 2
+      },
+      {
+        "x": 77.2,
+        "y": -33.428581,
+        "z": 0,
+        "number": 3
+      },
+      {
+        "x": 96.5,
+        "y": -33.428581,
+        "z": 0,
+        "number": 4
+      },
+      {
+        "x": 115.8,
+        "y": -33.428581,
+        "z": 0,
+        "number": 6
+      },
+      {
+        "x": 135.1,
+        "y": -33.428581,
+        "z": 0,
+        "number": 6
+      },
+      {
+        "x": 154.4,
+        "y": -33.428581,
+        "z": 0,
+        "number": 9
+      },
+      {
+        "x": 173.7,
+        "y": -33.428581,
+        "z": 0,
+        "number": 9
+      },
+      {
+        "x": 193,
+        "y": -33.428581,
+        "z": 0,
+        "number": 10
+      },
+      {
+        "x": 212.3,
+        "y": -33.428581,
+        "z": 0,
+        "number": 10
+      }
+    ],
+    "cellStates": {
+      "-6-6": {
+        "number": 5
+      },
+      "-6-7": {
+        "number": 7
+      },
+      "-6-8": {
+        "number": 8
+      },
+      "-6-9": {
+        "number": 14
+      },
+      "-6-10": {
+        "number": 14
+      },
+      "-6-11": {
+        "number": 13
+      },
+      "-6-12": {
+        "number": 13
+      },
+      "-6-13": {
+        "number": 12
+      },
+      "-5-2": {
+        "number": 1
+      },
+      "-5-3": {
+        "number": 1
+      },
+      "-5-4": {
+        "number": 3
+      },
+      "-5-5": {
+        "number": 4
+      },
+      "-5-6": {
+        "number": 5
+      },
+      "-5-7": {
+        "number": 7
+      },
+      "-5-8": {
+        "number": 8
+      },
+      "-5-9": {
+        "number": 14
+      },
+      "-5-10": {
+        "number": 14
+      },
+      "-5-11": {
+        "number": 13
+      },
+      "-5-12": {
+        "number": 13
+      },
+      "-5-13": {
+        "number": 12
+      },
+      "-4-2": {
+        "number": 1
+      },
+      "-4-3": {
+        "number": 1
+      },
+      "-4-4": {
+        "number": 3
+      },
+      "-4-5": {
+        "number": 4
+      },
+      "-4-6": {
+        "number": 5
+      },
+      "-4-7": {
+        "number": 6
+      },
+      "-4-8": {
+        "number": 7
+      },
+      "-4-9": {
+        "number": 8
+      },
+      "-4-10": {
+        "number": 8
+      },
+      "-4-11": {
+        "number": 11
+      },
+      "-4-12": {
+        "number": 11
+      },
+      "-4-13": {
+        "number": 12
+      },
+      "-4-14": {
+        "number": 12
+      },
+      "-3-1": {
+        "number": 2
+      },
+      "-3-2": {
+        "number": 2
+      },
+      "-3-3": {
+        "number": 3
+      },
+      "-3-4": {
+        "number": 4
+      },
+      "-3-5": {
+        "number": 5
+      },
+      "-3-6": {
+        "number": 6
+      },
+      "-3-7": {
+        "number": 7
+      },
+      "-3-8": {
+        "number": 9
+      },
+      "-3-9": {
+        "number": 9
+      },
+      "-3-10": {
+        "number": 10
+      },
+      "-3-11": {
+        "number": 10
+      },
+      "-3-12": {
+        "number": 11
+      },
+      "-3-13": {
+        "number": 11
+      },
+      "-2-2": {
+        "number": 2
+      },
+      "-2-3": {
+        "number": 2
+      },
+      "-2-4": {
+        "number": 3
+      },
+      "-2-5": {
+        "number": 4
+      },
+      "-2-6": {
+        "number": 6
+      },
+      "-2-7": {
+        "number": 6
+      },
+      "-2-8": {
+        "number": 9
+      },
+      "-2-9": {
+        "number": 9
+      },
+      "-2-10": {
+        "number": 10
+      },
+      "-2-11": {
+        "number": 10
+      }
+    },
+    "token": "f8583728-168c-41d1-9a36-813f50fa1666"
+  },
+  "menu": {
+    "panelStack": [
+      "main",
+      "export"
+    ],
+    "selectedTool": null,
+    "toggles": {
+      "frame": true,
+      "cellGrid": true,
+      "numCells": true,
+      "cellNumbers": true,
+      "boundingBox": true,
+      "bussA": false,
+      "bussB": true,
+      "measurements": true,
+      "downloadSTL": false,
+      "downloadSVG": false,
+      "downloadDXF": false
+    },
+    "settings": {
+      "cellDiameter": 18.5,
+      "frameColor": "#ffff00",
+      "bussBarColor": "#aeaeae",
+      "frameErrorColor": "#ffaa00",
+      "cellSpacing": 0.8,
+      "bussLineWidth": 5,
+      "environment": "none",
+      "cameraType": "perspective",
+      "imageDivisor": 5,
+      "imageXOffset": 0,
+      "imageYOffset": 0,
+      "imageRotation": 0,
+      "slitWidth": 1,
+      "slitHeight": 6,
+      "bussBarThickness": 1,
+      "bussCircleRadius": 8.5,
+      "gridRotation": 0,
+      "frameQuality": 32,
+      "frameMargin": 3,
+      "frameThickness": 7,
+      "caseHeight": 80,
+      "caseWallThickness": 4,
+      "trayHeight": 20,
+      "stopperRingHeight": 0.4,
+      "stopperRingThickness": 0.8,
+      "cellCapacity": 3,
+      "maxCurrent": 10,
+      "continousCurrent": 15,
+      "cellResistance": 25,
+      "cellNominalVoltage": 3.6,
+      "loadCurrent": 50,
+      "insideSmoothing": 0,
+      "outsideSmoothing": 0,
+      "insideSmoothingBussBars": 0,
+      "outsideSmoothingBussBars": 0,
+      "tableThickness": 10,
+      "tableLegWallThickness": 3,
+      "tableLegFootDiameter": 40,
+      "brushSize": 1,
+      "tableLegRoundness": 1,
+      "tableLegTwist": 0,
+      "footFloorThickness": 2,
+      "tableLegFootHeight": 30,
+      "joinerHeight": 35,
+      "frameType": "rounded",
+      "cellColors": "pastels",
+      "configS": 1,
+      "configP": 1
+    },
+    "quickSlots": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+}

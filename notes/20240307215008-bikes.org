@@ -190,6 +190,10 @@ The BB length doesn't matter for the template. Use it to see if the motor rub ag
 [[https://www.amazon.com/gp/product/B09BH3ZJJK][Ebike Battery Mount Hose Clamps]]
 
 *** 18650
+:PROPERTIES:
+:ID:       73e43e46-7c36-406f-857a-9c6470ee3891
+:END:
+
 **** Polly DP6 :ATTACH:
 The manufacture seems to be [[https://www.reention.com/en/xzdch/][Reention Down Tube Battery Case]]
 
@@ -202,7 +206,6 @@ I bought the [[https://enerprof.de/en/HaiLong-Reention-Jaffa-Bike-Frame-Battery-
 #+CAPTION: DP6 14s5p layout
 [[attachment:dp6-14s5p-layout.jpg]]
 *** 21700
-
 **** DP7 :ATTACH:
 This is a huge down-tube case.
 
@@ -253,6 +256,51 @@ pdfposter -m A4 -p 369x157mm  DP-2170-7\ template.pdf DP-2170-7\ template_2pages
 #+end_src
 
 The gimp [[attachment:DP-2170-7 template.xcf][DP-2170-7 template.xcf]] and [[attachment:Reention DP7 Sketch.pdf][another template]](from [[https://www.affordableebikes.ca/products/new-downtube-21700-xl-dp-7-21700][affordableebikes.ca]], *REMEMBER to set paper size to US letter when printing this template*)
+**** DP2170-5 (C)
+See [[id:e1bbd719-0205-49c1-ae7f-4fd64c373bfe][the section in diy-battery]]
+
+*** 3d-printed
+:PROPERTIES:
+:ID:       c7277909-5013-4c2a-bdd4-dff9c3ad389d
+:END:
+
+**** Electronic parts
+- [[https://www.aliexpress.com/item/1005008726633507.html][DC Power Socket Plug, 5.5*2.5]]
+- [[https://www.aliexpress.com/item/10000006487848.html][Waterproof cap DC099, DC Power Jack]]
+- [[https://www.aliexpress.com/item/1005007327685021.html][JST RCY]] two-wire connectors for connecting on/off switch internally
+- [[https://www.aliexpress.com/item/1005006600952774.html][XT30 plugs]] for connecting the charge port internally
+- 18awg wire for charging.
+- [[https://www.aliexpress.com/item/1005006727482998.html][round on/off switch]]
+- 12awg wire for discharging, with silicone insulated it should be good for 30A continuous, 60A peak. (14awg is good for 20A)
+- XT60 connector for discharging. Good for 30A cont. 60A peak.
+- [[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm.
+**** Case
+
+- on/off switch should be on the top, if mounted inside the bike frame, to avoid hitting it with the leg.
+- XT60 Female panel mount does not seems to be a good idea for the triangle shape. Better with a discharge cable, sealed with gasket seal (like Flex Seal)
+
+**** affordableebikes.ca
+Canadian shop that runs a Youtube channel with videos of the [[https://youtu.be/j9pV3fFvsIw][Compact triangle]], [[https://youtu.be/kQmSpNFnSbY][Medium triangle]] and [[https://youtu.be/4-Ca-I8Kjpw][slim pack 2.0]]. All 3d-printed cases. Files can be downloaded from the product page or the local copy
+
+***** [[https://www.affordableebikes.ca/products/compact-triangle-hard-case-battery-36-48-52-volt][Compact triangle]], 14s3p or 13s3p :ATTACH:
+
+#+CAPTION: Compact triangle
+[[attachment:compact_triangle.jpg]]
+
+[[attachment:3D Print Compact Triangle.zip][files]]
+
+***** [[https://www.affordableebikes.ca/products/hard-shell-medium-size-triangle-battery][Medium triangle]], 14s4p :ATTACH:
+
+#+CAPTION: Medium triangle
+[[attachment:medium_triangle.jpg]]
+
+[[attachment:56-2170-CT - Compact Triangle 52V 20AH.zip][files]]
+***** [[https://www.affordableebikes.ca/products/new-52v-10ah-slim-pack-2-0-hr-w-optional-universal-mount][Slim Pack 2.0]], 14s2p :ATTACH:
+
+#+CAPTION: Slim Pack 2.0
+[[attachment:slim_pack_20.jpg]]
+
+[[attachment:Slim Pack 2.0.zip][files]]
 
 ** Multiple batteries
 

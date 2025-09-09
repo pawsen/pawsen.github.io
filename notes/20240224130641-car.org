@@ -177,3 +177,8 @@ https://www.amazon.fr/gp/product/B00X9UCN8K
 
 https://github.com/FernandoGarcia/ParkingSensor
 https://www.aliexpress.com/item/1005001570169898.html
+** Solar
+[[https://www.instructables.com/DIY-1kW-MPPT-Solar-Charge-Controller/][DIY 1kW Arduino MPPT Solar Charge Controller (ESP32 + WiFi)]]
+[[https://www.aliexpress.com/item/1005007208000525.html][DC-DC charger, Aliexpress ~720dkk]]
+[[https://reliableinverter.aliexpress.com/store/413804][Pure sine Inverters, Reliable Electric Power Store]]
+[[https://diysolarforum.com/threads/this-could-be-interesting.7835/][Other stuff bought off ebay, smart guy]]

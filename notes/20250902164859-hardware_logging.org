@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       d328aeff-d299-440b-80dc-9ab202436e16
+:DIR:      ../.attach/notes-hardware-logging
+:END:
+#+title: hardware-logging
+
+
+#+filetags: electronics
+#+hugo_categories: diy
+
+Notes for logging from various devices
+
+#+hugo: more
+
+
+* General logging software
+*** Test controller, lygteinfo
+[[https://www.eevblog.com/forum/testgear/program-that-can-log-from-many-multimeters/][Test controller, lygteinfo]]
+
+* Specific meters
+** DC load, kunpin kp184
+https://www.eevblog.com/forum/testgear/serial-to-usb-on-kunkin-kp184-electronic-load/300/
+
+
+https://github.com/markmerz/kunkin-kp184-py/
+
+code for sigrok
+https://sourceforge.net/p/sigrok/mailman/sigrok-devel/thread/df9edf3c-af68-4ad1-52e4-168bf3c676f1%40pibf.de/#msg37129644
+** usb-c load meter
+*** RDTech TC66C
+https://sigrok.org/wiki/RDTech_TC66C
+
+OR simple python script to get readings over bluetooth
+https://ralimtek.com/posts/2019/tc66/
+https://github.com/Ralim/TC66C
