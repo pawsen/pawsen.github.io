@@ -355,6 +355,10 @@ M-@ : mark word. Only mark from cursor position and forward
 viw : evil mark word
 
 * dired
+:PROPERTIES:
+:ID:       df1ab6a4-d93e-4b31-8d81-537e2ff08f88
+:END:
+
 https://github.com/emacs-evil/evil-collection/blob/master/modes/dired/evil-collection-dired.el
 | keybind             | Description                                    |
 |---------------------+------------------------------------------------|

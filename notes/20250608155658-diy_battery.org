@@ -181,7 +181,7 @@ There is not much information online.
 - Another user did not trust the builtin battery protection and bought a cheap 4S 20A BMS
 - For 100W discharge, only one (usb-c) device can be connected.
 
-The battery configuration, capacity, etc, is set by flipping 10 dip-switches. See the link. After assembly, the module is [[https://energo-shop.com/ru/100w-100w-5s-power-bank-type-c-myzl-yd24-2.3/][activated by connecting]] a charger for 5 seconds.
+The battery configuration, capacity, etc, is set by flipping 10 dip-switches. See the [[https://energo-shop.com/ru/100w-100w-5s-power-bank-type-c-myzl-yd24-2.3/][link]]  After assembly the module is activated by connecting a charger for 5 seconds.
 
 The important part of the config are (SIC)
 - Number of cells in series connection (I guess this is independent of the BMS, maybe for CC-CV and input voltage) ::
