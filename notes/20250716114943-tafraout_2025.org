@@ -29,8 +29,8 @@ Vi aftalte at tage et halvreb med hver, sende hinanden et billede af eget trad-u
 Efter at have set Steves udstyr fortrød jeg lidt: mest kiler og nogle gamle cams. Han fortalte mig senere at han havde fundet alle cams. Efter en storm i Snowdonia og evt. redningsaktion af strandede klatrerer, ville han solo nogle lette ruter og lede efter efterladt udstyr.
 
 
-#+CAPTION: Steves trad gear. Old school og med en vibe af en der ikke klatrer de ruter jeg gerne vil.
-[[attachment:steves_trad_gear.jpg]]
+# #+CAPTION: Steves trad gear. Old school og med en vibe af en der ikke klatrer de ruter jeg gerne vil.
+# [[attachment:steves_trad_gear.jpg]]
 
 * Første indtryk
 Jeg landede i Agadir en dag før jeg skulle mødes med Steve ved lufthavnen. Jeg ville sove et sted uden for megen larm, tog den første bus ud mod kysten og stod af i en lille by. Fandt et værelse, efterlod mine ting og gik en tur langs stranden.
