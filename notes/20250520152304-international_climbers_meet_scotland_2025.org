@@ -20,36 +20,43 @@ I participated in the [[https://www.mountaineering.scot/activities/mountaineerin
 
 Kære alle,
 
-Jeg læser altid DBKKs nyhedsbrev (og [[https://www.dbkk.dk/omklubben][bestyrelsesreferat]] – gør du?), og forrige [[attachment:Nyhedsbrev+Oktober+2024.pdf][oktober]] skrev formanden, at DBKK havde to invitationer til det "Skotske internationale vintertræf" i marts 2025 og interesserede kunne skrive. Jeg skrev straks, og et par måneder senere fik jeg at vide, at Malwina og jeg havde fået de to pladser.
+Jeg læser altid DBKKs nyhedsbrev (og [[https://www.dbkk.dk/omklubben][bestyrelsesreferat]] – gør du?), og i forrige [[attachment:Nyhedsbrev+Oktober+2024.pdf][oktober]] skrev formanden, at DBKK havde to invitationer til det "Skotske internationale vintertræf" i marts 2025, og at interesserede kunne skrive. Jeg skrev straks, og et par måneder senere fik jeg at vide, at Malwina og jeg havde fået de to pladser.
 
 Jeg brugte februar på [[id:a1891901-03ee-46f2-9cfc-d330fe3c8e02][klatring omkring Tafraout i Marokko]] og delte riad med et par skotske klatrere den sidste uge. Hver dag til morgenmad fortalte de historier om ting, der var gået galt under vinterklatring i Skotland; den ene havde bl.a. brækket benet, da en stor blok blev revet løs af førstemanden og ramte ham. Utvivlsomt for at have det lidt sjovt og psyke mig.
 
-Som en del af ansøgningen til træffet skulle vi vedlægge et relevant klatre-CV for de sidste fem år. Jeg havde ikke isklatret i den periode og aldrig mixklatret. Det var et rimeligt tomt CV, så jeg ekstrapolerede lidt fra tidligere erfaring.
-Blandingen af ingen erfaring og historierne fra Marokko gjorde, at jeg var ret spændt, da jeg fløj fra Marokko til Skotland.
+Som en del af ansøgningen til træffet skulle vi vedlægge et relevant klatre-CV for de sidste fem år. Jeg havde ikke isklatret i den periode og aldrig mixklatret. Det var et ret tomt CV, så jeg ekstrapolerede lidt fra tidligere erfaring.
+Kombinationen af ingen vintererfaring og historierne fra Marokko gjorde, at jeg var ret spændt, da jeg fløj fra Marokko til Skotland.
 
-Alle deltagere mødtes ved Glenmore Lodge, og jeg var selvfølgelig spændt på, hvem min makker var. Under træffet blev hver deltager parret, på baggrund af bl.a. klatre-CV og alder, med en vært. Meningen er, at det skal være et ligeværdigt par, men værten havde lokalkendskab, så der ikke blev spildt tid på at finde vej (deltagerne betalte 400 £, værterne 200 £. Jeg tror, flere deltagere ikke forstod, at værterne også betalte og med god ret kunne forvente at få noget ud af træffet).
+Alle deltagere mødtes ved Glenmore Lodge, og jeg var selvfølgelig spændt på, hvem min makker var. Under træffet blev hver deltager parret med en vært på baggrund af bl.a. klatre-CV og alder. Meningen er, at det skal være et ligeværdigt par, men hvor værten har lokalkendskab, så man ikke spilder tid på at finde vej.
+Deltagerne betalte 400 £, værterne 200 £. Jeg tror, flere deltagere ikke forstod, at værterne også betalte og med god ret kunne forvente at få noget ud af træffet.
 
 * Min vært Tom, et match made in heaven
-Jeg mødte min vært Tom på værelset. Jeg havde taget lidt hash med fra Marokko og syntes, det var en god gestus at have en joint klar. Det var Tom ikke interesseret i. Til gengæld blev det hurtigt klart, at ingen af os havde pakke-skills. Vi spredte alt udstyr på gulvet, endte med at pakke det hele tilbage i taskerne og dumpe dem i bilen.
+Jeg mødte min vært Tom på værelset. Jeg havde taget lidt hash med fra Marokko og syntes, det var en god gestus at have en joint klar. Det var Tom ikke interesseret i. Til gengæld blev det hurtigt klart, at ingen af os havde pakke-skills. Vi spredte alt udstyr ud på gulvet, endte med at pakke det hele tilbage i taskerne og dumpe dem i bilen.
 
 #+CAPTION: Tom og jeg prøver at pakke
 [[attachment:packing.jpg]]
 
-Alle deltagere var delt i tre grupper. Hver gruppe havde sin egen hytte som base for klatringen, og efter et par dage roterede grupperne hytte. Der var altså ingen kontakt grupperne imellem under træffet, da hytterne var spredt over et stort område.
+Alle deltagere var delt i tre grupper. Hver gruppe havde sin egen hytte som base for klatringen, og efter et par dage roterede grupperne hytte. Der var altså ingen kontakt grupperne imellem, da hytterne var spredt over et stort område.
+
 Tom og jeg var super heldige og skulle starte med at sove i CIC-hytten ved foden af Ben Nevis, det højeste bjerg i Skotland. Heldige, fordi vejrudsigten lovede varmt vejr i løbet af ugen, og Ben Nevis ville have de bedste forhold til vinterklatring i løbet af de første par dage (f.eks. frost, så der ikke falder sten ned).
 
 #+CAPTION: CIC-hytten ved Ben Nevis
 [[attachment:CIC-hut.jpg]]
 
-Jeg var spændt første dag: Hvordan ville rollefordelingen være, hvilken gradering skulle vi klatre, jeg ville gerne prøve noget svært, men var jeg selv klar til at føre? Måske kunne Tom tage ansvaret, få os op, og jeg ville have en fornemmelse af, hvad det krævede.
-Vi forlod CIC uden en plan. Mit eneste krav var, at der ikke ville være nogen på ruten før os. Der var blevet nævnt en masse ruter til morgenmaden, men jeg havde ingen idé om, hvor vi lå i forhold til graderingerne. Vinterruter bliver graderet lidt som britiske trad-ruter med to numre: en generel vurdering af hele ruten angivet med et romersk tal og en teknisk grad for den sværeste reblængde med et arabisk tal. Dvs. en VI,6 er en "benchmark 6", mens en VI,7 er en velsikret, men teknisk sværere rute.
-Alt sammen meget godt; jeg havde klatret en del britisk graderet klippe, så jeg forstod den del. Men jeg havde ingen idé om, hvor en rute i grad VI lå i forhold til f.eks. en 6b sportsrute eller britisk E2, og om det overhovedet var muligt at sammenligne klippe- og vintergrader?
+Jeg var spændt første dag: Hvordan ville rollefordelingen være? Hvilken gradering skulle vi klatre? Jeg ville gerne prøve noget svært, men var jeg selv klar til at føre? Måske kunne Tom tage ansvaret, få os op, og jeg ville få en fornemmelse af, hvad det krævede.
+
+Vi forlod CIC uden en plan. Mit eneste krav var, at der ikke skulle være nogen på ruten foran os. Der var blevet nævnt en masse ruter til morgenmaden, men jeg havde ingen idé om, hvor vi lå i forhold til graderingerne.
+
+Vinterruter bliver graderet lidt som britiske trad-ruter med to numre: en generel vurdering af hele ruten angivet med et romersk tal og en teknisk grad for den sværeste reblængde med et arabisk tal. Dvs. en VI,6 er en "benchmark 6", mens en VI,7 er en velsikret, men teknisk sværere rute.
+
+Alt sammen meget godt; jeg havde klatret en del britisk graderet klippe, så jeg forstod den del. Men jeg havde ingen idé om, hvor en rute i grad VI lå i forhold til f.eks. en 6b sportsrute eller britisk E2 – og om det overhovedet var muligt at sammenligne klippe- og vintergrader.
 
 * Power to waste
 På vejen op fra hytten – man skal gå en halv time, før man er ved ruterne – snakkede Tom om, at vi kunne prøve en IV-rute.
+
 Jeg var klar over, at vejret ville blive varmt i løbet af ugen, og at vi måske kun havde et par dage med gode forhold. Jeg ville gerne prøve at klatre noget, jeg syntes var svært, og ville ikke bruge en god dag på for lette ruter. Min eneste fornemmelse for sværheden var, hvad andre reblag havde snakket om til morgenmaden, men de lod alle til at have en masse erfaring, hvor jeg ingen havde.
 
-Til gengæld havde jeg for nyligt lyttet til et interview med [[https://en.wikipedia.org/wiki/Alexander_Huber][Alexander Huber]]. Han beskrev, hvordan han kom til Yosemite i midt-halvfemserne, uden at have erfaring med den teknik, der kræves for at klatre godt i dalen, men til gengæld overbevist om, at han havde "power to waste", og at det ville gøre det op for manglende teknik.
+Til gengæld havde jeg for nyligt lyttet til et interview med [[https://en.wikipedia.org/wiki/Alexander_Huber][Alexander Huber]]. Han beskrev, hvordan han kom til Yosemite i midt-halvfemserne uden at have erfaring med den teknik, der kræves for at klatre godt i dalen, men til gengæld overbevist om, at han havde "power to waste", og at det ville opveje manglende teknik.
 Jeg havde det på samme måde. Så længe min isøkse blev siddende, var jeg sikker på, at jeg kunne komme op eller hænge længe nok til at finde en placering til en sikring.
 
 Jeg nedstemte Toms forslag om en IV-rute, og vi endte på [[https://routes.smc.org.uk/route/26950][Gargoyle Wall 120 m, VI,6]], en populær og klassisk rute for graden.
@@ -57,13 +64,21 @@ Jeg nedstemte Toms forslag om en IV-rute, og vi endte på [[https://routes.smc.o
 #+CAPTION: Mig på Gargoyle Wall, VI, 6
 [[attachment:paw_gargoyle.jpg]]
 
-Over for Gargoyle, på den anden side af gully'en, kunne jeg gennem tågen skimte en chimney og sporadisk en klatrer der møvede sig op. Jeg var rimelig imponeret, fik at vide, det var [[https://routes.smc.org.uk/route/26968][Darth Vader, VII, 7]], en test-rute for graden.
-Endnu mere imponeret blev jeg tilbage i hytten da jeg hørte, at den ene part af reblaget på Vader var en slovensk alpinist. Han lignede en bjørn med godt brugt udstyr og sagde, han havde været intimideret undervejs.
+Over for Gargoyle, på den anden side af gully'en, kunne jeg gennem tågen skimte en chimney og sporadisk en klatrer, der møvede sig op. Jeg var rimelig imponeret og fik at vide, at det var [[https://routes.smc.org.uk/route/26968][Darth Vader, VII, 7]], en test-rute for graden.
+
+Endnu mere imponeret blev jeg tilbage i hytten, da jeg hørte, at den ene part af reblaget på Vader var en slovensk alpinist. Han lignede en bjørn med godt brugt udstyr og sagde, han havde været intimideret undervejs.
 
 Jeg kunne ikke slippe tanken om, at vi skulle prøve, men vidste, at det var bedst ikke at diskutere det med Tom, for han sagde på Gargoyle, at han ikke brød sig om svære ruter.
-På vej fra hytten næste morgen fik jeg nævnt Vader. Tom var ikke interesseret og intimideret af graden, men jeg havde bestemt mig for i det mindste at prøve. Så mens Tom brokkede sig, scramblede jeg op ad starten, indtil jeg ikke turde længere, gjorde mig fast og smed en rebende ned til ham. Nu var vi ligesom i gang, og han havde ikke andet valg end at følge efter. Jeg havde stadig min taske på ryggen med en del indhold, jeg ikke havde brug for; det hele var gået ret stærkt, så Tom ikke kunne undslippe. Jeg fik scramblet lidt rundt, kaldt på en af de andre deltagere, der var i gully'en, og sænket tasken ned til ham.
+
+På vej fra hytten næste morgen fik jeg nævnt Vader. Tom var ikke interesseret og intimideret af graden, men jeg havde bestemt mig for i det mindste at prøve. Så mens Tom brokkede sig, scramblede jeg op ad starten, indtil jeg ikke turde længere, gjorde mig fast og smed en rebende ned til ham. Nu var vi ligesom i gang, og han havde ikke andet valg end at følge efter.
+
+Jeg havde stadig min taske på ryggen med en del indhold, jeg ikke havde brug for; det hele var gået ret stærkt, så Tom ikke kunne undslippe. Jeg fik scramblet lidt rundt, kaldt på en af de andre deltagere, der var i gully'en, og sænket tasken ned til ham.
+
 Nu var planen, at jeg skulle føre hele ruten. Jeg kom lidt op og satte en rød friend i en mosset sprække. Mosset var frossent, så jeg prøvede at skrabe det væk ved at trække klemkilen frem og tilbage. Jeg var egentlig godt tilfreds, men Tom foreslog, at jeg klatrede ned, og vi lige testede sikringen. Han gav rebet et lille ryk, og min "9/10"-sikring kom flyvende ud.
-Det gjorde mig lidt bekymret, men jeg havde stadig Alex Hubers ord i baghovedet om "power to waste", så jeg konkluderede, at jeg bare skulle være lidt mere omhyggelig og mestendels sikre med kiler og hexe. Selve ruten havde mange hooks, hvor spidsen på øksen synker ned i en sprække og ikke falder ud – perfekt til min "power to waste"-tilgang – og forløb uden yderligere problemer.
+
+Det gjorde mig lidt bekymret, men jeg havde stadig Alex Hubers ord i baghovedet om "power to waste". Jeg konkluderede, at jeg bare skulle være lidt mere omhyggelig og mestendels sikre med kiler og hexe.
+
+Selve ruten havde mange hooks, hvor spidsen på øksen synker ned i en sprække og ikke falder ud – perfekt til min "power to waste"-tilgang – og resten af turen forløb uden yderligere problemer.
 
 #+CAPTION: Tom klemmer sig ud af skorstenen, første reblængde af Darth Vader, VII, 7
 [[attachment:tom_darth_vader_chimney.jpg]]
@@ -73,7 +88,9 @@ På toppen sagde Tom, at ruten havde været på hans radar længe, og han var gl
 #+CAPTION: Tom på toppen af Darth Vader, VII, 7
 [[attachment:tom_darth_vader_top.jpg]]
 
-Dagen efter skulle vi rotere hytte. Tom var ikke interesseret i mere klatring den dag, så jeg tog med tre andre på en solo af [[https://routes.smc.org.uk/route/26753][Tower Ridge, IV, 3]]. Den ene var den vært, jeg to dage forinden havde set på Darth Vader. Hans slovenske makker havde også fået nok efter en hård dag. Godt for mig, for jeg havde endnu en uge i Skotland efter mødet sluttede og var på udkig efter makkere.
+Dagen efter skulle vi rotere hytte. Tom var ikke interesseret i mere klatring den dag, så jeg tog med tre andre på en solo af [[https://routes.smc.org.uk/route/26753][Tower Ridge, IV, 3]]. Den ene var den vært, jeg to dage forinden havde set på Darth Vader. Hans slovenske makker havde også fået nok efter en hård dag.
+
+Godt for mig, for jeg havde endnu en uge i Skotland efter mødet sluttede og var på udkig efter makkere.
 
 #+CAPTION: Tower Ridge, IV, 3
 [[attachment:tower_ridge.jpg]]
@@ -82,22 +99,33 @@ Dagen efter skulle vi rotere hytte. Tom var ikke interesseret i mere klatring de
 [[attachment:glissade_tower_ridge.jpg]]
 
 * The Great Dane
-Efter Tower Ridge mødte jeg Tom på parkeringspladsen, og vi kørte mod den nye hytte. Vi skulle have en nat der, inden en ny rotation. Det blev tøvejr dagen efter, så Tom foreslog, at vi løb mellem de to hytter, når vejret ikke var til vinterklatring. Det var en tur, han før havde overvejet, og han regnede med, at det ville være ca. 60 km.
+Efter Tower Ridge mødte jeg Tom på parkeringspladsen, og vi kørte mod den nye hytte. Vi skulle have en nat der, inden en ny rotation.
+
+Det blev tøvejr dagen efter, så Tom foreslog, at vi løb mellem de to hytter, når vejret ikke var til vinterklatring. Det var en tur, han før havde overvejet, og han regnede med, at den var ca. 60 km.
+
 Jeg havde ikke løbet siden sommer, men var sikker på, at jeg kunne løbe 40 km og så klare det sidste på viljen. Jeg var rimelig sikker på, at jeg ikke ville give op før Tom, til trods for aldrig at have løbet over 30 km.
+
 En af organisatorerne hørte om Toms plan og kom til vores hytte om aftenen. Han var bekymret og syntes ikke, det var en god idé.
-Jeg var ikke klar over, hvad det egentlig var, Tom havde tænkt sig, og hvilken type landskab vi skulle igennem, men jeg havde set ham bevæge sig i sne, og han var langt mere elegant end jeg. Han virkede også rimelig sikker på, at han kunne klare det. Jeg havde fuld tillid til ham og interesserede mig ikke for detaljerne. Desuden var jeg sikker på, at jeg ikke ville give op før ham.
+
+Jeg var ikke klar over, hvad det egentlig var, Tom havde tænkt sig, og hvilken type landskab vi skulle igennem. Jeg havde set ham bevæge sig i sne, og han var langt mere elegant end jeg. Han virkede også sikker på, at han kunne klare det. Jeg havde fuld tillid til ham og interesserede mig ikke for detaljerne. Desuden var jeg sikker på, at jeg ikke ville give op før ham.
 
 Vi startede ved daggry næste morgen fra [[https://huts.mountaineering.scot/Hut/raeburn][Raeburn]]. Det blæste meget og småregnede, men de første kilometer var på stier, og Tom forklarede, at nogle af dem var fra romersk tid.
 
 #+CAPTION: Tom på en sti i starten, da alt stadig var behageligt
 [[attachment:paw_tom_run_path.jpg]]
 
-Vi kom til en jernbaneoverskæring. Der var en låst port, en telefon og instruks om at ringe via telefonen for at få tilladelse til at krydse sporet – uautoriseret krydsning ville resultere i bødestraf. Jeg syntes, vi bare skulle kravle over, men Tom ville gøre det rigtige og ringede. Der blev ikke givet tilladelse.
-Nu havde vi prøvet at gøre det rigtige; jeg syntes, vi bare skulle hoppe over alligevel, men Tom brød sig ikke om at bryde reglerne. Jeg var stædig, det var Tom også; det var vores eneste uoverensstemmelse. Jeg syntes, han var et fjols, og han det samme.
-Ideen om, at nogen bestemmer, om jeg skal krydse et tomt spor, true med bødestraf, hvis jeg gør, og endda havde sat overvågningskameraer op langs hegnet, gjorde mig rimelig opsat på, at den eneste vej frem var at hoppe over hegnet og moone kameraet. Held og lykke med at finde mig i det skotske højland.
-Men Tom gav sig ikke; vi havde allerede brugt mere tid på at diskutere end de 10 minutter, det ville tage at løbe tilbage langs sporet og krydse over ved stationen. Jeg fik følelserne under kontrol og fulgte mut med.
+Vi kom til en jernbaneoverskæring. Der var en låst port, en telefon og en instruks om at ringe via telefonen for at få tilladelse til at krydse sporet – uautoriseret krydsning ville resultere i bødestraf.
 
-Herefter forsvandt stierne, vi havde stadig stærk modvind, og på vej mod det første pas med sne på toppen var det ved at gå op for mig, at det ikke svarede til at løbe gennem et dansk landskab.
+Jeg syntes, vi bare skulle kravle over, men Tom ville gøre det rigtige og ringede. Der blev ikke givet tilladelse.
+
+Nu havde vi prøvet at gøre det rigtige. Jeg syntes stadig, vi bare skulle hoppe over alligevel, men Tom brød sig ikke om at bryde reglerne. Jeg var stædig, det var Tom også. Det var vores eneste uoverensstemmelse. Jeg syntes, han var et fjols, og han det samme.
+
+Ideen om, at nogen bestemmer, om jeg skal krydse et tomt spor, truer med bødestraf, hvis jeg gør, og oven i købet har sat overvågningskameraer op langs hegnet, gjorde mig rimelig opsat på, at den eneste vej frem var at hoppe over hegnet og moone kameraet. Held og lykke med at finde mig i det skotske højland.
+
+Men Tom gav sig ikke. Vi havde allerede brugt mere tid på at diskutere end de 10 minutter, det ville tage at løbe tilbage langs sporet og krydse over ved stationen. Jeg fik følelserne under kontrol og fulgte mut med.
+
+Herefter forsvandt stierne. Vi havde stadig stærk modvind, og på vej mod det første pas med sne på toppen gik det langsomt op for mig, at det ikke svarede til at løbe gennem et dansk landskab.
+
 Der var vandløb, der konstant skulle krydses. Tom løb lige igennem, men jeg havde endnu ikke forstået, at det var umuligt ikke at blive gennemblødt, og brugte mere tid på at finde trædesten og hoppe over.
 
 #+attr_html: :controls t :class video-container
@@ -105,51 +133,64 @@ Der var vandløb, der konstant skulle krydses. Tom løb lige igennem, men jeg ha
 <source src="paw_tom_run_water_crossing.mp4" type="video/mp4">
 Your browser does not support the video tag.
 #+end_video
-([[attachment:paw_tom_run_water_crossing.mp4][Langsom krydsning af et af de mange vandløb. Tom løb bare igennem; han var klar over, at det var umuligt ikke at blive gennemblødt]])
+([[attachment:paw_tom_run_water_crossing.mp4][Langsom krydsning af et af de mange vandløb. Tom løb bare igennem; han vidste, at det var umuligt ikke at blive gennemblødt.]])
 
 Efter 30 km var det muligt at afbryde og i stedet løbe 10 km til en jernbanestation. Tom havde en makstid for de 30 km, og vi var under. Jeg var ikke kun kommet til Skotland for at klatre; jeg ville også gerne se noget af landet og var klar på at fortsætte.
 
-Vi kom til et stort område med bogs, det er en slags mose med græstuer. Når jeg trådte på tuerne, sank de; vi skulle stadig holde en god fart, og jeg prøvede at hoppe fra tue til tue. Tom bevægede sig flot igennem, han sammenlignede sig med en hjort.
-Det tog timer at komme igennem, og da jeg var på flad grund igen, gik det op for mig, hvor ondt jeg havde fået i hoftebøjerne. Fra da af snakkede jeg ikke længere med Tom, men fokuserede kun på at følge hans tempo. Hvis terrænet blev for stejlt til at løbe, var det vigtigt for Tom, at vi løb, så snart det fladede lidt ud.
-Det flade stykke varede måske bare 50 m, før vi skulle skifte tempo igen. At overbevise mig selv om, at det var værd at skifte til løb for et kort stykke, og den smerte, det medførte at føre benet frem, var det sværeste på turen. Men jeg forstod også Toms pointe om, at over så lang en tur betød de små strækninger noget.
+Vi kom til et stort område med bogs, en slags mose med græstuer. Når jeg trådte på tuerne, sank de. Vi skulle stadig holde en god fart, og jeg prøvede at hoppe fra tue til tue. Tom bevægede sig flot igennem og sammenlignede sig selv med en hjort.
 
-Jeg troede stadig, turen var omkring 60 km, og da Tom sagde, vi havde passeret 55 km, nægtede jeg at løbe mere. Hvis han ville fortsætte i løb, var det fint med mig. Jeg havde en pandelampe, og nu drejede det sig bare om at komme til hytten; hvornår og i hvilken stil var ligegyldigt.
+Det tog timer at komme igennem, og da jeg var på flad grund igen, gik det op for mig, hvor ondt jeg havde fået i hoftebøjerne.
+
+Fra da af snakkede jeg ikke længere med Tom, men fokuserede kun på at følge hans tempo. Hvis terrænet blev for stejlt til at løbe, var det vigtigt for Tom, at vi løb, så snart det fladede lidt ud.
+
+Det flade stykke varede måske bare 50 m, før vi skulle skifte tempo igen. At overbevise mig selv om, at det var værd at skifte til løb for et kort stykke – og den smerte, det medførte at føre benet frem – var det sværeste på turen. Men jeg forstod også Toms pointe: Over så lang en tur betød de små strækninger noget.
+
+Jeg troede stadig, turen var omkring 60 km. Da Tom sagde, vi havde passeret 55 km, nægtede jeg at løbe mere. Hvis han ville fortsætte i løb, var det fint med mig. Jeg havde en pandelampe, og nu drejede det sig bare om at komme til hytten; hvornår og i hvilken stil var ligegyldigt.
 
 #+CAPTION: Mig på vej til Tom. Vi har passeret 55 km, og jeg nægter at løbe mere
 [[attachment:paw_tom_run_walk.jpg]]
 
 Kort efter kommer vi forbi en bothy; det er bivuakhytter i afsidesliggende områder af højlandet og det første tegn på, at vi igen nærmede os stier.
-Der var nogle i hytten; de havde medbragt brænde og prøvede at tørre støvler og tøj – som mig havde de heller ikke lært, at det er umuligt at holde sig tør, og at det i stedet for store støvler og Gore-Tex er bedre at have sko, der nemt drænes.
-De lavede kakao til os, forstod ikke helt, hvor vi kom fra, og jeg syntes, det var alt for tidligt, da Tom sagde, vi skulle videre.
+
+Der var nogle i hytten. De havde medbragt brænde og prøvede at tørre støvler og tøj – ligesom mig havde de endnu ikke lært, at det er umuligt at holde sig tør, og at det i stedet for store støvler og Gore-Tex er bedre at have sko, der nemt drænes.
+
+De lavede kakao til os og forstod ikke helt, hvor vi kom fra. Jeg syntes, det var alt for tidligt, da Tom sagde, vi skulle videre.
 
 #+CAPTION: Hvil i en bothy. De var nysgerrige og lavede kakao til os
 [[attachment:paw_tom_run_hut_rest.jpg]]
 
-Det gik op for mig, at turen var længere end 60 km; hvor meget var ikke vigtigt. Jeg fokuserede stadig kun på at følge Tom.
+Det gik op for mig, at turen var længere end 60 km. Hvor meget længere var egentlig ikke vigtigt. Jeg fokuserede stadig kun på at følge Tom.
 
-Vi kom til en dæmning, og denne gang var Tom med på at krydse hegnet. Han sagde, at dæmningen var en af de ting, han var usikker på, inden vi startede: Ville der være for meget og for kraftigt vand til, at vi kunne krydse den?
+Vi kom til en dæmning, og denne gang var Tom med på at krydse hegnet. Han sagde, at dæmningen var en af de ting, han havde været usikker på, inden vi startede: Ville der være for meget og for kraftigt vand til, at vi kunne krydse den?
 
 #+CAPTION: Vi krydsede dæmningen. Jeg var glad for at se konkrete tegn på civilisation igen
 [[attachment:paw_tom_run_dam1.jpg]]
 
-Efter dæmningen var der 5 km med bogs, og efter at have passeret et lille pas kunne vi se en vej og derefter [[https://huts.mountaineering.scot/Hut/lagangarbh][Lagangarbh-hytten]]. Tom sagde, han ville have været en del timer hurtigere, hvis han havde været alene. Først da gik det op for mig, at han er ultraløber og deltager i konkurrencer. "I do this shit" var hans underspillede kommentar.
+Efter dæmningen var der 5 km med bogs. Efter et lille pas kunne vi se en vej og derefter [[https://huts.mountaineering.scot/Hut/lagangarbh][Lagangarbh-hytten]].
+
+Tom sagde, han ville have været en del timer hurtigere, hvis han havde været alene. Først da gik det op for mig, at han er ultraløber og deltager i konkurrencer. "I do this shit" var hans underspillede kommentar.
 
 #+CAPTION: Før og efter, Toms og min gå-/løbetur på 70 km og 13 timer mellem to hytter
 [[attachment:paw-tom-run-before_after.jpeg]]
 
 * Shenanigans
 Dagen efter var det stadig for varmt til vinterklatring, og vi gik en tur i landskabet og kom forbi en lille aflåst hytte.
-I Skotland har de en del forskellige klubber – klubberne ejer hytter, som medlemmerne kan bruge. Præcist som med Kullen-hytten.
-Den hytte, vi stod ved, var en "uautoriseret", en hytte opført uden tilladelse i en nationalpark. Hytten var ejet af [[https://www.facebook.com/CreaghDhuMC.org/posts/pfbid0Ma2oMaTD9iGhRm3iyNfrjkeT6FUkn9SnwvPCyhS8LZVSZhxdQX64nFutTV7gfgFEl][Creag Dhu]], en [[https://services.thebmc.co.uk/clublife][gruppe, der opstod i 1929 i Glasgow som arbejdernes og anarkisternes alternativ til overklassens Alpine klub]].
+
+I Skotland har de en del forskellige klubber. Klubberne ejer hytter, som medlemmerne kan bruge – præcis som med Kullen-hytten.
+
+Den hytte, vi stod ved, var en "uautoriseret", en hytte opført uden tilladelse i en nationalpark. Hytten var ejet af [[https://www.facebook.com/CreaghDhuMC.org/posts/pfbid0Ma2oMaTD9iGhRm3iyNfrjkeT6FUkn9SnwvPCyhS8LZVSZhxdQX64nFutTV7gfgFEl][Creag Dhu]], en [[https://services.thebmc.co.uk/clublife][gruppe, der opstod i 1929 i Glasgow som arbejdernes og anarkisternes alternativ til overklassens Alpine Club]].
 
 Fra hytteværten for CIC-hytten ved Ben Nevis, hvor vi sov de to første dage, hørte jeg, at Glasgows dry-tooling-gruppe havde reserveret hytten ugen efter vores træf. Jeg havde stadig ingen idé om, hvordan jeg ville komme ud at klatre den uge, men jeg ville gerne møde nogle rigtige dry-tool'ere, og jeg ville gerne tilbage til CIC.
+
 Tom fortalte, at arrangøren af dry-tool-gruppen sikkert var en ved navn Willis, at Willis var medlem af Creag Dhu og en karakter.
-Vi var nødt til at komme ind i hytten. Jeg fandt et par små kviste af rette beskaffenhed, fik hasperne af beslaget, lagde tagpap i karmen, så det var nemmere at møve sig ind. Tom havde en flaske hjemmebrygget vin med, vi drak. Jeg fik hasperne på igen, og vi gik videre.
+
+Vi var nødt til at komme ind i hytten. Jeg fandt et par små kviste af rette beskaffenhed, fik hasperne af beslaget og lagde tagpap i karmen, så det var nemmere at møve sig ind. Tom havde en flaske hjemmebrygget vin med, vi drak. Jeg fik hasperne på igen, og vi gik videre.
 
 #+CAPTION: Jeg fik løftet hasperne af, og vi klemmer os ind gennem det åbne vindue
 [[attachment:paw_window_hut.jpg]]
 
 De sidste par dage brugte vi på klippeklatring. Det var stadig for varmt til vinterklatring.
+
 På vej til Glenmore Lodge den sidste aften, til afskedsreceptionen, ville jeg gerne svømme. Vi kører over en bro, og Tom foreslår, at jeg da bare kan hoppe i floden.
 
 #+attr_html: :controls t :class video-container
@@ -164,56 +205,82 @@ Efter aftensmad er der opsummering, og der bliver taget et fællesbillede.
 #+CAPTION: Deltagere ved SMC-træf 2025, Glenmore Lodge
 [[attachment:participants.jpg]]
 
-Direktøren for BMC (The British Mountaineering Council) var til stede om aftenen. Han havde hørt om Tom og jeg og ville give en øl til os samt de to organisatorer Al og Simon. På det tidspunkt havde vi allerede drukket to af Toms flasker hjemmebryg på værelset, og mens jeg står med øllen og overvejer, om det er godt med mere alkohol, kommer en anden deltager hen for at snakke med Al.
-Hun siger, hun bor i Zermatt, skal til Nepal for at bestige Mt. Everest og har brug for nogen til at passe hendes kat. Har Al nogen idéer? Hvorfor hun spørger Al om det, har jeg stadig ingen idé om. Men jeg reagerer uden betænkning og siger, jeg gerne vil passe katten. Hun får mit nummer, og vi aftales at skrive ved.
-Jeg ved ikke, hvor Zermatt ligger; Tom forklarer, at det er en lille by ved foden af bjerget Matterhorn i Schweiz.
+Direktøren for BMC (The British Mountaineering Council) var til stede om aftenen. Han havde hørt om Tom og jeg og ville give en øl til os samt de to organisatorer Al og Simon.
+
+På det tidspunkt havde vi allerede drukket to af Toms flasker hjemmebryg på værelset. Mens jeg står med øllen og overvejer, om det er en god idé med mere alkohol, kommer en anden deltager hen for at snakke med Al.
+
+Hun siger, hun bor i Zermatt, skal til Nepal for at bestige Mt. Everest og har brug for nogen til at passe hendes kat. Har Al nogen idéer? Hvorfor hun spørger Al om det, har jeg stadig ingen idé om.
+
+Jeg reagerer uden betænkning og siger, at jeg gerne vil passe katten. Hun får mit nummer, og vi aftaler at skrive ved lejlighed.
+
+Jeg ved ikke, hvor Zermatt ligger. Tom forklarer, at det er en lille by ved foden af bjerget Matterhorn i Schweiz.
 
 * Steven, et kortvarigt venskab
 Mit næste problem var en makker til den kommende uge. Jeg havde tænkt mig at flytte ind hos den vært, jeg var på Tower Ridge med, men han havde desværre forstuvet foden, da han gik fra CIC-hytten, og Tom skulle tilbage til sit hjem i Lake District.
-Vejrudsigten lovede, at vinteren var tilbage, så jeg ville have en kompetent makker og prøve nogle svære vinterruter. Jeg falder i snak med Dan, en ung vært fra min gruppe, og det viser sig, at han også har tænkt sig at blive en uge ekstra. Han bor i Wales, men er medlem af The Climbers' Club, der ejer en hytte [[https://huts.mountaineering.scot/Hut/riasg][Roy Bridge]], ikke langt fra Ben Nevis, hvor vi begge kan sove.
 
-Dagen efter får vi et lift af Steven, en vært jeg har lært at kende i løbet af ugen. Mens vi ventede på vinteren, brugte vi tid på klatring i Glen Nevis. Ben, som i Ben Nevis, er skotsk for bjerg, mens Glen, som i Glen Nevis, er skotsk for dal. Dvs. Glen Nevis er dalen ved foden af bjerget Ben Nevis. Steven hentede os i Riasg-hytten de første par dage.
+Vejrudsigten lovede, at vinteren var på vej tilbage, så jeg ville have en kompetent makker og prøve nogle svære vinterruter. Jeg falder i snak med Dan, en ung vært fra min gruppe, og det viser sig, at han også har tænkt sig at blive en uge ekstra. Han bor i Wales, men er medlem af The Climbers' Club, der ejer en hytte [[https://huts.mountaineering.scot/Hut/riasg][Roy Bridge]], ikke langt fra Ben Nevis, hvor vi begge kan sove.
+
+Dagen efter får vi et lift af Steven, en vært jeg har lært at kende i løbet af ugen. Mens vi ventede på vinteren, brugte vi tid på klatring i Glen Nevis. Ben, som i Ben Nevis, er skotsk for bjerg, mens Glen, som i Glen Nevis, er skotsk for dal. Glen Nevis er altså dalen ved foden af Ben Nevis.
+
+Steven hentede os i Riasg-hytten de første par dage.
 
 #+CAPTION: Steven sikrer mig på [[https://www.ukclimbing.com/logbook/crags/polldubh_crags_glen_nevis-807/tobe_hooper-192587][Tobe Hooper, E4 6a]], Glen Nevis
 [[attachment:paw_steven_tobe_hooper_E46a.jpeg]]
 
-Steven og jeg er ca. samme alder og har samme uddannelse. Han er flyttet til Fort William (en større by tæt på Ben Nevis og massevis af klippeklatring) med sin hustru og to små børn for at bruge mere tid på klatring. En virkelig sød person og et indblik i, hvordan mit liv kunne have været, hvis jeg havde arbejdet i stedet for at strejfe rundt.
-Desværre får jeg en besked en måned senere om, at Steven er faldet ned i Glen Nevis og er død. Det rammer mig noget hårdere end de få andre dødsfald, jeg har været bekendt med, dels fordi han var så sympatisk, dels fordi han havde to små børn, dels fordi det hele jo bare er for sjov. Det er jo slet ikke meningen, at nogen skal dø.
+Steven og jeg er ca. samme alder og har samme uddannelsesbaggrund. Han er flyttet til Fort William (en større by tæt på Ben Nevis og massevis af klippeklatring) med sin hustru og to små børn for at bruge mere tid på klatring.
 
-#+CAPTION: Steven og jeg, på toppen af en af klipperne i Glen Nevis
+En virkelig sød person og et indblik i, hvordan mit liv kunne have været, hvis jeg havde arbejdet i stedet for at strejfe rundt.
+
+Desværre får jeg en besked en måned senere om, at Steven er faldet ned i Glen Nevis og er død. Det rammer mig hårdere end de få andre dødsfald, jeg har været bekendt med. Dels fordi han var så sympatisk, dels fordi han havde to små børn, dels fordi det hele jo bare er for sjov.
+
+Det er jo slet ikke meningen, at nogen skal dø.
+
+#+CAPTION: Steven og jeg på toppen af en af klipperne i Glen Nevis
 [[attachment:paw_steven.jpeg]]
 
 * Vinteren vender tilbage
 Efter et par solskinsdage er vinteren tilbage for fuld styrke. I hytten sover også et par bjergguider, og de giver Dan og jeg et lift til The Cairngorms, en af de andre populære bjergkæder længere østpå.
-Dan vil prøve en IX-rute, og jeg er spændt. Indmarchen er lang, men landskabet utrolig flot. Aftalen er, at Dan tager første reblængde, så jeg kan få en fornemmelse for klatringen, og jeg tager anden.
 
-Der står allerede en og sikrer et stykke væk fra vores rute; vinden er konstant hård, og han ser en smule kold ud. Dan gearer op, og jeg minder mig selv om, at jeg skal huske at bevæge tæer og fingre.
-Efter to timer står min stille sikringsmakker stadig 50 m fra mig. Og Dan er kun nået 15 m op. Det begynder at gå op for mig, at det, de kalder hård vinterklatring, betyder en masse venten for den, der sikrer, og jeg er ikke imponeret.
+Dan vil prøve en IX-rute, og jeg er spændt. Indmarchen er lang, men landskabet er utrolig flot. Aftalen er, at Dan tager første reblængde, så jeg kan få en fornemmelse for klatringen, og at jeg tager anden.
+
+Der står allerede en og sikrer et stykke væk fra vores rute. Vinden er konstant hård, og han ser en smule kold ud. Dan gearer op, og jeg minder mig selv om, at jeg skal huske at bevæge tæer og fingre.
+
+Efter to timer står min stille sikringsmakker stadig 50 m fra mig. Dan er kun nået 15 m op. Det begynder at gå op for mig, at det, de kalder hård vinterklatring, betyder en masse venten for den, der sikrer. Jeg er ikke imponeret.
+
 Heldigvis indser Dan også, at det ikke fungerer, og ikke længe efter banker han en kile fast med øksen, og jeg firer ham ned.
 
-Dan foreslår, at vi klatrer [[https://routes.smc.org.uk/route/17581][Fall-out Corner VI,7]], en 80 m rute i nærheden. Jeg får udstyret og er godt klar over, at vi ikke har så megen tid tilbage ift. vores lift tilbage til hytten, så hvis jeg vil til toppen, skal det hele klatres i ét go.
+Dan foreslår, at vi klatrer [[https://routes.smc.org.uk/route/17581][Fall-out Corner VI,7]], en 80 m rute i nærheden. Jeg får udstyret og er klar over, at vi ikke har så meget tid tilbage i forhold til vores lift tilbage til hytten. Hvis jeg vil til toppen, skal det hele klatres i ét go.
+
 Heldigvis er vinden så stærk, at jeg ikke vil kunne høre Dan brokke sig over, at jeg ikke laver standplads. Vi har 70 m dobbeltreb, så Dan må følge lidt med op, inden jeg er på toppen.
 
 * Tilbage til CIC og Ben Nevis
-Tilbage i hytten får jeg fat på Willis, arrangøren af dry-tool-gruppen i CIC-hytten. De har haft frafald, og der er plads til mig og en makker. Jeg får arrangeret et lift til nærmeste parkeringsplads næste morgen; Dan skal arbejde fra sin computer, og for at være sikker på, at han kommer om aftenen, indvilger jeg i at bære alt udstyr til hytten. Det tager 1,5–2 timer at gå turen op.
+Tilbage i hytten får jeg fat på Willis, arrangøren af dry-tool-gruppen i CIC-hytten. De har haft frafald, og der er plads til mig og en makker.
+
+Jeg får arrangeret et lift til nærmeste parkeringsplads næste morgen. Dan skal arbejde fra sin computer, og for at være sikker på, at han kommer om aftenen, indvilger jeg i at bære alt udstyr til hytten. Det tager 1,5–2 timer at gå turen op.
 
 I hytten møder jeg kokken Liam, der er ved at forberede aftensmaden. Han er festlig, og jeg er overrasket over, at han bare godtager, at jeg nu er en del af flokken. Jeg har helt ondt af de få vandrere, der tilfældigt kommer forbi og får at vide, at hytten er lukket til privat brug.
 
-Under vintermødet havde hver hytte en hyttevært, der forberedte alle måltider. Dry-tool-gruppen har medbragt deres egen kok Liam. Vi snakker lidt, jeg spiser deres rester og tager et billede af en rute, jeg har tænkt mig at klatre fra guidebogen.
+Under vintermødet havde hver hytte en hyttevært, der forberedte alle måltider. Dry-tool-gruppen har medbragt deres egen kok, Liam. Vi snakker lidt, jeg spiser deres rester og tager et billede af en rute, jeg har tænkt mig at klatre, fra guidebogen.
 
 #+CAPTION: Kokken Liam
 [[attachment:cic_chef_liam.jpg]]
 
-Da jeg kommer op til klippen, går det op for mig, at jeg har taget et billede af den forkerte side i guiden. I stedet starter jeg op ad en linje, jeg synes ser overkommelig ud ([[https://routes.smc.org.uk/route/26890][Comb Gully IV,4]]). Det går godt, indtil jeg kommer til det første stykke lodrette is. Jeg er klar over, at herefter vil det være svært at vende om, og en fejl vil sende mig kurende ned og først stoppe ved [[https://da.wikipedia.org/wiki/Ur_(geologi)][talus'en]] (en: scree) 100 m lavere.
-Jeg er også godt klar over, at det er en irrationel frygt; lige her er der noget, jeg rent faktisk har kendskab til, og efter et par indåndinger fortsætter jeg. På toppen af Ben Nevis møder jeg tilfældigt Willis med to makkere.
+Da jeg kommer op til klippen, går det op for mig, at jeg har taget et billede af den forkerte side i guiden. I stedet starter jeg op ad en linje, jeg synes ser overkommelig ud: [[https://routes.smc.org.uk/route/26890][Comb Gully IV,4]].
 
-#+CAPTION: Willis, th., med to andre fra dry-tool-gruppen.
+Det går godt, indtil jeg kommer til det første stykke lodrette is. Jeg er klar over, at det herefter vil være svært at vende om, og at en fejl vil sende mig kurende ned og først stoppe ved [[https://da.wikipedia.org/wiki/Ur_(geologi)][talus'en]] (en: scree) 100 m lavere.
+
+Jeg er også godt klar over, at det er en irrationel frygt. Lige her er der noget, jeg rent faktisk har kendskab til. Efter et par indåndinger fortsætter jeg. På toppen af Ben Nevis møder jeg tilfældigt Willis med to makkere.
+
+#+CAPTION: Willis, th., med to andre fra dry-tool-gruppen
 [[attachment:willis_top_ben_nevis.jpg]]
 
-Tilbage i hytten bruger jeg tiden på at læse om [[https://en.wikipedia.org/wiki/Munro][Munros]]. Det er toppe i Skotland over 3000 ft (914 m); dem er der 282 af, og Tom har selvfølgelig løbet til dem alle. Ben Nevis er den højeste med 1345 m.
+Tilbage i hytten bruger jeg tiden på at læse om [[https://en.wikipedia.org/wiki/Munro][Munros]]. Det er toppe i Skotland over 3000 ft (914 m). Dem er der 282 af, og Tom har selvfølgelig løbet til dem alle. Ben Nevis er den højeste med 1345 m.
+
 Jeg har tidligere været fascineret af den skotske bjergbestiger, opfinder og allround cool fyr [[https://en.wikipedia.org/wiki/Hamish_MacInnes][Hamish MacInnes]] og husker at have læst i en af hans bøger, at han i starten af sin klatrekarriere ikke ville sidestilles med en "Munro bagger" og derfor til tider undlod at klatre helt til toppen af bjergene. Jeg forstår nu, hvad det betyder.
 
-Dagen efter starter Dan og jeg på [[https://routes.smc.org.uk/route/38019][Sake, VIII,9]]. Det er den første rute, hvor jeg ikke bare kan hooke eller vride øksen fast. Nogle af klatrerne banker øksespidsen fast i små sprækker med siden af den anden økse, men det har jeg holdt mig fra. Efter at min ene økse falder ud af et tyndt rids, omfavner jeg teknikken og den gode følelse af en økse, der sidder rimelig godt fast. Desuden giver det øksen et patinalook, og du ligner en rigtig alpinist...
+Dagen efter starter Dan og jeg på [[https://routes.smc.org.uk/route/38019][Sake, VIII,9]]. Det er den første rute, hvor jeg ikke bare kan hooke eller vride øksen fast.
+
+Nogle klatrere banker øksespidsen fast i små sprækker med siden af den anden økse. Det har jeg holdt mig fra. Efter at min ene økse falder ud af et tyndt rids, omfavner jeg teknikken og den gode følelse af en økse, der sidder rimelig godt fast. Desuden giver det øksen et patinalook, og du ligner en rigtig alpinist...
 
 #+CAPTION: Dan følger efter på Sake, VIII, 9
 [[attachment:dan_following_sake_VIII.jpg]]
@@ -222,21 +289,23 @@ Dagen efter starter Dan og jeg på [[https://routes.smc.org.uk/route/38019][Sake
 Efter et par dage er vi tilbage i Climbers' Club-hytten. Jeg skal til Edinburgh, hvor jeg skal flyve tilbage til Marokko og tage et kursus i paragliding sammen med min ven og klatremakker, Poul.
 
 I Skotland er togbilletterne billigere, jo tidligere de købes. Da jeg ikke vidste, hvor jeg ville rejse fra, havde jeg ikke købt billet, og nu var prisen 56 £ i stedet for omkring 20 £, hvis jeg havde planlagt og købt i god tid.
-Jeg ventede med at købe billet, til toget ankom til Roy Bridge station, og beklagede min nød til togføreren. Han sagde, han ikke kunne give mig en billigere billet, men jeg kunne i stedet købe fra den station, hvor han blev afløst. På den måde ville jeg få billetten til halv pris.
 
-Denne sidste oplevelse illustrerer, hvor søde og venlige folk er i det skotske højland. Det var en god oplevelse, et eventyrland, og jeg håber, nogle er blevet inspireret til at søge næste gang formanden skriver, at der er kommet en invitation fra SMC.
+Jeg venter med at købe billet, til toget ankommer til Roy Bridge station, og beklager min nød til togføreren. Han siger, han ikke kan give mig en billigere billet, men at jeg i stedet kan købe fra den station, hvor han bliver afløst. På den måde får jeg billetten til halv pris.
+
+Denne sidste oplevelse illustrerer meget godt, hvor søde og venlige folk er i det skotske højland. Det var en god oplevelse, et eventyrland, og jeg håber, nogle er blevet inspireret til at søge, næste gang formanden skriver, at der er kommet en invitation fra SMC.
 
 Willis har siden inviteret mig tilbage i CIC-hytten næste år. Jeg har stadig kontakt med Tom og Dan og håber at besøge dem på et tidspunkt.
+
 Jeg skrev dette i Zermatt.
 
 * Noter
-For at links'ne til ruterne på https://routes.smc.org.uk/ skal virke, er det nødvendigt at have klikket ja til boksen på forsiden. Derefter bør de direkte links til rute-databasen virke.
+For at links'ne til ruterne på https://routes.smc.org.uk/ skal virke, er det nødvendigt at have klikket "ja" til boksen på forsiden. Derefter bør de direkte links til rute-databasen virke.
 
-- Arrangørerne Al og Simon har skrevet en [[https://www.ukclimbing.com/news/2025/03/international_winter_meet_returns_to_scotland_-_a_week_of_two_halves-73921][opsummering af mødet i 2025]]
-- Samme Simon skrev en [[https://www.ukclimbing.com/news/2020/03/scottish_international_winter_meet_2020-72224][opsummering af det forrige møde i 2020, hvor Michael Hjort og Michael Hjelm Poulsen deltog fra Danmark]]
+- Arrangørerne Al og Simon har skrevet en [[https://www.ukclimbing.com/news/2025/03/international_winter_meet_returns_to_scotland_-_a_week_of_two_halves-73921][opsummering af mødet i 2025]].
+- Samme Simon skrev en [[https://www.ukclimbing.com/news/2020/03/scottish_international_winter_meet_2020-72224][opsummering af det forrige møde i 2020, hvor Michael Hjort og Michael Hjelm Poulsen deltog fra Danmark]].
 
-En af hytteværterne, [[mailto:cm.huntley@btinternet.com][Chris Huntley]], huskede, at der tidligere havde været rapporteret et løb mellem SMC's hytter. Da han kom hjem, sendte han et indscan af beretningen
-[[attachment:scan-hut-route.pdf][Alec Keith - The SMC Hut Route. SMC Journal, ref 1995, no 186, page 625.]]
+En af hytteværterne, [[mailto:cm.huntley@btinternet.com][Chris Huntley]], huskede, at der tidligere havde været rapporteret et løb mellem SMC's hytter. Da han kom hjem, sendte han et indscan af beretningen:
+[[attachment:scan-hut-route.pdf][Alec Keith – The SMC Hut Route. SMC Journal, ref 1995, no 186, page 625.]]
 
 Tom kaldte vores tur for "The Great Dane" på Strava.
 
