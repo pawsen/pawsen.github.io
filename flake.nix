@@ -22,6 +22,8 @@
             echo "###########"
             echo "run"
             echo "emacs --batch --load scripts/ox-roam.el --funcall export-org-roam-files"
+            echo "OR"
+            echo "M-x org-hugo-export-wim-to-md"
             echo "hugo serve -D --logLevel debug --disableFastRender"
             echo "###########"
             '';
