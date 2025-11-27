@@ -1,0 +1,16 @@
+# -*- ispell-local-dictionary: "da" -*-
+:PROPERTIES:
+:ID:       c2a4aa44-2272-4bcf-88bd-32dc1118d7d9
+# :link-img:   ../.attach/tenerife-2022/boulder*.jpg
+:DIR:      ../.attach/tenerife-2022
+:END:
+#+title: dirtbag on Tenerife
+
+#+HUGO_SECTION: post
+#+filetags: climbing traveling
+#+hugo_categories: climbing
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2025-11-27
+#+hugo_bundle: tenerife-2022
+#+export_file_name: index
+# #+HUGO_CUSTOM_FRONT_MATTER: :image faulty_towers__hot_Rats_hvs5a.jpg
