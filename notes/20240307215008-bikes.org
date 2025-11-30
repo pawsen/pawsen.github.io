@@ -184,6 +184,8 @@ The templates are obtained by writing an email to [[mailto:liying@to7motor.cn][l
 - [[attachment:DM01-模板.pdf][DM01, (68mm BB)]]
 - [[attachment:DM02L-模板.pdf][DM02L, (100mm BB)]]
 The BB length doesn't matter for the template. Use it to see if the motor rub against the chainstay.
+*** troubleshooting
+[[https://toseven.miraheze.org][ToSeven Wiki]]
 
 * Battery
 ** cases
