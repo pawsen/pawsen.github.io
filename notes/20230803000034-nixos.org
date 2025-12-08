@@ -213,6 +213,31 @@ hydra-check openscad-unstable
 #+begin_src sh
 nix profile install github:nixos/nixpkgs/1bfcb1539b8f0ac52b06a33ed0630d5077a4f998#openscad-unstable
 #+end_src
+** Install a custom package, overriding the input
+I want to install a custom version of emacs, but =nix profile install github:nixos/nixpkgs/rev#emacs= does not bundle emacs and emacs packages.
+
+To install both =emacs= and =treesit-grammers=, add a package to =nixos-config/packages/emacs-treesit.nix=
+#+begin_src nix
+{ pkgs, ... }:
+
+let
+  unstablePkgs = pkgs.unstable;
+in
+(unstablePkgs.emacsPackagesFor unstablePkgs.emacs-gtk).emacsWithPackages
+  (epkgs: with epkgs; [
+    treesit-grammars.with-all-grammars
+    vterm
+    # mu4e
+  ])
+#+end_src
+
+From the =nixos-config= dir, install but override the input for the unstable packages. The input =nixpkgs-unstable= is defined the flake, =nixos-config/flake.nix=.
+#+begin_src sh
+nix profile install \
+       --override-input nixpkgs-unstable github:NixOS/nixpkgs \
+       .#emacs-latest
+#+end_src
+
 
 ** garbage collecting
 
