@@ -3,7 +3,6 @@
 :ID:       c2a4aa44-2272-4bcf-88bd-32dc1118d7d9
 :DIR:      ../.attach/tenerife-2022
 :END:
-# :link-img:   ../.attach/tenerife-2022/boulder*.jpg
 #+title: dirtbag on Tenerife
 
 #+HUGO_SECTION: post
@@ -18,7 +17,12 @@
 I was on Tenerife in the first months of 2020 when covid hit.
 Lucky for me, when most tourist left the island, I stayed, got to know locals and climb with the guides for half a year.
 
+
 Two years later I was back for a another climbing trip, this time with a friend. What I thought would be 6 weeks on the island turned out to be another half year.
 
 
 #+hugo: more
+
+
+#+CAPTION: Climbing with Teide in the background
+[[attachment:climbing_tenerife_teide_background.jpg]]

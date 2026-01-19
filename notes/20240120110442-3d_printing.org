@@ -163,6 +163,11 @@ With fan
 The [[https://nick-black.com/dankwiki/index.php/A_case_study_in_full-stack_device_development:_the_dankdryer][dankdryer]] is the world's best dryer. At least it is fully [[https://github.com/dankamongmen/dankdryer][open source]]: code, KiCad, openSCAD. Pretty awesome and totally overkill unless you really need engineering matetrials and have a good printer.
 
 * Custom G code
+The easiest way is to include a simple dwell time code in the gcode startsequence (set G4 after M190):
+
+: M190 R[first_layer_bed_temperature] ; wait for bed temp
+: G4 S1200 ; wait and heat bed for 20 minutes
+continue rest of code...
 
 https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-hardware-firmware-and-software-help/gcode-to-warm-up-enclose-before-printing/
 https://forum.prusa3d.com/forum/prusaslicer/how-to-configure-hot-end-heating-after-auto-leveling/

@@ -164,3 +164,18 @@ https://bit.ly/47QNzgF
 lesson: use carabiner which prevents the grigri from rotating in the bin.
 ** Using ascenders as belay devise
 [[http://www.supertopo.com/climbers-forum/330793/Mistakes-synergy-death-Accident-report-Joe-Ivy][Ascender broke rope]] and [[http://www.caves.org/section/vertical/nh/45/ivyaccrpt.html][detailed report at caves.org]]
+* Winter
+** Sharpening ice tools
+In the video [[https://youtu.be/AAth2zIXXGY][Will Gadd, Sharpening your picks, Youtube]], he states that the front of the pick should have an angle of approximately 45degrees.
+
+Carry around 12 screws. 8 of 13 cm, 2 loner and 2 very long(21-23 cm) for v-threads.
+Alu screws have larger diameter, makes bigger holes than steel which is good for no-thread absails (ie the rope is threaded through the hole). Alu screws, being lightweight and softer metal, takes much less abuse than steel.
+** picks
+- https://www.krukonogi-titanium.com/ ::
+  Russian amour steel. Popular among competition dry-tool'ers. Does not ship as of 2026, but https://www.nordicegear.fi/ sells a limited selection at slightly increased price (like 5eur per piece).
+  https://verticallstore.com/blogs/news/krukonogi-ice-mixed-drytooling-picks-guide describes how to decode the model listing.
+  Note that there is now a [[https://www.krukonogi-titanium.com/catalog?store-page=PN1-A-G-Replacement-pick-for-Petzl-Nomic-I-II-Quark-II-Ergo-II-Armor-steel-standart-p483174324][PN1(A)G]] which seems to have milling for hammer/adze.
+- https://www.sport-steinle.com/ ::
+  Well renowned picks for mix, does include milling for hammer/adze for Petzl Nomic
+- https://en.kuzniaszpeju.pl/ ::
+  The cheapest non-brand picks. Should be decent quality (not as hard steel as the two oter brands, but at half the price it might be good enough)
