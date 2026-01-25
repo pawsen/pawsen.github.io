@@ -110,7 +110,33 @@ https://cults3d.com/en/3d-model/tool/gromm-hitch
 
 Brent Barhahns sells a modifies version he calls [[https://avantclimbing.com/products/soft-cinch-lead-rope-solo-backfeed-preventer-5-pack][soft-cinch]]. The main difference is a /hammerhead/ keeping the rope in place, which should be a "game changer"
 [[attachment:_20240120_153145SoftCinchGIF1.gif]]
+** ice :ATTACH:
 
+#+CAPTION: Rope in backpack, using two stopper knots and two mailons for backup
+[[attachment:lead-rope-solo-setup_nah-1024x683.jpg]]
+
+https://youtu.be/0yOesU4O1Nc and [[https://ripperkon.de/en/lead-climbing-self-belayed-solo-climbing-with-grigri-plus-and-maillons-rope-in-backpack/][blog]]
+* Forces on climber, belayer and anchor :ATTACH:
+The highest impact force I have seen measured on a lead fall is 7.16kN on anchor by Tanner for a HowNOT2 video (he is 131kg).
+The belay device is bolted to the anchor, so it resembles LRS fall.
+
+#+CAPTION: Lead fall forces from [[https://web.archive.org/web/20250206225144/https://www.hownot2.info/post/big-climbers][hownot2 blog]]
+[[attachment:lead-fall-forces-hownot2.png]]
+
+Direct link at 6:28 in the How NOT 2 Video: https://youtu.be/Tnk4Ky-D9Bg?si=0tL6f8cqm78sMBMh&t=388
+
+#+caption: Lead fall forces from hardiseasy: https://youtu.be/uoDN6SQog9g
+[[attachment:lead-fall-forces-hardiseasy.png]]
+
+#+caption: Shock load forces are a myth, hownot2: https://youtu.be/nr3YBDnOI8Q
+[[attachment:shock-load-forces-hownot2.png]]
+
+[[https://www.petzl.com/US/en/Sport/Forces-at-work-in-a-real-fall][Petzl dynamic test]]. Factor 1 fall,
+- climber, Impact force  4 kN ::
+  Such a fall is impressive for the climber and is rare in the field. However, the force is quite bearable.
+- Belayer,Impact force ≈ 2 kN ::
+  As with the factor 0.7, the belayer is stopped harshly at the belay station: arresting the fall can be painful and difficult.
+- Anchor, Impact force ≈ 6 kN
 * gear
 ** p-led
 p-led is called quick-links or mailon, [[https://www.google.com/search?q=delta+link+climbing][here]] shown as triangular shape (delta link)
@@ -179,3 +205,9 @@ Alu screws have larger diameter, makes bigger holes than steel which is good for
   Well renowned picks for mix, does include milling for hammer/adze for Petzl Nomic
 - https://en.kuzniaszpeju.pl/ ::
   The cheapest non-brand picks. Should be decent quality (not as hard steel as the two oter brands, but at half the price it might be good enough)
+
+** gloves
+- Showa Termes 282 Winter Gloves ::
+  This glove is a lined rubber glove designed for “cutting fish all day on a trawler”.
+- Showa PVC 620 Gloves ::
+  This glove features a cotton liner coated with PVC, allowing it to absorb some moisture inside. The thin material provides excellent dexterity, and the fit allows wearing a thin merino liner underneath if needed.

@@ -38,4 +38,6 @@ The pdf also list these values from a test (without stating the precise angles)
 
 The same is true for snow anchors. Here is [[https://youtu.be/sbRSFdsnb-Q][Presentation on snow anchors]] and collection of [[https://drive.google.com/drive/folders/1lIY2C_y3Pkg_Jy2OeepIqXhvZEMwJaSo][documents on snow anchors]].
 
+Another resource for numbers on [[https://web.archive.org/web/20250114195308/https://www.needlesports.com/Information/Need-Advice/Ice-Screw-Placement][Strenght VS Placement angle]]
+
 A bit related is this comprehensive page on [[http://www.bolt-products.com/Glue-inBoltDesign.htm][Glue In bolts and more]]

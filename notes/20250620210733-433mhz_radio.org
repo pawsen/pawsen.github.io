@@ -38,8 +38,11 @@ Tire Pressure Monitoring Systems (TPMS) are present on all US automobiles sold a
 The initial presentation that kicked of the frenzy, [[https://youtu.be/bKqiq2Y43Wg][Jared Boone: Reversing Tire Pressure Monitors with a Software-Defined Radio]]
 - US/Asian cars use 315MHz
 - EU cars use 433MHz
+* Decode weather stations
 
 
+1. decode with sdr and URH, [[https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html][Decode captured transmission using URH]]
+2. use decoding to receive data with cheap FS1000A arduino module, [[https://www.onetransistor.eu/2024/01/receive-lpd433-weather-unit-nexus.html][Receive weather station data with Arduino]]
 
 * Other usages
 

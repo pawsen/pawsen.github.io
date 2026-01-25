@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       7240cbcb-33ab-4433-a94b-0159b4679e70
+:DIR:      ../.attach/lofoten
+:END:
+
+#+title: Lofoten
+
+
+* Winter climbing :ATTACH:
+
+- International Winter Meet, 2009 ::
+  From March 8 to 15, 2009, the Norwegian Alpine Club (Norsk Tindeklub, NTK) invited nearly 40 climbers from all over the world to Lofoten
+  Writeup in [[attachment:AAJ_2010_52_84_220.pdf][AAJ_2010_52_84_220.pdf]] ([[https://publications.americanalpineclub.org/articles/12201022000/Lofoten-International-Winter-Meet][link]] to comments from participants with color pictures of some of the lines)
+
+- Arctic Ice Climbing, guide ::
+  Guide for Northern Norway, 93 routes. [[https://www.vpg.no/Arctic-Ice-Climbing/303421/][vpg.no]]
+
+** TheCrag
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/5263461720][Stauren]] ::
+  Bruvoll-Widlund, WI4-5 ([[https://www.instagram.com/p/CYLpjwtsxmy/][pictures, instagram]])
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/3040813557][Abrahamstind]] ::
+  [[https://www.ntk.no/topo/nothing-compares-2-u/][Nothuing Compares 2 U]], WI6/M6+. Already a classic, with several reptitions.
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/3051537519][Hoven]]
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/1298160417#n4944873990][Rulten]]
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/3068457933][Svolværveien Ice]] ::
+  Between the town and airport tunnels above the E10, some prised lines form when the Lofoten ice gods are kind. Mostly South facing, they´re generally only climbable early season (Dec-Feb).
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/952718295#n4356692634][Vågakallen]] ::
+  Two of the routes have links to AAC
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/4479568854][Damvatnet]]
+- [[https://www.thecrag.com/climbing/norway/lofoten/area/3072291768][Dalsjorda]] ::
+  There are two classic frozen waterfalls & at least 1 other climbed line to be found in the valley below Breitinden/Stortinden/Gårdstinden
