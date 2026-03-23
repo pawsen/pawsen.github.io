@@ -29,3 +29,13 @@
 - [[https://www.thecrag.com/climbing/norway/lofoten/area/4479568854][Damvatnet]]
 - [[https://www.thecrag.com/climbing/norway/lofoten/area/3072291768][Dalsjorda]] ::
   There are two classic frozen waterfalls & at least 1 other climbed line to be found in the valley below Breitinden/Stortinden/Gårdstinden
+
+* Weather
+- historical data, https://senorge.no/. [[https://senorge.no/?lang=no&p=standard&bl=graatone&tw=threeHours&tl=windDirection10m3h&l=class_max_windspeed_day_age%2Cclass_max_windspeed_day%2Cst_vindretning%2Cst_vindstyrke10%2Cclass_temp_day_age%2Cclass_temp_day%2Cst_lt&date=2026-03-19T03%3A00&click=474603%3A7568844&zoom=11&center=474281%3A7571135][example]]
+- [[https://graphapp.xgeo.no/index.html?X=474677&Y=7568892&searchT=10000&app=senorge][graphapp.xgeo.no]],
+
+seNorge are observational gridded datasets for temperature and precipitation produced by the Norwegian Meteorological Institute (MET Norway). See the [[https://github.com/metno/seNorge_docs/wiki][wiki]]
+
+seNorge data is stored as =nc= files, written using Unidata's netCDF library. See [[https://github.com/metno/seNorge_docs/wiki/File-format][file format]].
+
+[[https://moritzshore.github.io/miljotools/articles/senorge.html][Example on accessing SeNorge2018 data through R]]

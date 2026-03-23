@@ -121,3 +121,5 @@ Free
 https://github.com/chenxiaolong/BCR
 ** Split APKM to APK
 https://maximoff.su/apktool/
+** modded
+https://forum.mobilism.org/index.php
