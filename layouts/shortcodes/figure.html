@@ -1,59 +1,41 @@
 <!-- Web page content width -->
 {{ $maxWidth := 800 }}
-{{ $orient := images.AutoOrient }}
 {{ $src := .Get "src" }}
-{{ $original := .Page.Resources.GetMatch $src }}
-
-{{ if $original }}
-  {{/* Rotate image according to EXIF metadata */}}
-  {{ $fixed := $original | images.Filter $orient }}
-  {{ if gt $fixed.Width $maxWidth }}
-    {{ .Scratch.Set "preview" ($fixed.Resize (print $maxWidth "x")).RelPermalink }}
-  {{ else }}
-    {{ .Scratch.Set "preview" $fixed.RelPermalink }}
-  {{ end }}
-  {{ .Scratch.Set "link" $fixed.RelPermalink }}
-{{ else }}
-  {{ .Scratch.Set "preview" $src }}
-  {{ .Scratch.Set "link" $src }}
-{{ end }}
-
-{{ if (.Scratch.Get "preview") }}
-  {{ if .Get "link" }}
-    {{ .Scratch.Set "link" (.Get "src") }}
-  {{ else }}
-    {{ .Scratch.Set "link" (.Get "src") }}
-  {{ end }}
-{{ else }}
-  {{ .Scratch.Set "preview" (.Get "src") }}
-  {{ .Scratch.Set "link" (.Get "src") }}
-{{ end }}
-
-<!-- Strip "Figure X: " from caption -->
 {{ $caption := replaceRE "^Figure [0-9]+: " "" (.Get "caption") }}
 
+{{ $preview := $src }}
+{{ $link := $src }}
+
+{{ with .Page.Resources.GetMatch $src }}
+  {{/* Rotate image according to EXIF metadata */}}
+  {{ $fixed := .Filter images.AutoOrient }}
+  {{ $link = $fixed.RelPermalink }}
+  {{ if gt $fixed.Width $maxWidth }}
+    {{ $preview = ($fixed.Resize (printf "%dx" $maxWidth)).RelPermalink }}
+  {{ else }}
+    {{ $preview = $fixed.RelPermalink }}
+  {{ end }}
+{{ end }}
+
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-  <a href="{{ .Scratch.Get "link" }}" target="{{ .Get "target" | default "_blank" }}" rel="noopener noreferrer">
-    <img src="{{ .Scratch.Get "preview" }}"
-         {{- if or (.Get "alt") $caption }}
-         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify | plainify }}{{ end }}"
-         {{ end }}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
-         loading="lazy"
+  <a href="{{ $link }}" target="{{ .Get "target" | default "_blank" }}" rel="noopener noreferrer">
+    <img
+      src="{{ $preview }}"
+      {{- if or (.Get "alt") $caption }}
+      alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ $caption | markdownify | plainify }}{{ end }}"
+      {{- end }}
+      {{- with .Get "width" }} width="{{ . }}"{{ end }}
+      {{- with .Get "height" }} height="{{ . }}"{{ end }}
+      loading="lazy"
     />
   </a>
 
   {{- if or $caption (.Get "attr") -}}
-    <figcaption>
-      {{- if or $caption (.Get "attr") -}}<p>
-        {{- $caption | markdownify -}}
-        {{- with .Get "attrlink" }}
-            <a href="{{ . }}">
-        {{ end -}}
-        {{- .Get "attr" | markdownify -}}
-        {{- if .Get "attrlink" }}</a>{{ end }}</p>
-      {{- end }}
-    </figcaption>
+    <figcaption><p>
+      {{- $caption | markdownify -}}
+      {{- with .Get "attrlink" }}<a href="{{ . }}">{{ end -}}
+      {{- .Get "attr" | markdownify -}}
+      {{- if .Get "attrlink" }}</a>{{ end -}}
+    </p></figcaption>
   {{- end }}
 </figure>
