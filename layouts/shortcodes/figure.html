@@ -1,7 +1,8 @@
 <!-- Web page content width -->
 {{ $maxWidth := 800 }}
-{{ $orient    := images.AutoOrient }}
-{{ $original := .Page.Resources.GetMatch (.Get "src") }}
+{{ $orient := images.AutoOrient }}
+{{ $src := .Get "src" }}
+{{ $original := .Page.Resources.GetMatch $src }}
 
 {{ if $original }}
   {{/* Rotate image according to EXIF metadata */}}
@@ -11,6 +12,10 @@
   {{ else }}
     {{ .Scratch.Set "preview" $fixed.RelPermalink }}
   {{ end }}
+  {{ .Scratch.Set "link" $fixed.RelPermalink }}
+{{ else }}
+  {{ .Scratch.Set "preview" $src }}
+  {{ .Scratch.Set "link" $src }}
 {{ end }}
 
 {{ if (.Scratch.Get "preview") }}
