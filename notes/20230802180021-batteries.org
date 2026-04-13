@@ -23,7 +23,7 @@ How to assemble Lithium batteries, like the nominal e-bike 36V battery in fig. [
 
 #+NAME: fig:10s4p_liion_battery
 #+CAPTION: 36V 10s4p liion ebike battery
-[[attachment:IMG_20211103_180619403.jpg]]
+[[attachment:diy-10s4p-battery.jpg]]
 
 * Connectors
 See a list on the [[https://en.wikipedia.org/wiki/DC_connector][Wikipedia article on dc connectors]]
@@ -110,7 +110,7 @@ NOTE:
 
 #+NAME: fig:anderson_colour_keying
 #+CAPTION: Different keying for each colour in the *SB50* series
-[[attachment:_20240218_023440220px-Anderson_SB50_Colour_Keying.jpg]]
+[[attachment:Anderson_SB50_Colour_Keying.jpg]]
 
 - Buy them from [[https://www.aliexpress.com/item/1005005237025318.html][aliexpress]], remember to select AWG size for the pins.
 - The SB connectors can be flush mounted. Here's a 3d model from [[https://www.thingiverse.com/thing:5835998/files][thingiverse]]
@@ -166,7 +166,7 @@ And depending on length, use the
 #+NAME: fig:awg_selection_chart
 #+CAPTION: AWG selection chart.
 #+CAPTION: [[http://assets.bluesea.com/files/resources/newsletter/images/DC_wire_selection_chartlg.jpg][source]]
-[[attachment:_20240218_005227DC_wire_selection_chartlg.jpg]]
+[[attachment:DC_wire_selection_chartlg.jpg]]
 
 ** discharge
 For short cable lengths the main limiting factor is the temperature rating of the insulation. That's why silicon insulated wire can handle amps.
@@ -307,7 +307,7 @@ This doesn't discard the steel for welding purposes: if the strips are in good c
 Take a strip sample and polish / scratch with a dremel tool or simply with a knife on a small area, and put into salty water for 12h to 24h.
 
 #+CAPTION: Pure nickel and nickel plated steel strips in salt water
-[[attachment:DSC_1394_E.jpg]]
+[[attachment:nickel-plated-pure-nickel-salt-water.jpg]]
 
 **** The sanding/grinding wheel test - sparks from grinding
 Nickel plated steel strips should give sparks if grinded with a dremel sanding wheel.
@@ -334,7 +334,7 @@ I have read that the slot in the nickel strip makes the current take the shortes
 ** Types
 There are many different li-ion type cells
 #+CAPTION: Different types of LI-ION cells
-[[attachment:aQnIswu.png]]
+[[attachment:different-liion-cells.png]]
 
 #+CAPTION: Voltage and Chemistry
 | Voltage | Chemistries           |
@@ -439,7 +439,7 @@ This flow chart might help deciding if the cells are worth reusing
 #+CAPTION: flow chart for testing used batteries
 #+CAPTION: {{{NEWLINE}}}
 #+CAPTION: https://secondlifestorage.com/index.php?threads/18650-harvesting-flow-charts.9714
-[[attachment:_20240117_134522index.php.jpeg]]
+[[attachment:cells-harvesting-flow-chart.jpeg]]
 
 *** Internal resistance
 DC and AC IR, [[https://secondlifestorage.com/index.php?threads/dc-ir-vs-ac-1kh-ir-measurements.9471/post-64654][thread]]. Theoretical info on how to measure IR can be found in this paper, [[https://sci-hub.se/10.3390/s100605604][Comparison of methods for determining IR]]
@@ -454,10 +454,10 @@ AC IR is most useful as a coarse first-level screening tool, to weed out unhealt
 
 However, this [[https://docs.google.com/spreadsheets/d/1n6DU0VC7Yjksz2ah90VUcpw6SW6kFqQt/edit#gid=1042577799][IR cheat sheet]] give maximum and optimal AC IR values for different cells. And this [[https://secondlifestorage.com/index.php?threads/dc-ir-vs-ac-1kh-ir-measurements.9471/post-66400][post]] shows that AC & DC IR correlates(shown below as well)
 #+CAPTION: AC & DC IR measurements
-[[attachment:_20240117_15553520341-0abdeb4398e2d17212a3aa109e6b96a9.jpg]]
+[[attachment:ac-dc-IR.jpg]]
 
 #+CAPTION: SOH vs AC & DC IR
-[[attachment:_20240117_1551034755-1d484a0665d4c8b6866f08dc47a918e6.jpg]]
+[[attachment:soh-vs-ac-dc-IR.jpg]]
 
 The current observation is that AC IR so far has been a very good indicator of a cells SOH with DC IR confirming it.
 AC IR can indicate a cells SOH even at low V i.e. a cells cutoff V of ≈2.8V to 2.5V and even below that, where DC IR needs the cell to be at least ≈3.2V to get a reasonably respectable reading.
@@ -490,12 +490,12 @@ Lead-acid batteries have a relatively discharge linear curve, which allows a goo
 Lithium-ion batteries have a much flatter discharge curve, which means that over a wide operating range, the voltage at the battery terminals changes very slightly.
 
 #+CAPTION: Open Circuit voltage, liion VS Lead Acid
-[[attachment:_20240117_141842OCV-vs-SOC-EN.png]]
+[[attachment:OCV-vs-SOC-EN.webp]]
 
 
 Experimental OCV vs SoC is found [[https://lygte-info.dk/info/BatteryChargePercent%20UK.html][here]](see *tables*  section after the images) and summarized here
 #+CAPTION: Estimated remaining capacity, OCV
-[[attachment:_20240117_142835BatteryChargePercent.png]]
+[[attachment:BatteryChargePercent.png]]
 
 *** Coulomb Counting
 
@@ -611,17 +611,17 @@ The copper braid is 25 mm2 equivalent, but it's 25 mm wide x 2 mm thick. It's ra
 Nickel plating was done with nickel acetate, made with vinegar and a pure nickel bar used for electroplating
 
 #+CAPTION: Assembled battery with flexible bus bars.
-[[attachment:20210422_130857.jpg]]
+[[attachment:battery-flexible-busbar.jpg]]
 
 Consider using [[https://mgchemicals.com/products/grease-for-electronics/electrically-conductive-grease/conductive-paste/][Conductive Assembly Paste 847]] between the bus bar and terminals. Might equalize any potential issues from not having perfectly flat bus bars or difference in resistance contact from cell to cell.
 ** Portable powerbank
 https://www.facebook.com/groups/215409542709308/permalink/1124136908503229/
 
 #+CAPTION: DIY 7s powerbank with 4000W inverter
-[[attachment:336641969_260578612981094_4576794305281260481_n.jpg]]
+[[attachment:diy-7s-powerbank-inverter1.jpg]]
 
 #+CAPTION: DIY 7s powerbank with 4000W inverter
-[[attachment:341332985_249482387540216_4869565342427987087_n.jpg]]
+[[attachment:diy-7s-powerbank-inverter2.jpg]]
 
 - 200Ah LifePO4, 7s
 - [[*JKBMS][JKBMS + display]]
@@ -634,7 +634,7 @@ https://www.facebook.com/groups/215409542709308/permalink/1124136908503229/
 * tech
 ** Wire batteries in parallel :ATTACH:
 Pull from +ve on one battery and -ve of the other battery to ensure even load/wear/resistance
-[[attachment:_20240206_203635How-to-Wire-Batteries-in-Series-and-Parallel-Image-11.jpg]]
+[[attachment:How-to-Wire-Batteries-in-Series-and-Parallel.jpg]]
 * fuses :ATTACH:
 A single 180Ah cell shot-circuit using a wrench submerged in water. The cell delivered 2500A, about 13C. This is done using a older cell(video is from 2011), a newer cell might deliver closer to 20C.
 
@@ -680,7 +680,7 @@ Calculate fuse size for a high frequency inverter (ex. 3500W)
 205.882352941 service amps / .8 fuse headroom = 257.352941176 fault amps.
 
 #+CAPTION: https://diysolarforum.com/threads/class-t-vs-anl-fuse.13913/page-3#post-326485
-[[attachment:_20240309_172628Choose_the_Fuse_Amperage.jpg]]
+[[attachment:Choose_the_Fuse_Amperage.jpg]]
 ** estimating short circut current
 
 https://diysolarforum.com/threads/class-t-vs-anl-fuse.13913/post-390863
@@ -713,16 +713,16 @@ Three types of cell fuse
 
 *** images :ATTACH:
 #+CAPTION: Spot welded fuse wire to bus bar
-[[attachment:20220713_190008.jpg]]
+[[attachment:thin-fuse-wire-spotwelded.jpg]]
 
 #+CAPTION: soldered fuse wire to solid bus bar
-[[attachment:BatteryFuse1.webp]]
+[[attachment:thin-fuse-wire-soldered.webp]]
 
 #+CAPTION: Fusing current for AWG wires. From https://en.wikipedia.org/wiki/American_wire_gauge#Tables_of_AWG_wire_sizes
 [[attachment:AWG-wire-sizes.jpg]]
 
 #+CAPTION: nickel fuse strip
-[[attachment:strip.jpg]]
+[[attachment:nickel-fuse-strip.jpg]]
 
 * Inverters
 ** High frequency
