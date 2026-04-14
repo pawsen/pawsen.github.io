@@ -406,8 +406,7 @@ This makes it a natural fit into the lower part of the frame triangle space, as 
 #+CAPTiON: https://e4bike.ru/page/battery-shape-configurator
 [[attachment:Battery18650Allex.webp]]
 
-Supplier of honeycomb configuration plastic cell holders, plus 30-degree angled nickel bus-strips
-https://www.aliexpress.com/item/18650-battery-holder-Cylindrical-cell-2-10-plastic-holder-18650-lithium-ion-battery-bracket-plastic-case/32729220653.html
+- [[https://www.aliexpress.com/item/1005001869928390.html][21700 Lithium Battery Packs DIY Misalignment Fixed Bracket Assembly Holder]]
 ** Voltage
 
 
@@ -629,7 +628,6 @@ https://www.facebook.com/groups/215409542709308/permalink/1124136908503229/
 * Pouch cells
 - [[https://youtu.be/01GqOijUC-s][lithium ion NCM prismatic pouch battery build]] ::
   assembling the cells, creating custom circuit boards, and securing them with rivet nuts.
--
 
 * tech
 ** Wire batteries in parallel :ATTACH:
@@ -782,6 +780,9 @@ To get a higher load capacity, the [[https://www.aliexpress.com/item/10050047731
 
 ** Software / data collector
 - [[https://lygte-info.dk/project/TestControllerIntro%20UK.html][lygte-info.dk Test controller]]
+* Chargers
+- [[https://www.aliexpress.com/item/1005002759424107.html][Adjustable charger, 0-120V, 0-25A]], €96 ::
+  Between 0-60V, 0-50A. This model is Battis Power. There are probably multiple more less identical chargers
 
 * Notes
 

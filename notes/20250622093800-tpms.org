@@ -21,6 +21,7 @@ I collected TPMS signals from cars around LFHS using a 3d-printed antenna, sdr-d
 #+HUGO: more
 [[https://en.wikipedia.org/wiki/Tire-pressure_monitoring_system][Tire Pressure Monitoring System]]
  [[https://github.com/merbanan/rtl_433][rtl_433]]
+[[https://github.com/pawsen/tpms]]
 TPMS sends pressure and temperature data, and a unique ID, using [[id:1c18980a-dc71-4ad7-ac34-d0bb7f5d059a][433MHz radio]] in Europe, to a computer in the car.
 [[attachment:tire-pressure-sensor-in-wheel.jpg]]
 

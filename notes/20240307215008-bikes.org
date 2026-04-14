@@ -189,8 +189,14 @@ The BB length doesn't matter for the template. Use it to see if the motor rub ag
 
 * Battery
 ** cases
-[[https://www.amazon.com/gp/product/B09BH3ZJJK][Ebike Battery Mount Hose Clamps]]
+*** attachment to downtube
+:PROPERTIES:
+:ID:       05ce51d8-3b1d-45c2-b9e5-f9466819d33d
+:END:
 
+For stronger attachment
+- [[https://www.amazon.com/gp/product/B09BH3ZJJK][Ebike Battery Mount Hose Clamps]] (Grin Technologies Ebike Battery Mount Hose Clamps)
+- M5 threaded rivet nuts, ie. drill extra holes and use rivet nuts.
 *** 18650
 :PROPERTIES:
 :ID:       73e43e46-7c36-406f-857a-9c6470ee3891
@@ -303,6 +309,13 @@ Canadian shop that runs a Youtube channel with videos of the [[https://youtu.be/
 [[attachment:slim_pack_20.jpg]]
 
 [[attachment:Slim Pack 2.0.zip][files]]
+*** Glass fiber moulded
+There is an example of a [[https://www.pedelecforum.de/forum/index.php?threads/rahmen-akku-gehaeuse-mit-klappe-und-schloss-aus-gfk-epoxy.87696/][frame-mounted battery housing with flap and lock made of GRP+Epoxy]], but the guy gave up before finishing.
+
+- [[https://www.ebike24.com/panasonic-abus-locking-cylinder-flyer-sib/E-2502-002][ABUS Locking cylinder Panasonic, SIB BLO PAN IT1 XPlus Standard]] ::
+  [[https://www.pedelecforum.de/forum/index.php?threads/mehrere-reention-cases-und-schluessel-schloesser-umbauen.86944/#post-1675901][Modify multiple locks to use same key]]
+- [[https://www.amazon.de/stores/page/E035A604-353D-454A-813A-53AFFCE9B2B4][SMI sealing profile, seal as flag/on the side, DF10]]
+- [[https://www.amazon.de/stores/page/A6B9A50F-E3CE-49B7-AC01-5ADBCB565C82][SMI sealing profile, side seal, DS4]] (smaller than DF10)
 
 ** Multiple batteries
 

@@ -42,6 +42,8 @@ You need
 - 12awg wire for discharging, silicone insulated, should be good for 30A continuous, 60A peak. (14awg is good for 20A)
 - XT60 female connector for discharging. Good for 30A cont. 60A peak.
 - [[https://www.aliexpress.com/item/1005004892183305.html][JBD Bluetooth mini BMS 7-14S with on/off SW]], Size:63*52*12mm. The BMS has Bluetooth, which is very convenient. I use [[https://play.google.com/store/apps/details?id=com.marchingband.overkillsolar][OverkillSolar]] for checking the state of the battery
+- Alternative BMS: [[https://www.aliexpress.com/item/1005006022993441.html][7S-14S Smart Bluetooth BMS, with on/off SW, 30A]], size 63*52*12m, €9.05 ::
+  Probably the same as the JBD just sold under a different name
 - [[https://www.aliexpress.com/item/1005007083394347.html][Tangspower 58.8V 3A charger]], DC 5.5x2.1 tip (Or [[https://www.aliexpress.com/item/1005004678064524.html][58.8V 4A]])
 
 Additionally, to assemble the battery you need
@@ -151,7 +153,6 @@ The battery has five pins for connecting to the battery holder(mounted on the bi
 #+CAPTION: XT60F between the battery mount and motor
 [[attachment:connector_xt60F.jpg]]
 
-
 *** Mounting on the bike
 
 The battery is supposed to be attached the frame using the screws for water bottles. On one of the bikes the screws and the mounting plate did not fit (a full suspension bike with very limited space for the battery inside the triangle due to the rear suspension)
@@ -164,6 +165,8 @@ Instead I took the mounting plate apart - removed the metal part - and cut three
 
 #+CAPTION: The finished bike. Complete with 14s4p battery and 1000W motor
 [[attachment:bike.jpg]]
+
+Alternatively, drill holes in the downtube and use M5 threaded river nuts, see [[id:05ce51d8-3b1d-45c2-b9e5-f9466819d33d][attachment to downtube]]
 
 * Powerbanks
 ** 100W bidirectional PD
