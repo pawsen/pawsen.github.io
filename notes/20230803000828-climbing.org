@@ -101,15 +101,28 @@ The prucell is nice to know, but not super important
 
 Brent Barghahns ultimate [[https://www.brentbarghahn.com/climbing-blog/redpoint-rope-soloing-revised-2023][guide]](2023).
 
-** backfeed preventer :ATTACH:
+** 3d printed :ATTACH:
+- [[attachment:Grigri drill-free accessory.stl]]
+
+*** Anti crossload :ATTACH:
+- [[attachment:anticrossload.stl]]
+- [[attachment:anti-crossload-strap.stl][anti-crossload-strap.stl]]
+- [[attachment:anti-crossload-strap-short.stl][anti-crossload-strap-short.stl]]
+*** backfeed preventer :ATTACH:
 
 The original design
 https://cults3d.com/en/3d-model/tool/gromm-hitch
 #+CAPTION: Gromm hitch by [[https://cults3d.com/en/users/ArcticBastards/3d-models][Artic Bastards.]]
-[[attachment:_20240120_143805hell-grommets.jpg]]
+[[attachment:hell-grommets.jpg]]
 
 Brent Barhahns sells a modifies version he calls [[https://avantclimbing.com/products/soft-cinch-lead-rope-solo-backfeed-preventer-5-pack][soft-cinch]]. The main difference is a /hammerhead/ keeping the rope in place, which should be a "game changer"
-[[attachment:_20240120_153145SoftCinchGIF1.gif]]
+[[attachment:SoftCinchGIF1.gif]]
+**** diy :ATTACH:
+Recommend TPU 85A filament.
+- [[https://makerworld.com/en/models/2674964-backfeed-preventer][Steve Young, from facebook LRS group]] ::
+  - V1, [[attachment:rope retainer v1 20251007.stl]]
+  - V2, size has been slightly increased to fit most carabiners , [[attachment:rope+retainer+2+wide+type+.stl]]
+- [[https://github.com/pawsen/3dmodels/tree/main/climbing/backfeed%20preventer][my version on Github]]
 ** ice :ATTACH:
 
 #+CAPTION: Rope in backpack, using two stopper knots and two mailons for backup

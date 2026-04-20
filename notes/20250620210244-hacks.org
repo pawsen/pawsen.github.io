@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       c5f5b81d-b307-4075-96c5-d416f7d9c052
+:DIR:      ~/git/notes/.attach/notes-hacks
 :END:
 #+title: hacks
 
@@ -27,12 +28,12 @@ Feeling bored or have time to kill? Here are some famous or interesting hacks
 - [[https://youtu.be/ZUvGfuLlZus][Elevator Hacking: From the Pit to the Penthouse]]
 - [[https://youtu.be/mkW3N-ufPe4][Eric Schmiedl: Advanced Physical Attacks]],
 
-* rfid
+* rfid :ATTACH:
 :PROPERTIES:
 :ID:       cdfbb224-e8d9-4f8f-8272-a0b88fb8e82d
 :END:
-
-- [[https://youtu.be/1JT_lTfK69Q?t=1215][Hacking a Bosten Transit card]]
+- [[https://youtu.be/1JT_lTfK69Q?t=1215][Hacking a Bosten Transit card]] ([[attachment:Matthew Harris Zachary Bertocchi Scott Campbell Noah Gibson - Boston Infinite Money Glitch Hacking Transit Cards Without Ending Up In Handcuffs.pdf][slides.pdf]])
+- [[https://youtu.be/BNOmouHeAOw][The dirty laundry of stored value washing cards, Hang out to Dry]] ([[https://github.com/luu176/hung-out-to-dry][github]], offline copy of [[attachment:mifare-classic_hung-out-to-dry.pdf][paper.pdf]])
 
 * Arduino
 ** knielsen
