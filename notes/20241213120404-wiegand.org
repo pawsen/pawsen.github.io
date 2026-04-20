@@ -1,5 +1,6 @@
 :PROPERTIES:
 :ID:       040e6d1b-0d69-445c-bffd-399694cdb58d
+:DIR:      ~/git/notes/.attach/notes-wiegand
 :END:
 #+title: wiegand
 
@@ -19,6 +20,7 @@ By simple is meant that the reader reads card number or PIN(or other data), and 
 
 The [[https://en.wikipedia.org/wiki/Wiegand_interface#Physical_layer][Wiegand interface]] uses three wires, one of which is a common ground and two of which are data transmission wires usually called DATA0 and DATA1, alternatively labeled "D0" and "D1" or "Data Low" and "Data High"
 
+[[https://youtu.be/0NCnjx5wuns][Behind Closed Doors - Bypassing RFID Readers]], a presentation using [[*The Tick, ESP32 C3 based]] to read the wiegand data.
 
 * logic analyzers
 There are a number of esp-based sniffers(logic analyzers) that can be attached to the wires from the reader. They are transparent to both the card reader and the downstream panel. See the [[https://github.com/rfidtool/ESP-RFID-Tool/tree/master/Connector-Adapter-Options][pictures]] for means of connecting. The punchdown seems easy to use.

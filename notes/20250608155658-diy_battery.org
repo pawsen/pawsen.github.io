@@ -22,6 +22,8 @@ I have assembled several lithium batteries. For ebikes, usb-c PD powerbanks and 
 #+hugo: more
 
 For more details see the notes [[id:a1b57a39-78a7-4fc0-91a3-546a2a349a52][on batteries]] and [[id:b87e63b0-7d21-4cb5-8418-ac5f93551ed7][converting an bike to ebike]].
+[[https://youtu.be/Q0IyXPRKgzQ][This guy from Ghana build an electric bike/moped using recycled laptop batteries]]
+
 * Bikes
 
 ** 14s

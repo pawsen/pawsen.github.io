@@ -509,6 +509,31 @@ SoH = Q_{max} Q_{rated}
 - https://www.electricbike.com/inside-18650-cell
 - [[https://youtu.be/9qi03QawZEk][Why lithium batteries dies]]
 - [[https://youtu.be/CxS7XeIh_i4][What is inside a 18650 cell]]
+* Tools
+** Soldering iron
+- [[https://geeboontools.aliexpress.com/store/1103439446/pages/all-items.html][Geeboon]] makes good digital soldering irons. ::
+  The [[https://www.aliexpress.com/item/1005008060887226.html][HC24 soldering iron]] can run c210 up to c470 tips. With c470 tips it pulls 400w.
+** AC IR
+A good AC IR meter is *FNIRSI HRM-10*
+** Spot Welder
+*** Pens :ATTACH:
+- [[https://www.aliexpress.com/item/1005005204122735.html][SUNKKO 73B Spot Welding Pen]]. S-75B has separate handheld probes(ie. not a pen style probe)
+- AwithZ wp240 (maybe better than the Sunkko 73B)
+
+It is annoying that AwithZ chose pure copper tips for a high current machine, but you can potentially swap them out for Aluminum Oxide Versions which should help.
+
+#+CAPTION: Add heat shrink to insulate the two probes of the SUNKKO 73B pen
+#+CAPTION: Without insulation I read that you loose current
+[[attachment:sunkko-73b-insulation.jpg]]
+*** Tips
+Aluminum Oxide Copper vs Pure Copper on AwithZ Probes.
+Aluminum Oxide is harder and has much better wear resistance. The other factor is the tip shape which is much thicker. More like a 3 mm diameter tip that tapers down to a 2 mm diameter ball shape. The thick tip allows high currents to pass through with less tip melting which causes sticking.
+- [[https://www.aliexpress.com/item/1005002259341535.html][Welding Needle Aluminum Oxide 3mm Eccentric Rod]] ::
+  Note you should cut off the 1.5 mm diameter section and then round off the tip till it has about a 2 mm diameter and smooth.
+** Wires
+[[https://www.amazon.com/dp/B08Q46JXBQ][BNTECHGO 12awg]], bntechgo is the best silicon bang for your buck.
+
+
 * BMS
 The Battery Management System (BMS) should prevent under- and overvoltage and balance the cells.
 
