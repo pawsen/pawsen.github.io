@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       63a922d4-f290-4173-8ec6-ed07697c6d9f
+:DIR:      ~/git/notes/.attach/notes-zermatt
+:END:
+#+title: zermatt
+
+* Paragliding :ATTACH:
+#+CAPTION: Paragliding with Matterhorn in the background
+[[attachment:paw-paragliding-matterhorn.jpg]]
+
+* Climbing :ATTACH:
+- [[https://www.thecrag.com/climbing/switzerland/alpen/wallis/area/192778605][Eschelbalmen]] ::
+
+- [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/3941426691][Dosse/Furi]] ::
+  [[attachment:Dosse_Topo_English_Translation.pdf][English translation of the 2020 Dosse Topo]]. Find the original from the link under the =Description= link at thecrag.
+- [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/192775725][Medji]] ::
+
+- [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/4937789967][Mattsand]] ::
+  [[attachment:Mattsand.pdf][Mattsand.pdf]] ([[https://until2025.rebolting.ch/de/topos/routen/mattsand-mattertal.php][hosted on rebolting.ch]])
