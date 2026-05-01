@@ -213,3 +213,12 @@ See [[https://adnubes.info/en/paraglider-trim-check-with-we-measure/][this guide
 * posts
 - [[https://aviation.stackexchange.com/questions/47514/how-do-paraglider-controls-work][How do paraglider controls work?]]
 - [[https://youtu.be/j09ji0o0wTM][How to do a cascade loop?]]
+* tools :ATTACH:
+- [[https://www.printables.com/model/1044430-phone-holder-for-paragliders][Phone Holder for paragliders]]
+- [[https://www.printables.com/model/902554-line-splice-sewing-machine-presser-feet][Line Splice Sewing Machine Presser Feet]]
+
+#+CAPTION: Splicing lines to form a loop
+[[attachment:line-splicing-sewing-foot.webp]]
+
+#+CAPTION: Sewing a loop onto fabric
+[[attachment:line-splicing-sewing-onto-fabric.webp]]

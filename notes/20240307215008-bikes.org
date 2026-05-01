@@ -186,6 +186,9 @@ The templates are obtained by writing an email to [[mailto:liying@to7motor.cn][l
 The BB length doesn't matter for the template. Use it to see if the motor rub against the chainstay.
 *** troubleshooting
 [[https://toseven.miraheze.org][ToSeven Wiki]]
+*** lights
+Light kit that uses battery voltage instead. They plug in between the display and the controller using Julet 813 type connectors
+- https://www.aliexpress.com/item/1005008584510665.html
 
 * Battery
 ** cases

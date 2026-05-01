@@ -329,6 +329,12 @@ Another option is to [[https://endless-sphere.com/sphere/threads/copper-nickel-s
 I have read that the slot in the nickel strip makes the current take the shortest path, which is though the tip of the cell, during a spot weld. This should reduce the wear on the spot welder electrodes.
 #+CAPTION: The slot in the nickel strips ensures that most current travels through the shorter path of the cell tip.
 [[attachment:SpotWeldCurrent1.png]]
+** Cutting copper, rounded corners :ATTACH:
+- Crop-A-Dile Corner Chomper Punch, https://amzn.to/4hZRcFy
+- Use a 3d-printed jig and a scissor/standley knife
+
+#+CAPTION: 3d printed jig for cutting copper sheets with a scissor
+[[attachment:3d-jig-rounded-corners.jpeg]]
 
 * Cells
 ** Types
@@ -534,7 +540,6 @@ Aluminum Oxide is harder and has much better wear resistance. The other factor i
   Note you should cut off the 1.5 mm diameter section and then round off the tip till it has about a 2 mm diameter and smooth.
 ** Wires
 [[https://www.amazon.com/dp/B08Q46JXBQ][BNTECHGO 12awg]], bntechgo is the best silicon bang for your buck.
-
 
 * BMS
 The Battery Management System (BMS) should prevent under- and overvoltage and balance the cells.
@@ -808,8 +813,126 @@ To get a higher load capacity, the [[https://www.aliexpress.com/item/10050047731
 ** Software / data collector
 - [[https://lygte-info.dk/project/TestControllerIntro%20UK.html][lygte-info.dk Test controller]]
 * Chargers
+** AliExpress
 - [[https://www.aliexpress.com/item/1005002759424107.html][Adjustable charger, 0-120V, 0-25A]], €96 ::
   Between 0-60V, 0-50A. This model is Battis Power. There are probably multiple more less identical chargers
+** DIY Emerson/Vertiv R48 rectifier
+
+The Emerson R48 power supply can be [[https://endless-sphere.com/sphere/threads/rectifier-emerson-r48-3500e-3200e-mod-voltage-adjust-13-65v-to-53-9v.112293/][voltage adjusted by changing resistor values/using a potmeter]].
+But to get fully CC/CV, it has to be [[https://endless-sphere.com/sphere/threads/emerson-vertiv-r48-series-can-programming.114785/][programmed using CANbus]].
+
+It can deliver very high current. The connector PCB / adapter can be found on AliExpress. Search for
+- R48-3000E3 connector adapter board
+
+These are good
+- R48-1000e3, 1000W max
+- R48-2000e3, 2000W max
+- R48-3000e3, 3000W max
+
+Note that the *offline* Voltage span depends on the model/year.
+- R48-2000e3 built 2020/2022 ::
+  permanent/offline ~41–58.5 V. Also derates less than most at low voltage; reported ~35 A down to 20 V.
+- R48-2000e3 pre-2020 ::
+  Reported permanent/offline only 48–58 V;
+
+*** Offline VS Online
+Offline means stored/permanent. Online means temporary and expires after communication stops or after reboot. The thread repeatedly says online voltage/current must be resent, commonly within 30 seconds; some users send every 25 seconds, and for R48-4300E3 below 48 V one user says every ~5 seconds is safer. For dynamic charging control, use online commands. Use offline commands only as safe fallback defaults, because they are stored values and may take ~30–45 seconds to visibly apply. One later ESP32 implementation explicitly pauses readback while sending permanent commands because otherwise the permanent values may not get set.
+*** CC/CV control strategy
+Arduino/ESP32 + MCP2515/TJA1050 works.
+
+Use this structure:
+1. Startup
+   - Set safe offline voltage/current values.
+   - Set output on.
+   - Set fan auto or full depending on cooling.
+   - Set AC input current limit according to wall socket capacity.
+
+2. CC phase
+   - Set online voltage slightly above present battery voltage, or use staged ramping.
+   - Set online current limit to desired charge current.
+   - Repeat online voltage/current every 5–15 seconds.
+
+3. CV phase
+    - Set online voltage to final pack voltage distributed across modules.
+    - Keep current limit active.
+    - Stop when current tapers to your termination threshold.
+
+4. Fault/failsafe
+    - If CAN controller dies, the modules fall back to offline values.
+    - Therefore offline values should be conservative, not maximum-risk values.
+
+* Examples
+** 6s6p, for SUP
+#+CAPTION: 6s6p battery for SUP motor
+[[attachment:6S6P-full-pack.jpg]]
+
+#+CAPTION: Motor
+[[attachment:sup-motor-4400W.jpg]]
+
+#+CAPTION: Using a 3d printed fixture to weld nickel strips onto the copper sheet
+[[attachment:6S6P--nickel-3dprinted-fixture.jpg]]
+
+#+CAPTION: The cells are hold together with two 3d printed cell spacer, vaguely seen as black between the cells
+[[attachment:6S6P-ir-measurement.jpg]]
+
+#+CAPTION: 3d models of the cell spacer and weld fixture
+[[attachment:6S6P-fixture-spacer-3dfusion.jpg]]
+- [[attachment:6S6P 21700.step]]
+- [[attachment:6S6P 21700.f3d]]
+** 6s1p, for FPV drone, :ATTACH:
+
+#+CAPTION: 6s1p FPV drone battery
+[[attachment:6s1p-fpv-drone-liion.jpeg]]
+
+#+CAPTION: Another drone battery
+[[attachment:drone-battery.jpeg]]
+
+** 20s10p, bolted copper lugs, for scooter :ATTACH:
+[[https://www.dropbox.com/scl/fo/if5ix35e0bq9coujebvl9/AMgF015j8DWvPBxMq-XJ578?dl=0&e=1&rlkey=vtuzhy1p6w0f24xtuoxs5qbly][Link to higher res images]]
+
+Around 120A continuous, 250A peak
+- leads are crimped into copper lugs that are bolted onto extra copper bars
+- important to keep all the main cables from the BMS and Positive terminal the same length. Here especially the three split cables.
+- The wire from the BMS is AWG7, and split it into 3× AWG10.
+- copper lugs (AliExpress: "SC Type SC6 SC10 SC16 SC25 Copper Lug")
+- 2 mm copper plates. There is one plate on the bottom and one on the top with drilled holes through them (the copper pinched easily)
+
+#+CAPTION: 20s10p
+[[attachment:20s10p-full.jpeg]]
+
+#+CAPTION: Wires are crimped to copper lugs and bolted to copper bars
+[[attachment:20s10p-closeup-bolted-connections.jpeg]]
+
+#+CAPTION: Closeup of the bolted connection
+[[attachment:20s10p-closeup-bolted-connections2.jpeg]]
+
+#+CAPTION: All wires connected
+[[attachment:20s10p-all-connected.jpeg]]
+
+#+CAPTION: BMS app shows battery stats
+[[attachment:20s10p-bms-screenshot.jpeg]]
+
+#+CAPTION: Battery and scooter
+[[attachment:20s10p-case-scooter.jpeg]]
+** 3s5p, ~12V, 21700 :ATTACH:
+great for small engine or a jumper pack if you have good enough cells.
+3d printed enclosure and cell spacers. [[https://makerworld.com/en/models/2074695-21700-12-6v-battery-case-and-cell-holder][stl]]
+
+- 2 main posts on top and 2 4mm holes for separate charge wires
+- 2xM3 5mm screws to hold the lid on, 2xM6 Nuts, 2xM6 Bolts for the battery posts.
+- 3s BMS from AliExpress
+
+#+CAPTION: 3s5p front
+[[attachment:3s5p-welded1.jpeg]]
+
+#+CAPTION: 3s5p side
+[[attachment:3s5p-welded2.jpeg]]
+
+#+CAPTION: 3s5p without lid
+[[attachment:3s5p-enclosure.jpeg]]
+
+#+CAPTION: 3s5p full enclosure
+[[attachment:3s5p-finished.jpeg]]
 
 * Notes
 

@@ -17,3 +17,49 @@
 
 - [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/4937789967][Mattsand]] ::
   [[attachment:Mattsand.pdf][Mattsand.pdf]] ([[https://until2025.rebolting.ch/de/topos/routen/mattsand-mattertal.php][hosted on rebolting.ch]])
+* Canyoning :ATTACH:
+See https://www.opencanyon.org, it seems like an aggregator that collected info from https://www.descente-canyon.com and other places. There's an =opencanyon= app as well.
+
+[[attachment:zermatt_canyoning_may_june_conditions.pdf][chatgpt list of recommended canyons close(1.5h-4h drive) from Zermatt]]
+*** books
+- [[https://sac-cas-shop.ch/products/andreas-brunner-frederic-betrisey-canyoning-touren-der-schweiz-canyoning-en-suisse-canyoning-le-vie-svizzere][Andreas Brunner; Frédéric Bétrisey - Canyoning-Touren der Schweiz (SAC)]]
+- [[https://ropewiki.com/Canyoning_in_the_Swiss_Alps_Book][Swiss alps canyoning alpes suisses]]
+** Massaschlucht
+Beautiful gneiss gorge with huge boulders and downclimbs; impressive gneiss formations; several entry and exit options possible; large dam, call ahead! (+41 27 970 59 04) . Adequate protection, but a lot of searching for a route; mostly little cold water; most of the sun is in the canyon from midday; emergency exit after a 7m jump. In the last part you can repeatedly rappel through the blocks into the dark.
+
+The Massa Gorge is more of a hiking and swim canyon than a rappel canyon. Nevertheless, the canyon offers beautiful rappels in wonderfully green/bluish pools. The countless downclimbs (some over fixed ropes) never get boring as you have to find your way through crevices and holes. One of the highlights is the rappel (approx. 25m) into the so-called cathedral (left or right belay - exposed) followed by a narrow crevice with steps and a large pool, after which you approach the possible exit. However, there is also the option of exiting the canyon on the right after the last block area at a water drainage and reaching the road via a footbridge/hiking trail.
+- https://www.descente-canyon.com/canyoning/canyon/21007/Massaschlucht.html
+- https://www.opencanyon.org/en/canyon/77e223a4-7bd1-4421-b55e-de99a8955bac
+** Feschelbach
+Actually quite attractive rappel canyon.
+
+Many smaller rappels.
+- https://www.descente-canyon.com/canyoning/canyon/21972/Feschelbach.html
+- https://www.opencanyon.org/en/canyon/8c02134d-b961-4c6d-b48f-e087a490be51
+** Mundbach
+Canyon that was made a long time ago. It was refitted in 2021. With 80m of rope (exact length still to be checked) you can rappel directly from the bridge. (machine translated)
+
+Not too exciting at first, lots of blocks to downclimb, but then it gets tighter and there are finally a few successive rappels.
+At the possible intermediate exit via the Suone, there are more boulders again, but then comes another very nice part.
+Then the canyon opens up and unfortunately there is another passage with blocks.
+At the end it gets a bit more vertical, watch out at the rappel below the Bahn bridge is an intermediate pool which has a lot of white water!
+- https://www.opencanyon.org/en/canyon/b533d725-4da8-4dbc-aae6-43ce7a0a113e
+** Jolibach
+Super narrow, mostly in the stream, no slides or possible jumps.
+- https://www.descente-canyon.com/canyoning/canyon/23077/Jolibach-.html
+- https://www.opencanyon.org/en/canyon/cef7ae33-c127-45ca-abf4-03b29dcc614f
+** Gondo
+Beautiful aquatic gneiss canyon; several jumps and slides (after checking the water depth); several slippery passages; automatic power station; information may be obtained from Lokals (www.zwischenbergenschlucht.ch); several emergency exits on the left side; rock arch in the lower part; partly difficult rope retrival; some belays bent but still sufficient; best entry time approx. 11am as northern exposure.
+
+The continuously watery canyon offers slides, jumps and rappels into pools, some of which are very deep. The water level and water depth should always be checked beforehand!
+https://ees-canyoning.ch
+
+Some pools recede when the water level rises. The abseiling sections, especially in the lower part (key section), also become very dangerous. The canyon remains very entertaining until the end, but should never be underestimated. One of the highlights in the lower part is a huge rock arch under which you can swim (possible jumps). Before the final waterfall, you can decide whether to leave or continue downclimbing (C40+ downclimb).
+
+- https://www.descente-canyon.com/canyoning/canyon/2750/Gondo.html
+- https://www.opencanyon.org/en/canyon/82fae977-2ad3-4c4b-9404-8db40e879504
+** Rasiga (In Italy, 2h10m drive from Tash)
+Long and great descent with slides, possible jumps, bottlenecks and pools flooded with sun (if the sun shines). At the water drainage you can get out if necessary, if the water flow seems too strong for the following bottlenecks.
+
+- https://www.descente-canyon.com/canyoning/canyon/2572/Rasiga.html
+- https://www.opencanyon.org/en/canyon/35bbcc34-975f-431f-8d86-0167cc2dddd1

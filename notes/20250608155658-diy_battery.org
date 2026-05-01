@@ -237,12 +237,76 @@ Discharge at 100W heats the inductor to ~77℃
 Another option is to get a [[https://www.aliexpress.com/item/1005003954338954.html][IP2368]] module, also 100W bidirection but without a bms. This is 4S by default but can be changed by changing ~R7~ (2-6S).
 - Get a 4S 20A bms
 - add a heatsink on the four mosfet
-- optioanlly, extend the leds. Ie. wire and 4 small leds, solder to D1-D4.
+- optionally, extend the leds. Ie. wire and 4 small leds, solder to D1-D4.
 - optionally, move the two capacitors and inductor on the backside to the side, extending with wires, for flush mount
-- [[https://www.aliexpress.com/item/1005009420164605.html][AliExpress seller]]
 See this [[https://youtu.be/QPQXsRYFZLs&t=514][video]].
 
 I would get this module over the [[id:162485ee-4a16-43a0-a812-522fa0ad84bd][WYZL-YD24-2.3]]
+
+*Note* that there are multiple IP2368 chips, some of them support I2C which allows to set registers that control charging, low voltage cutoff, etc.
+See this [[https://github.com/D-314/IP2368-Arduino-Library/issues/15][github issue]] for chip versions and differences and p2. of the [[https://www.injoinic.com/api//static/uploads/20250529/20250529120342_6837dc9e992a4.pdf][official datasheet]]. The datasheet also list the resistor values for setting number of LiIon in series, capacity, etc.
+- IP2368_BZ
+- IP2368_COUT
+- IP2368_I2C_COUT
+- IP2368_NACT
+- IP2368_I2C_NACT
+Only IP2368_I2C_NACT and IP2368_I2C_COUT can be used with https://github.com/D-314/IP2368-Arduino-Library. A link to the register descriptions can be found in [[https://github.com/D-314/IP2368-Arduino-Library/issues/3#issuecomment-2688691000][this issue]], which also shows how to connect the I2C. The datasheet and another register description can be found at https://github.com/TPAXcc/Datasheet/tree/master/Injoinic/IP2368 (in Chinese)
+
+**** The Chinese register document notes
+1. INT Application Notes
+   - When the IP2368 is in sleep mode, INT is high-impedance.
+   - After the MCU detects INT low, it must stop accessing I2C within 16 ms.
+   - When the IP2368 is in sleep mode, detecting INT high wakes up the IP2368.
+   - After the IP2368 wakes up, INT is actively pulled high.
+   - After INT has been pulled high for 100 ms, the MCU may start accessing I2C data.
+   - Before the IP2368 enters sleep mode, it switches INT to input high-impedance mode.
+   - If INT is pulled high by the MCU, the IP2368 treats this as the MCU not allowing it to enter sleep mode.
+
+2. I2C Frequency
+   - The maximum I2C frequency supported by the IP2368 is 250 kHz.
+   - Because of possible MCU clock deviation, the recommended MCU I2C clock is around 200 kHz.
+
+3. Register Modification Rules
+   - To modify an IP2368 register, first read the current value of the register.
+   - Then use AND/OR operations to modify only the required bit fields.
+   - Write the calculated value back to the register.
+   - This ensures that only the required bits are changed.
+   - Reserved or undocumented bits must not be changed arbitrarily.
+   - The register default value should be treated as the value read from the IC.
+   - Default values may differ between IC batches.
+
+4. MCU Operation Flow
+   - When INT stays high continuously for 100 ms, the MCU may read and write I2C registers.
+   - The MCU may initialize registers first.
+   - Registers only need to be modified when special functions must be changed.
+   - If no modification is needed, the MCU does not need to write registers.
+   - Then the MCU can read internal IC information, such as:
+     - Battery level
+     - Charging/discharging status
+     - Key/button status
+   - The MCU can then perform required application functions, such as:
+     - Special indicator control
+     - Charge/discharge management
+     - Fast-charge request management
+   - After INT goes low, the MCU must stop accessing I2C within 16 ms.
+
+5. Register Default Values
+   - IP2368 register default values are only provided as a reference for the current functional configuration.
+   - If register operations are required, first read the register value.
+   - Then calculate the required modified value.
+   - Finally, write the calculated value back to the register.
+
+6. Applicable Model
+   - This document applies only to the IP2368_I2C_COUT model.
+   - It is invalid for other models.
+
+   Reserved Registers
+   - Registers marked Reserved must not be written arbitrarily.
+   - Their original values must not be changed.
+   - Otherwise, unpredictable results may occur.
+   - Register operations must follow a read-modify-write procedure.
+   - Only the bits that are actually used may be modified.
+   - Unused bits must not be changed.
 
 *** Making a case
 I found an old lead/acid battery and cut off the top with a hacksaw(around where the top part is welded to the box is good). The lead cells are surrounded by acid-soaked pouches, remove them with a plier, and remove the cell walls with a fine cutter, chisel, flush cutter, dremel or whatever is handy.

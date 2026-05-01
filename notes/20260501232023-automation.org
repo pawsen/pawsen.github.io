@@ -1,0 +1,19 @@
+:PROPERTIES:
+:DIR:      ~/git/notes/.attach/notes-automation
+:ID:       91a820ca-dacf-434d-a4f1-7b5507158e22
+:END:
+#+title: automation
+
+#+filetags: it hacking diy
+#+hugo_categories: hacking
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2026-05-01
+
+Notes about home automation
+
+#+HUGO: more
+
+* Read old utility devices
+
+The device captures a photo of your meter at set intervals. It then extracts the Regions of Interest (ROIs) from the image and runs them through artificial intelligence. As a result, you get the digitized value of your meter.
+https://github.com/jomjol/AI-on-the-edge-device

@@ -63,8 +63,10 @@ The three readers I have seen used are
 - HID Indala ASR-620 (125kHz Indala cards)
 - HID iCLASS R90 (13.56mHz iClass cards)
 
-** doorsim
-[[https://github.com/evildaemond/doorsim][doorsim]] is a esp32 based access simulator.
+** doorsim / opendoorsim
+[[https://github.com/evildaemond/doorsim][doorsim]] is a esp32 based access simulator and a [[https://github.com/nechry/DoorSim][refactored version using platformIO]]
+
+There is  newer fork/clone, [[https://github.com/shortrangetech/opendoorsim/][Opendoorsim]]
 ** libraries
 [[https://github.com/paulo-raca/YetAnotherArduinoWiegandLibrary.git][YetAnotherArduinoWiegandLibrary]]
 

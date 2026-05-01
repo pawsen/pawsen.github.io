@@ -1,0 +1,20 @@
+# -*- ispell-local-dictionary: "da" -*-
+:PROPERTIES:
+:ID:       f8cc70f6-27b4-482d-9faa-b2a1da11c262
+# :link-img:   ../.attach/tafraout-2025/boulder*.jpg
+:DIR:      ../.attach/letter-from-zermatt-2026
+:END:
+#+title: Letter from Zermatt
+
+#+HUGO_SECTION: post
+#+filetags: climbing traveling paragliding
+#+hugo_categories: climbing
+#+hugo_auto_set_lastmod: t
+#+hugo_publishdate: 2026-05-06
+#+hugo_bundle: letter-from-zermatt-2026
+#+export_file_name: index
+#+HUGO_CUSTOM_FRONT_MATTER: :image faulty_towers__hot_Rats_hvs5a.jpg
+
+I went to Tafraout in Morocco to meet a man from the internet for rock climbing. This is a write up I did for the [[https://www.dbkk.dk/][Danish Mountaineering and Climbing Club]].
+
+#+hugo: more

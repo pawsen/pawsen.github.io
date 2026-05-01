@@ -2,6 +2,7 @@
 :ID:       9168a2da-73ed-4534-89d0-ede79fe5dc28
 :DIR:      ../.attach/pg-line-measurement-tool
 :link-img:   ../.attach/pg-line-measurement-tool/3d-printed-tool*.jpg
+:link-img:   ../.atatch/pg-line-measurement-tool/diy-line-measurement-tool-domi*.jpg
 :END:
 #+title: DIY paraglider line measure tool
 
@@ -33,6 +34,8 @@ Buy this
 
 - 2x [[https://www.aliexpress.com/item/32762038019.html][U Groove nylon wheel with bearing]], =24x5x7mm= (OD,ID,thk)
 - [[https://www.aliexpress.com/item/4000762343261.html][Miniature linear rail slide]]/guide, =MGN 9C= 150mm.
+- [[https://www.thingiverse.com/thing:5984533][LEICA Sock for Line Measuring Rig]], stl. Might fit a Bosch laser meter as well. ::
+  It doesn't matter if
 Specs for [[attachment:linear-rail-guide-spec.webp][the linear rail slide]] and [[attachment:BSU625-24-7K-nylon-wheel.webp][the nylon wheels]]
 
 Use a Laser distance measurement device(ideally with bluetooth, we could end up doing this many times. [[https://duckduckgo.com/?t=h_&q=leica%20disto%20d2][Leica Disto D2]](or D1 if found second hand) are recommended.
@@ -143,3 +146,38 @@ There is of course [[https://vimeo.com/124682223][DIY Porosity Meter]] out there
 Otherwise this [[https://youtu.be/ErRbhevAFw0][PoROTest]] with a flexible cylinder/hose is a smart design. And just fyi,
 \[ ΔP=\frac{mg}{a} \]
 A mass of ~0.8 kg pulling the piston down over a 10 cm diameter creates 10 mbar of underpressure.
+
+* Inspection Recommendations
+[[https://www.flybgd.com/en/paragliders/inspection-recommendations-13-0-0.html][BGDs Inspection Recommendations]]
+
+** Lines
+The "check length" of the lines is defined as the distance from the lower surface of the canopy to the inside edge of the maillons connecting the lines to the risers. It must be measured with 5kg line tension.
+
+#+begin_quote
+The measured lengths of individual lines should match those in the line-lengths table within a +/-10mm tolerance.
+
+An offset of +/-50mm of the line-lengths table is acceptable. That is to say, the entire line set can be longer or shorter up to a maximum value of 50mm.
+#+end_quote
+
+** Porosity
+#+begin_quote
+Porosity is measured with a calibrated Porosimeter. It should be measured in at least 3 different places on the upper surface, at 20-30cm from the leading edge in the centre of a panel.
+
+Minimum acceptable value is 10 seconds. Below, the glider must be flight tested for approval.
+#+end_quote
+* Other designs :ATTACH:
+
+#+CAPTION: Tool using long rails. https://www.thingiverse.com/thing:6827738.
+[[attachment:line-measument-tool-alternative-1.jpeg]]
+
+#+CAPTION: Inspiration for the above, using wood profiles instead of rails. https://www.thingiverse.com/thing:6116049
+[[attachment:line-measument-tool-alternative-2.jpeg]]
+
+#+CAPTION: 3d printed boot for laser meter
+[[attachment:laser-measurement-boot.jpg]]
+
+
+#+CAPTION: Tool made by Domi, Zermatt
+#+begin_export hugo
+{{< gallery match="diy-line-measurement-tool-domi*.jpg" id="domi-tool" >}}
+#+end_export
