@@ -1,8 +1,10 @@
 # -*- ispell-local-dictionary: "da" -*-
 :PROPERTIES:
 :ID:       f8cc70f6-27b4-482d-9faa-b2a1da11c262
-# :link-img:   ../.attach/tafraout-2025/boulder*.jpg
 :DIR:      ../.attach/letter-from-zermatt-2026
+:link-img: ../.attach/letter-from-zermatt-2026/*.mp4
+:link-img: ../.attach/letter-from-zermatt-2026/roccia-nera-ice-fresser*.jp*g
+:link-img: ../.attach/letter-from-zermatt-2026/skitour*.jp*g
 :END:
 #+title: Letter from Zermatt
 
@@ -13,8 +15,190 @@
 #+hugo_publishdate: 2026-05-06
 #+hugo_bundle: letter-from-zermatt-2026
 #+export_file_name: index
-#+HUGO_CUSTOM_FRONT_MATTER: :image faulty_towers__hot_Rats_hvs5a.jpg
+#+HUGO_CUSTOM_FRONT_MATTER: :image paragliding-matterhorn.jpg
 
-I went to Tafraout in Morocco to meet a man from the internet for rock climbing. This is a write up I did for the [[https://www.dbkk.dk/][Danish Mountaineering and Climbing Club]].
+This is a virtual postcard for the students at [[https://www.lofotenfolkehogskole.no/][Lofoten Folkehøgskole]] from Zermatt.
 
 #+hugo: more
+Kære alle
+
+Jeg håber I har nogle gode dage. Jeg savner at være på skolen, især weekenden/helgen, men det går meget godt
+her i Schweiz.
+Jeg er i Zermatt, det er en lille by for enden af en lang dal. Om vinteren kommer der mange turister for at stå på ski, om sommeren mange for at køre mountainbike og vandre.
+
+#+CAPTION: Zermatt set fra Syd.
+[[attachment:zermatt-from-south.jpg]]
+
+
+Lige nu er det lavsæson og der er mange asiatiske turister der kommer fordi Zermatt ligger ved foden af bjerget Matterhorn,
+så man kan tage nogle flotte billeder. Der kommer også en del for at stå på forårs-ski. Der ligger en del hytter i bjergene, som mange bruger som udgangspunkt for topture til 4000m toppe.
+Den eneste ulempe er at man skal stå super tidligt op, for sneen bliver blød og skredfaren stiger allerede ved middags/lunch-tid. Jeg kommer aldrig til at synes det er sjovt at stå op før kl 08.
+
+
+* Et tilfældigt møde i Skotland
+
+Jeg var her også to måneder sidste år. Jeg har klatret en del mix-klatring og sidste vinter var jeg til et mix-klatretræf i Skotland. Der mødte jeg en fra Zermatt og endte med at leje hendes lejlighed mens hun var to måneder i Nepal i april og maj. Jeg skulle til gengæld passe katten.
+
+Jeg havde regnet med at finde anden lejlighed i år. Jeg kan ikke lide katten og ejeren af huset kan ikke lide mig. Sidste år truede han med at melde mig til politiet hvis jeg ikke forlod lejligheden.
+Ejeren er en meget formel, gammel mand. Alting har sin faste plads og intet er tilfældigt. Jeg kom lige fra en måned i det sydlige Marokko hvor kaos hersker og tog lidt af det med til Zermatt. En dag hvor jeg havde brugt den forkerte vaskemaskine i kælderen og lagt en skruetrækker et forkert sted, fik han nok og blev rasende.
+Men Julia, hende jeg mødte i Skotland, er igen i Nepal for at klatre et stort bjerg, katten betyder meget for hende og hun ville gerne jeg passede på den. Så nu sidder jeg i sammen lejlighed, men i år går det meget bedre. Jeg er mere opmærksom på, at min livsstil kan være irriterende for nogle.
+
+Fordi der er så mange turister i Zermatt er det svært at finde venner og turmakkere. De turister der kommer for at gå på tur, har allerede en makker og de lokale vil ikke bruge energi på at lære en at kende, der alligevel snart er væk igen.
+Jeg blev så desperat sidste år, at jeg satte mig med en bog hvor de der har været på toptur kommer tilbage ned til byen. Hver gang der kom en forbi der så kompetent ud, ville jeg løbe efter og spørge om vedkommende ville klatre med mig.
+
+* Frank. Endnu et tilfældigt møde, en bror fra en anden mor
+
+Sådan mødte jeg Frank. Han var flyttet til byen med sin kæreste og manglede også en makker.
+
+Vi tog hurtigt op i en hytte, for at stå på ski og klatre til toppen af Dufourspitze(4634), der er Schweiz' højeste bjerg. Da vi kom tilbage til Zermatt ville vi fejre det med en øl.
+Frank sagde jeg skulle følge efter ham, vi gik om i baggården til et supermarked og han gik over til en stabel øl for at åbne en kasse og fylde lommerne.
+Jeg var rimelig overrasket, vi kendte ikke hinanden særlig godt og jeg syntes det var forkert at stjæle øl på den måde. Men jeg ville også være loyal og stod og overvejede hvordan jeg kunne opfange en medarbejder, hvis der kom en om i baggården så han kunne nå at slippe væk.
+
+Bagefter spurgte jeg om ikke han syntes det var forkert. Det viste sig at alle øllene havde overskredet sidste salgsdato og supermarkedet derfor havde sat dem udenfor. Jeg ville senere hente masser af øl fra baggården, de stod i papkasser af 24 stk og jeg har vitterlig hentet 100-vis af øl til forskellige fester.
+
+#+CAPTION: Frank og jeg tilbage i Zermatt efter at have været på Dufourspitze(4634m), Schweiz højeste bjerg. Gratis øl fra det lokale supermarked. Bemærk at Franks lommer er fulde af øl.
+[[attachment:frank-paw-zermatt-after-dufourspitze.jpeg]]
+
+* Paragliding
+
+Ud over Frank fik jeg en anden ven sidste år. Det er Julio, en af de kommercielle paraglidere.
+Da jeg kom til Zermatt havde jeg lige lært at paraglide, dvs jeg havde taget et kursus på to uger, og var totalt begynder. Der er ikke så mange der paraglider i Zermatt, de fleste er kommercielle tandem-piloter og nogle få dygtige lokale.
+
+Jeg gik ind på det første kontor der reklamerede for tandem-flyvning, sagde jeg var helt ny og spurgte om information. Han syntes ikke det var en god ide jeg skulle flyve der. Der var ingen af de kommercielle piloter jeg snakkede med der ville hjælpe, så jeg endte med at følge efter en, som en usynlig skygge.
+Man tager en kabelbane op på et bjerg til 3100m, jeg holdt mig på afstand og da alle piloter var fløjet gjorde jeg mig klar og løb ned af den sneklædte skråning, præcist som de havde gjort. Turen ned til landingen tog 20 minutter og det eneste jeg husker er min hjerne der kører på repeat og siger fuck, fuck, fuck. Landingen er på en lille græsplet ved siden af togstationen og jeg var mest bange for at ramme ved siden af og flyve ind i et tog eller en elledning.
+
+Jeg begyndte at flyve så meget som muligt, stadig uden nogen form for råd og begik en masse fejl. Landingen er i den ene ende af byen og oftest flyver man ved bjergene i den anden ende. Dvs man skal flyve over byen for at lande.
+En paraglider flyver med 30 km/h gennem luften(for en begynder), og hvis luften blæser mod dig med 25km/t bevæger du dig kun med 5km/t over jorden, men du synker stadig mod jorden med ca 1 m/s. Så flyver du mod stærk modvin skal du være meget højere for at flyve samme distance. Det er selvfølgelig logisk, men i begyndelsen er det svært at vurdere hvor højt man er oppe og hvor stærk mod- eller medvind er.
+
+En gang fløj jeg alt for lavt med modvind.
+Først da jeg var inde over byen gik det op for mig at jeg ikke kunne nå landingen. Der var jeg allerede så langt inde over byen at jeg heller ikke kunne vende om og flyve med vinden tilbage. Jeg var super heldig at ramme mellem to høje bygninger og nødlande på en skrænt i siden af byen.
+Der var dog en helikopterpilot der tog et billede(der flyver helikoptere rundt hele tiden, næsten al transport af materialer fra togstationen og videre ud sker med helikopter) og sendte det til en WhatsApp gruppe for nogle af tandem-piloterne. Det gjorde mig endnu mindre populær og alle bemærkningerne fra dem gjorde mig selvfølgelig nervøs, mest af alt for at dumme mig foran dem, og så bliver sandsynligheden for at begå fejl større.
+Dagen efter fløj jeg lidt for langt under landingen og landede i en busk, foran nogle af tandempiloterne. Der var en af dem der optog en video af det og jeg syntes det nærmede sig mobning.
+
+Der mødte jeg Julio. En colombiansk tandem-pilot der arbejder i byen. Han sagde noget ala "land like a champ next time" og var den første der sagde andet end at jeg ikke skulle være der. Det blev starten på et venskab han har vist mig masser af takeoff steder.
+
+Der er stor infight mellem de forskellige tandem-firmaer. Der er fem, med en række piloter tilknyttet som freelance. En tur koster ca 3500nok, det er ca 25 minutters flyvetur, og derudover 600nok for kabelbanen der tager 40 min. Jeg tror en del af den bagtalelse der er mellem de forskellige firmaer skyldes at der er så mange penge involveret. En god pilot kan tage 5-6 kunder på en dag, det er 17500-21000nok på en dag, men gennemsnitlig nok mere 3-4 kunder.
+
+Julio er også lidt underlig. Pt. har han en kvinde, Sugi fra Taiwan, boende hos sig. Jeg tror ikke de kærester eller har et forhold. Hun er bare dukket op og er her et par måneder endnu. Hun er ikke så god til engelsk og Julio kan helt sikkert ikke kinesisk. Det giver ingen mening og jeg synes det er ret sjovt.
+
+#+CAPTION: Julio og Zugo i flybypara's kontor.
+[[attachment:julio-zugi.jpg]]
+
+Jeg blev efterhånden accepteret af de andre tandem piloter. Ikke fordi jeg tror de syntes jeg var dygtig, men nok mest fordi jeg ikke gav op. De kan huske mig fra sidste år og nu snakker jeg med dem når vi mødes på landingspladsen eller kabelbanen.
+
+
+* Tilbage i Zermatt
+
+Efter jeg kom tilbage til Zermatt i år, foreslog Frank vi tog op i en bivuakhytte for at klatre. Den ligger i 3778m højde og fordi Frank først skulle være færdig med arbejde og gå på ski op i mørket, skulle jeg bære det meste af udstyret. Vi deler en udpræget mangel til at lave god planlægning. Jeg kom lige fra Lofoten og var slet ikke klar til den højde og han havde lige været på et langt skimo løb.
+#+CAPTION: På vej til Bivacco Rossi e Volante i 3778m højde med alt udstyr
+[[attachment:approach-bivacco-rossi-e-volanta.jpg]]
+
+Jeg havde kæmpe hovedpine, kunne ikke sove og frøs, så det var nærmest en lettelse da vi stod op klokken 0430 og smeltede sne til havregrød.
+På med skiene, vi fandt vores mix-rute. Vi havde håbet på solid is, i stedet var det der på engelsk kaldes Chandeliers(en slags sprø, hengende istappformasjoner) der nemt går i stykker og det er svært at finde gode placeringer til isskruer. Hvis vi skulle til tops, skulle jeg klatre først. Jeg bandede lidt over Frank, det var jo klart hans skyld jeg havde hovedpine og var bange for at falde, men koncentrationen om klatringen gjorde at ikke bemærkede hovedpinen indtil jeg kom til en ny standplads og skulle sikre. Jeg havde glemt mine dagssnaks, en håndfuld gulerødder, men på grund af højden var jeg alligevel ikke specielt sulten
+Frank førte den sidste reblængde der var rent klippe med en lille cornice/skavle til slut, vi kom til tops i strålende solskin og udsigt over en masse bjerge.
+
+#+begin_export hugo
+{{< gallery match="roccia-nera-ice-fresser*.jp*g" id="roccia-nera-ice-fresser" >}}
+#+end_export
+
+#+attr_html: :controls t :class video-container
+#+begin_video
+<source src="roccia-nera-ice-fresser-topout.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+end_video
+
+Frank tog hjem, jeg blev i bivaukhytten endnu en nat. Jeg havde tænkt at jeg ville stå på ski eller klatre noget let, men dagen efter havde jeg stadig hovedpine og havde ikke energi til andet end at tage sækken på ryggen og begynde at gå hjem.
+Glad over at vi ikke gav op og bedre akklimatiseret til næste gang.
+
+
+* Ski touring
+
+Efter vores klatretur foreslog jeg Frank at vi skulle have en BBQ fest i hans have, for at fejre han havde gennemført et 57km langt skiløb med 4000 højdemeter, lidt ligesom Lofoten Skimo. Under løbet tog jeg skiene til første checkpoint efter 11km, for at tage noget udstyr med tilbage de kun havde brug for i starten, samt heppe.
+
+Der må ikke køre biler i Zermatt og det kan være svært at komme af med træ-affald. Jeg har en hjemmelavet elcykel her i Zermatt, ligesom den på Lofoten, så jeg cyklede rundt og fandt brænde/træ hos folk.
+
+#+CAPTION: Transport af brænde med min hjemmesamlede elcykel
+[[attachment:bike-transport-wood.jpg]]
+
+#+CAPTION: BBQ fondue i Franks have med Matterhorn i baggrunden
+[[attachment:bbq-frank-fondue.JPG]]
+
+Til BBQ'en mødte jeg Nicole, hun var en del af Franks hold til skimo-løbet og Keegan.
+
+Keegan har et årskort til liftene her i området. Hvis du vil stå på ski, toptur eller bare piste, eller flyve med paraglider skal du starte med en lift. Zermatt ligger i 1620m højde og man skal op i mindst 3000m før det giver mening at flyve eller starte på en toptur.
+Et halvårs liftkort, hvis man ikke har adresse i Zermatt, koster 22000nok (alt er dyrt her), så det er super vigtigt at kende nogle med kort man kan låne, især når man som jeg er her mens liftsystemet skifter fra vinter til sommer og man derfor har brug for to halvårskort.
+I kan måske forestille jer, at jeg ved meget om hvordan liftkort virker. Jeg har en dims der kan aflæse kort, jeg sniffet kommunikationen mellem kort og aflæser (dvs hvilken information sender liftsystemet til kortet og hvad sender kortet retur) og har lært at lave en kopi af andres kort.
+Desværre opdateres kortet hver gang det bruges, så hvis jeg kopiere en andens kort og bruger min kopi er det originale kort ikke længere gyldigt.
+Så jeg låner andres kort og da Keegan sagde jeg kunne låne hans kort var jeg straks interesseret i at lære ham bedre at kende.
+
+Det viste sig han også klatre lidt men havde svært ved at finde makkere. Der er et lille klatrefelt 5 min fra byen, så jeg tog ham med derop en dag efter arbejde. Jeg har klatret alle ruter der. Når jeg ikke kan finde nogle, laver jeg toprebs-solo/clogging.
+Det er kalksten og meget glat. De fleste bryder sig ikke om at være der, for det føles usikkert, men det er god træning for det kræver selvtillid og det vigtigste er at komme ud.
+
+#+caption: Keegan klatre med hovedlygte efter solnedgang
+[[attachment:night-climb-eschelbalmen.jpg]]
+
+Efter vi begyndte at bruge tid sammen, spurgte han om jeg ville på en fem-dages toptur. Alt mad i rygsækken og sove i vinterhytter med brændeovn til at smelte sne og varme.
+
+Jeg manglede et par ski, jeg plejer at låne Julias men mine støvler er lidt for store til bindingerne så det er svært at få dem ordentlig på.
+Keegan arbejder for en af udstyrbutikkerne hvor man kan leje ski. Han havde et par hvor 5cm af stålkanten manglede på den ene ski. Det lappede vi med epoxy, fandt et par Frichi bindinger der var lidt knækket og et par gamle fæller. Jeg skrabede limen af fellerne med en varmepistol, rullede ny lim på og havde et par udmærkede ski til vores tur. Alt sammen i kælderen under butikken, når hans chef ikke var på arbejde.
+
+#+CAPTION: Keegan spiser pizza med den lim jeg har skrabet af fellerne på papstykket.
+[[attachment:ski-mounting-skin-reglueing-keegan.jpg]]
+
+
+Nicole, hende Frank havde lavet skimo-løbet med, skulle også med. Hun er vild. Hun har gået PCT, der er en lang vandretur, i hendes tilfælde fra Canada gennem USA til Mexico. Cyklet fra kysten af Portugal til Østrig og en masse andet der bare lyder ubehageligt. Af os tre, var jeg klart dårligst til at stå på ski og i dårligst form. Men jeg giver ikke så nemt op og det er altid fedt at være på tur med nogle der er bedre, så jeg kan betragte og lære af dem.
+
+Keegan brugte et par letvægsski. De var indleveret i butikken fordi det øverste trælag var gået løs. Han limede det og tog dem med på vores tur. Desværre gik limen op om morgenen på anden dag (tidlig morgen, vi stod stadig op før kl 05)
+#+CAPTION: Keegans "fiksede" letvægtsski. Skien var indleveret med samme fejl, han havde limet det men ikke godt nok og første dag sprang limen op
+[[attachment:broken-ski.jpg]]
+
+Han brugte dagen på at tage tilbage til Zermatt efter et par nye ski, mens Nicole og jeg tog rundt og spejdede vores rute. Det var tydeligt hvor forskellig vores komforzone var. Vi var på en top hvor det var rent klippe, med stegjern og en isøkse. Intet problem for mig men det gjorde hende nervøs.
+
+#+CAPTION: Nicole på en top
+[[attachment:nicole-top.jpeg]]
+
+Til gengæld gik vi også op i en coulour/renne for at stå på ski ned. Min første. Hun var helt cool mens jeg var klar over at det skulle være som Yoda siger: "Do or Do Not, there is no try"
+
+#+CAPTION: Nicole og jeg i min første couloir/renne
+[[attachment:nicole-couloir.jpg]]
+
+Vi mødte Keegan i hytten igen om aftenen. Vi indhentede den tabte tid dagen efter. Det var en tur der havde lidt af alt; en lang dag fra 0430 til vi var fremme ved næste hytte 0330, whiteout, crevasser/bresprekker, solskin, god skikøring og lange stræk hvor vi måtte gå med skiene på ryggen.
+
+#+begin_export hugo
+{{< gallery match="skitour*.jp*g" id="roccia-nera-ice-fresser" >}}
+#+end_export
+
+#+attr_html: :controls t :class video-container
+#+begin_video
+<source src="skitour-paw-crawling.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+end_video
+
+
+* Flere tilfældigheder
+Før jeg kom til Zermatt justerede jeg linerne på min paraglider. På grund af fugt og forskellig belastning, ændrer de længde forskelligt. Normalt sender man sin vinge ind til inspektion. De trækker i linerne med 5kg, måler længden og justerer dem så paraglideren får sin oprindelige form.
+
+Jeg tænkte at det kan jeg gøre selv, så jeg lavede en lille dims der gjorde at jeg kunne hænge et 5kg lod i linerne og måle længderne med en laser måler. Så bandt jeg nogle knuder for at ændre længderne og var godt tilfreds, for gennemsnitlig passede længderne bedre end før.
+
+#+CAPTION: DIY tool til at måle line-længder på en paraglider
+[[attachment:alu-tool-line-adjustment.jpg]]
+
+Her begik jeg dog en fejl, for selvom gennemsnittet at længderne er bedre er det ikke nødvendigvis det samme som at formen af vingen er bedre. Jeg stolede faktisk så meget på mine justeringer at jeg ikke engang testede vingen på en græsmark.
+Jeg tog den direkte med op i liften, lagde den på en skibakke og prøvede at komme i luften.
+Men hver gang jeg forsøgte at løbe, ville den flyve skævt eller kollapse. Jeg har haft mange problemer med paragliding, men takeoff har aldrig været et.
+Og det var min første tur i år, der var turister der kiggede på mig og jeg blev mere og mere frustreret over at det l*** ikke ville i luften. Hver gang ville jeg glide ned af skråningen, bruge en masse energi på at samle den sammen og prøve at gå op ad skråningen med dyb sne.
+Heldigvis kom der efter tredje forsøg en skipatrulje på scooter og sagde jeg ikke måtte lette fra den skråning før anlægget lukkede og han kørte mig tilbage til kabelbanen. Ellers var jeg nok blevet ved indtil jeg var i luften og hvem ved hvordan paraglideren så havde fløjet.
+
+Jeg spurgte rundt blandt de andre piloter om nogen havde udstyr til at justere liner med, og jeg endte med at tage hjem til Domi. Det viser sig at Domi udover at være paraglider også er helikopterpilot og var ham der tog et billede af mig over byen med alt for lav højde sidste år.
+#+CAPTION: Hjælp til justering af line-længder
+[[attachment:paragliding-line-trimming.jpg]]
+
+
+Et andet tilfældigt møde var hos Frank til BBQ. En gæst spurgte hvilken farve min paraglider har. Det viste sig at han havde fløjet med drone tidligere den dag, for at tage nogle billeder af en paraglider ven der var på besøg. Han havde taget fejl af farvene og havde i stedet taget billeder af en anden. Den anden var mig, så nu har jeg en række billeder af mig der flyver med Matterhorn i baggrunden.
+#+CAPTION: Paragliding med Matterhorn i baggrunden
+[[attachment:paragliding-matterhorn.jpg]]
+
+
+* PS, byg en elcykel.
+Jeg vil stadig anbefale at samle en elcykel. Det er den mindst energikrævede assisterende transportform.
+Der er masser af tutorials på youtube, f.eks. denne https://youtu.be/3Rjx1-RVDEc. Motor og batteri kan købes på f.eks. Amazon.

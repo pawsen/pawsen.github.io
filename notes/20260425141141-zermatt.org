@@ -17,6 +17,16 @@
 
 - [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/4937789967][Mattsand]] ::
   [[attachment:Mattsand.pdf][Mattsand.pdf]] ([[https://until2025.rebolting.ch/de/topos/routen/mattsand-mattertal.php][hosted on rebolting.ch]])
+
+** Other areas
+*** Ticino
+Thousands of routes and boulders of very high quality are waiting on the southern side of the Alps. As the weather here is often better than on the northern side of the Alps, and winters are usually warmer, they can be climbed almost all year long.
+
+https://www.thecrag.com/en/climbing/switzerland/alpen/tessin
+
+Keegan recommends
+- [[https://www.thecrag.com/en/climbing/switzerland/alpen/tessin/area/215759367][Valle Verzasca]]
+- [[https://www.thecrag.com/en/climbing/switzerland/alpen/tessin/valle-maggia][Valle Maggia]]
 * Canyoning :ATTACH:
 See https://www.opencanyon.org, it seems like an aggregator that collected info from https://www.descente-canyon.com and other places. There's an =opencanyon= app as well.
 
