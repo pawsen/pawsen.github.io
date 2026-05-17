@@ -14,9 +14,19 @@
 - [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/3941426691][Dosse/Furi]] ::
   [[attachment:Dosse_Topo_English_Translation.pdf][English translation of the 2020 Dosse Topo]]. Find the original from the link under the =Description= link at thecrag.
 - [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/192775725][Medji]] ::
+  The wall is east facing. In May, it should be in the shade from 1400. Bring 15 quickdraws.
+
+  I park my bike [[https://maps.app.goo.gl/3hK6wCC4CvwCupuo6][here]]. There is a sawmill/carpenter [[https://maps.app.goo.gl/xXjFqwkqcRGAhvLM9][close by]]. The owner lets me charge the bike, the door to the workshop is never locked.
 
 - [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/4937789967][Mattsand]] ::
+  The wall is South facing. In May, Mattsand gets sun from 1400.
+
   [[attachment:Mattsand.pdf][Mattsand.pdf]] ([[https://until2025.rebolting.ch/de/topos/routen/mattsand-mattertal.php][hosted on rebolting.ch]])
+
+- [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/192776055][Breitmatten]] ::
+  Multipitch on bolt/trad in the spring – if there is still snow at altitude
+
+  [[attachment:_20260509_200605Topo_Hammerstein.pdf][Topo_Hammerstein.pdf]] (from [[https://www.kletterclub-oberwallis.ch/neue-klettertouren-in-breitmatten-st-niklaus/][kletterclub-oberwallis.ch]]) has three new routes. =Red Bull= is in the =Oberwalliser climbing guide= or [[https://www.thecrag.com/en/climbing/switzerland/alpen/wallis/area/192776055][thecrag]] ([[attachment:breitmatten-redbull-topo.pdf][red bull topo]])
 
 ** Other areas
 *** Ticino

@@ -189,6 +189,8 @@ The BB length doesn't matter for the template. Use it to see if the motor rub ag
 *** lights
 Light kit that uses battery voltage instead. They plug in between the display and the controller using Julet 813 type connectors
 - https://www.aliexpress.com/item/1005008584510665.html
+* Chain alingment
+[[https://www.aliexpress.com/item/1005005849447792.html][Bike Chain Guide Direct Mount Adjustable (AliExpress)]]
 
 * Battery
 ** cases

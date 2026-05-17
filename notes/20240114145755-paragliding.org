@@ -110,8 +110,12 @@ It combines everything, but cost around 500€
 ** BlueBip
 The [[https://www.stodeus.com/shop/en/][BlueBip]] is a bluetooth Vario (around 200€). It does not have GPS or FLARM, but combined with [[*LilyGo T-Echo]] it is a full-fledged alternative to XC Tracer Mini, but 200€ cheaper.
 It does have LEDs for visual vario which some [[https://www.paraglidingforum.com/viewtopic.php?p=p686003#p686003][like]].
-** MipBip+
-The [[https://shop.mipfly.com/index.php?route=product/product&product_id=81][MipBip+]] (95€) is probably the cheapest instant variometer.
+** MipBipX
+The [[https://shop.mipfly.com/index.php?route=product%2Fproduct&product_id=82][MipBipX]] (~130€) is among the cheaper instant varios
+** Bluefly
+Cheap (120AUD ~ 74€), hacker friendly, from Australia
+
+- https://www.blueflyvario.com/product/blueflyvario_bluetooth_v25/
 
 ** DIY
 *** Hari Nairs, ESP32C3 based design

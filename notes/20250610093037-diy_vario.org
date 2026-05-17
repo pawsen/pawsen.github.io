@@ -21,8 +21,42 @@ DIY Vario for clim/sink rates. With BLE
 
 audio vario using Kalman filter to fuse acceleration and pressure sensor data. Bluetooth transmission of LK8EX1 sentences.
 
+* Modules
+** Barometer
 
-** Testing the GPS
+MS5611 barometric pressure sensor
+
+| Rank | Module/Mfr               | Res/Acc/Noise                          | ODR       | Pwr A/S     | IF      | Pkg/vent                            | ~AliExpress price          | PG vario note                                     |
+|------+--------------------------+----------------------------------------+-----------+-------------+---------+-------------------------------------+----------------------------+---------------------------------------------------|
+|    3 | MS5611/TE                | 1.2Pa @OSR; ±1.5hPa; 10cm res          | conv.-dep | 1/<0.15uA   | I2C/SPI | 5x3 QFN steel cap                   | AE ~$3.7-4.4               | proven vario/altimeter sensor; cheap              |
+|    1 | BMP390/Bosch             | 0.085Pa; ±50Pa abs/±3Pa rel; 0.9Pa RMS | 200Hz     | 3.2/1.4uA   | I2C/SPI | 2x2 LGA; easy module supply         | AE ~$6.9 BMP390L module    | best practical AliExpress pick                    |
+|    2 | BMP581/Bosch             | rel 0.06hPa/10kPa; ±0.3-0.5hPa abs     | 240-480Hz | ~1.3/0.55uA | I2C/SPI | 2x2 LGA; baffled vent recommended   | AE scarce; use DFRobot/etc | best technical choice if breakout is available    |
+|    4 | LPS22DF/ST               | 0.024Pa/LSB; ±0.2-0.45hPa; 0.34Pa RMS  | 200Hz     | 1.7/0.9uA   | I2C/SPI | 2x2 HLGA; clean vent critical       | AE scarce                  | excellent sensor, but fewer cheap breakouts       |
+|    5 | DPS368/Infineon          | 0.06Pa; 0.2-2.5Pa RMS                  | 1-128Hz   | mode-dep    | I2C/SPI | robust pkg; slower at cleanest mode | AE scarce                  | precise and robust, but less ideal for fast vario |
+|    6 | CJMCU-117/MS5611+MPU9250 | MS5611-class; 24-bit; 10-20cm alt res  | conv.-dep | board-dep   | I2C/SPI | combo breakout; MS5611 steel cap    | AE ~$20-27 combo           | convenient combo, but expensive and legacy IMU    |
+
+| Module/Mfr      | Res/Acc/Noise                          | ODR       | Pwr A/S    | IF      | Pkg/vent                            | ~Price               | Avail/PG note                    |
+|-----------------+----------------------------------------+-----------+------------+---------+-------------------------------------+----------------------+----------------------------------|
+| MS5611/TE       | 1.2Pa @OSR; ±1.5hPa; 10cm res          | conv.-dep | 1/<0.15uA  | I2C/SPI | 5x3 QFN steel cap                   | AE ~$3.7             |                                  |
+| BMP581/Bosch    | rel 0.06hPa/10kPa; ±0.5hPa abs; n/g    | 240-480Hz | 1.3/0.55uA | I2C/SPI | 2x2 LGA; baffled vent               | AE kw BMP581 module  | best drift/lag; breakout scarcer |
+| BMP390/Bosch    | 0.085Pa; ±50Pa abs/±3Pa rel; 0.9Pa RMS | 200Hz     | 3.2/1.4uA  | I2C/SPI | 2x2 LGA; easy module supply         | AE ~$4.7             | best cheap-safe pick             |
+| DPS368/Infineon | 0.06Pa; 0.2-2.5Pa RMS                  | 1-128Hz   | mode-dep   | I2C/SPI | robust pkg; slower at cleanest mode | AE kw DPS368 module  | precise but slower               |
+| LPS22DF/ST      | 0.024Pa/LSB; ±0.2-0.45hPa; 0.34Pa RMS  | 200Hz     | 1.7/0.9uA  | I2C/SPI | 2x2 HLGA; clean vent critical       | AE kw LPS22DF module | excellent, fewer breakouts       |
+
+** IMU
+
+CJMCU-117 module with MPU9250 9-DOF IMU
+
+| Module/Mfr      | Ax | Acc/Gyr noise  | ODR/FIFO       | Pwr A/S         | IF          | Pkg                     | ~Price                  | PG note                    |
+|-----------------+----+----------------+----------------+-----------------+-------------+-------------------------+-------------------------+----------------------------|
+| MPU9250/TDK     |  9 | 300ug/10mdps   | to 8k/4k; 512B | 3.5mA/8uA       | I2C/SPI     | CJMCU-117; 3x3 QFN chip | AE ~$26.8 combo         | legacy/EOL; has mag+MS5611 |
+| ICM-42688-P/TDK |  6 | 70ug/2.8mdps   | to 32k; 2kB    | 0.88mA/7.5uA    | I2C/I3C/SPI | 2.5x3 LGA               | AE ~$11.5               | best overall               |
+| ICM-45686/TDK   |  6 | 70ug/3.8mdps   | to 6.4k; 2-8kB | 0.42mA/2.2uA    | I2C/I3C/SPI | 2.5x3; bend/temp robust | AE kw ICM-45686 module  | premium                    |
+| BMI270/Bosch    |  6 | 160ug/7-10mdps | to 6.4k; 2kB   | 0.685mA/3.5uA   | I2C/SPI     | small LGA               | AE kw BMI270 module     | budget modern              |
+| LSM6DSV16X/ST   |  6 | 60ug/2.8mdps   | to 7.68k; FIFO | 0.65mA/2.6uA PD | I2C/SPI     | 2.5x3 LGA               | AE kw LSM6DSV16X module | excellent accel            |
+| MPU6050/TDK     |  6 | legacy/noisier | to 1k; FIFO    | ~mA-class       | I2C         | GY-521 common           | AE ~$0.9                | ultra-cheap only           |
+
+* Testing the GPS
 
 - baud rate =9600=
 *** u-blox center

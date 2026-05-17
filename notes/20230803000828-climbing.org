@@ -144,6 +144,16 @@ Recommend TPU 85A filament.
 [[attachment:lead-rope-solo-setup_nah-1024x683.jpg]]
 
 https://youtu.be/0yOesU4O1Nc and [[https://ripperkon.de/en/lead-climbing-self-belayed-solo-climbing-with-grigri-plus-and-maillons-rope-in-backpack/][blog]]
+** Dangerous stuff :ATTACH:
+
+
+#+CAPTION: Quickdraw pinched on a bolt. The quickdraw is used on the second bolt, as part of the lower anchor.
+[[attachment:second-bolt-clove-hitch-quickdraw.jpeg]]
+** Examples
+
+Colin Haley, LRS of winter mix route.
+https://youtu.be/Fxltm25tgdQ
+
 * Forces on climber, belayer and anchor :ATTACH:
 The highest impact force I have seen measured on a lead fall is 7.16kN on anchor by Tanner for a HowNOT2 video (he is 131kg).
 The belay device is bolted to the anchor, so it resembles LRS fall.
