@@ -155,6 +155,13 @@ Colin Haley, LRS of winter mix route.
 https://youtu.be/Fxltm25tgdQ
 
 * Forces on climber, belayer and anchor :ATTACH:
+From [[https://www.hownot2.com/post/climbing-science#c990e4_9baafdd0e10848cfbc376951dfcde834~mv2.png][hownot2]] and [[https://www.petzl.com/US/en/Sport/Forces-at-work-in-a-real-fall][Petzl dynamic test]]. Factor 1 fall,
+|                 | anchor, kN | climber, kN | belayer, kN |
+|-----------------+------------+-------------+-------------|
+| hownot2         |          4 |         2.5 |           1 |
+| petzl, factor 1 |          6 |           4 |           2 |
+
+But having a ground anchor increases the forces. See this [[https://www.hownot2.com/post/big-climbers#viewer-djhjt][chart]]
 The highest impact force I have seen measured on a lead fall is 7.16kN on anchor by Tanner for a HowNOT2 video (he is 131kg).
 The belay device is bolted to the anchor, so it resembles LRS fall.
 
@@ -169,12 +176,6 @@ Direct link at 6:28 in the How NOT 2 Video: https://youtu.be/Tnk4Ky-D9Bg?si=0tL6
 #+caption: Shock load forces are a myth, hownot2: https://youtu.be/nr3YBDnOI8Q
 [[attachment:shock-load-forces-hownot2.png]]
 
-[[https://www.petzl.com/US/en/Sport/Forces-at-work-in-a-real-fall][Petzl dynamic test]]. Factor 1 fall,
-- climber, Impact force  4 kN ::
-  Such a fall is impressive for the climber and is rare in the field. However, the force is quite bearable.
-- Belayer,Impact force ≈ 2 kN ::
-  As with the factor 0.7, the belayer is stopped harshly at the belay station: arresting the fall can be painful and difficult.
-- Anchor, Impact force ≈ 6 kN
 * gear
 ** p-led
 p-led is called quick-links or mailon, [[https://www.google.com/search?q=delta+link+climbing][here]] shown as triangular shape (delta link)
@@ -201,16 +202,16 @@ btw [[https://www.google.com/search?q=Grivel+Candela+Ice+Screw+Tool][Grivel Cand
 *** Petzl connect adjust
 ≥8mm (dynamic) cord. See [[https://youtu.be/ZZuDTKIDptc?feature=shared&t=86][this]] for example of two CA's on a single 8mm cord, girth hitch to harness with knot. Figure of 8 knot at each end, allows to clip the knot into the CA carabiner to create a loop.
 
-** breaking strength of climbing rope (approx 13kN)
+** Ropes
+*** dynamic
 [[https://youtu.be/ZWaDh6-roMI?feature=shared&t=303][This]] test shows that a dynamic climbing rope breaks around 12kN in a drop test and 13-14kN in a slow pull test. Ie. the rope breaks around the same, whether it's a drop- or slow pull test.
-** force on gear/climber when falling on dynamic rope (less than 6kN)
 
-From [[https://www.hownot2.com/post/climbing-science#c990e4_9baafdd0e10848cfbc376951dfcde834~mv2.png][hownot2]]
-| anchor | climber | belayer |
-|--------+---------+---------|
-|      4 |     2.5 |       1 |
+- 10% stretch at static 80kg
+- 30% stretch at 6kN fall
+*** semi Static
+- 4% stretch at static 80kg
+- 15% stretch at 6kN fall
 
-But having a ground anchor increases the forces. See this [[https://www.hownot2.com/post/big-climbers#viewer-djhjt][chart]]
 
 ** crampons
 [[https://youtu.be/fPbya5hEiSI][Vitaliy Musiyenko reviews crampons]]

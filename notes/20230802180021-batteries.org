@@ -933,6 +933,36 @@ great for small engine or a jumper pack if you have good enough cells.
 
 #+CAPTION: 3s5p full enclosure
 [[attachment:3s5p-finished.jpeg]]
+** 16s12p, electric motorcycle :ATTACH:
+
+Battery for Yamaha 125 DTLC.
+
+- 16s12p, 0.2mm copper, 0.1mm nickel.
+- Two part, connected through 6 copper strips at the bottom
+- 25mm2 cable (4awg) discharge
+- 2.5mm2 (14awg), 25A fuse, charge
+
+From https://www.facebook.com/julien.menada/
+
+
+*** battery
+[[attachment:16s12p_1.jpeg]]
+[[attachment:16s12p_2.jpeg]]
+[[attachment:16s12p_3.jpeg]]
+[[attachment:16s12p_4.jpeg]]
+[[attachment:16s12p_5.jpeg]]
+
+*** BMS :ATTACH:
+[[attachment:16s12p_bms_1.jpeg]]
+[[attachment:16s12p_bms_2.jpeg]]
+[[attachment:16s12p_bms_3.jpeg]]
+
+*** Case :ATTACH:
+[[attachment:16s12p_case_1.jpeg]]
+[[attachment:16s12p_case_2.jpeg]]
+[[attachment:16s12p_case_3.jpeg]]
+[[attachment:16s12p_case_4.jpeg]]
+[[attachment:16s12p_case_5.jpeg]]
 
 * Notes
 
