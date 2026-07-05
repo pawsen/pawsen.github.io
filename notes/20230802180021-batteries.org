@@ -522,6 +522,8 @@ SoH = Q_{max} Q_{rated}
 ** AC IR
 A good AC IR meter is *FNIRSI HRM-10*
 ** Spot Welder
+[[https://youtu.be/TZr1XimPu7c][Measure the current by a spot welder]]
+
 *** Machines
 - [[https://www.alibaba.com/product-detail/-1600999217903.html][AwithZ P60F]]
 *** Pens :ATTACH:
