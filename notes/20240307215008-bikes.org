@@ -39,6 +39,12 @@ Get the BBSHD. You will never regret the extra power and torque. Also, its 'Heav
 Standard current usage
 - BBS02: 25A
 - BBSHD: 30A, but can be modified to >50A.
+
+To avoid the front chainring hitting the chainstay, some spacer might be needed when fitting the motor
+- [[https://www.aliexpress.com/item/1005004671389383.html][5/10mm Spacer Adapter for Bafang Mid Drive Motor]]
+
+Another diy option is to unscrew the chainring and add washers between the chainring and motor.
+
 *** Bottom Brackets and fits :ATTACH:
 
 The easiest is to print one of the [[https://intercom.help/bafangusadirect/en/articles/4649613-bbs02-bbshd-motor-fitment-templates][fitment templates]] (*REMEMBER to set paper size to US letter when printing this template*)
@@ -189,7 +195,7 @@ The BB length doesn't matter for the template. Use it to see if the motor rub ag
 *** lights
 Light kit that uses battery voltage instead. They plug in between the display and the controller using Julet 813 type connectors
 - https://www.aliexpress.com/item/1005008584510665.html
-* Chain alingment
+* Chain alignment
 [[https://www.aliexpress.com/item/1005005849447792.html][Bike Chain Guide Direct Mount Adjustable (AliExpress)]]
 
 * Battery
