@@ -7,7 +7,7 @@
 #+title: DIY paraglider line measure tool
 
 #+HUGO_SECTION: post
-#+filetags: paragliding 3d-print diy
+#+filetags: paragliding 3d-print diy trimming
 #+hugo_categories: diy
 #+hugo_auto_set_lastmod: t
 #+hugo_publishdate: 2025-06-08
@@ -38,7 +38,7 @@ Buy this
   It doesn't matter if
 Specs for [[attachment:linear-rail-guide-spec.webp][the linear rail slide]] and [[attachment:BSU625-24-7K-nylon-wheel.webp][the nylon wheels]]
 
-Use a Laser distance measurement device(ideally with bluetooth, we could end up doing this many times. [[https://duckduckgo.com/?t=h_&q=leica%20disto%20d2][Leica Disto D2]](or D1 if found second hand) are recommended.
+Use a Laser distance measurement device(ideally with bluetooth, we could end up doing this many times. [[https://duckduckgo.com/?t=h_&q=leica%20disto%20d2][Leica Disto D2]](or D1 if found second hand. D1 is favored by https://we-measure.io) are recommended.
 
 and 3d-print the STL files, use at least 5 perimeters. Any filament should be good. The FreeCAD drawing/stl is [[https://github.com/pawsen/3dmodels/tree/main/paragliding/line-measure-tool][here]].
 
@@ -64,10 +64,18 @@ Instead of reprinting the model, I used the alu version shown above.
   #+end_quote
   (The lengths we are using are including the risers, ie. from the inside of the riser connection to the carabiner)
 
-  Print the layout of the wing or copy it to a piece of paper. That makes it much easier to find the right lines the first times measuring.
+  Print the layout of the wing or copy it to a piece of paper. That makes it much easier to find the right lines the first time measuring.
 
 - Know what knot is used to tie the lines to the maillons ::
-  Different knots uses different lengths of line, which is used for the simulation/adjustment. See [[https://we-measure.io/manual/loops][loops]].
+  + Different knots uses different lengths of line which is used for the simulation/adjustment. See [[https://we-measure.io/manual/loops][loops]].
+  + New gliders comes with a loop on the B's. B's shrink more than A's because A's carry more of the loading. Releasing the loops should restore some of the trim.
+  + The risers are made from hollow Kevlar. Small adjustments of 1~2mm(for racing) are made by pressing the line together which hollows it out, inserting a needle with a piece of old line into the hollow section and thus preventing the line to extend fully.
+    Place it ~30cm from the raiser. You can leave a small bit sticking out, so it can be removed at a later point.
+  + damp environment changes the trim most
+
+  + The lower brake lines are often made from shielded dynemaa.
+    Dynemaa shrinks more than kevlar so be sure the bake lines are not getting too shart.
+    - Travel from hands up to slight tension should be at least 7cm. When pressing the speedbar, the wingfoil deforms and the trailing edge is pushed up thus there should be enough slack on the brake line to not inadvertently brake the wing.
 
 #+CAPTION: Knots shown in increasing order of line usage
 [[attachment:knots_mailon_line_usage.png]]
@@ -151,7 +159,7 @@ A mass of ~0.8 kg pulling the piston down over a 10 cm diameter creates 10 mbar 
 [[https://www.flybgd.com/en/paragliders/inspection-recommendations-13-0-0.html][BGDs Inspection Recommendations]]
 
 ** Lines
-The "check length" of the lines is defined as the distance from the lower surface of the canopy to the inside edge of the maillons connecting the lines to the risers. It must be measured with 5kg line tension.
+The "check length" of the lines is defined as the distance from the lower surface of the canopy to the inside edge of the maillons connecting the lines to the risers. It must be measured with 5kg line tension. In practice 3kg-8kg should work.
 
 #+begin_quote
 The measured lengths of individual lines should match those in the line-lengths table within a +/-10mm tolerance.

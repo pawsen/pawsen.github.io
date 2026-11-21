@@ -159,6 +159,32 @@ C010 controller and CANBUS setup - you can change a bunch of settings around ass
 The gear sensor cut-off time is 300ms for =UART= and 500ms for CAN. The CANbus cut-off time can at the moment, 2025, not be changed.
 
 Here are some notes on the [[https://kaspars.net/blog/bafang-canbus][Bafang CANbus]].
+** Servicing
+#+CAPTION: Exploded view of the BBS motor
+[[attachment:bafang/bbs-exploded-view.jpg]]
+
+*NOTE*
+There is the *BBS02* and *BBS02b*, make sure to get parts for the correct model.
+*** Grease
+- Mobil 28 for the nylon gear
+- for the reduction gear: any bearing grease that is waterproof will work(white lithium grease or truck bearing grease)
+
+#+CAPTION: Reduction gear grease
+[[attachment:bafang/reduction-gear-grease.jpg]]
+
+#+CAPTION: Waterproofing the axle seal with grease
+[[attachment:bafang/axle-seal-grease.png]]
+
+#+CAPTION: Orientation of the thrust ball bearing
+[[attachment:bafang/orientation-thrust-ball-bearing.png]]
+The screenshot is from https://youtu.be/gVuzLZT6zeI
+
+*** replacing nylon gear
+Deep side facing up
+
+#+CAPTION: orientation of the nylon gear
+[[attachment:bafang/bbs02b-nylon-gear-orientation.jpg]]
+
 * Other middrive motors
 ** Tongsheng TSDZ2 (Or the newer TSDZ8)
 Alternative to the BBS02 700W.
@@ -196,6 +222,9 @@ The BB length doesn't matter for the template. Use it to see if the motor rub ag
 Light kit that uses battery voltage instead. They plug in between the display and the controller using Julet 813 type connectors
 - https://www.aliexpress.com/item/1005008584510665.html
 * Chain alignment
+#+CAPTION: Chain guide
+[[attachment:chain-guide.jpg]]
+
 [[https://www.aliexpress.com/item/1005005849447792.html][Bike Chain Guide Direct Mount Adjustable (AliExpress)]]
 
 * Battery
